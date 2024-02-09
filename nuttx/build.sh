@@ -172,7 +172,8 @@ riscv64-unknown-elf-ld \
   ../apps/libapps.a \
   $HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
-  -o ../apps/bin/qjs
+  -o ../apps/bin/qjs \
+  -Map nuttx/qjs.map
 
 ## Dump the disassembly
 riscv64-unknown-elf-objdump \
