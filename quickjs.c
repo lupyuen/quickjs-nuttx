@@ -2466,12 +2466,15 @@ static inline BOOL is_num_string(uint32_t *pval, const JSString *p)
 }
 
 /* XXX: could use faster version ? */
-static inline uint32_t hash_string8(const uint8_t *str, size_t len, uint32_t h)
+////static inline 
+uint32_t hash_string8(const uint8_t *str, size_t len, uint32_t h)
 {
     size_t i;
 
+printf("hash_string8: len1=%d\n", len);////
     for(i = 0; i < len; i++)
         h = h * 263 + str[i];
+printf("hash_string8: len2=%d\n", len);////
     return h;
 }
 
