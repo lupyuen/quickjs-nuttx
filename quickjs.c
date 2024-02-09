@@ -2867,6 +2867,7 @@ static JSAtom __JS_NewAtomInit(JSRuntime *rt, const char *str, int len,
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
 {
+static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
 // printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
 // if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
     uint32_t h, h1, i;

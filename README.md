@@ -270,7 +270,7 @@ riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:495: undefined reference to
 
 After fixing the missing functions, QuickJS compiles OK for NuttX yay!
 
-# QuickJS Crashes
+# QuickJS Crashes on NuttX
 
 _Does QuickJS run on NuttX?_
 
