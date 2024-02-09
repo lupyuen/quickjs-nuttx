@@ -50,18 +50,24 @@ nuttx_options=" \
   -I "../apps/include"   \
 "
 
+# riscv64-unknown-elf-gcc \
+#   $nuttx_options \
+#   $qjs_options \
+#   -o .obj/repl.o \
+#   repl.c
+
+# riscv64-unknown-elf-gcc \
+#   $nuttx_options \
+#   $qjs_options \
+#   -o .obj/qjscalc.o \
+#   qjscalc.c
+
 ## Compile the NuttX App
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/qjs.o \
   qjs.c
-
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/repl.o \
-  repl.c
 
 riscv64-unknown-elf-gcc \
   $nuttx_options \
@@ -98,12 +104,6 @@ riscv64-unknown-elf-gcc \
   $qjs_options \
   -o .obj/libbf.o \
   libbf.c
-
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/qjscalc.o \
-  qjscalc.c
 
 ## Link the NuttX App
 ## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
