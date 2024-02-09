@@ -376,6 +376,11 @@ main: a
 JS_NewCustomContext: c
 JS_NewCFunction3: c
 __JS_FindAtom: rt=0xc02005d0, len=0
+__JS_FindAtom: h=0x1
+__JS_FindAtom: h=0x1
+__JS_FindAtom: h1=0x1
+__JS_FindAtom: rt=0xc02005d0, i=47
+__JS_FindAtom: rt=0xc02005d0, return i=47
 JS_NewCFunction3: d
 js_function_set_properties: a
 js_function_set_properties: b
@@ -384,31 +389,84 @@ JS_NewCFunction3: e
 JS_NewCFunction3: f
 __JS_FindAtom: rt=0xc02005d0, len=8
 __JS_FindAtom: rt=0xc02005d0, str=toString
+__JS_FindAtom: h=0x15becee5
+__JS_FindAtom: h=0x15becee5
+__JS_FindAtom: h1=0xe5
+__JS_FindAtom: rt=0xc02005d0, i=56
+__JS_FindAtom: rt=0xc02005d0, return i=56
 __JS_FindAtom: rt=0xc02005d0, len=4
 __JS_FindAtom: rt=0xc02005d0, str=name
+__JS_FindAtom: h=0xffffffff94d7f3b4
+__JS_FindAtom: h=0x14d7f3b4
+__JS_FindAtom: h1=0xb4
+__JS_FindAtom: rt=0xc02005d0, i=163
+__JS_FindAtom: rt=0xc02005d0, i=55
+__JS_FindAtom: rt=0xc02005d0, return i=55
 __JS_FindAtom: rt=0xc02005d0, len=7
 __JS_FindAtom: rt=0xc02005d0, str=message
+__JS_FindAtom: h=0x62bf0f06
+__JS_FindAtom: h=0x22bf0f06
+__JS_FindAtom: h1=0x6
+__JS_FindAtom: rt=0xc02005d0, i=51
+__JS_FindAtom: rt=0xc02005d0, return i=51
 __JS_FindAtom: rt=0xc02005d0, len=9
 __JS_FindAtom: rt=0xc02005d0, str=EvalError
+__JS_FindAtom: h=0x60778ebb
+__JS_FindAtom: h=0x20778ebb
+__JS_FindAtom: h1=0xbb
+__JS_FindAtom: rt=0xc02005d0, i=195
+__JS_FindAtom: rt=0xc02005d0, return i=195
 __JS_FindAtom: rt=0xc02005d0, len=10
 __JS_FindAtom: rt=0xc02005d0, str=RangeError
+__JS_FindAtom: h=0x12fdbe5c
+__JS_FindAtom: h=0x12fdbe5c
+__JS_FindAtom: h1=0x5c
+__JS_FindAtom: rt=0xc02005d0, i=196
+__JS_FindAtom: rt=0xc02005d0, return i=196
 __JS_FindAtom: rt=0xc02005d0, len=14
 __JS_FindAtom: rt=0xc02005d0, str=ReferenceError
+__JS_FindAtom: h=0x62f79d9e
+__JS_FindAtom: h=0x22f79d9e
+__JS_FindAtom: h1=0x9e
+__JS_FindAtom: rt=0xc02005d0, i=197
+__JS_FindAtom: rt=0xc02005d0, return i=197
 __JS_FindAtom: rt=0xc02005d0, len=11
 __JS_FindAtom: rt=0xc02005d0, str=SyntaxError
+__JS_FindAtom: h=0x33bc728c
+__JS_FindAtom: h=0x33bc728c
+__JS_FindAtom: h1=0x8c
+__JS_FindAtom: rt=0xc02005d0, i=198
+__JS_FindAtom: rt=0xc02005d0, return i=198
 __JS_FindAtom: rt=0xc02005d0, len=9
 __JS_FindAtom: rt=0xc02005d0, str=TypeError
+__JS_FindAtom: h=0xffffffffd6c4f8dd
+__JS_FindAtom: h=0x16c4f8dd
+__JS_FindAtom: h1=0xdd
+__JS_FindAtom: rt=0xc02005d0, i=199
+__JS_FindAtom: rt=0xc02005d0, return i=199
 __JS_FindAtom: rt=0xc02005d0, len=8
 __JS_FindAtom: rt=0xc02005d0, str=URIError
+__JS_FindAtom: h=0x3e962805
+__JS_FindAtom: h=0x3e962805
+__JS_FindAtom: h1=0x5
+__JS_FindAtom: rt=0xc02005d0, i=200
+__JS_FindAtom: rt=0xc02005d0, return i=200
 __JS_FindAtom: rt=0xc02005d0, len=13
 __JS_FindAtom: rt=0xc02005d0, str=InternalError
+__JS_FindAtom: h=0xffffffff8d11fe12
+__JS_FindAtom: h=0xd11fe12
+__JS_FindAtom: h1=0x12
+__JS_FindAtom: rt=0xc02005d0, i=201
+__JS_FindAtom: rt=0xc02005d0, return i=201
 __JS_FindAtom: rt=0xc02005d0, len=14
 __JS_FindAtom: rt=0xc02005d0, str=AggregateError
+__JS_FindAtom: h=0x384dee5a
+__JS_FindAtom: h=0x384dee5a
+__JS_FindAtom: h1=0x5a
 JS_NewContext: e
 JS_AddIntrinsicBaseObjects: g
 JS_NewCFunction3: c
 __JS_FindAtom: rt=0xc02005d0, len=0
-riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c00553e0, MTVAL: 0000000000000128
 ```
 
-TODO
+TODO: Why does __JS_FindAtom hang? Stack problems?
