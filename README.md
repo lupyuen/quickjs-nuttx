@@ -292,6 +292,8 @@ nsh> qjs
 [    2.378000] up_dump_register: SP: 00000000c0202220 FP: 00000000c0201fc0 TP: 0000000000000000 RA: 00000000c001b32c
 ```
 
+We look up the disassembly: [nuttx/qjs.S](nuttx/qjs.S)
+
 EPC c0006484 is here...
 
 ```text
@@ -304,4 +306,4 @@ riscv/quickjs-nuttx/quickjs.c:2876
     c0006484:	6380                	ld	s0,0(a5)
 ```
 
-TODO
+TODO: Why is it accessing MTVAL 8_c020_3b88? Maybe the `8` prefix shouldn't be there?
