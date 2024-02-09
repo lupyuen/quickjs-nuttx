@@ -2471,10 +2471,10 @@ uint32_t hash_string8(const uint8_t *str, size_t len, uint32_t h)
 {
     size_t i;
 
-printf("hash_string8: len1=%d\n", len);////
+printf("hash_string8: str=%s, len=%d\n", str, len);////
     for(i = 0; i < len; i++)
         h = h * 263 + str[i];
-printf("hash_string8: len2=%d\n", len);////
+printf("hash_string8: str=%s, h=%p\n", str, h);////
     return h;
 }
 
@@ -2872,7 +2872,7 @@ static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
 {
 printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
 if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
-// static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
+static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
     uint32_t h, h1, i;
     JSAtomStruct *p;
 
