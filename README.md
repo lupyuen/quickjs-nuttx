@@ -1,6 +1,6 @@
 # Porting QuickJS JavaScript Engine to Apache NuttX RTOS
 
-Let's port QuickJS JavaScript Engine to Apache NuttX RTOS! (64-bit RISC-V QEMU, Kernel Mode)
+Let's port [QuickJS JavaScript Engine](https://bellard.org/quickjs/quickjs.html) to Apache NuttX RTOS! (64-bit RISC-V QEMU, Kernel Mode)
 
 _Why are we doing this?_
 
@@ -143,9 +143,9 @@ The NuttX Linking fails. The missing functions are...
 
 - POSIX Functions (popen, pclose, pipe2, symlink, ...): We'll stub them out
 
-- Dynamic Linking (dlopen, dlsym, dlclose): Might not need Dynamic Linking
+- Dynamic Linking (dlopen, dlsym, dlclose): Don't need Dynamic Linking for fib.so, point.so
 
-- Math Functions (pow, floor, trunc, ...): Might not need Math Functions
+- Math Functions (pow, floor, trunc, ...): Link with `-lm`
 
 ```text
 + riscv64-unknown-elf-ld --oformat elf64-littleriscv -e _start -Bstatic -T../apps/import/scripts/gnu-elf.ld -L../apps/import/libs -L /Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d ../apps/import/startup/crt0.o .obj/qjs.o .obj/repl.o .obj/quickjs.o .obj/libregexp.o .obj/libunicode.o .obj/cutils.o .obj/quickjs-libc.o .obj/libbf.o .obj/qjscalc.o --start-group -lmm -lc -lproxies -lgcc ../apps/libapps.a /Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a --end-group -o ../apps/bin/qjs

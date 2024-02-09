@@ -50,6 +50,16 @@ nuttx_options=" \
   -I "../apps/include"   \
 "
 
+## This one is slooooooow
+if [ ! -e ".obj/quickjs.o" ] 
+then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/quickjs.o \
+    quickjs.c
+fi
+
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
@@ -68,12 +78,6 @@ riscv64-unknown-elf-gcc \
   $qjs_options \
   -o .obj/qjs.o \
   qjs.c
-
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/quickjs.o \
-  quickjs.c
 
 riscv64-unknown-elf-gcc \
   $nuttx_options \
@@ -130,6 +134,7 @@ riscv64-unknown-elf-ld \
   -lc \
   -lproxies \
   -lgcc \
+  -lm \
   ../apps/libapps.a \
   $HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
