@@ -88,14 +88,14 @@ then
     nuttx/qjscalc.c
 fi
 
-if [ ! -e ".obj/fi.o" ] 
-then
+# if [ ! -e ".obj/qjs.o" ] 
+# then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/qjs.o \
   qjs.c
-fi
+# fi
 
 if [ ! -e ".obj/libregexp.o" ] 
 then
