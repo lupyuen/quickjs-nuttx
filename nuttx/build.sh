@@ -10,10 +10,20 @@ set -x  #  Echo commands
 pushd ..
 mkdir -p .obj
 
-## Compile the NuttX App
+## GCC Options for QuickJS
+qjs_options=" \
+  -Wno-array-bounds \
+  -Wno-format-truncation \
+  -fwrapv  \
+  -D_GNU_SOURCE \
+  -DCONFIG_VERSION=\"2024-01-13\" \
+  -DCONFIG_BIGNUM \
+"
+
+## GCC Options for NuttX
 ## For riscv-none-elf-gcc: "-march=rv64imafdc_zicsr_zifencei"
 ## For riscv64-unknown-elf-gcc: "-march=rv64imafdc"
-riscv64-unknown-elf-gcc \
+nuttx_options=" \
   -c \
   -fno-common \
   -Wall \
@@ -38,15 +48,62 @@ riscv64-unknown-elf-gcc \
   -isystem ../apps/import/include \
   -D__NuttX__  \
   -I "../apps/include"   \
-  \
-  -Wno-array-bounds \
-  -Wno-format-truncation \
-  -fwrapv  \
-  -D_GNU_SOURCE \
-  -DCONFIG_VERSION=\"2024-01-13\" \
-  -DCONFIG_BIGNUM \
+"
+
+## Compile the NuttX App
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
   -o .obj/qjs.o \
   qjs.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/repl.o \
+  repl.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/quickjs.o \
+  quickjs.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/libregexp.o \
+  libregexp.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/libunicode.o \
+  libunicode.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/cutils.o \
+  cutils.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/quickjs-libc.o \
+  quickjs-libc.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/libbf.o \
+  libbf.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/qjscalc.o \
+  qjscalc.c
 
 ## Link the NuttX App
 ## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
@@ -60,6 +117,14 @@ riscv64-unknown-elf-ld \
   -L "$HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
   ../apps/import/startup/crt0.o  \
   .obj/qjs.o \
+  .obj/repl.o \
+  .obj/quickjs.o \
+  .obj/libregexp.o \
+  .obj/libunicode.o \
+  .obj/cutils.o \
+  .obj/quickjs-libc.o \
+  .obj/libbf.o \
+  .obj/qjscalc.o \
   --start-group \
   -lmm \
   -lc \
@@ -68,5 +133,6 @@ riscv64-unknown-elf-ld \
   ../apps/libapps.a \
   $HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
-  -o  ../apps/bin/qjs
+  -o ../apps/bin/qjs
+
 popd
