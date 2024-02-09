@@ -137,9 +137,9 @@ const uint8_t qjsc_repl[16280] = {
  0x2e, 0x6a, 0x73, 0x06, 0x73, 0x74, 0x64, 0x04,
 ```
 
-The NuttX Linking fails. The missing functions are...
+The NuttX Linking fails. The missing functions...
 
-- Atomic Functions (__atomic_fetch_add_2, ...): Why are they missing?
+- Atomic Functions (__atomic_fetch_add_2, ...): [Why are they missing?](https://github.com/apache/nuttx/issues/10642)
 
 - POSIX Functions (popen, pclose, pipe2, symlink, ...): We'll stub them out
 
@@ -148,7 +148,7 @@ The NuttX Linking fails. The missing functions are...
 - Math Functions (pow, floor, trunc, ...): Link with `-lm`
 
 ```text
-+ riscv64-unknown-elf-ld --oformat elf64-littleriscv -e _start -Bstatic -T../apps/import/scripts/gnu-elf.ld -L../apps/import/libs -L /Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d ../apps/import/startup/crt0.o .obj/qjs.o .obj/repl.o .obj/quickjs.o .obj/libregexp.o .obj/libunicode.o .obj/cutils.o .obj/quickjs-libc.o .obj/libbf.o .obj/qjscalc.o --start-group -lmm -lc -lproxies -lgcc ../apps/libapps.a /Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a --end-group -o ../apps/bin/qjs
++ riscv64-unknown-elf-ld --oformat elf64-littleriscv -e _start -Bstatic -T../apps/import/scripts/gnu-elf.ld -L../apps/import/libs -L riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d ../apps/import/startup/crt0.o .obj/qjs.o .obj/repl.o .obj/quickjs.o .obj/libregexp.o .obj/libunicode.o .obj/cutils.o .obj/quickjs-libc.o .obj/libbf.o .obj/qjscalc.o --start-group -lmm -lc -lproxies -lgcc ../apps/libapps.a riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a --end-group -o ../apps/bin/qjs
 
 riscv64-unknown-elf-ld: .obj/quickjs.o: in function `js_pow':
 quickjs-nuttx/quickjs.c:12026: undefined reference to `pow'
