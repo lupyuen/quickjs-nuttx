@@ -50,17 +50,17 @@ nuttx_options=" \
   -I "../apps/include"   \
 "
 
-# riscv64-unknown-elf-gcc \
-#   $nuttx_options \
-#   $qjs_options \
-#   -o .obj/repl.o \
-#   repl.c
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/repl.o \
+  nuttx/repl.c
 
-# riscv64-unknown-elf-gcc \
-#   $nuttx_options \
-#   $qjs_options \
-#   -o .obj/qjscalc.o \
-#   qjscalc.c
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  $qjs_options \
+  -o .obj/qjscalc.o \
+  nuttx/qjscalc.c
 
 ## Compile the NuttX App
 riscv64-unknown-elf-gcc \
