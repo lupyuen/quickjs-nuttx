@@ -4,9 +4,11 @@ Let's port QuickJS JavaScript Engine to Apache NuttX RTOS! (64-bit RISC-V QEMU, 
 
 _Why are we doing this?_
 
-[QuickJS supports POSIX](https://bellard.org/quickjs/quickjs.html#os-module) open(), read(), ... so we might use it to control NuttX Devices! (Like blinking the LED Driver)
+[QuickJS supports POSIX](https://bellard.org/quickjs/quickjs.html#os-module) open(), read(), ...
 
-But ioctl() is missing, maybe we can extend QuickJS?
+So we might run the JavaScript Interpreter on NuttX to control NuttX Devices, REPL-style! (Like blinking the LED Driver)
+
+(But ioctl() is missing, maybe we can extend QuickJS?)
 
 # Compile QuickJS for NuttX
 
