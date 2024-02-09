@@ -139,11 +139,11 @@ const uint8_t qjsc_repl[16280] = {
 
 The NuttX Linking fails. The missing functions...
 
-- Atomic Functions (__atomic_fetch_add_2, ...): [Why are they missing?](https://github.com/apache/nuttx/issues/10642)
-
 - POSIX Functions (popen, pclose, pipe2, symlink, ...): We'll stub them out
 
 - Dynamic Linking (dlopen, dlsym, dlclose): Don't need Dynamic Linking for fib.so, point.so
+
+- Atomic Functions (__atomic_fetch_add_2, ...): We patched them: [nuttx/arch_atomic.c](nuttx/arch_atomic.c) [(Why are they missing)](https://github.com/apache/nuttx/issues/10642)
 
 - Math Functions (pow, floor, trunc, ...): Link with `-lm`
 

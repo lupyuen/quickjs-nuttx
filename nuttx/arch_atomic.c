@@ -1,3 +1,4 @@
+// https://github.com/apache/nuttx/blob/master/libs/libc/machine/arch_atomic.c
 /****************************************************************************
  * libs/libc/machine/arch_atomic.c
  *
@@ -22,11 +23,18 @@
  * Included Files
  ****************************************************************************/
 
-#include <nuttx/config.h>
+////#include <nuttx/config.h>
 
 #include <stdbool.h>
 #include <stdint.h>
-#include <nuttx/spinlock.h>
+////#include <nuttx/spinlock.h>
+
+//// Begin Patch
+#define NULL 0
+typedef int spinlock_t;
+irqstate_t spin_lock_irqsave(spinlock_t *lock) { return 0; }
+void spin_unlock_irqrestore(spinlock_t *lock, irqstate_t flags) {}
+//// End Patch
 
 /****************************************************************************
  * Pre-processor Definitions

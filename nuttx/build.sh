@@ -50,6 +50,11 @@ nuttx_options=" \
   -I "../apps/include"   \
 "
 
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
+  -o .obj/arch_atomic.o \
+  nuttx/arch_atomic.c
+
 ## This one is slooooooow
 if [ ! -e ".obj/quickjs.o" ] 
 then
@@ -129,6 +134,7 @@ riscv64-unknown-elf-ld \
   .obj/quickjs-libc.o \
   .obj/libbf.o \
   .obj/qjscalc.o \
+  .obj/arch_atomic.o \
   --start-group \
   -lmm \
   -lc \
