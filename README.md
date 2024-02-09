@@ -139,7 +139,7 @@ const uint8_t qjsc_repl[16280] = {
 
 The NuttX Linking fails. The missing functions...
 
-- POSIX Functions (popen, pclose, pipe2, symlink, ...): We'll stub them out
+- POSIX Functions (popen, pclose, pipe2, symlink, ...): We'll stub them out: [nuttx/stub.c](nuttx/stub.c)
 
 - Dynamic Linking (dlopen, dlsym, dlclose): Don't need Dynamic Linking for fib.so, point.so
 
@@ -265,5 +265,9 @@ quickjs-nuttx/quickjs-libc.c:479: undefined reference to `dlopen'
 riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:490: undefined reference to `dlsym'
 riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:495: undefined reference to `dlclose'
 ```
+
+_Does it work?_
+
+Nope NuttX crashes...
 
 TODO

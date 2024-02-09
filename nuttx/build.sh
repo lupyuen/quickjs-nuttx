@@ -52,6 +52,11 @@ nuttx_options=" \
 
 riscv64-unknown-elf-gcc \
   $nuttx_options \
+  -o .obj/stub.o \
+  nuttx/stub.c
+
+riscv64-unknown-elf-gcc \
+  $nuttx_options \
   -o .obj/arch_atomic.o \
   nuttx/arch_atomic.c
 
@@ -135,6 +140,7 @@ riscv64-unknown-elf-ld \
   .obj/libbf.o \
   .obj/qjscalc.o \
   .obj/arch_atomic.o \
+  .obj/stub.o \
   --start-group \
   -lmm \
   -lc \
@@ -145,5 +151,17 @@ riscv64-unknown-elf-ld \
   $HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
   -o ../apps/bin/qjs
+
+## Test with QEMU
+pushd ../nuttx
+qemu-system-riscv64 \
+  -semihosting \
+  -M virt,aclint=on \
+  -cpu rv64 \
+  -smp 8 \
+  -bios none \
+  -kernel nuttx \
+  -nographic
+popd
 
 popd
