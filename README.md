@@ -368,7 +368,11 @@ TODO: Is QuickJS built correctly for 64-bit pointers?
 
 _Where exactly in main() are we crashing?_
 
-JS_NewCFunction3 seems to crash the second time we call it...
+JS_NewCFunction3 seems to crash the second time we call it.
+
+TODO: Are we running low on App Text / Data / Heap? According to Linker Map [nuttx/qjs.map](nuttx/qjs.map), we're using 486 KB of App Text (Code).
+
+[NuttX Config](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/configs/knsh64/defconfig#L39-L40) says we have 128 pages of App Text. Assuming 8 KB per page, that's 1 MB of App Text.
 
 ```text
 nsh> qjs -e "console.log(123)" 
