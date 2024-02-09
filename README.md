@@ -371,11 +371,11 @@ _Where exactly in main() are we crashing?_
 JS_NewCFunction3 seems to crash the second time we call it...
 
 ```text
-nsh> qjs -e 123
+nsh> qjs -e "console.log(123)" 
 main: a
 JS_NewCustomContext: c
+JS_NewCFunction3: c
 __JS_FindAtom: rt=0xc02005d0, len=0
-__JS_FindAtom: rt=0xc02005d0, i=47
 JS_NewCFunction3: d
 js_function_set_properties: a
 js_function_set_properties: b
@@ -384,40 +384,31 @@ JS_NewCFunction3: e
 JS_NewCFunction3: f
 __JS_FindAtom: rt=0xc02005d0, len=8
 __JS_FindAtom: rt=0xc02005d0, str=toString
-__JS_FindAtom: rt=0xc02005d0, i=56
 __JS_FindAtom: rt=0xc02005d0, len=4
 __JS_FindAtom: rt=0xc02005d0, str=name
-__JS_FindAtom: rt=0xc02005d0, i=163
-__JS_FindAtom: rt=0xc02005d0, i=55
 __JS_FindAtom: rt=0xc02005d0, len=7
 __JS_FindAtom: rt=0xc02005d0, str=message
-__JS_FindAtom: rt=0xc02005d0, i=51
 __JS_FindAtom: rt=0xc02005d0, len=9
 __JS_FindAtom: rt=0xc02005d0, str=EvalError
-__JS_FindAtom: rt=0xc02005d0, i=195
 __JS_FindAtom: rt=0xc02005d0, len=10
 __JS_FindAtom: rt=0xc02005d0, str=RangeError
-__JS_FindAtom: rt=0xc02005d0, i=196
 __JS_FindAtom: rt=0xc02005d0, len=14
 __JS_FindAtom: rt=0xc02005d0, str=ReferenceError
-__JS_FindAtom: rt=0xc02005d0, i=197
 __JS_FindAtom: rt=0xc02005d0, len=11
 __JS_FindAtom: rt=0xc02005d0, str=SyntaxError
-__JS_FindAtom: rt=0xc02005d0, i=198
 __JS_FindAtom: rt=0xc02005d0, len=9
 __JS_FindAtom: rt=0xc02005d0, str=TypeError
-__JS_FindAtom: rt=0xc02005d0, i=199
 __JS_FindAtom: rt=0xc02005d0, len=8
 __JS_FindAtom: rt=0xc02005d0, str=URIError
-__JS_FindAtom: rt=0xc02005d0, i=200
 __JS_FindAtom: rt=0xc02005d0, len=13
 __JS_FindAtom: rt=0xc02005d0, str=InternalError
-__JS_FindAtom: rt=0xc02005d0, i=201
 __JS_FindAtom: rt=0xc02005d0, len=14
 __JS_FindAtom: rt=0xc02005d0, str=AggregateError
 JS_NewContext: e
 JS_AddIntrinsicBaseObjects: g
+JS_NewCFunction3: c
 __JS_FindAtom: rt=0xc02005d0, len=0
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c00553e0, MTVAL: 0000000000000128
 ```
 
-TODO: Why is len 0?
+TODO
