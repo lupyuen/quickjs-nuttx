@@ -176,6 +176,13 @@ riscv64-unknown-elf-ld \
   --end-group \
   -o ../apps/bin/qjs
 
+## Dump the disassembly
+riscv64-unknown-elf-objdump \
+  -t -S --demangle --line-numbers --wide \
+  ../apps/bin/qjs \
+  >nuttx/qjs.S \
+  2>&1
+
 ## Test with QEMU
 pushd ../nuttx
 (sleep 10 ; pkill qemu) &

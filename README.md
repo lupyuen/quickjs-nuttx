@@ -292,4 +292,22 @@ nsh> qjs
 [    2.378000] up_dump_register: SP: 00000000c0202220 FP: 00000000c0201fc0 TP: 0000000000000000 RA: 00000000c001b32c
 ```
 
-TODO
+EPC c0006484 is here...
+
+```text
+apps/nshlib/nsh_proccmds.c:318
+      ret = nsh_readfile(vtbl, "ps", filepath, vtbl->iobuffer, IOBUFFERSIZE);
+    c000647a:	05848d13          	addi	s10,s1,88
+    c000647e:	20000713          	li	a4,512
+    c0006482:	86ea                	mv	a3,s10
+    c0006484:	00004597          	auipc	a1,0x4
+    c0006488:	ddc58593          	addi	a1,a1,-548 # c000a260 <g_aliasfmt+0x518>
+    c000648c:	8526                	mv	a0,s1
+    c000648e:	f10ff0ef          	jal	ra,c0005b9e <nsh_readfile>
+    c0006492:	842a                	mv	s0,a0
+```
+
+TODO: What is this PS?
+
+TODO: Check the qjs disassembly
+
