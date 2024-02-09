@@ -137,6 +137,8 @@ const uint8_t qjsc_repl[16280] = {
  0x2e, 0x6a, 0x73, 0x06, 0x73, 0x74, 0x64, 0x04,
 ```
 
+# Fix the Missing Functions
+
 The NuttX Linking fails. The missing functions...
 
 - POSIX Functions (popen, pclose, pipe2, symlink, ...): We'll stub them out: [nuttx/stub.c](nuttx/stub.c)
@@ -266,9 +268,11 @@ riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:490: undefined reference to
 riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:495: undefined reference to `dlclose'
 ```
 
-And it compiles OK yay!
+After fixing the missing functions, QuickJS compiles OK for NuttX yay!
 
-_Does it work?_
+# QuickJS Crashes
+
+_Does QuickJS run on NuttX?_
 
 Nope NuttX crashes...
 
