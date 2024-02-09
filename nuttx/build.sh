@@ -61,14 +61,14 @@ riscv64-unknown-elf-gcc \
   nuttx/arch_atomic.c
 
 ## This one is slooooooow
-if [ ! -e ".obj/quickjs.o" ] 
-then
+# if [ ! -e ".obj/quickjs.o" ] 
+# then
   riscv64-unknown-elf-gcc \
     $nuttx_options \
     $qjs_options \
     -o .obj/quickjs.o \
     quickjs.c
-fi
+# fi
 
 if [ ! -e ".obj/repl.o" ] 
 then

@@ -2161,7 +2161,9 @@ JSContext *JS_NewContext(JSRuntime *rt)
     if (!ctx)
         return NULL;
 
+puts("JS_NewContext: e");////
     JS_AddIntrinsicBaseObjects(ctx);
+puts("JS_NewContext: f");////
     JS_AddIntrinsicDate(ctx);
     JS_AddIntrinsicEval(ctx);
     JS_AddIntrinsicStringNormalize(ctx);
@@ -5052,8 +5054,11 @@ static JSValue JS_NewCFunction3(JSContext *ctx, JSCFunction *func,
     if (!name)
         name = "";
     name_atom = JS_NewAtom(ctx, name);
+puts("JS_NewCFunction3: d");////
     js_function_set_properties(ctx, func_obj, name_atom, length);
+puts("JS_NewCFunction3: e");////
     JS_FreeAtom(ctx, name_atom);
+puts("JS_NewCFunction3: f");////
     return func_obj;
 }
 
@@ -52358,14 +52363,18 @@ void JS_AddIntrinsicBaseObjects(JSContext *ctx)
     JSValueConst obj, number_obj;
     JSValue obj1;
 
+puts("JS_AddIntrinsicBaseObjects: g");////
     ctx->throw_type_error = JS_NewCFunction(ctx, js_throw_type_error, NULL, 0);
 
     /* add caller and arguments properties to throw a TypeError */
+puts("JS_AddIntrinsicBaseObjects: h");////
     obj1 = JS_NewCFunction(ctx, js_function_proto_caller, NULL, 0);
+puts("JS_AddIntrinsicBaseObjects: i");////
     JS_DefineProperty(ctx, ctx->function_proto, JS_ATOM_caller, JS_UNDEFINED,
                       obj1, ctx->throw_type_error,
                       JS_PROP_HAS_GET | JS_PROP_HAS_SET |
                       JS_PROP_HAS_CONFIGURABLE | JS_PROP_CONFIGURABLE);
+puts("JS_AddIntrinsicBaseObjects: j");////
     JS_DefineProperty(ctx, ctx->function_proto, JS_ATOM_arguments, JS_UNDEFINED,
                       obj1, ctx->throw_type_error,
                       JS_PROP_HAS_GET | JS_PROP_HAS_SET |

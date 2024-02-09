@@ -366,4 +366,21 @@ Might be a problem with the JavaScript Atom Tagging? The `8` prefix might be a t
 
 TODO: Is QuickJS built correctly for 64-bit pointers?
 
-TODO: Where exactly in main() are we crashing?
+_Where exactly in main() are we crashing?_
+
+JS_NewCFunction3 seems to crash the second time we call it...
+
+```text
+nsh> qjs qjs -e console.log(123) 
+main: a
+JS_NewCustomContext: c
+JS_NewCFunction3: d
+JS_NewCFunction3: e
+JS_NewCFunction3: f
+JS_NewContext: e
+JS_AddIntrinsicBaseObjects: g
+JS_NewCFunction3: d
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0055384, MTVAL: 0000000000000128
+```
+
+TODO

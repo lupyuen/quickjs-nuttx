@@ -107,7 +107,9 @@ static int eval_file(JSContext *ctx, const char *filename, int module)
 static JSContext *JS_NewCustomContext(JSRuntime *rt)
 {
     JSContext *ctx;
+puts("JS_NewCustomContext: c");////
     ctx = JS_NewContext(rt);
+puts("JS_NewCustomContext: d");////
     if (!ctx)
         return NULL;
 #ifdef CONFIG_BIGNUM
@@ -465,7 +467,9 @@ int main(int argc, char **argv)
         JS_SetMaxStackSize(rt, stack_size);
     js_std_set_worker_new_context_func(JS_NewCustomContext);
     js_std_init_handlers(rt);
+puts("main: a");////
     ctx = JS_NewCustomContext(rt);
+puts("main: b");////
     if (!ctx) {
         fprintf(stderr, "qjs: cannot allocate JS context\n");
         exit(2);
