@@ -17,7 +17,6 @@ qjs_options=" \
   -fwrapv  \
   -D_GNU_SOURCE \
   -DCONFIG_VERSION=\"2024-01-13\" \
-  -DCONFIG_BIGNUM \
 "
 
 ## GCC Options for NuttX
@@ -162,7 +161,6 @@ riscv64-unknown-elf-ld \
   .obj/cutils.o \
   .obj/quickjs-libc.o \
   .obj/libbf.o \
-  .obj/qjscalc.o \
   .obj/arch_atomic.o \
   .obj/stub.o \
   --start-group \
