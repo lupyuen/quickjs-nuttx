@@ -469,4 +469,4 @@ JS_NewCFunction3: c
 __JS_FindAtom: rt=0xc02005d0, len=0
 ```
 
-TODO: Why does __JS_FindAtom hang? Stack problems?
+TODO: Why does hash_string8 hang? Stack problems?
