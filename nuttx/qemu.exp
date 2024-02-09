@@ -16,10 +16,10 @@ spawn qemu-system-riscv64 \
 
 ## Wait for the prompt and enter `uname -a`
 expect "nsh> "
-send -s "qjs qjs -e console.log(123) \r"
+send -s "qjs -e \"console.log(123)\" \r"
 
-## Wait at most 10 seconds
-set timeout 10
+## Wait at most 30 seconds
+set timeout 30
 
 ## Check the response...
 expect {

@@ -2867,6 +2867,8 @@ static JSAtom __JS_NewAtomInit(JSRuntime *rt, const char *str, int len,
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
 {
+printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
+if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
     uint32_t h, h1, i;
     JSAtomStruct *p;
 
@@ -2875,6 +2877,7 @@ static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
     h1 = h & (rt->atom_hash_size - 1);
     i = rt->atom_hash[h1];
     while (i != 0) {
+// printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
         p = rt->atom_array[i];
         if (p->hash == h &&
             p->atom_type == JS_ATOM_TYPE_STRING &&
@@ -4941,11 +4944,14 @@ JSValue JS_NewObject(JSContext *ctx)
 static void js_function_set_properties(JSContext *ctx, JSValueConst func_obj,
                                        JSAtom name, int len)
 {
+puts("js_function_set_properties: a");////
     /* ES6 feature non compatible with ES5.1: length is configurable */
     JS_DefinePropertyValue(ctx, func_obj, JS_ATOM_length, JS_NewInt32(ctx, len),
                            JS_PROP_CONFIGURABLE);
+puts("js_function_set_properties: b");////
     JS_DefinePropertyValue(ctx, func_obj, JS_ATOM_name,
                            JS_AtomToString(ctx, name), JS_PROP_CONFIGURABLE);
+puts("js_function_set_properties: c");////
 }
 
 static BOOL js_class_has_bytecode(JSClassID class_id)
@@ -5053,6 +5059,7 @@ static JSValue JS_NewCFunction3(JSContext *ctx, JSCFunction *func,
                          cproto == JS_CFUNC_constructor_or_func_magic);
     if (!name)
         name = "";
+puts("JS_NewCFunction3: c");////
     name_atom = JS_NewAtom(ctx, name);
 puts("JS_NewCFunction3: d");////
     js_function_set_properties(ctx, func_obj, name_atom, length);

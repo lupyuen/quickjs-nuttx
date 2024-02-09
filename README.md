@@ -349,7 +349,7 @@ It still crashes...
 EPC c0006232 in [qjs.S](nuttx/qjs.S) says...
 
 ```text
-/Users/Luppy/riscv/quickjs-nuttx/quickjs.c:2876
+quickjs-nuttx/quickjs.c:2876
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type) { ...
         p = rt->atom_array[i];
@@ -371,16 +371,53 @@ _Where exactly in main() are we crashing?_
 JS_NewCFunction3 seems to crash the second time we call it...
 
 ```text
-nsh> qjs qjs -e console.log(123) 
+nsh> qjs -e 123
 main: a
 JS_NewCustomContext: c
+__JS_FindAtom: rt=0xc02005d0, len=0
+__JS_FindAtom: rt=0xc02005d0, i=47
 JS_NewCFunction3: d
+js_function_set_properties: a
+js_function_set_properties: b
+js_function_set_properties: c
 JS_NewCFunction3: e
 JS_NewCFunction3: f
+__JS_FindAtom: rt=0xc02005d0, len=8
+__JS_FindAtom: rt=0xc02005d0, str=toString
+__JS_FindAtom: rt=0xc02005d0, i=56
+__JS_FindAtom: rt=0xc02005d0, len=4
+__JS_FindAtom: rt=0xc02005d0, str=name
+__JS_FindAtom: rt=0xc02005d0, i=163
+__JS_FindAtom: rt=0xc02005d0, i=55
+__JS_FindAtom: rt=0xc02005d0, len=7
+__JS_FindAtom: rt=0xc02005d0, str=message
+__JS_FindAtom: rt=0xc02005d0, i=51
+__JS_FindAtom: rt=0xc02005d0, len=9
+__JS_FindAtom: rt=0xc02005d0, str=EvalError
+__JS_FindAtom: rt=0xc02005d0, i=195
+__JS_FindAtom: rt=0xc02005d0, len=10
+__JS_FindAtom: rt=0xc02005d0, str=RangeError
+__JS_FindAtom: rt=0xc02005d0, i=196
+__JS_FindAtom: rt=0xc02005d0, len=14
+__JS_FindAtom: rt=0xc02005d0, str=ReferenceError
+__JS_FindAtom: rt=0xc02005d0, i=197
+__JS_FindAtom: rt=0xc02005d0, len=11
+__JS_FindAtom: rt=0xc02005d0, str=SyntaxError
+__JS_FindAtom: rt=0xc02005d0, i=198
+__JS_FindAtom: rt=0xc02005d0, len=9
+__JS_FindAtom: rt=0xc02005d0, str=TypeError
+__JS_FindAtom: rt=0xc02005d0, i=199
+__JS_FindAtom: rt=0xc02005d0, len=8
+__JS_FindAtom: rt=0xc02005d0, str=URIError
+__JS_FindAtom: rt=0xc02005d0, i=200
+__JS_FindAtom: rt=0xc02005d0, len=13
+__JS_FindAtom: rt=0xc02005d0, str=InternalError
+__JS_FindAtom: rt=0xc02005d0, i=201
+__JS_FindAtom: rt=0xc02005d0, len=14
+__JS_FindAtom: rt=0xc02005d0, str=AggregateError
 JS_NewContext: e
 JS_AddIntrinsicBaseObjects: g
-JS_NewCFunction3: d
-riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0055384, MTVAL: 0000000000000128
+__JS_FindAtom: rt=0xc02005d0, len=0
 ```
 
-TODO
+TODO: Why is len 0?
