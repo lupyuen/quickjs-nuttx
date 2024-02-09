@@ -1,3 +1,5 @@
+$ make --trace
+
 Makefile:205: target '.obj' does not exist
 mkdir -p .obj .obj/examples .obj/tests
 Makefile:304: update target '.obj/quickjs.check.o' due to: quickjs.c
