@@ -295,19 +295,13 @@ nsh> qjs
 EPC c0006484 is here...
 
 ```text
-apps/nshlib/nsh_proccmds.c:318
-      ret = nsh_readfile(vtbl, "ps", filepath, vtbl->iobuffer, IOBUFFERSIZE);
-    c000647a:	05848d13          	addi	s10,s1,88
-    c000647e:	20000713          	li	a4,512
-    c0006482:	86ea                	mv	a3,s10
-    c0006484:	00004597          	auipc	a1,0x4
-    c0006488:	ddc58593          	addi	a1,a1,-548 # c000a260 <g_aliasfmt+0x518>
-    c000648c:	8526                	mv	a0,s1
-    c000648e:	f10ff0ef          	jal	ra,c0005b9e <nsh_readfile>
-    c0006492:	842a                	mv	s0,a0
+riscv/quickjs-nuttx/quickjs.c:2876
+        p = rt->atom_array[i];
+    c0006476:	0609b783          	ld	a5,96(s3)
+    c000647a:	02049693          	slli	a3,s1,0x20
+    c000647e:	01d6d713          	srli	a4,a3,0x1d
+    c0006482:	97ba                	add	a5,a5,a4
+    c0006484:	6380                	ld	s0,0(a5)
 ```
 
-TODO: What is this PS?
-
-TODO: Check the qjs disassembly
-
+TODO
