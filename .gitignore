@@ -3,12 +3,12 @@
 examples/*.so
 examples/hello
 examples/hello_module
+examples/test_fib
 qjs
 qjsc
 qjscalc
 run-test262
-examples/test_fib
-hello.c
-qjscalc.c
-repl.c
-test_fib.c
+/hello.c
+/test_fib.c
+/qjscalc.c
+/repl.c
