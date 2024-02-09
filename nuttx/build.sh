@@ -50,6 +50,7 @@ nuttx_options=" \
   -I "../apps/include"   \
 "
 
+## Compile the NuttX App
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   -o .obj/stub.o \
@@ -70,54 +71,77 @@ then
     quickjs.c
 fi
 
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/repl.o \
-  nuttx/repl.c
+if [ ! -e ".obj/repl.o" ] 
+then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/repl.o \
+    nuttx/repl.c
+fi
 
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/qjscalc.o \
-  nuttx/qjscalc.c
+if [ ! -e ".obj/qjscalc.o" ] 
+then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/qjscalc.o \
+    nuttx/qjscalc.c
+fi
 
-## Compile the NuttX App
+if [ ! -e ".obj/fi.o" ] 
+then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/qjs.o \
   qjs.c
+fi
 
+if [ ! -e ".obj/libregexp.o" ] 
+then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/libregexp.o \
   libregexp.c
+fi
 
+if [ ! -e ".obj/libunicode.o" ] 
+then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/libunicode.o \
   libunicode.c
+fi
 
+if [ ! -e ".obj/cutils.o" ] 
+then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/cutils.o \
   cutils.c
+fi
 
+if [ ! -e ".obj/quickjs-libc.o" ] 
+then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/quickjs-libc.o \
   quickjs-libc.c
+fi
 
+if [ ! -e ".obj/libbf.o" ] 
+then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/libbf.o \
   libbf.c
+fi
 
 ## Link the NuttX App
 ## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
@@ -154,6 +178,7 @@ riscv64-unknown-elf-ld \
 
 ## Test with QEMU
 pushd ../nuttx
+(sleep 10 ; pkill qemu) &
 qemu-system-riscv64 \
   -semihosting \
   -M virt,aclint=on \
