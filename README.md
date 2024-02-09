@@ -60,6 +60,8 @@ $ cd ../apps
 $ make --trace import
 
 ## Compile hello app
+## For riscv-none-elf-gcc: "-march=rv64imafdc_zicsr_zifencei"
+## For riscv64-unknown-elf-gcc: "-march=rv64imafdc"
 riscv-none-elf-gcc \
   -c \
   -fno-common \
@@ -89,6 +91,8 @@ riscv-none-elf-gcc \
   -o  hello_main.c.workspaces.bookworm.apps.examples.hello.o
 
 ## Link hello app
+## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
+## For riscv64-unknown-elf-ld: "rv64imafdc/lp64d
 riscv-none-elf-ld \
   --oformat elf64-littleriscv \
   -e _start \
@@ -109,4 +113,4 @@ riscv-none-elf-ld \
 
 We'll do the same for QuickJS (and worry about the Makefile later).
 
-TODO
+TODO: NuttX Build Script: [nuttx/build.sh](nuttx/build.sh)
