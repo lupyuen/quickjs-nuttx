@@ -2867,18 +2867,21 @@ static JSAtom __JS_NewAtomInit(JSRuntime *rt, const char *str, int len,
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
 {
-static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
-// printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
-// if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
+printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
+if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
+// static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
     uint32_t h, h1, i;
     JSAtomStruct *p;
 
     h = hash_string8((const uint8_t *)str, len, JS_ATOM_TYPE_STRING);
+printf("__JS_FindAtom: h=%p\n", h);////
     h &= JS_ATOM_HASH_MASK;
+printf("__JS_FindAtom: h=%p\n", h);////
     h1 = h & (rt->atom_hash_size - 1);
+printf("__JS_FindAtom: h1=%p\n", h1);////
     i = rt->atom_hash[h1];
     while (i != 0) {
-// printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
+printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
         p = rt->atom_array[i];
         if (p->hash == h &&
             p->atom_type == JS_ATOM_TYPE_STRING &&
@@ -2887,6 +2890,7 @@ static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
             memcmp(p->u.str8, str, len) == 0) {
             if (!__JS_AtomIsConst(i))
                 p->header.ref_count++;
+printf("__JS_FindAtom: rt=%p, return i=%d\n", rt, i);////
             return i;
         }
         i = p->hash_next;
@@ -14670,6 +14674,7 @@ static __exception int js_operator_delete(JSContext *ctx, JSValue *sp)
 static JSValue js_throw_type_error(JSContext *ctx, JSValueConst this_val,
                                    int argc, JSValueConst *argv)
 {
+puts("js_throw_type_error");////
     return JS_ThrowTypeError(ctx, "invalid property access");
 }
 
