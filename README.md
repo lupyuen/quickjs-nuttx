@@ -266,6 +266,8 @@ riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:490: undefined reference to
 riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:495: undefined reference to `dlclose'
 ```
 
+And it compiles OK yay!
+
 _Does it work?_
 
 Nope NuttX crashes...
@@ -297,7 +299,9 @@ We look up the disassembly: [nuttx/qjs.S](nuttx/qjs.S)
 EPC c0006484 is here...
 
 ```text
-riscv/quickjs-nuttx/quickjs.c:2876
+quickjs-nuttx/quickjs.c:2876
+static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
+                            int atom_type) { ...
         p = rt->atom_array[i];
     c0006476:	0609b783          	ld	a5,96(s3)
     c000647a:	02049693          	slli	a3,s1,0x20
@@ -306,4 +310,54 @@ riscv/quickjs-nuttx/quickjs.c:2876
     c0006484:	6380                	ld	s0,0(a5)
 ```
 
-TODO: Why is it accessing MTVAL 8_c020_3b88? Maybe the `8` prefix shouldn't be there?
+_Why is it accessing MTVAL 8_c020_3b88? Maybe the `8` prefix shouldn't be there?_
+
+Seems to be crashing while searching for the JavaScript Atom for a String.
+
+Maybe we shouldn't borrow the bytecode [nuttx/repl.c](nuttx/repl.c) and [nuttx/qjscalc.c](nuttx/qjscalc.c) from another platform? (Debian x64)
+
+Let's [disable BIGNUM and qjscalc.c](https://github.com/lupyuen/quickjs-nuttx/commit/fe3b62c84c66f7a50daa548d4f74adfcdbbee3cd).
+
+To disable [nuttx/repl.c](nuttx/repl.c), we run QuickJS Non-Interactively, without REPL...
+
+```bash
+qjs -e "console.log(123)"
+```
+
+It still crashes...
+
+```text
+[    2.468000] riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006232, MTVAL: 00000008c0209718
+[    2.468000] riscv_exception: PANIC!!! Exception = 000000000000000d
+[    2.468000] _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb  9 2024 14:19:24 risc-v
+[    2.468000] _assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: /system/bin/init 0xc000004a
+[    2.468000] up_dump_register: EPC: 00000000c0006232
+[    2.468000] up_dump_register: A0: 00000000c02005d0 A1: 00000000c0062868 A2: 0000000000000067 A3: ffffffff00000000
+[    2.468000] up_dump_register: A4: 00000007fffffff8 A5: 00000008c0209718 A6: 0000000000000003 A7: 0000000000000000
+[    2.468000] up_dump_register: T0: 0000000080007474 T1: fffffffffc000000 T2: 00000000000001ff T3: 00000000c020b8a0
+[    2.468000] up_dump_register: T4: 00000000c020b898 T5: 0000000000000009 T6: 000000000000002a
+[    2.468000] up_dump_register: S0: 00000000c0201f90 S1: ffffffffffffffff S2: 00000000398dc555 S3: 00000000c02005d0
+[    2.468000] up_dump_register: S4: 0000000000000012 S5: 00000000c0062868 S6: 000000003fffffff S7: 000000007fffffff
+[    2.468000] up_dump_register: S8: 0000000040000000 S9: ffffffffc0000000 S10: 0000000000000000 S11: 0000000000000000
+[    2.468000] up_dump_register: SP: 00000000c0202440 FP: 00000000c0201f90 TP: 0000000000000000 RA: 00000000c0019fa4
+```
+
+EPC c0006232 in [qjs.S](nuttx/qjs.S) says...
+
+```text
+/Users/Luppy/riscv/quickjs-nuttx/quickjs.c:2876
+static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
+                            int atom_type) { ...
+        p = rt->atom_array[i];
+    c0006224:	0609b783          	ld	a5,96(s3)
+    c0006228:	02049693          	slli	a3,s1,0x20
+    c000622c:	01d6d713          	srli	a4,a3,0x1d
+    c0006230:	97ba                	add	a5,a5,a4
+    c0006232:	6380                	ld	s0,0(a5)
+```
+
+Same old place! Similar MTVAL! 8_c020_9718
+
+Might be a problem with the JavaScript Atom Tagging? The `8` prefix might be a tag? [quickjs.h](quickjs.h)
+
+TODO: Is QuickJS built correctly for 64-bit pointers?
