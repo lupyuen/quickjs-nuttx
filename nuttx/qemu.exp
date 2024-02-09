@@ -1,0 +1,34 @@
+#!/usr/bin/expect
+## Expect Script for Testing NuttX with Ox64 BL808 Emulator
+
+## For every 1 character sent, wait 0.001 milliseconds
+set send_slow {1 0.001}
+
+## Start the Ox64 BL808 Emulator
+spawn qemu-system-riscv64 \
+  -semihosting \
+  -M virt,aclint=on \
+  -cpu rv64 \
+  -smp 8 \
+  -bios none \
+  -kernel nuttx \
+  -nographic
+
+## Wait for the prompt and enter `uname -a`
+expect "nsh> "
+send -s "qjs qjs -e console.log(123) \r"
+
+## Wait at most 10 seconds
+set timeout 10
+
+## Check the response...
+expect {
+  ## If we see this message, exit normally
+  "nsh>" { exit 0 }
+
+  ## If we see this message, exit with an error
+  "stack_dump" { exit 1 }
+
+  ## If timeout, exit with an error
+  timeout { exit 1 }
+}

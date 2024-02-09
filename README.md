@@ -274,7 +274,7 @@ After fixing the missing functions, QuickJS compiles OK for NuttX yay!
 
 _Does QuickJS run on NuttX?_
 
-Nope NuttX crashes...
+We tested with our Expect Script: [nuttx/qemu.exp](nuttx/qemu.exp). Nope NuttX crashes...
 
 ```text
 + qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
@@ -365,3 +365,4 @@ Same old place! Similar MTVAL! 8_c020_9718
 Might be a problem with the JavaScript Atom Tagging? The `8` prefix might be a tag? [quickjs.h](quickjs.h)
 
 TODO: Is QuickJS built correctly for 64-bit pointers?
+

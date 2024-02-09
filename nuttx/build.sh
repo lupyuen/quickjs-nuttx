@@ -183,15 +183,20 @@ riscv64-unknown-elf-objdump \
 
 ## Test with QEMU
 pushd ../nuttx
-(sleep 10 ; pkill qemu) &
-qemu-system-riscv64 \
-  -semihosting \
-  -M virt,aclint=on \
-  -cpu rv64 \
-  -smp 8 \
-  -bios none \
-  -kernel nuttx \
-  -nographic
+
+../quickjs-nuttx/nuttx/qemu.exp
+
+# (sleep 10 ; pkill qemu) &
+# qemu-system-riscv64 \
+#   -semihosting \
+#   -M virt,aclint=on \
+#   -cpu rv64 \
+#   -smp 8 \
+#   -bios none \
+#   -kernel nuttx \
+#   -nographic
+
+## Return to quickjs-nuttx
 popd
 
 popd
