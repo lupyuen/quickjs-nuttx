@@ -322,10 +322,10 @@ Maybe we shouldn't borrow the bytecode [nuttx/repl.c](nuttx/repl.c) and [nuttx/q
 
 Let's [disable BIGNUM and qjscalc.c](https://github.com/lupyuen/quickjs-nuttx/commit/fe3b62c84c66f7a50daa548d4f74adfcdbbee3cd).
 
-To disable [nuttx/repl.c](nuttx/repl.c), we run QuickJS Non-Interactively, without REPL...
+To disable [nuttx/repl.c](nuttx/repl.c), we run QuickJS Non-Interactively, without REPL: [nuttx/qemu.exp](nuttx/qemu.exp)
 
 ```bash
-qjs -e "console.log(123)"
+qjs -e console.log(123)
 ```
 
 It still crashes...
@@ -366,3 +366,4 @@ Might be a problem with the JavaScript Atom Tagging? The `8` prefix might be a t
 
 TODO: Is QuickJS built correctly for 64-bit pointers?
 
+TODO: Where exactly in main() are we crashing?
