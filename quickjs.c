@@ -5102,13 +5102,13 @@ static JSValue JS_NewCFunction3(JSContext *ctx, JSCFunction *func,
                          cproto == JS_CFUNC_constructor_or_func_magic);
     if (!name)
         name = "";
-//puts("JS_NewCFunction3: c");////
+_d("JS_NewCFunction3: a="); _d(debug_expr); _d("\n"); ////
     name_atom = JS_NewAtom(ctx, name);
-//puts("JS_NewCFunction3: d");////
+_d("JS_NewCFunction3: b="); _d(debug_expr); _d("\n"); ////
     js_function_set_properties(ctx, func_obj, name_atom, length);
-//puts("JS_NewCFunction3: e");////
+_d("JS_NewCFunction3: c="); _d(debug_expr); _d("\n"); ////
     JS_FreeAtom(ctx, name_atom);
-//puts("JS_NewCFunction3: f");////
+_d("JS_NewCFunction3: d="); _d(debug_expr); _d("\n"); ////
     return func_obj;
 }
 

@@ -708,7 +708,7 @@ elf_dumploadinfo:   textsize:     0
 elf_dumploadinfo:   datasize:     0
 elf_dumploadinfo:   textalign:    0
 elf_dumploadinfo:   dataalign:    0
-elf_dumploadinfo:   filelen:      4072952
+elf_dumploadinfo:   filelen:      4073696
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -718,7 +718,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4070328
+elf_dumploadinfo:   e_shoff:      4071072
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -730,53 +730,53 @@ elf_load: loadinfo: 0x80209a38
 mm_malloc: Allocated 0x802089d0, size 128
 elf_read: Read 112 bytes from offset 64
 mm_malloc: Allocated 0x8020a810, size 2640
-elf_read: Read 2624 bytes from offset 4070328
+elf_read: Read 2624 bytes from offset 4071072
 mm_malloc: Allocated 0x80208a50, size 128
 elf_loadfile: Loaded sections:
-elf_read: Read 359356 bytes from offset 4096
+elf_read: Read 359572 bytes from offset 4096
 elf_loadfile: 1. c0000000->c0000000
-elf_read: Read 115552 bytes from offset 363456
-elf_loadfile: 2. c0057bc0->c0057bc0
-elf_read: Read 488 bytes from offset 479008
-elf_loadfile: 3. c0073f20->c0073f20
-elf_read: Read 4 bytes from offset 479496
-elf_loadfile: 4. c0074108->c0074108
-elf_read: Read 4 bytes from offset 479504
-elf_loadfile: 5. c0074110->c0074110
-elf_read: Read 4 bytes from offset 479512
-elf_loadfile: 6. c0074118->c0074118
-elf_read: Read 8 bytes from offset 479520
-elf_loadfile: 7. c0074120->c0074120
-elf_read: Read 6 bytes from offset 479528
-elf_loadfile: 8. c0074128->c0074128
-elf_read: Read 6 bytes from offset 479536
-elf_loadfile: 9. c0074130->c0074130
-elf_read: Read 5 bytes from offset 479544
-elf_loadfile: 10. c0074138->c0074138
-elf_read: Read 4 bytes from offset 479552
-elf_loadfile: 11. c0074140->c0074140
-elf_read: Read 5 bytes from offset 479560
-elf_loadfile: 12. c0074148->c0074148
-elf_read: Read 4 bytes from offset 479568
-elf_loadfile: 13. c0074150->c0074150
-elf_read: Read 4 bytes from offset 479576
-elf_loadfile: 14. c0074158->c0074158
-elf_read: Read 4 bytes from offset 479584
-elf_loadfile: 15. c0074160->c0074160
-elf_read: Read 4 bytes from offset 479592
-elf_loadfile: 16. c0074168->c0074168
-elf_read: Read 5 bytes from offset 479600
-elf_loadfile: 17. c0074170->c0074170
-elf_read: Read 8 bytes from offset 479608
-elf_loadfile: 18. c0074178->c0074178
-elf_read: Read 7 bytes from offset 479616
-elf_loadfile: 19. c0074180->c0074180
-elf_read: Read 3 bytes from offset 479624
-elf_loadfile: 20. c0074188->c0074188
-elf_read: Read 6 bytes from offset 479632
-elf_loadfile: 21. c0074190->c0074190
-elf_read: Read 108 bytes from offset 479640
-elf_loadfile: 22. c0074198->c0074198
+elf_read: Read 115648 bytes from offset 363680
+elf_loadfile: 2. c0057ca0->c0057ca0
+elf_read: Read 488 bytes from offset 479328
+elf_loadfile: 3. c0074060->c0074060
+elf_read: Read 4 bytes from offset 479816
+elf_loadfile: 4. c0074248->c0074248
+elf_read: Read 4 bytes from offset 479824
+elf_loadfile: 5. c0074250->c0074250
+elf_read: Read 4 bytes from offset 479832
+elf_loadfile: 6. c0074258->c0074258
+elf_read: Read 8 bytes from offset 479840
+elf_loadfile: 7. c0074260->c0074260
+elf_read: Read 6 bytes from offset 479848
+elf_loadfile: 8. c0074268->c0074268
+elf_read: Read 6 bytes from offset 479856
+elf_loadfile: 9. c0074270->c0074270
+elf_read: Read 5 bytes from offset 479864
+elf_loadfile: 10. c0074278->c0074278
+elf_read: Read 4 bytes from offset 479872
+elf_loadfile: 11. c0074280->c0074280
+elf_read: Read 5 bytes from offset 479880
+elf_loadfile: 12. c0074288->c0074288
+elf_read: Read 4 bytes from offset 479888
+elf_loadfile: 13. c0074290->c0074290
+elf_read: Read 4 bytes from offset 479896
+elf_loadfile: 14. c0074298->c0074298
+elf_read: Read 4 bytes from offset 479904
+elf_loadfile: 15. c00742a0->c00742a0
+elf_read: Read 4 bytes from offset 479912
+elf_loadfile: 16. c00742a8->c00742a8
+elf_read: Read 5 bytes from offset 479920
+elf_loadfile: 17. c00742b0->c00742b0
+elf_read: Read 8 bytes from offset 479928
+elf_loadfile: 18. c00742b8->c00742b8
+elf_read: Read 7 bytes from offset 479936
+elf_loadfile: 19. c00742c0->c00742c0
+elf_read: Read 3 bytes from offset 479944
+elf_loadfile: 20. c00742c8->c00742c8
+elf_read: Read 6 bytes from offset 479952
+elf_loadfile: 21. c00742d0->c00742d0
+elf_read: Read 108 bytes from offset 479960
+elf_loadfile: 22. c00742d8->c00742d8
 elf_read: Read 152 bytes from offset 483328
 elf_loadfile: 23. c0101000->c0101000
 elf_read: Read 4 bytes from offset 483480
@@ -789,11 +789,11 @@ elf_loadfile: 27. c01010b0->c01010b0
 elf_dumploadinfo: LOAD_INFO:
 elf_dumploadinfo:   textalloc:    c0000000
 elf_dumploadinfo:   dataalloc:    c0101000
-elf_dumploadinfo:   textsize:     475652
+elf_dumploadinfo:   textsize:     475972
 elf_dumploadinfo:   datasize:     296
 elf_dumploadinfo:   textalign:    16
 elf_dumploadinfo:   dataalign:    8
-elf_dumploadinfo:   filelen:      4072952
+elf_dumploadinfo:   filelen:      4073696
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -803,7 +803,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4070328
+elf_dumploadinfo:   e_shoff:      4071072
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -816,8 +816,8 @@ elf_dumploadinfo:   p_type:       00000001
 elf_dumploadinfo:   p_offset:     00001000
 elf_dumploadinfo:   p_vaddr:      c0000000
 elf_dumploadinfo:   p_paddr:      c0000000
-elf_dumploadinfo:   p_filesz:     00074204
-elf_dumploadinfo:   p_memsz:      00074204
+elf_dumploadinfo:   p_filesz:     00074344
+elf_dumploadinfo:   p_memsz:      00074344
 elf_dumploadinfo:   p_flags:      00000005
 elf_dumploadinfo:   p_align:      00001000
 elf_dumploadinfo: Programs 1:
@@ -846,7 +846,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000006
 elf_dumploadinfo:   sh_addr:      c0000000
 elf_dumploadinfo:   sh_offset:    4096
-elf_dumploadinfo:   sh_size:      359356
+elf_dumploadinfo:   sh_size:      359572
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 2
@@ -855,9 +855,9 @@ elf_dumploadinfo: Sections 2:
 elf_dumploadinfo:   sh_name:      00000021
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0057bc0
-elf_dumploadinfo:   sh_offset:    363456
-elf_dumploadinfo:   sh_size:      115552
+elf_dumploadinfo:   sh_addr:      c0057ca0
+elf_dumploadinfo:   sh_offset:    363680
+elf_dumploadinfo:   sh_size:      115648
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 16
@@ -866,8 +866,8 @@ elf_dumploadinfo: Sections 3:
 elf_dumploadinfo:   sh_name:      00000029
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000012
-elf_dumploadinfo:   sh_addr:      c0073f20
-elf_dumploadinfo:   sh_offset:    479008
+elf_dumploadinfo:   sh_addr:      c0074060
+elf_dumploadinfo:   sh_offset:    479328
 elf_dumploadinfo:   sh_size:      488
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -877,8 +877,8 @@ elf_dumploadinfo: Sections 4:
 elf_dumploadinfo:   sh_name:      00000037
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074108
-elf_dumploadinfo:   sh_offset:    479496
+elf_dumploadinfo:   sh_addr:      c0074248
+elf_dumploadinfo:   sh_offset:    479816
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -888,8 +888,8 @@ elf_dumploadinfo: Sections 5:
 elf_dumploadinfo:   sh_name:      0000004f
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074110
-elf_dumploadinfo:   sh_offset:    479504
+elf_dumploadinfo:   sh_addr:      c0074250
+elf_dumploadinfo:   sh_offset:    479824
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -899,8 +899,8 @@ elf_dumploadinfo: Sections 6:
 elf_dumploadinfo:   sh_name:      00000064
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074118
-elf_dumploadinfo:   sh_offset:    479512
+elf_dumploadinfo:   sh_addr:      c0074258
+elf_dumploadinfo:   sh_offset:    479832
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -910,8 +910,8 @@ elf_dumploadinfo: Sections 7:
 elf_dumploadinfo:   sh_name:      00000079
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074120
-elf_dumploadinfo:   sh_offset:    479520
+elf_dumploadinfo:   sh_addr:      c0074260
+elf_dumploadinfo:   sh_offset:    479840
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -921,8 +921,8 @@ elf_dumploadinfo: Sections 8:
 elf_dumploadinfo:   sh_name:      00000098
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074128
-elf_dumploadinfo:   sh_offset:    479528
+elf_dumploadinfo:   sh_addr:      c0074268
+elf_dumploadinfo:   sh_offset:    479848
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -932,8 +932,8 @@ elf_dumploadinfo: Sections 9:
 elf_dumploadinfo:   sh_name:      000000ba
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074130
-elf_dumploadinfo:   sh_offset:    479536
+elf_dumploadinfo:   sh_addr:      c0074270
+elf_dumploadinfo:   sh_offset:    479856
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -943,8 +943,8 @@ elf_dumploadinfo: Sections 10:
 elf_dumploadinfo:   sh_name:      000000d0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074138
-elf_dumploadinfo:   sh_offset:    479544
+elf_dumploadinfo:   sh_addr:      c0074278
+elf_dumploadinfo:   sh_offset:    479864
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -954,8 +954,8 @@ elf_dumploadinfo: Sections 11:
 elf_dumploadinfo:   sh_name:      000000fc
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074140
-elf_dumploadinfo:   sh_offset:    479552
+elf_dumploadinfo:   sh_addr:      c0074280
+elf_dumploadinfo:   sh_offset:    479872
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -965,8 +965,8 @@ elf_dumploadinfo: Sections 12:
 elf_dumploadinfo:   sh_name:      00000127
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074148
-elf_dumploadinfo:   sh_offset:    479560
+elf_dumploadinfo:   sh_addr:      c0074288
+elf_dumploadinfo:   sh_offset:    479880
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -976,8 +976,8 @@ elf_dumploadinfo: Sections 13:
 elf_dumploadinfo:   sh_name:      00000157
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074150
-elf_dumploadinfo:   sh_offset:    479568
+elf_dumploadinfo:   sh_addr:      c0074290
+elf_dumploadinfo:   sh_offset:    479888
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -987,8 +987,8 @@ elf_dumploadinfo: Sections 14:
 elf_dumploadinfo:   sh_name:      00000188
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074158
-elf_dumploadinfo:   sh_offset:    479576
+elf_dumploadinfo:   sh_addr:      c0074298
+elf_dumploadinfo:   sh_offset:    479896
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -998,8 +998,8 @@ elf_dumploadinfo: Sections 15:
 elf_dumploadinfo:   sh_name:      000001b1
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074160
-elf_dumploadinfo:   sh_offset:    479584
+elf_dumploadinfo:   sh_addr:      c00742a0
+elf_dumploadinfo:   sh_offset:    479904
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1009,8 +1009,8 @@ elf_dumploadinfo: Sections 16:
 elf_dumploadinfo:   sh_name:      000001e0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074168
-elf_dumploadinfo:   sh_offset:    479592
+elf_dumploadinfo:   sh_addr:      c00742a8
+elf_dumploadinfo:   sh_offset:    479912
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1020,8 +1020,8 @@ elf_dumploadinfo: Sections 17:
 elf_dumploadinfo:   sh_name:      000001ff
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074170
-elf_dumploadinfo:   sh_offset:    479600
+elf_dumploadinfo:   sh_addr:      c00742b0
+elf_dumploadinfo:   sh_offset:    479920
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1031,8 +1031,8 @@ elf_dumploadinfo: Sections 18:
 elf_dumploadinfo:   sh_name:      0000021d
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074178
-elf_dumploadinfo:   sh_offset:    479608
+elf_dumploadinfo:   sh_addr:      c00742b8
+elf_dumploadinfo:   sh_offset:    479928
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1042,8 +1042,8 @@ elf_dumploadinfo: Sections 19:
 elf_dumploadinfo:   sh_name:      00000235
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074180
-elf_dumploadinfo:   sh_offset:    479616
+elf_dumploadinfo:   sh_addr:      c00742c0
+elf_dumploadinfo:   sh_offset:    479936
 elf_dumploadinfo:   sh_size:      7
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1053,8 +1053,8 @@ elf_dumploadinfo: Sections 20:
 elf_dumploadinfo:   sh_name:      0000024b
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074188
-elf_dumploadinfo:   sh_offset:    479624
+elf_dumploadinfo:   sh_addr:      c00742c8
+elf_dumploadinfo:   sh_offset:    479944
 elf_dumploadinfo:   sh_size:      3
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1064,8 +1064,8 @@ elf_dumploadinfo: Sections 21:
 elf_dumploadinfo:   sh_name:      0000025e
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074190
-elf_dumploadinfo:   sh_offset:    479632
+elf_dumploadinfo:   sh_addr:      c00742d0
+elf_dumploadinfo:   sh_offset:    479952
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1075,8 +1075,8 @@ elf_dumploadinfo: Sections 22:
 elf_dumploadinfo:   sh_name:      00000271
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074198
-elf_dumploadinfo:   sh_offset:    479640
+elf_dumploadinfo:   sh_addr:      c00742d8
+elf_dumploadinfo:   sh_offset:    479960
 elf_dumploadinfo:   sh_size:      108
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1176,7 +1176,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
 elf_dumploadinfo:   sh_offset:    560367
-elf_dumploadinfo:   sh_size:      956929
+elf_dumploadinfo:   sh_size:      957485
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1186,8 +1186,8 @@ elf_dumploadinfo:   sh_name:      000002fd
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    1517296
-elf_dumploadinfo:   sh_size:      928032
+elf_dumploadinfo:   sh_offset:    1517852
+elf_dumploadinfo:   sh_size:      928114
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1197,7 +1197,7 @@ elf_dumploadinfo:   sh_name:      00000309
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2445328
+elf_dumploadinfo:   sh_offset:    2445966
 elf_dumploadinfo:   sh_size:      36112
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1208,8 +1208,8 @@ elf_dumploadinfo:   sh_name:      00000318
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2481440
-elf_dumploadinfo:   sh_size:      1153227
+elf_dumploadinfo:   sh_offset:    2482078
+elf_dumploadinfo:   sh_size:      1153330
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1219,7 +1219,7 @@ elf_dumploadinfo:   sh_name:      00000323
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3634667
+elf_dumploadinfo:   sh_offset:    3635408
 elf_dumploadinfo:   sh_size:      155232
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1230,7 +1230,7 @@ elf_dumploadinfo:   sh_name:      00000331
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000030
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3789899
+elf_dumploadinfo:   sh_offset:    3790640
 elf_dumploadinfo:   sh_size:      94913
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1241,7 +1241,7 @@ elf_dumploadinfo:   sh_name:      0000033c
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3884816
+elf_dumploadinfo:   sh_offset:    3885560
 elf_dumploadinfo:   sh_size:      92464
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1252,7 +1252,7 @@ elf_dumploadinfo:   sh_name:      00000001
 elf_dumploadinfo:   sh_type:      00000002
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3977280
+elf_dumploadinfo:   sh_offset:    3978024
 elf_dumploadinfo:   sh_size:      54696
 elf_dumploadinfo:   sh_link:      39
 elf_dumploadinfo:   sh_info:      1551
@@ -1263,7 +1263,7 @@ elf_dumploadinfo:   sh_name:      00000009
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4031976
+elf_dumploadinfo:   sh_offset:    4032720
 elf_dumploadinfo:   sh_size:      37511
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1274,7 +1274,7 @@ elf_dumploadinfo:   sh_name:      00000011
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4069487
+elf_dumploadinfo:   sh_offset:    4070231
 elf_dumploadinfo:   sh_size:      841
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1555,11 +1555,15 @@ mm_malloc: Allocated 0xc0200f70, size 48
 mm_malloc: Allocated 0xc0200fa0, size 112
 mm_malloc: Allocated 0xc0201010, size 80
 mm_malloc: Allocated 0xc0201060, size 48
+JS_NewCFunction3: a=console.log(123)
 __JS_FindAtom: 
+JS_NewCFunction3: b=console.log(123)
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=console.log(123)
+JS_NewCFunction3: d=console.log(123)
 mm_malloc: Allocated 0xc0201090, size 112
 mm_malloc: Allocated 0xc0201100, size 80
 mm_malloc: Allocated 0xc0201150, size 48
@@ -1649,21 +1653,29 @@ JS_AddIntrinsicBaseObjects: a=console.log(123)
 mm_malloc: Allocated 0xc0205580, size 112
 mm_malloc: Allocated 0xc02055f0, size 80
 mm_malloc: Allocated 0xc0205640, size 48
+JS_NewCFunction3: a=cZeÀ
 __JS_FindAtom: 
+JS_NewCFunction3: b=cZeÀ
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_AddIntrinsicBaseObjects: b=
 mm_malloc: Allocated 0xc0205670, size 112
 mm_malloc: Allocated 0xc02056e0, size 80
 mm_malloc: Allocated 0xc0205730, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: 
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0205670
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_AddIntrinsicBaseObjects: c=
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -1691,12 +1703,16 @@ mm_free: Freeing 0xc0200bf0
 mm_malloc: Allocated 0xc0200bf0, size 112
 mm_malloc: Allocated 0xc0205a30, size 80
 mm_malloc: Allocated 0xc0205a80, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Object
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0200bf0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Object
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -1797,23 +1813,31 @@ __JS_FindAtom: __proto__
 mm_malloc: Allocated 0xc0200bf0, size 112
 mm_malloc: Allocated 0xc0205fb0, size 80
 mm_malloc: Allocated 0xc0206000, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get __proto__
 mm_malloc: Allocated 0xc02063f0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0200bf0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 mm_malloc: Allocated 0xc0200bf0, size 112
 mm_malloc: Allocated 0xc0206420, size 80
 mm_malloc: Allocated 0xc0206470, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: set __proto__
 mm_malloc: Allocated 0xc02064a0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0200bf0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: __defineGetter__
@@ -1847,13 +1871,17 @@ __JS_FindAtom: fileName
 mm_malloc: Allocated 0xc02057d0, size 112
 mm_malloc: Allocated 0xc02062e0, size 80
 mm_malloc: Allocated 0xc0205690, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get fileName
 mm_malloc: Allocated 0xc0206330, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02057d0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc0206810, size 224
@@ -1864,24 +1892,32 @@ __JS_FindAtom: lineNumber
 mm_malloc: Allocated 0xc02057d0, size 112
 mm_malloc: Allocated 0xc0206360, size 80
 mm_malloc: Allocated 0xc02063b0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get lineNumber
 mm_malloc: Allocated 0xc02066a0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02057d0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc02057d0, size 112
 mm_malloc: Allocated 0xc02066d0, size 80
 mm_malloc: Allocated 0xc0206720, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Function
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02057d0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Function
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -1895,12 +1931,16 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc02057d0, size 112
 mm_malloc: Allocated 0xc02069e0, size 80
 mm_malloc: Allocated 0xc02067d0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Error
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02057d0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Error
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -1919,11 +1959,15 @@ mm_free: Freeing 0xc0204fc0
 mm_malloc: Allocated 0xc0204fc0, size 112
 mm_malloc: Allocated 0xc0206b20, size 80
 mm_malloc: Allocated 0xc0201060, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: EvalError
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: EvalError
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -1943,11 +1987,15 @@ mm_free: Freeing 0xc0204fc0
 mm_malloc: Allocated 0xc0204fc0, size 112
 mm_malloc: Allocated 0xc0206c60, size 80
 mm_malloc: Allocated 0xc0201060, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: RangeError
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: RangeError
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -1965,11 +2013,15 @@ mm_free: Freeing 0xc0205140
 mm_malloc: Allocated 0xc0204fc0, size 112
 mm_malloc: Allocated 0xc0206d50, size 80
 mm_malloc: Allocated 0xc0205140, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: ReferenceError
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: ReferenceError
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -1985,11 +2037,15 @@ mm_free: Freeing 0xc02051c0
 mm_malloc: Allocated 0xc0206de0, size 112
 mm_malloc: Allocated 0xc0206e50, size 80
 mm_malloc: Allocated 0xc02051c0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: SyntaxError
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: SyntaxError
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2009,11 +2065,15 @@ mm_free: Freeing 0xc0205240
 mm_malloc: Allocated 0xc0206de0, size 112
 mm_malloc: Allocated 0xc0206cb0, size 80
 mm_malloc: Allocated 0xc0205240, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: TypeError
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: TypeError
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2029,11 +2089,15 @@ mm_free: Freeing 0xc02052c0
 mm_malloc: Allocated 0xc0207010, size 112
 mm_malloc: Allocated 0xc0207080, size 80
 mm_malloc: Allocated 0xc02052c0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: URIError
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: URIError
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2049,11 +2113,15 @@ mm_free: Freeing 0xc0205340
 mm_malloc: Allocated 0xc0207110, size 112
 mm_malloc: Allocated 0xc0207180, size 80
 mm_malloc: Allocated 0xc0205340, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: InternalError
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: InternalError
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2073,11 +2141,15 @@ mm_free: Freeing 0xc02053c0
 mm_malloc: Allocated 0xc0206ee0, size 112
 mm_malloc: Allocated 0xc0206f50, size 80
 mm_malloc: Allocated 0xc02053c0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: AggregateError
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: AggregateError
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2190,12 +2262,16 @@ __JS_FindAtom: values
 mm_malloc: Allocated 0xc02078a0, size 112
 mm_malloc: Allocated 0xc0207910, size 80
 mm_malloc: Allocated 0xc0207960, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: values
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02078a0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: keys
@@ -2203,12 +2279,16 @@ __JS_FindAtom: entries
 mm_malloc: Allocated 0xc02078a0, size 112
 mm_malloc: Allocated 0xc0207990, size 80
 mm_malloc: Allocated 0xc02079e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02078a0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2230,13 +2310,17 @@ __JS_FindAtom: of
 mm_malloc: Allocated 0xc0207cb0, size 112
 mm_malloc: Allocated 0xc0207d20, size 80
 mm_malloc: Allocated 0xc0207d70, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.species]
 mm_malloc: Allocated 0xc0207e40, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0207cb0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc0207e70, size 160
@@ -2379,12 +2463,16 @@ mm_free: Freeing 0xc0205920
 mm_malloc: Allocated 0xc0208670, size 112
 mm_malloc: Allocated 0xc0205920, size 80
 mm_malloc: Allocated 0xc02080c0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Number
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0208670
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Number
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2403,12 +2491,16 @@ __JS_FindAtom: parseInt
 mm_malloc: Allocated 0xc0208480, size 112
 mm_malloc: Allocated 0xc02086b0, size 80
 mm_malloc: Allocated 0xc02080c0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: parseInt
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0208480
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc0208480, size 112
@@ -2419,12 +2511,16 @@ __JS_FindAtom: parseFloat
 mm_malloc: Allocated 0xc0208480, size 112
 mm_malloc: Allocated 0xc0208bb0, size 80
 mm_malloc: Allocated 0xc0208c00, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: parseFloat
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0208480
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc0208c30, size 160
@@ -2482,12 +2578,16 @@ __JS_FindAtom: valueOf
 mm_malloc: Allocated 0xc0208c60, size 112
 mm_malloc: Allocated 0xc0208cd0, size 80
 mm_malloc: Allocated 0xc02090d0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Boolean
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0208c60
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Boolean
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2503,12 +2603,16 @@ mm_malloc: Allocated 0xc0209180, size 48
 mm_malloc: Allocated 0xc02091b0, size 112
 mm_malloc: Allocated 0xc0209220, size 80
 mm_malloc: Allocated 0xc0209270, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: String
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02091b0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: String
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2612,12 +2716,16 @@ __JS_FindAtom: trimEnd
 mm_malloc: Allocated 0xc0203c30, size 112
 mm_malloc: Allocated 0xc0203ca0, size 80
 mm_malloc: Allocated 0xc0203cf0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: trimEnd
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0203c30
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
@@ -2634,12 +2742,16 @@ __JS_FindAtom: trimStart
 mm_malloc: Allocated 0xc02039e0, size 112
 mm_malloc: Allocated 0xc0203a50, size 80
 mm_malloc: Allocated 0xc0203aa0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: trimStart
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02039e0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
@@ -2714,13 +2826,17 @@ mm_malloc: Allocated 0xc02088a0, size 48
 mm_malloc: Allocated 0xc0208770, size 112
 mm_malloc: Allocated 0xc02071d0, size 80
 mm_malloc: Allocated 0xc02087e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get description
 mm_malloc: Allocated 0xc0207220, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0208770
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc0207250, size 160
@@ -2728,12 +2844,16 @@ mm_free: Freeing 0xc0208820
 mm_malloc: Allocated 0xc0208770, size 112
 mm_malloc: Allocated 0xc0208820, size 80
 mm_malloc: Allocated 0xc0208870, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Symbol
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0208770
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Symbol
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -2825,13 +2945,17 @@ mm_malloc: Allocated 0xc020b200, size 80
 mm_malloc: Allocated 0xc020b000, size 48
 mm_malloc: Allocated 0xc020b250, size 80
 mm_malloc: Allocated 0xc020b2a0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: GeneratorFunction
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020b2d0, size 112
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020b2d0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
@@ -2851,13 +2975,17 @@ mm_free: Freeing 0xc020af90
 mm_malloc: Allocated 0xc020af90, size 112
 mm_malloc: Allocated 0xc020b3e0, size 80
 mm_malloc: Allocated 0xc020b2a0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: eval
 mm_malloc: Allocated 0xc020b080, size 32
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020af90
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
@@ -2882,12 +3010,16 @@ __JS_FindAtom: toUTCString
 mm_malloc: Allocated 0xc020b480, size 112
 mm_malloc: Allocated 0xc020b600, size 80
 mm_malloc: Allocated 0xc020b4f0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: toUTCString
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020b480
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020b480, size 112
@@ -2997,12 +3129,16 @@ __JS_FindAtom: toJSON
 mm_malloc: Allocated 0xc020beb0, size 112
 mm_malloc: Allocated 0xc020bf20, size 80
 mm_malloc: Allocated 0xc020bf70, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Date
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020beb0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Date
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3034,39 +3170,51 @@ __JS_FindAtom: flags
 mm_malloc: Allocated 0xc020baa0, size 112
 mm_malloc: Allocated 0xc020bb10, size 80
 mm_malloc: Allocated 0xc020bb60, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get flags
 mm_malloc: Allocated 0xc020bb90, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020baa0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: source
 mm_malloc: Allocated 0xc020baa0, size 112
 mm_malloc: Allocated 0xc020bbc0, size 80
 mm_malloc: Allocated 0xc020bc10, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get source
 mm_malloc: Allocated 0xc020bc40, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020baa0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: global
 mm_malloc: Allocated 0xc020baa0, size 112
 mm_malloc: Allocated 0xc020c840, size 80
 mm_malloc: Allocated 0xc020c890, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get global
 mm_malloc: Allocated 0xc020c8c0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020baa0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020c8f0, size 112
@@ -3076,13 +3224,17 @@ mm_malloc: Allocated 0xc020bab0, size 48
 mm_malloc: Allocated 0xc020bfe0, size 112
 mm_malloc: Allocated 0xc020c960, size 80
 mm_malloc: Allocated 0xc020bae0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get ignoreCase
 mm_malloc: Allocated 0xc020c9b0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020bfe0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020bfe0, size 80
@@ -3094,13 +3246,17 @@ mm_malloc: Allocated 0xc020ba70, size 48
 mm_malloc: Allocated 0xc020c8f0, size 112
 mm_malloc: Allocated 0xc020ca60, size 80
 mm_malloc: Allocated 0xc020cab0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get multiline
 mm_malloc: Allocated 0xc020cae0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020c8f0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020cb10, size 160
@@ -3110,26 +3266,34 @@ mm_malloc: Allocated 0xc020c8f0, size 32
 mm_malloc: Allocated 0xc020c9e0, size 112
 mm_malloc: Allocated 0xc020c910, size 80
 mm_malloc: Allocated 0xc020cbb0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get dotAll
 mm_malloc: Allocated 0xc020cbe0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020c9e0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: unicode
 mm_malloc: Allocated 0xc020c9e0, size 112
 mm_malloc: Allocated 0xc020cc10, size 80
 mm_malloc: Allocated 0xc020cc60, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get unicode
 mm_malloc: Allocated 0xc020cc90, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020c9e0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020ccc0, size 160
@@ -3141,13 +3305,17 @@ mm_malloc: Allocated 0xc020bfe0, size 32
 mm_malloc: Allocated 0xc020c9e0, size 112
 mm_malloc: Allocated 0xc020c000, size 80
 mm_malloc: Allocated 0xc020cb10, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get sticky
 mm_malloc: Allocated 0xc020cb40, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020c9e0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: hasIndices
@@ -3155,13 +3323,17 @@ mm_malloc: Allocated 0xc020cb70, size 48
 mm_malloc: Allocated 0xc020c9e0, size 112
 mm_malloc: Allocated 0xc020ce30, size 80
 mm_malloc: Allocated 0xc020ce80, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get hasIndices
 mm_malloc: Allocated 0xc020ceb0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020c9e0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: exec
@@ -3181,12 +3353,16 @@ mm_free: Freeing 0xc020cfc0
 mm_malloc: Allocated 0xc020cee0, size 112
 mm_malloc: Allocated 0xc020cf50, size 80
 mm_malloc: Allocated 0xc020ce00, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: RegExp
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020cee0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: RegExp
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3199,12 +3375,16 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc020cee0, size 112
 mm_malloc: Allocated 0xc020cfa0, size 80
 mm_malloc: Allocated 0xc020ce00, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.species]
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020cee0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020cee0, size 112
@@ -3221,12 +3401,16 @@ __JS_FindAtom: JSON
 mm_malloc: Allocated 0xc020cee0, size 112
 mm_malloc: Allocated 0xc020d290, size 80
 mm_malloc: Allocated 0xc020d2e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Proxy
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020cee0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: revocable
 mm_malloc: Allocated 0xc020cee0, size 48
 mm_malloc: Allocated 0xc020d310, size 112
@@ -3264,13 +3448,17 @@ mm_malloc: Allocated 0xc020d350, size 32
 mm_malloc: Allocated 0xc020d4b0, size 112
 mm_malloc: Allocated 0xc020d520, size 80
 mm_malloc: Allocated 0xc020d2e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get size
 mm_malloc: Allocated 0xc020d610, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020d4b0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: forEach
@@ -3285,23 +3473,31 @@ __JS_FindAtom: entries
 mm_malloc: Allocated 0xc020d570, size 112
 mm_malloc: Allocated 0xc020d640, size 80
 mm_malloc: Allocated 0xc020d5e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: entries
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020d570
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020d570, size 112
 mm_malloc: Allocated 0xc020d690, size 80
 mm_malloc: Allocated 0xc020d6e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Map
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020d570
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: groupBy
 mm_malloc: Allocated 0xc020d570, size 112
 mm_malloc: Allocated 0xc020d800, size 64
@@ -3311,12 +3507,16 @@ mm_free: Freeing 0xc020d570
 mm_malloc: Allocated 0xc020d570, size 112
 mm_malloc: Allocated 0xc020d8b0, size 80
 mm_malloc: Allocated 0xc020d6e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.species]
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020d570
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020d570, size 80
@@ -3349,12 +3549,16 @@ __JS_FindAtom: size
 mm_malloc: Allocated 0xc020d9c0, size 112
 mm_malloc: Allocated 0xc020daf0, size 80
 mm_malloc: Allocated 0xc020da30, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get size
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020d9c0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020db40, size 160
@@ -3370,12 +3574,16 @@ __JS_FindAtom: values
 mm_malloc: Allocated 0xc020d900, size 112
 mm_malloc: Allocated 0xc020d9c0, size 80
 mm_malloc: Allocated 0xc020da70, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: values
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020d900
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: values
@@ -3387,12 +3595,16 @@ mm_free: Freeing 0xc020dc80
 mm_malloc: Allocated 0xc020d900, size 112
 mm_malloc: Allocated 0xc020daa0, size 80
 mm_malloc: Allocated 0xc020db40, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Set
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020d900
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: groupBy
 mm_malloc: Allocated 0xc020d900, size 112
 mm_malloc: Allocated 0xc020dc80, size 112
@@ -3400,12 +3612,16 @@ mm_free: Freeing 0xc020d900
 mm_malloc: Allocated 0xc020d900, size 112
 mm_malloc: Allocated 0xc020dcf0, size 80
 mm_malloc: Allocated 0xc020de40, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.species]
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020d900
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020de70, size 128
@@ -3438,12 +3654,16 @@ mm_free: Freeing 0xc020df20
 mm_malloc: Allocated 0xc020df20, size 112
 mm_malloc: Allocated 0xc020df90, size 80
 mm_malloc: Allocated 0xc020dfe0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: WeakMap
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020df20
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: WeakMap
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3466,12 +3686,16 @@ mm_free: Freeing 0xc020e0b0
 mm_malloc: Allocated 0xc020e070, size 112
 mm_malloc: Allocated 0xc020e1a0, size 80
 mm_malloc: Allocated 0xc020e0e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: WeakSet
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020e070
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: WeakSet
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3499,13 +3723,17 @@ mm_malloc: Allocated 0xc020e390, size 48
 mm_malloc: Allocated 0xc020e3c0, size 112
 mm_malloc: Allocated 0xc020e430, size 80
 mm_malloc: Allocated 0xc020e480, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get byteLength
 mm_malloc: Allocated 0xc020e4b0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020e3c0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: slice
@@ -3516,12 +3744,16 @@ mm_free: Freeing 0xc020e070
 mm_malloc: Allocated 0xc020e070, size 112
 mm_malloc: Allocated 0xc020e550, size 80
 mm_malloc: Allocated 0xc020e360, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: ArrayBuffer
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020e070
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: ArrayBuffer
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3541,12 +3773,16 @@ mm_free: Freeing 0xc020e4e0
 mm_malloc: Allocated 0xc020e4e0, size 112
 mm_malloc: Allocated 0xc020e6a0, size 80
 mm_malloc: Allocated 0xc020e360, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.species]
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020e4e0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020e6f0, size 160
@@ -3560,12 +3796,16 @@ mm_free: Freeing 0xc02088d0
 mm_malloc: Allocated 0xc02088d0, size 112
 mm_malloc: Allocated 0xc0208940, size 80
 mm_malloc: Allocated 0xc0208990, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get byteLength
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02088d0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: slice
@@ -3576,12 +3816,16 @@ mm_free: Freeing 0xc020e4e0
 mm_malloc: Allocated 0xc020e4e0, size 112
 mm_malloc: Allocated 0xc0208a30, size 80
 mm_malloc: Allocated 0xc020e670, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: SharedArrayBuffer
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020e4e0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: SharedArrayBuffer
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3599,12 +3843,16 @@ mm_free: Freeing 0xc02089c0
 mm_malloc: Allocated 0xc02089c0, size 112
 mm_malloc: Allocated 0xc020e4e0, size 80
 mm_malloc: Allocated 0xc020e670, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.species]
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02089c0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc02089c0, size 112
@@ -3614,13 +3862,17 @@ __JS_FindAtom: length
 mm_malloc: Allocated 0xc020a510, size 112
 mm_malloc: Allocated 0xc020a580, size 80
 mm_malloc: Allocated 0xc020a5d0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get length
 mm_malloc: Allocated 0xc020a600, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020a510
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: at
@@ -3632,13 +3884,17 @@ mm_malloc: Allocated 0xc020e530, size 32
 mm_malloc: Allocated 0xc02089c0, size 112
 mm_malloc: Allocated 0xc020a520, size 80
 mm_malloc: Allocated 0xc020a6a0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get buffer
 mm_malloc: Allocated 0xc020a6d0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02089c0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc02089c0, size 80
@@ -3649,12 +3905,16 @@ __JS_FindAtom: byteLength
 mm_malloc: Allocated 0xc020a630, size 112
 mm_malloc: Allocated 0xc020aaf0, size 80
 mm_malloc: Allocated 0xc020a700, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get byteLength
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020a630
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020ab40, size 160
@@ -3664,13 +3924,17 @@ mm_malloc: Allocated 0xc020a4e0, size 48
 mm_malloc: Allocated 0xc020a630, size 112
 mm_malloc: Allocated 0xc020aa70, size 80
 mm_malloc: Allocated 0xc020aac0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get byteOffset
 mm_malloc: Allocated 0xc020abe0, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020a630
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: set
@@ -3683,12 +3947,16 @@ __JS_FindAtom: values
 mm_malloc: Allocated 0xc02089c0, size 112
 mm_malloc: Allocated 0xc020acb0, size 80
 mm_malloc: Allocated 0xc020a630, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: values
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02089c0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: keys
@@ -3700,13 +3968,17 @@ __JS_FindAtom: entries
 mm_malloc: Allocated 0xc02089c0, size 112
 mm_malloc: Allocated 0xc020ac10, size 80
 mm_malloc: Allocated 0xc020a660, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.toStringTag]
 mm_malloc: Allocated 0xc020ac60, size 64
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02089c0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: copyWithin
@@ -3743,24 +4015,32 @@ __JS_FindAtom: includes
 mm_malloc: Allocated 0xc020ab40, size 112
 mm_malloc: Allocated 0xc020f590, size 80
 mm_malloc: Allocated 0xc020abb0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: toString
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020ab40
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020ab40, size 112
 mm_malloc: Allocated 0xc020f5e0, size 80
 mm_malloc: Allocated 0xc02089f0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: TypedArray
 mm_malloc: Allocated 0xc020f630, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020ab40
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: from
 mm_malloc: Allocated 0xc020ab40, size 112
 mm_malloc: Allocated 0xc020f660, size 112
@@ -3774,12 +4054,16 @@ mm_free: Freeing 0xc020f660
 mm_malloc: Allocated 0xc020f660, size 112
 mm_malloc: Allocated 0xc020f750, size 80
 mm_malloc: Allocated 0xc02089f0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.species]
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc020f660
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc020f7a0, size 160
@@ -3798,11 +4082,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc020fb30, size 112
 mm_malloc: Allocated 0xc020fba0, size 80
 mm_malloc: Allocated 0xc020fbf0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Uint8ClampedArray
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Uint8ClampedArray
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3828,11 +4116,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc020fd70, size 112
 mm_malloc: Allocated 0xc020fde0, size 80
 mm_malloc: Allocated 0xc020fe30, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Int8Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Int8Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3858,11 +4150,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc020feb0, size 112
 mm_malloc: Allocated 0xc020ff20, size 80
 mm_malloc: Allocated 0xc020ff70, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Uint8Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Uint8Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3888,11 +4184,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc020fff0, size 112
 mm_malloc: Allocated 0xc0210060, size 80
 mm_malloc: Allocated 0xc02100b0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Int16Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Int16Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3918,11 +4218,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc0210130, size 112
 mm_malloc: Allocated 0xc02101a0, size 80
 mm_malloc: Allocated 0xc02101f0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Uint16Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Uint16Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3948,11 +4252,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc0210270, size 112
 mm_malloc: Allocated 0xc02102e0, size 80
 mm_malloc: Allocated 0xc0210330, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Int32Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Int32Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -3978,11 +4286,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc02103b0, size 112
 mm_malloc: Allocated 0xc0210420, size 80
 mm_malloc: Allocated 0xc0210470, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Uint32Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Uint32Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -4008,11 +4320,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc02104f0, size 112
 mm_malloc: Allocated 0xc0210560, size 80
 mm_malloc: Allocated 0xc02105b0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: BigInt64Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: BigInt64Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -4038,11 +4354,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc0210630, size 112
 mm_malloc: Allocated 0xc02106a0, size 80
 mm_malloc: Allocated 0xc02106f0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: BigUint64Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: BigUint64Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -4068,11 +4388,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc0210770, size 112
 mm_malloc: Allocated 0xc02107e0, size 80
 mm_malloc: Allocated 0xc0210830, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Float32Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Float32Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -4098,11 +4422,15 @@ JS_CreateProperty: a
 mm_malloc: Allocated 0xc02108b0, size 112
 mm_malloc: Allocated 0xc0210920, size 80
 mm_malloc: Allocated 0xc0210970, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Float64Array
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: Float64Array
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -4126,36 +4454,48 @@ __JS_FindAtom: buffer
 mm_malloc: Allocated 0xc02109f0, size 112
 mm_malloc: Allocated 0xc0210a60, size 80
 mm_malloc: Allocated 0xc0210ab0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get buffer
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02109f0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: byteLength
 mm_malloc: Allocated 0xc02109f0, size 112
 mm_malloc: Allocated 0xc0210ae0, size 80
 mm_malloc: Allocated 0xc0210b30, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get byteLength
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02109f0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 __JS_FindAtom: byteOffset
 mm_malloc: Allocated 0xc02109f0, size 112
 mm_malloc: Allocated 0xc0210b60, size 80
 mm_malloc: Allocated 0xc0210bb0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get byteOffset
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc02109f0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc0210be0, size 112
@@ -4219,12 +4559,16 @@ mm_malloc: Allocated 0xc0211040, size 48
 mm_malloc: Allocated 0xc0211070, size 112
 mm_malloc: Allocated 0xc02110e0, size 80
 mm_malloc: Allocated 0xc0211130, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: DataView
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0211070
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: DataView
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -4247,12 +4591,16 @@ mm_free: Freeing 0xc02113b0
 mm_malloc: Allocated 0xc0211370, size 112
 mm_malloc: Allocated 0xc02114a0, size 80
 mm_malloc: Allocated 0xc02113e0, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: Promise
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0211370
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: resolve
 mm_malloc: Allocated 0xc0211370, size 112
 mm_malloc: Allocated 0xc02114f0, size 112
@@ -4279,12 +4627,16 @@ mm_malloc: Allocated 0xc02113b0, size 48
 mm_malloc: Allocated 0xc0211590, size 112
 mm_malloc: Allocated 0xc0211600, size 80
 mm_malloc: Allocated 0xc0211650, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: get [Symbol.species]
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0211590
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc0211750, size 240
@@ -4306,11 +4658,15 @@ mm_malloc: Allocated 0xc02115d0, size 48
 mm_malloc: Allocated 0xc02118e0, size 112
 mm_malloc: Allocated 0xc0211070, size 80
 mm_malloc: Allocated 0xc02116f0, size 48
+JS_NewCFunction3: a=ÿ
 __JS_FindAtom: AsyncFunction
+JS_NewCFunction3: b=ÿ
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=ÿ
+JS_NewCFunction3: d=ÿ
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_malloc: Allocated 0xc0211950, size 112
@@ -4344,11 +4700,15 @@ mm_malloc: Allocated 0xc0211d20, size 48
 mm_malloc: Allocated 0xc0211d50, size 112
 mm_malloc: Allocated 0xc0211dc0, size 80
 mm_malloc: Allocated 0xc0211e10, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: AsyncGeneratorFunction
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
@@ -4377,12 +4737,16 @@ mm_free: Freeing 0xc0211a40
 mm_malloc: Allocated 0xc0211a40, size 112
 mm_malloc: Allocated 0xc0211c80, size 80
 mm_malloc: Allocated 0xc0211e10, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: BigInt
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0211a40
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: BigInt
 JS_DefineProperty: a
 JS_CreateProperty: a
@@ -4636,13 +5000,17 @@ mm_malloc: Allocated 0xc0200a00, size 48
 mm_malloc: Allocated 0xc0214ab0, size 112
 mm_malloc: Allocated 0xc0200a30, size 80
 mm_malloc: Allocated 0xc0214b20, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: log
 mm_malloc: Allocated 0xc0214b50, size 32
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0214ab0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: log
 __JS_FindAtom: console
 mm_malloc: Allocated 0xc0214ab0, size 32
@@ -4653,24 +5021,32 @@ mm_malloc: Allocated 0xc0214b90, size 48
 mm_malloc: Allocated 0xc0214bc0, size 112
 mm_malloc: Allocated 0xc0214c30, size 80
 mm_malloc: Allocated 0xc0214c80, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: print
 mm_malloc: Allocated 0xc0214cb0, size 32
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0214bc0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: print
 mm_malloc: Allocated 0xc0214bc0, size 112
 mm_malloc: Allocated 0xc0214cd0, size 80
 mm_malloc: Allocated 0xc0214d20, size 48
+JS_NewCFunction3: a=
 __JS_FindAtom: __loadScript
 mm_malloc: Allocated 0xc0214d50, size 48
+JS_NewCFunction3: b=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
 mm_free: Freeing 0xc0214bc0
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
 __JS_FindAtom: __loadScript
 eval_buf: buf=
 JS_EvalThis: input=
