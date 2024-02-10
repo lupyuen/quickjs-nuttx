@@ -2878,7 +2878,7 @@ void print_hex(uint64_t n) {
         hex_str[15 - i] = dec_to_hex[d];
     }
     hex_str[16] = 0;
-    write(1, hex_str, 17);
+    write(1, hex_str, 16);
 }
 //// End Test
 
@@ -2890,28 +2890,28 @@ if (len > 0) { write(1, str, len); write(1, "\n", 1); };////
 // printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
 // if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
 ////static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
-write(1, "__JS_FindAtom: a\n", 17);////
+// write(1, "__JS_FindAtom: a\n", 17);////
     uint32_t h, h1, i;
     JSAtomStruct *p;
 
-write(1, "__JS_FindAtom: b\n", 17);////
+// write(1, "__JS_FindAtom: b\n", 17);////
     h = hash_string8((const uint8_t *)str, len, JS_ATOM_TYPE_STRING);
-write(1, "__JS_FindAtom: c\n", 17);////
+// write(1, "__JS_FindAtom: c\n", 17);////
 // printf("__JS_FindAtom: h=%p\n", h);////
     h &= JS_ATOM_HASH_MASK;
 // printf("__JS_FindAtom: h=%p\n", h);////
     h1 = h & (rt->atom_hash_size - 1);
-write(1, "__JS_FindAtom: d\n", 17);////
+// write(1, "__JS_FindAtom: d\n", 17);////
 // printf("__JS_FindAtom: h1=%p\n", h1);////
     i = rt->atom_hash[h1];
     ////while (i != 0) {
     while (i != 0 && i != 0xffffffff) {////
-write(1, "__JS_FindAtom: e\n", 17);////
-print_hex(&(rt->atom_array[i])); write(1, "\n", 1); ////
+// write(1, "__JS_FindAtom: e\n", 17);////
+// print_hex(&(rt->atom_array[i])); write(1, "\n", 1); ////
 // printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
         p = rt->atom_array[i];
-write(1, "__JS_FindAtom: f\n", 17);////
-print_hex(p); write(1, "\n", 1); ////
+// write(1, "__JS_FindAtom: f\n", 17);////
+// print_hex(p); write(1, "\n", 1); ////
         if (p->hash == h &&
             p->atom_type == JS_ATOM_TYPE_STRING &&
             p->len == len &&
@@ -2919,15 +2919,15 @@ print_hex(p); write(1, "\n", 1); ////
             memcmp(p->u.str8, str, len) == 0) {
             if (!__JS_AtomIsConst(i))
                 p->header.ref_count++;
-write(1, "__JS_FindAtom: g\n", 17);////
+// write(1, "__JS_FindAtom: g\n", 17);////
 // printf("__JS_FindAtom: rt=%p, return i=%d\n", rt, i);////
             return i;
         }
-write(1, "__JS_FindAtom: h\n", 17);////
-print_hex(&(p->hash_next)); write(1, "\n", 1); ////
+// write(1, "__JS_FindAtom: h\n", 17);////
+// print_hex(&(p->hash_next)); write(1, "\n", 1); ////
         i = p->hash_next;
-write(1, "__JS_FindAtom: i\n", 17);////
-print_hex(i); write(1, "\n", 1); ////
+// write(1, "__JS_FindAtom: i\n", 17);////
+// print_hex(i); write(1, "\n", 1); ////
     }
     return JS_ATOM_NULL;
 }
@@ -8967,25 +8967,25 @@ write(1, "JS_CreateProperty: a\n", 21);////
         }
     }
 
-write(1, "JS_CreateProperty: b\n", 21);////
+// write(1, "JS_CreateProperty: b\n", 21);////
     if (!p->extensible) {
     not_extensible:
         return JS_ThrowTypeErrorOrFalse(ctx, flags, "object is not extensible");
     }
 
-write(1, "JS_CreateProperty: c\n", 21);////
+// write(1, "JS_CreateProperty: c\n", 21);////
     if (flags & (JS_PROP_HAS_GET | JS_PROP_HAS_SET)) {
         prop_flags = (flags & (JS_PROP_CONFIGURABLE | JS_PROP_ENUMERABLE)) |
             JS_PROP_GETSET;
     } else {
         prop_flags = flags & JS_PROP_C_W_E;
     }
-write(1, "JS_CreateProperty: d\n", 21);////
+// write(1, "JS_CreateProperty: d\n", 21);////
     pr = add_property(ctx, p, prop, prop_flags);
-write(1, "JS_CreateProperty: e\n", 21);////
+// write(1, "JS_CreateProperty: e\n", 21);////
     if (unlikely(!pr))
         return -1;
-write(1, "JS_CreateProperty: f\n", 21);////
+// write(1, "JS_CreateProperty: f\n", 21);////
     if (flags & (JS_PROP_HAS_GET | JS_PROP_HAS_SET)) {
         pr->u.getset.getter = NULL;
         if ((flags & JS_PROP_HAS_GET) && JS_IsFunction(ctx, getter)) {
@@ -9004,7 +9004,7 @@ write(1, "JS_CreateProperty: f\n", 21);////
             pr->u.value = JS_UNDEFINED;
         }
     }
-write(1, "JS_CreateProperty: g\n", 21);////
+// write(1, "JS_CreateProperty: g\n", 21);////
     return TRUE;
 }
 
@@ -9100,18 +9100,18 @@ write(1, "JS_DefineProperty: a\n", 21);////
     int mask, res;
 
     if (JS_VALUE_GET_TAG(this_obj) != JS_TAG_OBJECT) {
-write(1, "JS_DefineProperty: b\n", 21);////
+// write(1, "JS_DefineProperty: b\n", 21);////
         JS_ThrowTypeErrorNotAnObject(ctx);
         return -1;
     }
-write(1, "JS_DefineProperty: c\n", 21);////
+// write(1, "JS_DefineProperty: c\n", 21);////
     p = JS_VALUE_GET_OBJ(this_obj);
-write(1, "JS_DefineProperty: d\n", 21);////
+// write(1, "JS_DefineProperty: d\n", 21);////
 
  redo_prop_update:
-write(1, "JS_DefineProperty: e\n", 21);////
+// write(1, "JS_DefineProperty: e\n", 21);////
     prs = find_own_property(&pr, p, prop);
-write(1, "JS_DefineProperty: f\n", 21);////
+// write(1, "JS_DefineProperty: f\n", 21);////
     if (prs) {
         /* the range of the Array length property is always tested before */
         if ((prs->flags & JS_PROP_LENGTH) && (flags & JS_PROP_HAS_VALUE)) {
@@ -9293,7 +9293,7 @@ write(1, "JS_DefineProperty: f\n", 21);////
     }
 
     /* handle modification of fast array elements */
-write(1, "JS_DefineProperty: g\n", 21);////
+// write(1, "JS_DefineProperty: g\n", 21);////
     if (p->fast_array) {
         uint32_t idx;
         uint32_t prop_flags;
@@ -9365,7 +9365,7 @@ write(1, "JS_DefineProperty: g\n", 21);////
         }
     }
 
-write(1, "JS_DefineProperty: h\n", 21);////
+// write(1, "JS_DefineProperty: h\n", 21);////
     return JS_CreateProperty(ctx, p, prop, val, getter, setter, flags);
 }
 

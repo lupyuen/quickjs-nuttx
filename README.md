@@ -1097,7 +1097,7 @@ mm_free: Freeing 0xc0209710
 riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c005321c, MTVAL: 0000000000000168
 ```
 
-Here...
+From here...
 
 ```text
 bool nxmutex_is_hold(FAR mutex_t *mutex)
@@ -1135,6 +1135,42 @@ up_dump_register: A0:+ true
 ```
 
 TODO: What is this Heap Free Error?
+
+And another corrupted printf Mutex....
+
+```text
+__JS_FindAtom: 0
+toString
+JS_DefineProperty: a
+JS_CreateProperty: a
+JS_DefineProperty: a
+JS_CreateProperty: a
+mm_free: Freeing 0xc0214c90
+mm_malloc: Allocated 0xc0215250, size 48
+mm_malloc: Allocated 0xc0214c90, size 64
+mm_free: Freeing 0xc0215250
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0055e9c, MTVAL: 0000000000000223
+```
+
+From here...
+
+```text
+/Users/Luppy/riscv/nuttx/libs/libc/stream/lib_stdoutstream.c:157
+   * opened in binary mode.  In binary mode, the newline has no special
+   * meaning.
+   */
+
+#ifndef CONFIG_STDIO_DISABLE_BUFFERING
+  if (handle->fs_bufstart != NULL && (handle->fs_oflags & O_TEXT) != 0)
+    c0055e9c:	6db8                	ld	a4,88(a1)
+/Users/Luppy/riscv/nuttx/libs/libc/stream/lib_stdoutstream.c:164
+      stream->common.flush = stdoutstream_flush;
+    }
+  else
+#endif
+```
+
+TODO: Do we disable stdio buffering?
 
 TODO: Where in main() are we?
 
