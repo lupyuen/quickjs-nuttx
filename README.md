@@ -1113,6 +1113,29 @@ bool nxmutex_is_hold(FAR mutex_t *mutex)
 
 TODO: Why is the Mutex corrupted?
 
+We [change all puts() to write()](https://github.com/lupyuen/quickjs-nuttx/commit/b8df93e209abd594dc6e843bbb1941ddae91350d#diff-93a38cdf6b6645fff66fa78773011a5330ea9ed48cc1f70f4c65a6f6b707e246), which doesn't use Mutex.
+
+Now we see Heap Free Error...
+
+```text
+mm_free: Freeing 0xc0214e10
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+mm_free: Freeing 0xc0214c80
+mm_free: Freeing 0xc0214e80
+mm_free: Freeing 0xc0214c50
+mm_free: Freeing 0xc0215080
+mm_free: Freeing 0xc0200da0
+mm_free: Freeing 0xc0201920
+_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 12:50:34 risc-v
+_assert: Assertion failed : at file: mm_heap/mm_free.c:112 task: qjs process: qjs 0xc000339e
+up_dump_register: EPC: 0000000080001faa
+up_dump_register: A0:+ true
+```
+
+TODO: What is this Heap Free Error?
+
 TODO: Where in main() are we?
 
 # Heap Memory for QuickJS on NuttX
