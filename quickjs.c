@@ -2867,6 +2867,20 @@ static JSAtom __JS_NewAtomInit(JSRuntime *rt, const char *str, int len,
     return __JS_NewAtom(rt, p, atom_type);
 }
 
+//// Begin Test
+void print_hex(uint64_t n) {
+    const char dec_to_hex[] = "0123456789ABCDEF";
+    static char hex_str[17];
+    for (int i = 0; i < 16; i++) {
+        const uint8_t d = n & 0xf;
+        n = n >> 4;
+        hex_str[15 - i] = dec_to_hex[d];
+    }
+    hex_str[16] = 0;
+    write(1, hex_str, 17);
+}
+//// End Test
+
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
 {
@@ -2891,9 +2905,11 @@ write(1, "__JS_FindAtom: d\n", 17);////
     i = rt->atom_hash[h1];
     while (i != 0) {
 write(1, "__JS_FindAtom: e\n", 17);////
+print_hex(&(rt->atom_array[i])); write(1, "\n", 1); ////
 // printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
         p = rt->atom_array[i];
 write(1, "__JS_FindAtom: f\n", 17);////
+print_hex(p); write(1, "\n", 1); ////
         if (p->hash == h &&
             p->atom_type == JS_ATOM_TYPE_STRING &&
             p->len == len &&
@@ -2905,7 +2921,11 @@ write(1, "__JS_FindAtom: g\n", 17);////
 // printf("__JS_FindAtom: rt=%p, return i=%d\n", rt, i);////
             return i;
         }
+write(1, "__JS_FindAtom: h\n", 17);////
+print_hex(&(p->hash_next)); write(1, "\n", 1); ////
         i = p->hash_next;
+write(1, "__JS_FindAtom: i\n", 17);////
+print_hex(i); write(1, "\n", 1); ////
     }
     return JS_ATOM_NULL;
 }
