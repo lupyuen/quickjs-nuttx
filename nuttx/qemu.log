@@ -708,7 +708,7 @@ elf_dumploadinfo:   textsize:     0
 elf_dumploadinfo:   datasize:     0
 elf_dumploadinfo:   textalign:    0
 elf_dumploadinfo:   dataalign:    0
-elf_dumploadinfo:   filelen:      4087240
+elf_dumploadinfo:   filelen:      4087232
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -718,7 +718,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4084616
+elf_dumploadinfo:   e_shoff:      4084608
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -730,53 +730,53 @@ elf_load: loadinfo: 0x8020afa8
 mm_malloc: Allocated 0x80209940, size 128
 elf_read: Read 112 bytes from offset 64
 mm_malloc: Allocated 0x802088f0, size 2640
-elf_read: Read 2624 bytes from offset 4084616
+elf_read: Read 2624 bytes from offset 4084608
 mm_malloc: Allocated 0x80209340, size 128
 elf_loadfile: Loaded sections:
-elf_read: Read 359350 bytes from offset 4096
+elf_read: Read 359330 bytes from offset 4096
 elf_loadfile: 1. c0000000->c0000000
-elf_read: Read 115632 bytes from offset 363456
-elf_loadfile: 2. c0057bc0->c0057bc0
-elf_read: Read 488 bytes from offset 479088
-elf_loadfile: 3. c0073f70->c0073f70
-elf_read: Read 4 bytes from offset 479576
-elf_loadfile: 4. c0074158->c0074158
-elf_read: Read 4 bytes from offset 479584
-elf_loadfile: 5. c0074160->c0074160
-elf_read: Read 4 bytes from offset 479592
-elf_loadfile: 6. c0074168->c0074168
-elf_read: Read 8 bytes from offset 479600
-elf_loadfile: 7. c0074170->c0074170
-elf_read: Read 6 bytes from offset 479608
-elf_loadfile: 8. c0074178->c0074178
-elf_read: Read 6 bytes from offset 479616
-elf_loadfile: 9. c0074180->c0074180
-elf_read: Read 5 bytes from offset 479624
-elf_loadfile: 10. c0074188->c0074188
+elf_read: Read 115616 bytes from offset 363440
+elf_loadfile: 2. c0057bb0->c0057bb0
+elf_read: Read 488 bytes from offset 479056
+elf_loadfile: 3. c0073f50->c0073f50
+elf_read: Read 4 bytes from offset 479544
+elf_loadfile: 4. c0074138->c0074138
+elf_read: Read 4 bytes from offset 479552
+elf_loadfile: 5. c0074140->c0074140
+elf_read: Read 4 bytes from offset 479560
+elf_loadfile: 6. c0074148->c0074148
+elf_read: Read 8 bytes from offset 479568
+elf_loadfile: 7. c0074150->c0074150
+elf_read: Read 6 bytes from offset 479576
+elf_loadfile: 8. c0074158->c0074158
+elf_read: Read 6 bytes from offset 479584
+elf_loadfile: 9. c0074160->c0074160
+elf_read: Read 5 bytes from offset 479592
+elf_loadfile: 10. c0074168->c0074168
+elf_read: Read 4 bytes from offset 479600
+elf_loadfile: 11. c0074170->c0074170
+elf_read: Read 5 bytes from offset 479608
+elf_loadfile: 12. c0074178->c0074178
+elf_read: Read 4 bytes from offset 479616
+elf_loadfile: 13. c0074180->c0074180
+elf_read: Read 4 bytes from offset 479624
+elf_loadfile: 14. c0074188->c0074188
 elf_read: Read 4 bytes from offset 479632
-elf_loadfile: 11. c0074190->c0074190
-elf_read: Read 5 bytes from offset 479640
-elf_loadfile: 12. c0074198->c0074198
-elf_read: Read 4 bytes from offset 479648
-elf_loadfile: 13. c00741a0->c00741a0
-elf_read: Read 4 bytes from offset 479656
-elf_loadfile: 14. c00741a8->c00741a8
-elf_read: Read 4 bytes from offset 479664
-elf_loadfile: 15. c00741b0->c00741b0
-elf_read: Read 4 bytes from offset 479672
-elf_loadfile: 16. c00741b8->c00741b8
-elf_read: Read 5 bytes from offset 479680
-elf_loadfile: 17. c00741c0->c00741c0
-elf_read: Read 8 bytes from offset 479688
-elf_loadfile: 18. c00741c8->c00741c8
-elf_read: Read 7 bytes from offset 479696
-elf_loadfile: 19. c00741d0->c00741d0
-elf_read: Read 3 bytes from offset 479704
-elf_loadfile: 20. c00741d8->c00741d8
-elf_read: Read 6 bytes from offset 479712
-elf_loadfile: 21. c00741e0->c00741e0
-elf_read: Read 108 bytes from offset 479720
-elf_loadfile: 22. c00741e8->c00741e8
+elf_loadfile: 15. c0074190->c0074190
+elf_read: Read 4 bytes from offset 479640
+elf_loadfile: 16. c0074198->c0074198
+elf_read: Read 5 bytes from offset 479648
+elf_loadfile: 17. c00741a0->c00741a0
+elf_read: Read 8 bytes from offset 479656
+elf_loadfile: 18. c00741a8->c00741a8
+elf_read: Read 7 bytes from offset 479664
+elf_loadfile: 19. c00741b0->c00741b0
+elf_read: Read 3 bytes from offset 479672
+elf_loadfile: 20. c00741b8->c00741b8
+elf_read: Read 6 bytes from offset 479680
+elf_loadfile: 21. c00741c0->c00741c0
+elf_read: Read 108 bytes from offset 479688
+elf_loadfile: 22. c00741c8->c00741c8
 elf_read: Read 152 bytes from offset 483328
 elf_loadfile: 23. c0101000->c0101000
 elf_read: Read 4 bytes from offset 483480
@@ -789,11 +789,11 @@ elf_loadfile: 27. c01010b0->c01010b0
 elf_dumploadinfo: LOAD_INFO:
 elf_dumploadinfo:   textalloc:    c0000000
 elf_dumploadinfo:   dataalloc:    c0101000
-elf_dumploadinfo:   textsize:     475732
+elf_dumploadinfo:   textsize:     475700
 elf_dumploadinfo:   datasize:     288
 elf_dumploadinfo:   textalign:    16
 elf_dumploadinfo:   dataalign:    8
-elf_dumploadinfo:   filelen:      4087240
+elf_dumploadinfo:   filelen:      4087232
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -803,7 +803,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4084616
+elf_dumploadinfo:   e_shoff:      4084608
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -816,8 +816,8 @@ elf_dumploadinfo:   p_type:       00000001
 elf_dumploadinfo:   p_offset:     00001000
 elf_dumploadinfo:   p_vaddr:      c0000000
 elf_dumploadinfo:   p_paddr:      c0000000
-elf_dumploadinfo:   p_filesz:     00074254
-elf_dumploadinfo:   p_memsz:      00074254
+elf_dumploadinfo:   p_filesz:     00074234
+elf_dumploadinfo:   p_memsz:      00074234
 elf_dumploadinfo:   p_flags:      00000005
 elf_dumploadinfo:   p_align:      00001000
 elf_dumploadinfo: Programs 1:
@@ -846,7 +846,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000006
 elf_dumploadinfo:   sh_addr:      c0000000
 elf_dumploadinfo:   sh_offset:    4096
-elf_dumploadinfo:   sh_size:      359350
+elf_dumploadinfo:   sh_size:      359330
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 2
@@ -855,9 +855,9 @@ elf_dumploadinfo: Sections 2:
 elf_dumploadinfo:   sh_name:      00000021
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0057bc0
-elf_dumploadinfo:   sh_offset:    363456
-elf_dumploadinfo:   sh_size:      115632
+elf_dumploadinfo:   sh_addr:      c0057bb0
+elf_dumploadinfo:   sh_offset:    363440
+elf_dumploadinfo:   sh_size:      115616
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 16
@@ -866,8 +866,8 @@ elf_dumploadinfo: Sections 3:
 elf_dumploadinfo:   sh_name:      00000029
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000012
-elf_dumploadinfo:   sh_addr:      c0073f70
-elf_dumploadinfo:   sh_offset:    479088
+elf_dumploadinfo:   sh_addr:      c0073f50
+elf_dumploadinfo:   sh_offset:    479056
 elf_dumploadinfo:   sh_size:      488
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -877,8 +877,8 @@ elf_dumploadinfo: Sections 4:
 elf_dumploadinfo:   sh_name:      00000037
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074158
-elf_dumploadinfo:   sh_offset:    479576
+elf_dumploadinfo:   sh_addr:      c0074138
+elf_dumploadinfo:   sh_offset:    479544
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -888,8 +888,8 @@ elf_dumploadinfo: Sections 5:
 elf_dumploadinfo:   sh_name:      0000004f
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074160
-elf_dumploadinfo:   sh_offset:    479584
+elf_dumploadinfo:   sh_addr:      c0074140
+elf_dumploadinfo:   sh_offset:    479552
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -899,8 +899,8 @@ elf_dumploadinfo: Sections 6:
 elf_dumploadinfo:   sh_name:      00000064
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074168
-elf_dumploadinfo:   sh_offset:    479592
+elf_dumploadinfo:   sh_addr:      c0074148
+elf_dumploadinfo:   sh_offset:    479560
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -910,8 +910,8 @@ elf_dumploadinfo: Sections 7:
 elf_dumploadinfo:   sh_name:      00000079
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074170
-elf_dumploadinfo:   sh_offset:    479600
+elf_dumploadinfo:   sh_addr:      c0074150
+elf_dumploadinfo:   sh_offset:    479568
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -921,8 +921,8 @@ elf_dumploadinfo: Sections 8:
 elf_dumploadinfo:   sh_name:      00000098
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074178
-elf_dumploadinfo:   sh_offset:    479608
+elf_dumploadinfo:   sh_addr:      c0074158
+elf_dumploadinfo:   sh_offset:    479576
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -932,8 +932,8 @@ elf_dumploadinfo: Sections 9:
 elf_dumploadinfo:   sh_name:      000000ba
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074180
-elf_dumploadinfo:   sh_offset:    479616
+elf_dumploadinfo:   sh_addr:      c0074160
+elf_dumploadinfo:   sh_offset:    479584
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -943,8 +943,8 @@ elf_dumploadinfo: Sections 10:
 elf_dumploadinfo:   sh_name:      000000d0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074188
-elf_dumploadinfo:   sh_offset:    479624
+elf_dumploadinfo:   sh_addr:      c0074168
+elf_dumploadinfo:   sh_offset:    479592
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -954,8 +954,8 @@ elf_dumploadinfo: Sections 11:
 elf_dumploadinfo:   sh_name:      000000fc
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074190
-elf_dumploadinfo:   sh_offset:    479632
+elf_dumploadinfo:   sh_addr:      c0074170
+elf_dumploadinfo:   sh_offset:    479600
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -965,8 +965,8 @@ elf_dumploadinfo: Sections 12:
 elf_dumploadinfo:   sh_name:      00000127
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074198
-elf_dumploadinfo:   sh_offset:    479640
+elf_dumploadinfo:   sh_addr:      c0074178
+elf_dumploadinfo:   sh_offset:    479608
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -976,8 +976,8 @@ elf_dumploadinfo: Sections 13:
 elf_dumploadinfo:   sh_name:      00000157
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741a0
-elf_dumploadinfo:   sh_offset:    479648
+elf_dumploadinfo:   sh_addr:      c0074180
+elf_dumploadinfo:   sh_offset:    479616
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -987,8 +987,8 @@ elf_dumploadinfo: Sections 14:
 elf_dumploadinfo:   sh_name:      00000188
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741a8
-elf_dumploadinfo:   sh_offset:    479656
+elf_dumploadinfo:   sh_addr:      c0074188
+elf_dumploadinfo:   sh_offset:    479624
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -998,8 +998,8 @@ elf_dumploadinfo: Sections 15:
 elf_dumploadinfo:   sh_name:      000001b1
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741b0
-elf_dumploadinfo:   sh_offset:    479664
+elf_dumploadinfo:   sh_addr:      c0074190
+elf_dumploadinfo:   sh_offset:    479632
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1009,8 +1009,8 @@ elf_dumploadinfo: Sections 16:
 elf_dumploadinfo:   sh_name:      000001e0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741b8
-elf_dumploadinfo:   sh_offset:    479672
+elf_dumploadinfo:   sh_addr:      c0074198
+elf_dumploadinfo:   sh_offset:    479640
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1020,8 +1020,8 @@ elf_dumploadinfo: Sections 17:
 elf_dumploadinfo:   sh_name:      000001ff
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741c0
-elf_dumploadinfo:   sh_offset:    479680
+elf_dumploadinfo:   sh_addr:      c00741a0
+elf_dumploadinfo:   sh_offset:    479648
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1031,8 +1031,8 @@ elf_dumploadinfo: Sections 18:
 elf_dumploadinfo:   sh_name:      0000021d
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741c8
-elf_dumploadinfo:   sh_offset:    479688
+elf_dumploadinfo:   sh_addr:      c00741a8
+elf_dumploadinfo:   sh_offset:    479656
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1042,8 +1042,8 @@ elf_dumploadinfo: Sections 19:
 elf_dumploadinfo:   sh_name:      00000235
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741d0
-elf_dumploadinfo:   sh_offset:    479696
+elf_dumploadinfo:   sh_addr:      c00741b0
+elf_dumploadinfo:   sh_offset:    479664
 elf_dumploadinfo:   sh_size:      7
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1053,8 +1053,8 @@ elf_dumploadinfo: Sections 20:
 elf_dumploadinfo:   sh_name:      0000024b
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741d8
-elf_dumploadinfo:   sh_offset:    479704
+elf_dumploadinfo:   sh_addr:      c00741b8
+elf_dumploadinfo:   sh_offset:    479672
 elf_dumploadinfo:   sh_size:      3
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1064,8 +1064,8 @@ elf_dumploadinfo: Sections 21:
 elf_dumploadinfo:   sh_name:      0000025e
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741e0
-elf_dumploadinfo:   sh_offset:    479712
+elf_dumploadinfo:   sh_addr:      c00741c0
+elf_dumploadinfo:   sh_offset:    479680
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1075,8 +1075,8 @@ elf_dumploadinfo: Sections 22:
 elf_dumploadinfo:   sh_name:      00000271
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00741e8
-elf_dumploadinfo:   sh_offset:    479720
+elf_dumploadinfo:   sh_addr:      c00741c8
+elf_dumploadinfo:   sh_offset:    479688
 elf_dumploadinfo:   sh_size:      108
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1176,7 +1176,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
 elf_dumploadinfo:   sh_offset:    561372
-elf_dumploadinfo:   sh_size:      961961
+elf_dumploadinfo:   sh_size:      961920
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1186,8 +1186,8 @@ elf_dumploadinfo:   sh_name:      000002fd
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    1523333
-elf_dumploadinfo:   sh_size:      931024
+elf_dumploadinfo:   sh_offset:    1523292
+elf_dumploadinfo:   sh_size:      931018
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1197,7 +1197,7 @@ elf_dumploadinfo:   sh_name:      00000309
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2454357
+elf_dumploadinfo:   sh_offset:    2454310
 elf_dumploadinfo:   sh_size:      36208
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1208,8 +1208,8 @@ elf_dumploadinfo:   sh_name:      00000318
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2490565
-elf_dumploadinfo:   sh_size:      1157356
+elf_dumploadinfo:   sh_offset:    2490518
+elf_dumploadinfo:   sh_size:      1157394
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1219,7 +1219,7 @@ elf_dumploadinfo:   sh_name:      00000323
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3647921
+elf_dumploadinfo:   sh_offset:    3647912
 elf_dumploadinfo:   sh_size:      155696
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1230,7 +1230,7 @@ elf_dumploadinfo:   sh_name:      00000331
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000030
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3803617
+elf_dumploadinfo:   sh_offset:    3803608
 elf_dumploadinfo:   sh_size:      95142
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1241,7 +1241,7 @@ elf_dumploadinfo:   sh_name:      0000033c
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3898760
+elf_dumploadinfo:   sh_offset:    3898752
 elf_dumploadinfo:   sh_size:      92648
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1252,7 +1252,7 @@ elf_dumploadinfo:   sh_name:      00000001
 elf_dumploadinfo:   sh_type:      00000002
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3991408
+elf_dumploadinfo:   sh_offset:    3991400
 elf_dumploadinfo:   sh_size:      54768
 elf_dumploadinfo:   sh_link:      39
 elf_dumploadinfo:   sh_info:      1553
@@ -1263,7 +1263,7 @@ elf_dumploadinfo:   sh_name:      00000009
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4046176
+elf_dumploadinfo:   sh_offset:    4046168
 elf_dumploadinfo:   sh_size:      37595
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1274,7 +1274,7 @@ elf_dumploadinfo:   sh_name:      00000011
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4083771
+elf_dumploadinfo:   sh_offset:    4083763
 elf_dumploadinfo:   sh_size:      841
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1538,7 +1538,6 @@ mm_malloc: Allocated 0xc0200ce0, size 48
 mm_malloc: Allocated 0xc0204500, size 2176
 mm_malloc: Allocated 0xc0200d10, size 144
 mm_malloc: Allocated 0xc0200da0, size 96
-main: a
 JS_NewCustomContext: c
 mm_malloc: Allocated 0xc0200e00, size 464
 mm_malloc: Allocated 0xc0204d80, size 880
@@ -18071,87 +18070,2177 @@ mm_malloc: Allocated 0xc0212030, size 112
 mm_free: Freeing 0xc0211b20
 mm_malloc: Allocated 0xc0209790, size 160
 mm_free: Freeing 0xc0209710
-riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c005321c, MTVAL: 0000000000000168
-riscv_exception: PANIC!!! Exception = 000000000000000d
+JS_NewCustomContext: d
+__JS_FindAtom: 0
+std
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212620 
+__JS_FindAtom: f
+00000000C0203050 
+__JS_FindAtom: h
+00000000C020305C 
+__JS_FindAtom: i
+0000000000000077 
+__JS_FindAtom: e
+00000000C0212528 
+__JS_FindAtom: f
+00000000C0202C10 
+__JS_FindAtom: h
+00000000C0202C1C 
+__JS_FindAtom: i
+000000000000000B 
+__JS_FindAtom: e
+00000000C02121C8 
+__JS_FindAtom: f
+00000000C0201430 
+__JS_FindAtom: h
+00000000C020143C 
+__JS_FindAtom: i
+0000000000000005 
+__JS_FindAtom: e
+00000000C0212198 
+__JS_FindAtom: f
+00000000C0201370 
+__JS_FindAtom: h
+00000000C020137C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0210620, size 32
+mm_malloc: Allocated 0xc0209830, size 288
+__JS_FindAtom: 0
+exit
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212F18 
+__JS_FindAtom: f
+00000000C020E470 
+__JS_FindAtom: h
+00000000C020E47C 
+__JS_FindAtom: i
+00000000000000A4 
+__JS_FindAtom: e
+00000000C0212690 
+__JS_FindAtom: f
+00000000C0203280 
+__JS_FindAtom: h
+00000000C020328C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc02104e0, size 32
+mm_malloc: Allocated 0xc0211ef0, size 48
+__JS_FindAtom: 0
+gc
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02123D0 
+__JS_FindAtom: f
+00000000C0201D70 
+__JS_FindAtom: h
+00000000C0201D7C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc02103a0, size 32
+mm_malloc: Allocated 0xc0211b20, size 80
+mm_free: Freeing 0xc0211ef0
+__JS_FindAtom: 0
+evalScript
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212890 
+__JS_FindAtom: f
+00000000C0205CE0 
+__JS_FindAtom: h
+00000000C0205CEC 
+__JS_FindAtom: i
+0000000000000026 
+__JS_FindAtom: e
+00000000C02122A0 
+__JS_FindAtom: f
+00000000C02017E0 
+__JS_FindAtom: h
+00000000C02017EC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0211ef0, size 48
+mm_malloc: Allocated 0xc0209710, size 112
+mm_free: Freeing 0xc0211b20
+__JS_FindAtom: 0
+loadScript
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213008 
+__JS_FindAtom: f
+00000000C02110F0 
+__JS_FindAtom: h
+00000000C02110FC 
+__JS_FindAtom: i
+000000000000017A 
+__JS_FindAtom: e
+00000000C0212D40 
+__JS_FindAtom: f
+00000000C020B620 
+__JS_FindAtom: h
+00000000C020B62C 
+__JS_FindAtom: i
+000000000000015C 
+__JS_FindAtom: e
+00000000C0212C50 
+__JS_FindAtom: f
+00000000C0203E60 
+__JS_FindAtom: h
+00000000C0203E6C 
+__JS_FindAtom: i
+0000000000000119 
+__JS_FindAtom: e
+00000000C0212A38 
+__JS_FindAtom: f
+00000000C0207940 
+__JS_FindAtom: h
+00000000C020794C 
+__JS_FindAtom: i
+0000000000000087 
+__JS_FindAtom: e
+00000000C02125A8 
+__JS_FindAtom: f
+00000000C0202E40 
+__JS_FindAtom: h
+00000000C0202E4C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0211d20, size 48
+mm_malloc: Allocated 0xc0209950, size 144
+mm_free: Freeing 0xc0209710
+__JS_FindAtom: 0
+getenv
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212A90 
+__JS_FindAtom: f
+00000000C02080E0 
+__JS_FindAtom: h
+00000000C02080EC 
+__JS_FindAtom: i
+000000000000010F 
+__JS_FindAtom: e
+00000000C02129E8 
+__JS_FindAtom: f
+00000000C0207510 
+__JS_FindAtom: h
+00000000C020751C 
+__JS_FindAtom: i
+000000000000010C 
+__JS_FindAtom: e
+00000000C02129D0 
+__JS_FindAtom: f
+00000000C02051D0 
+__JS_FindAtom: h
+00000000C02051DC 
+__JS_FindAtom: i
+00000000000000C1 
+__JS_FindAtom: e
+00000000C0212778 
+__JS_FindAtom: f
+00000000C0203780 
+__JS_FindAtom: h
+00000000C020378C 
+__JS_FindAtom: i
+00000000000000A1 
+__JS_FindAtom: e
+00000000C0212678 
+__JS_FindAtom: f
+00000000C02031F0 
+__JS_FindAtom: h
+00000000C02031FC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0210260, size 32
+__JS_FindAtom: 0
+setenv
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0210120, size 32
+__JS_FindAtom: 0
+unsetenv
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212A58 
+__JS_FindAtom: f
+00000000C02082D0 
+__JS_FindAtom: h
+00000000C02082DC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0211b20, size 48
+__JS_FindAtom: 0
+getenviron
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0209710, size 48
+__JS_FindAtom: 0
+urlGet
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212ED0 
+__JS_FindAtom: f
+00000000C020CF70 
+__JS_FindAtom: h
+00000000C020CF7C 
+__JS_FindAtom: i
+0000000000000143 
+__JS_FindAtom: e
+00000000C0212B88 
+__JS_FindAtom: f
+00000000C0209420 
+__JS_FindAtom: h
+00000000C020942C 
+__JS_FindAtom: i
+0000000000000041 
+__JS_FindAtom: e
+00000000C0212378 
+__JS_FindAtom: f
+00000000C0201BF0 
+__JS_FindAtom: h
+00000000C0201BFC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0211b50, size 32
+__JS_FindAtom: 0
+loadFile
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212EA8 
+__JS_FindAtom: f
+00000000C020CCA0 
+__JS_FindAtom: h
+00000000C020CCAC 
+__JS_FindAtom: i
+00000000000001A2 
+__JS_FindAtom: e
+00000000C0212E80 
+__JS_FindAtom: f
+00000000C020BB70 
+__JS_FindAtom: h
+00000000C020BB7C 
+__JS_FindAtom: i
+0000000000000146 
+__JS_FindAtom: e
+00000000C0212BA0 
+__JS_FindAtom: f
+00000000C0209580 
+__JS_FindAtom: h
+00000000C020958C 
+__JS_FindAtom: i
+00000000000000BE 
+__JS_FindAtom: e
+00000000C0212760 
+__JS_FindAtom: f
+00000000C02036F0 
+__JS_FindAtom: h
+00000000C02036FC 
+__JS_FindAtom: i
+00000000000000AA 
+__JS_FindAtom: e
+00000000C02126C0 
+__JS_FindAtom: f
+00000000C02033A0 
+__JS_FindAtom: h
+00000000C02033AC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0209740, size 48
+__JS_FindAtom: 0
+strerror
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0209b00, size 48
+__JS_FindAtom: 0
+parseExtJSON
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0209b30, size 48
+__JS_FindAtom: 0
+open
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212EE0 
+__JS_FindAtom: f
+00000000C020CAC0 
+__JS_FindAtom: h
+00000000C020CACC 
+__JS_FindAtom: i
+0000000000000130 
+__JS_FindAtom: e
+00000000C0212AF0 
+__JS_FindAtom: f
+00000000C0208CF0 
+__JS_FindAtom: h
+00000000C0208CFC 
+__JS_FindAtom: i
+00000000000000C3 
+__JS_FindAtom: e
+00000000C0212788 
+__JS_FindAtom: f
+00000000C02037E0 
+__JS_FindAtom: h
+00000000C02037EC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0209770, size 32
+__JS_FindAtom: 0
+popen
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212AF8 
+__JS_FindAtom: f
+00000000C0208D20 
+__JS_FindAtom: h
+00000000C0208D2C 
+__JS_FindAtom: i
+00000000000000B1 
+__JS_FindAtom: e
+00000000C02126F8 
+__JS_FindAtom: f
+00000000C02034D0 
+__JS_FindAtom: h
+00000000C02034DC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020ffe0, size 32
+mm_malloc: Allocated 0xc0209b60, size 624
+mm_free: Freeing 0xc0209950
+__JS_FindAtom: 0
+fdopen
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213040 
+__JS_FindAtom: f
+00000000C0211810 
+__JS_FindAtom: h
+00000000C021181C 
+__JS_FindAtom: i
+00000000000001C2 
+__JS_FindAtom: e
+00000000C0212F80 
+__JS_FindAtom: f
+00000000C0210AF0 
+__JS_FindAtom: h
+00000000C0210AFC 
+__JS_FindAtom: i
+00000000000000B3 
+__JS_FindAtom: e
+00000000C0212708 
+__JS_FindAtom: f
+00000000C0203510 
+__JS_FindAtom: h
+00000000C020351C 
+__JS_FindAtom: i
+0000000000000064 
+__JS_FindAtom: e
+00000000C0212490 
+__JS_FindAtom: f
+00000000C0202920 
+__JS_FindAtom: h
+00000000C020292C 
+__JS_FindAtom: i
+000000000000003C 
+__JS_FindAtom: e
+00000000C0212350 
+__JS_FindAtom: f
+00000000C0201B00 
+__JS_FindAtom: h
+00000000C0201B0C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020fea0, size 32
+__JS_FindAtom: 0
+tmpfile
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212B18 
+__JS_FindAtom: f
+00000000C0208E90 
+__JS_FindAtom: h
+00000000C0208E9C 
+__JS_FindAtom: i
+00000000000000F8 
+__JS_FindAtom: e
+00000000C0212930 
+__JS_FindAtom: f
+00000000C0206740 
+__JS_FindAtom: h
+00000000C020674C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020fd20, size 32
+__JS_FindAtom: 0
+puts
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213088 
+__JS_FindAtom: f
+00000000C0211B20 
+__JS_FindAtom: h
+00000000C0211B2C 
+__JS_FindAtom: i
+000000000000011D 
+__JS_FindAtom: e
+00000000C0212A58 
+__JS_FindAtom: f
+00000000C02082D0 
+__JS_FindAtom: h
+00000000C02082DC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020fc60, size 32
+__JS_FindAtom: 0
+printf
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212848 
+__JS_FindAtom: f
+00000000C0205BE0 
+__JS_FindAtom: h
+00000000C0205BEC 
+__JS_FindAtom: i
+0000000000000018 
+__JS_FindAtom: e
+00000000C0212230 
+__JS_FindAtom: f
+00000000C02015F0 
+__JS_FindAtom: h
+00000000C02015FC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020f810, size 32
+__JS_FindAtom: 0
+sprintf
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020ae60, size 32
+__JS_FindAtom: 0
+SEEK_SET
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0209950, size 48
+__JS_FindAtom: 0
+SEEK_CUR
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212AD0 
+__JS_FindAtom: f
+00000000C0208690 
+__JS_FindAtom: h
+00000000C020869C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0209980, size 48
+__JS_FindAtom: 0
+SEEK_END
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212638 
+__JS_FindAtom: f
+00000000C02030B0 
+__JS_FindAtom: h
+00000000C02030BC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc02099b0, size 48
+__JS_FindAtom: 0
+Error
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212610 
+__JS_FindAtom: f
+00000000C0203010 
+__JS_FindAtom: g
+__JS_FindAtom: 0
+in
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212FB8 
+__JS_FindAtom: f
+00000000C0210CF0 
+__JS_FindAtom: h
+00000000C0210CFC 
+__JS_FindAtom: i
+00000000000001C6 
+__JS_FindAtom: e
+00000000C0212FA0 
+__JS_FindAtom: f
+00000000C0210D60 
+__JS_FindAtom: h
+00000000C0210D6C 
+__JS_FindAtom: i
+000000000000000D 
+__JS_FindAtom: e
+00000000C02121D8 
+__JS_FindAtom: f
+00000000C0201470 
+__JS_FindAtom: g
+__JS_FindAtom: 0
+out
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213100 
+__JS_FindAtom: f
+00000000C02099B0 
+__JS_FindAtom: h
+00000000C02099BC 
+__JS_FindAtom: i
+0000000000000099 
+__JS_FindAtom: e
+00000000C0212638 
+__JS_FindAtom: f
+00000000C02030B0 
+__JS_FindAtom: h
+00000000C02030BC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0208970, size 32
+__JS_FindAtom: 0
+err
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212C10 
+__JS_FindAtom: f
+00000000C0203CF0 
+__JS_FindAtom: h
+00000000C0203CFC 
+__JS_FindAtom: i
+0000000000000140 
+__JS_FindAtom: e
+00000000C0212B70 
+__JS_FindAtom: f
+00000000C0208EF0 
+__JS_FindAtom: h
+00000000C0208EFC 
+__JS_FindAtom: i
+000000000000006F 
+__JS_FindAtom: e
+00000000C02124E8 
+__JS_FindAtom: f
+00000000C0202AC0 
+__JS_FindAtom: h
+00000000C0202ACC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020daf0, size 32
+__JS_FindAtom: 0
+os
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212F58 
+__JS_FindAtom: f
+00000000C020ADC0 
+__JS_FindAtom: h
+00000000C020ADCC 
+__JS_FindAtom: i
+000000000000012F 
+__JS_FindAtom: e
+00000000C0212AE8 
+__JS_FindAtom: f
+00000000C0208580 
+__JS_FindAtom: h
+00000000C020858C 
+__JS_FindAtom: i
+0000000000000014 
+__JS_FindAtom: e
+00000000C0212210 
+__JS_FindAtom: f
+00000000C0201570 
+__JS_FindAtom: h
+00000000C020157C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020d3d0, size 32
+mm_malloc: Allocated 0xc02099e0, size 288
+__JS_FindAtom: 0
+open
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02130B8 
+__JS_FindAtom: f
+00000000C0209770 
+__JS_FindAtom: g
+mm_malloc: Allocated 0xc0209ef0, size 48
+__JS_FindAtom: 0
+O_RDONLY
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0209f20, size 48
+mm_malloc: Allocated 0xc0209f50, size 80
+mm_free: Freeing 0xc0209ef0
+__JS_FindAtom: 0
+O_WRONLY
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212B10 
+__JS_FindAtom: f
+00000000C02086F0 
+__JS_FindAtom: h
+00000000C02086FC 
+__JS_FindAtom: i
+0000000000000031 
+__JS_FindAtom: e
+00000000C02122F8 
+__JS_FindAtom: f
+00000000C0201960 
+__JS_FindAtom: h
+00000000C020196C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0209ef0, size 48
+__JS_FindAtom: 0
+O_RDWR
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0209fc0, size 32
+mm_malloc: Allocated 0xc0209fe0, size 144
+mm_free: Freeing 0xc0209f50
+__JS_FindAtom: 0
+O_APPEND
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212968 
+__JS_FindAtom: f
+00000000C0206FC0 
+__JS_FindAtom: h
+00000000C0206FCC 
+__JS_FindAtom: i
+000000000000007A 
+__JS_FindAtom: e
+00000000C0212540 
+__JS_FindAtom: f
+00000000C0202C90 
+__JS_FindAtom: h
+00000000C0202C9C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0209f50, size 48
+__JS_FindAtom: 0
+O_CREAT
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213078 
+__JS_FindAtom: f
+00000000C0210260 
+__JS_FindAtom: h
+00000000C021026C 
+__JS_FindAtom: i
+0000000000000124 
+__JS_FindAtom: e
+00000000C0212A90 
+__JS_FindAtom: f
+00000000C02080E0 
+__JS_FindAtom: h
+00000000C02080EC 
+__JS_FindAtom: i
+000000000000010F 
+__JS_FindAtom: e
+00000000C02129E8 
+__JS_FindAtom: f
+00000000C0207510 
+__JS_FindAtom: h
+00000000C020751C 
+__JS_FindAtom: i
+000000000000010C 
+__JS_FindAtom: e
+00000000C02129D0 
+__JS_FindAtom: f
+00000000C02051D0 
+__JS_FindAtom: h
+00000000C02051DC 
+__JS_FindAtom: i
+00000000000000C1 
+__JS_FindAtom: e
+00000000C0212778 
+__JS_FindAtom: f
+00000000C0203780 
+__JS_FindAtom: h
+00000000C020378C 
+__JS_FindAtom: i
+00000000000000A1 
+__JS_FindAtom: e
+00000000C0212678 
+__JS_FindAtom: f
+00000000C02031F0 
+__JS_FindAtom: h
+00000000C02031FC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0209f80, size 32
+__JS_FindAtom: 0
+O_EXCL
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02122C0 
+__JS_FindAtom: f
+00000000C0201870 
+__JS_FindAtom: h
+00000000C020187C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0209fa0, size 32
+__JS_FindAtom: 0
+O_TRUNC
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212FB0 
+__JS_FindAtom: f
+00000000C0210CC0 
+__JS_FindAtom: h
+00000000C0210CCC 
+__JS_FindAtom: i
+0000000000000086 
+__JS_FindAtom: e
+00000000C02125A0 
+__JS_FindAtom: f
+00000000C0202E20 
+__JS_FindAtom: h
+00000000C0202E2C 
+__JS_FindAtom: i
+0000000000000075 
+__JS_FindAtom: e
+00000000C0212518 
+__JS_FindAtom: f
+00000000C0202BB0 
+__JS_FindAtom: h
+00000000C0202BBC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a110, size 32
+__JS_FindAtom: 0
+close
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212340 
+__JS_FindAtom: f
+00000000C0201AC0 
+__JS_FindAtom: h
+00000000C0201ACC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a130, size 32
+__JS_FindAtom: 0
+seek
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212BB0 
+__JS_FindAtom: f
+00000000C02095D0 
+__JS_FindAtom: h
+00000000C02095DC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a150, size 32
+mm_malloc: Allocated 0xc020a170, size 432
+mm_free: Freeing 0xc0209fe0
+__JS_FindAtom: 0
+read
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212CA8 
+__JS_FindAtom: f
+00000000C0207350 
+__JS_FindAtom: h
+00000000C020735C 
+__JS_FindAtom: i
+000000000000001D 
+__JS_FindAtom: e
+00000000C0212258 
+__JS_FindAtom: f
+00000000C02016B0 
+__JS_FindAtom: h
+00000000C02016BC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0209fe0, size 32
+mm_malloc: Allocated 0xc02137b0, size 2064
+mm_free: Freeing 0xc0200820
+__JS_FindAtom: 0
+write
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212870 
+__JS_FindAtom: f
+00000000C0205C40 
+__JS_FindAtom: h
+00000000C0205C4C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a000, size 32
+__JS_FindAtom: 0
+isatty
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212C08 
+__JS_FindAtom: f
+00000000C0203CC0 
+__JS_FindAtom: h
+00000000C0203CCC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a020, size 32
+__JS_FindAtom: 0
+ttyGetWinSize
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a040, size 48
+__JS_FindAtom: 0
+ttySetRaw
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a070, size 48
+__JS_FindAtom: 0
+remove
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a0a0, size 32
+__JS_FindAtom: 0
+rename
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a0c0, size 32
+__JS_FindAtom: 0
+setReadHandler
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a0e0, size 48
+__JS_FindAtom: 0
+setWriteHandler
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a3e0, size 48
+__JS_FindAtom: 0
+signal
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212B08 
+__JS_FindAtom: f
+00000000C0205B40 
+__JS_FindAtom: h
+00000000C0205B4C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a410, size 32
+mm_malloc: Allocated 0xc0200820, size 912
+mm_free: Freeing 0xc020a170
+__JS_FindAtom: 0
+SIGINT
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212628 
+__JS_FindAtom: f
+00000000C0203070 
+__JS_FindAtom: h
+00000000C020307C 
+__JS_FindAtom: i
+00000000000000DF 
+__JS_FindAtom: e
+00000000C0212868 
+__JS_FindAtom: f
+00000000C0205D40 
+__JS_FindAtom: h
+00000000C0205D4C 
+__JS_FindAtom: i
+0000000000000160 
+__JS_FindAtom: e
+00000000C0212C70 
+__JS_FindAtom: f
+00000000C02042E0 
+__JS_FindAtom: h
+00000000C02042EC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0200bb0, size 32
+__JS_FindAtom: 0
+SIGABRT
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0200bd0, size 32
+__JS_FindAtom: 0
+SIGFPE
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02125C0 
+__JS_FindAtom: f
+00000000C0202EA0 
+__JS_FindAtom: h
+00000000C0202EAC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0200bf0, size 32
+__JS_FindAtom: 0
+SIGILL
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212A08 
+__JS_FindAtom: f
+00000000C0207850 
+__JS_FindAtom: h
+00000000C020785C 
+__JS_FindAtom: i
+0000000000000117 
+__JS_FindAtom: e
+00000000C0212A28 
+__JS_FindAtom: f
+00000000C02078F0 
+__JS_FindAtom: h
+00000000C02078FC 
+__JS_FindAtom: i
+000000000000017E 
+__JS_FindAtom: e
+00000000C0212D60 
+__JS_FindAtom: f
+00000000C020B910 
+__JS_FindAtom: h
+00000000C020B91C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0200c10, size 32
+__JS_FindAtom: 0
+SIGSEGV
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a430, size 32
+__JS_FindAtom: 0
+SIGTERM
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02124F0 
+__JS_FindAtom: f
+00000000C0202AE0 
+__JS_FindAtom: h
+00000000C0202AEC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a450, size 32
+__JS_FindAtom: 0
+SIGQUIT
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212650 
+__JS_FindAtom: f
+00000000C0203120 
+__JS_FindAtom: h
+00000000C020312C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a470, size 32
+__JS_FindAtom: 0
+SIGPIPE
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a490, size 32
+__JS_FindAtom: 0
+SIGALRM
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213130 
+__JS_FindAtom: f
+00000000C0209FC0 
+__JS_FindAtom: h
+00000000C0209FCC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a4b0, size 32
+mm_malloc: Allocated 0xc0213fc0, size 1360
+mm_free: Freeing 0xc0200820
+__JS_FindAtom: 0
+SIGUSR1
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212740 
+__JS_FindAtom: f
+00000000C0203650 
+__JS_FindAtom: h
+00000000C020365C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a4d0, size 32
+__JS_FindAtom: 0
+SIGUSR2
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a4f0, size 32
+__JS_FindAtom: 0
+SIGCHLD
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213060 
+__JS_FindAtom: f
+00000000C02103A0 
+__JS_FindAtom: h
+00000000C02103AC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a510, size 32
+__JS_FindAtom: 0
+SIGCONT
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212660 
+__JS_FindAtom: f
+00000000C0203170 
+__JS_FindAtom: h
+00000000C020317C 
+__JS_FindAtom: i
+00000000000000F4 
+__JS_FindAtom: e
+00000000C0212910 
+__JS_FindAtom: f
+00000000C0206300 
+__JS_FindAtom: h
+00000000C020630C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a530, size 32
+__JS_FindAtom: 0
+SIGSTOP
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212ED8 
+__JS_FindAtom: f
+00000000C020CAA0 
+__JS_FindAtom: h
+00000000C020CAAC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a550, size 32
+__JS_FindAtom: 0
+SIGTSTP
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a570, size 32
+__JS_FindAtom: 0
+SIGTTIN
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212FE8 
+__JS_FindAtom: f
+00000000C0211090 
+__JS_FindAtom: h
+00000000C021109C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a590, size 32
+__JS_FindAtom: 0
+SIGTTOU
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212798 
+__JS_FindAtom: f
+00000000C0203840 
+__JS_FindAtom: h
+00000000C020384C 
+__JS_FindAtom: i
+0000000000000198 
+__JS_FindAtom: e
+00000000C0212E30 
+__JS_FindAtom: f
+00000000C020BEF0 
+__JS_FindAtom: h
+00000000C020BEFC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a5b0, size 32
+__JS_FindAtom: 0
+now
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212E48 
+__JS_FindAtom: f
+00000000C020BF70 
+__JS_FindAtom: g
+__JS_FindAtom: 0
+setTimeout
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212938 
+__JS_FindAtom: f
+00000000C0206770 
+__JS_FindAtom: h
+00000000C020677C 
+__JS_FindAtom: i
+00000000000001AF 
+__JS_FindAtom: e
+00000000C0212EE8 
+__JS_FindAtom: f
+00000000C020CFA0 
+__JS_FindAtom: h
+00000000C020CFAC 
+__JS_FindAtom: i
+00000000000001CE 
+__JS_FindAtom: e
+00000000C0212FE0 
+__JS_FindAtom: f
+00000000C0211060 
+__JS_FindAtom: h
+00000000C021106C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a170, size 48
+__JS_FindAtom: 0
+clearTimeout
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212980 
+__JS_FindAtom: f
+00000000C0207230 
+__JS_FindAtom: h
+00000000C020723C 
+__JS_FindAtom: i
+000000000000018D 
+__JS_FindAtom: e
+00000000C0212DD8 
+__JS_FindAtom: f
+00000000C020BA50 
+__JS_FindAtom: h
+00000000C020BA5C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a1a0, size 48
+__JS_FindAtom: 0
+sleepAsync
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212288 
+__JS_FindAtom: f
+00000000C0201770 
+__JS_FindAtom: h
+00000000C020177C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a1d0, size 48
+__JS_FindAtom: 0
+platform
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a200, size 48
+__JS_FindAtom: 0
+getcwd
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a5d0, size 32
+__JS_FindAtom: 0
+chdir
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02128C0 
+__JS_FindAtom: f
+00000000C0205FF0 
+__JS_FindAtom: h
+00000000C0205FFC 
+__JS_FindAtom: i
+0000000000000138 
+__JS_FindAtom: e
+00000000C0212B30 
+__JS_FindAtom: f
+00000000C0208720 
+__JS_FindAtom: h
+00000000C020872C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a230, size 32
+__JS_FindAtom: 0
+mkdir
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212720 
+__JS_FindAtom: f
+00000000C0203590 
+__JS_FindAtom: h
+00000000C020359C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a250, size 32
+__JS_FindAtom: 0
+readdir
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213238 
+__JS_FindAtom: f
+00000000C020A5B0 
+__JS_FindAtom: h
+00000000C020A5BC 
+__JS_FindAtom: i
+00000000000000C5 
+__JS_FindAtom: e
+00000000C0212798 
+__JS_FindAtom: f
+00000000C0203840 
+__JS_FindAtom: h
+00000000C020384C 
+__JS_FindAtom: i
+0000000000000198 
+__JS_FindAtom: e
+00000000C0212E30 
+__JS_FindAtom: f
+00000000C020BEF0 
+__JS_FindAtom: h
+00000000C020BEFC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a270, size 32
+__JS_FindAtom: 0
+S_IFMT
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212490 
+__JS_FindAtom: f
+00000000C0202920 
+__JS_FindAtom: h
+00000000C020292C 
+__JS_FindAtom: i
+00000000000000B3 
+__JS_FindAtom: e
+00000000C0212708 
+__JS_FindAtom: f
+00000000C0203510 
+__JS_FindAtom: h
+00000000C020351C 
+__JS_FindAtom: i
+00000000000001C2 
+__JS_FindAtom: e
+00000000C0212F80 
+__JS_FindAtom: f
+00000000C0210AF0 
+__JS_FindAtom: h
+00000000C0210AFC 
+__JS_FindAtom: i
+00000000000001DA 
+__JS_FindAtom: e
+00000000C0213040 
+__JS_FindAtom: f
+00000000C0211810 
+__JS_FindAtom: h
+00000000C021181C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a290, size 32
+__JS_FindAtom: 0
+S_IFIFO
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212ED0 
+__JS_FindAtom: f
+00000000C020CF70 
+__JS_FindAtom: h
+00000000C020CF7C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a2b0, size 32
+__JS_FindAtom: 0
+S_IFCHR
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212D10 
+__JS_FindAtom: f
+00000000C020B5D0 
+__JS_FindAtom: h
+00000000C020B5DC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a2d0, size 32
+__JS_FindAtom: 0
+S_IFDIR
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212788 
+__JS_FindAtom: f
+00000000C02037E0 
+__JS_FindAtom: h
+00000000C02037EC 
+__JS_FindAtom: i
+0000000000000130 
+__JS_FindAtom: e
+00000000C0212AF0 
+__JS_FindAtom: f
+00000000C0208CF0 
+__JS_FindAtom: h
+00000000C0208CFC 
+__JS_FindAtom: i
+00000000000001AE 
+__JS_FindAtom: e
+00000000C0212EE0 
+__JS_FindAtom: f
+00000000C020CAC0 
+__JS_FindAtom: h
+00000000C020CACC 
+__JS_FindAtom: i
+00000000000001E9 
+__JS_FindAtom: e
+00000000C02130B8 
+__JS_FindAtom: f
+00000000C0209770 
+__JS_FindAtom: h
+00000000C020977C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a2f0, size 32
+__JS_FindAtom: 0
+S_IFBLK
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a310, size 32
+__JS_FindAtom: 0
+S_IFREG
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213220 
+__JS_FindAtom: f
+00000000C020A550 
+__JS_FindAtom: h
+00000000C020A55C 
+__JS_FindAtom: i
+00000000000001AD 
+__JS_FindAtom: e
+00000000C0212ED8 
+__JS_FindAtom: f
+00000000C020CAA0 
+__JS_FindAtom: h
+00000000C020CAAC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a330, size 32
+__JS_FindAtom: 0
+S_IFSOCK
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213250 
+__JS_FindAtom: f
+00000000C020A1D0 
+__JS_FindAtom: h
+00000000C020A1DC 
+__JS_FindAtom: i
+0000000000000023 
+__JS_FindAtom: e
+00000000C0212288 
+__JS_FindAtom: f
+00000000C0201770 
+__JS_FindAtom: h
+00000000C020177C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a350, size 48
+__JS_FindAtom: 0
+S_IFLNK
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212C20 
+__JS_FindAtom: f
+00000000C0203D20 
+__JS_FindAtom: h
+00000000C0203D2C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a380, size 32
+__JS_FindAtom: 0
+S_ISGID
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc020a3a0, size 32
+__JS_FindAtom: 0
+S_ISUID
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213280 
+__JS_FindAtom: f
+00000000C020A290 
+__JS_FindAtom: h
+00000000C020A29C 
+__JS_FindAtom: i
+0000000000000064 
+__JS_FindAtom: e
+00000000C0212490 
+__JS_FindAtom: f
+00000000C0202920 
+__JS_FindAtom: h
+00000000C020292C 
+__JS_FindAtom: i
+00000000000000B3 
+__JS_FindAtom: e
+00000000C0212708 
+__JS_FindAtom: f
+00000000C0203510 
+__JS_FindAtom: h
+00000000C020351C 
+__JS_FindAtom: i
+00000000000001C2 
+__JS_FindAtom: e
+00000000C0212F80 
+__JS_FindAtom: f
+00000000C0210AF0 
+__JS_FindAtom: h
+00000000C0210AFC 
+__JS_FindAtom: i
+00000000000001DA 
+__JS_FindAtom: e
+00000000C0213040 
+__JS_FindAtom: f
+00000000C0211810 
+__JS_FindAtom: h
+00000000C021181C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc020a3c0, size 32
+__JS_FindAtom: 0
+stat
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0200820, size 32
+__JS_FindAtom: 0
+utimes
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0200840, size 32
+__JS_FindAtom: 0
+sleep
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212E70 
+__JS_FindAtom: f
+00000000C020BD00 
+__JS_FindAtom: h
+00000000C020BD0C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0200860, size 32
+__JS_FindAtom: 0
+realpath
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02121E8 
+__JS_FindAtom: f
+00000000C02014C0 
+__JS_FindAtom: h
+00000000C02014CC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0200880, size 48
+__JS_FindAtom: 0
+lstat
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212840 
+__JS_FindAtom: f
+00000000C0205BB0 
+__JS_FindAtom: h
+00000000C0205BBC 
+__JS_FindAtom: i
+00000000000000F5 
+__JS_FindAtom: e
+00000000C0212918 
+__JS_FindAtom: f
+00000000C0206330 
+__JS_FindAtom: h
+00000000C020633C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc02008b0, size 32
+__JS_FindAtom: 0
+symlink
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212500 
+__JS_FindAtom: f
+00000000C0202B20 
+__JS_FindAtom: h
+00000000C0202B2C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc02008d0, size 32
+__JS_FindAtom: 0
+readlink
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02132C8 
+__JS_FindAtom: f
+00000000C020A3C0 
+__JS_FindAtom: h
+00000000C020A3CC 
+__JS_FindAtom: i
+0000000000000222 
+__JS_FindAtom: e
+00000000C0213280 
+__JS_FindAtom: f
+00000000C020A290 
+__JS_FindAtom: h
+00000000C020A29C 
+__JS_FindAtom: i
+0000000000000064 
+__JS_FindAtom: e
+00000000C0212490 
+__JS_FindAtom: f
+00000000C0202920 
+__JS_FindAtom: h
+00000000C020292C 
+__JS_FindAtom: i
+00000000000000B3 
+__JS_FindAtom: e
+00000000C0212708 
+__JS_FindAtom: f
+00000000C0203510 
+__JS_FindAtom: h
+00000000C020351C 
+__JS_FindAtom: i
+00000000000001C2 
+__JS_FindAtom: e
+00000000C0212F80 
+__JS_FindAtom: f
+00000000C0210AF0 
+__JS_FindAtom: h
+00000000C0210AFC 
+__JS_FindAtom: i
+00000000000001DA 
+__JS_FindAtom: e
+00000000C0213040 
+__JS_FindAtom: f
+00000000C0211810 
+__JS_FindAtom: h
+00000000C021181C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc02008f0, size 48
+__JS_FindAtom: 0
+exec
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02125A8 
+__JS_FindAtom: f
+00000000C0202E40 
+__JS_FindAtom: g
+__JS_FindAtom: 0
+getpid
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213170 
+__JS_FindAtom: f
+00000000C020A000 
+__JS_FindAtom: h
+00000000C020A00C 
+__JS_FindAtom: i
+00000000000000E0 
+__JS_FindAtom: e
+00000000C0212870 
+__JS_FindAtom: f
+00000000C0205C40 
+__JS_FindAtom: h
+00000000C0205C4C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0200920, size 32
+__JS_FindAtom: 0
+waitpid
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0200940, size 32
+__JS_FindAtom: 0
+WNOHANG
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0200960, size 32
+__JS_FindAtom: 0
+pipe
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212F18 
+__JS_FindAtom: f
+00000000C020E470 
+__JS_FindAtom: h
+00000000C020E47C 
+__JS_FindAtom: i
+00000000000001DD 
+__JS_FindAtom: e
+00000000C0213058 
+__JS_FindAtom: f
+00000000C02104E0 
+__JS_FindAtom: h
+00000000C02104EC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0200980, size 32
+__JS_FindAtom: 0
+kill
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212188 
+__JS_FindAtom: f
+00000000C0201330 
+__JS_FindAtom: h
+00000000C020133C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc02009a0, size 32
+__JS_FindAtom: 0
+dup
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212C00 
+__JS_FindAtom: f
+00000000C0203C90 
+__JS_FindAtom: h
+00000000C0203C9C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc02009c0, size 32
+__JS_FindAtom: 0
+dup2
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc02009e0, size 32
+__JS_FindAtom: 0
+Worker
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0212730 
+__JS_FindAtom: f
+00000000C02035F0 
+__JS_FindAtom: h
+00000000C02035FC 
+__JS_FindAtom: i
+000000000000011C 
+__JS_FindAtom: e
+00000000C0212A50 
+__JS_FindAtom: f
+00000000C0207F20 
+__JS_FindAtom: h
+00000000C0207F2C 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0200a00, size 32
+mm_malloc: Allocated 0xc0200a20, size 112
+mm_malloc: Allocated 0xc0200a90, size 80
+mm_malloc: Allocated 0xc0200ae0, size 48
+mm_malloc: Allocated 0xc0200b10, size 112
+mm_malloc: Allocated 0xc0214b90, size 80
+mm_malloc: Allocated 0xc0200b80, size 48
+__JS_FindAtom: 0
+log
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213178 
+__JS_FindAtom: f
+00000000C020A020 
+__JS_FindAtom: h
+00000000C020A02C 
+__JS_FindAtom: i
+0000000000000153 
+__JS_FindAtom: e
+00000000C0212C08 
+__JS_FindAtom: f
+00000000C0203CC0 
+__JS_FindAtom: h
+00000000C0203CCC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0214be0, size 32
+JS_DefineProperty: a
+JS_DefineProperty: c
+JS_DefineProperty: d
+JS_DefineProperty: e
+JS_DefineProperty: f
+JS_DefineProperty: g
+JS_DefineProperty: h
+JS_CreateProperty: a
+JS_CreateProperty: b
+JS_CreateProperty: c
+JS_CreateProperty: d
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+JS_DefineProperty: a
+JS_DefineProperty: c
+JS_DefineProperty: d
+JS_DefineProperty: e
+JS_DefineProperty: f
+JS_DefineProperty: g
+JS_DefineProperty: h
+JS_CreateProperty: a
+JS_CreateProperty: b
+JS_CreateProperty: c
+JS_CreateProperty: d
+mm_free: Freeing 0xc0200b10
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+__JS_FindAtom: 0
+log
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213348 
+__JS_FindAtom: f
+00000000C0214BE0 
+__JS_FindAtom: g
+__JS_FindAtom: 0
+console
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0200b10, size 32
+mm_malloc: Allocated 0xc0200b30, size 80
+mm_malloc: Allocated 0xc0214c00, size 32
+__JS_FindAtom: 0
+scriptArgs
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0214c20, size 48
+mm_malloc: Allocated 0xc0214c50, size 112
+mm_malloc: Allocated 0xc0214cc0, size 80
+mm_malloc: Allocated 0xc0214d10, size 48
+__JS_FindAtom: 0
+print
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0214d40, size 32
+JS_DefineProperty: a
+JS_DefineProperty: c
+JS_DefineProperty: d
+JS_DefineProperty: e
+JS_DefineProperty: f
+JS_DefineProperty: g
+JS_DefineProperty: h
+JS_CreateProperty: a
+JS_CreateProperty: b
+JS_CreateProperty: c
+JS_CreateProperty: d
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+JS_DefineProperty: a
+JS_DefineProperty: c
+JS_DefineProperty: d
+JS_DefineProperty: e
+JS_DefineProperty: f
+JS_DefineProperty: g
+JS_DefineProperty: h
+JS_CreateProperty: a
+JS_CreateProperty: b
+JS_CreateProperty: c
+JS_CreateProperty: d
+mm_free: Freeing 0xc0214c50
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+__JS_FindAtom: 0
+print
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213360 
+__JS_FindAtom: f
+00000000C0214D40 
+__JS_FindAtom: g
+mm_malloc: Allocated 0xc0214c50, size 112
+mm_malloc: Allocated 0xc0214d60, size 80
+mm_malloc: Allocated 0xc0214db0, size 48
+__JS_FindAtom: 0
+__loadScript
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0214de0, size 48
+JS_DefineProperty: a
+JS_DefineProperty: c
+JS_DefineProperty: d
+JS_DefineProperty: e
+JS_DefineProperty: f
+JS_DefineProperty: g
+JS_DefineProperty: h
+JS_CreateProperty: a
+JS_CreateProperty: b
+JS_CreateProperty: c
+JS_CreateProperty: d
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+JS_DefineProperty: a
+JS_DefineProperty: c
+JS_DefineProperty: d
+JS_DefineProperty: e
+JS_DefineProperty: f
+JS_DefineProperty: g
+JS_DefineProperty: h
+JS_CreateProperty: a
+JS_CreateProperty: b
+JS_CreateProperty: c
+JS_CreateProperty: d
+mm_free: Freeing 0xc0214c50
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+__JS_FindAtom: 0
+__loadScript
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C0213368 
+__JS_FindAtom: f
+00000000C0214DE0 
+__JS_FindAtom: g
+mm_malloc: Allocated 0xc0214e10, size 560
+__JS_FindAtom: 0
+<cmdline>
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+__JS_FindAtom: e
+00000000C02132C0 
+__JS_FindAtom: f
+00000000C020A3A0 
+__JS_FindAtom: h
+00000000C020A3AC 
+__JS_FindAtom: i
+0000000000000000 
+mm_malloc: Allocated 0xc0214c50, size 48
+mm_malloc: Allocated 0xc0214c80, size 32
+mm_malloc: Allocated 0xc0214ca0, size 32
+mm_malloc: Allocated 0xc0215040, size 32
+mm_free: Freeing 0xc0214c80
+mm_malloc: Allocated 0xc0214c80, size 32
+mm_malloc: Allocated 0xc0215060, size 32
+mm_free: Freeing 0xc0214c80
+mm_free: Freeing 0xc0215040
+mm_malloc: Allocated 0xc0215040, size 32
+mm_malloc: Allocated 0xc0214c80, size 32
+mm_malloc: Allocated 0xc0215080, size 32
+mm_free: Freeing 0xc0215080
+mm_free: Freeing 0xc0214c80
+mm_free: Freeing 0xc0215040
+mm_malloc: Allocated 0xc0215080, size 160
+mm_free: Freeing 0xc0215060
+mm_free: Freeing 0xc0214ca0
+mm_free: Freeing 0xc0214e10
+mm_malloc: Allocated 0xc0214e10, size 112
+mm_malloc: Allocated 0xc0214e80, size 80
+mm_malloc: Allocated 0xc0214c80, size 48
+JS_DefineProperty: a
+JS_DefineProperty: c
+JS_DefineProperty: d
+JS_DefineProperty: e
+JS_DefineProperty: f
+JS_DefineProperty: g
+JS_DefineProperty: h
+JS_CreateProperty: a
+JS_CreateProperty: b
+JS_CreateProperty: c
+JS_CreateProperty: d
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+JS_DefineProperty: a
+JS_DefineProperty: c
+JS_DefineProperty: d
+JS_DefineProperty: e
+JS_DefineProperty: f
+JS_DefineProperty: g
+JS_DefineProperty: h
+JS_CreateProperty: a
+JS_CreateProperty: b
+JS_CreateProperty: c
+JS_CreateProperty: d
+mm_free: Freeing 0xc0214e10
+JS_CreateProperty: e
+JS_CreateProperty: f
+JS_CreateProperty: g
+mm_free: Freeing 0xc0214c80
+mm_free: Freeing 0xc0214e80
+mm_free: Freeing 0xc0214c50
+mm_free: Freeing 0xc0215080
+mm_free: Freeing 0xc0200da0
+mm_free: Freeing 0xc0201920
 _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 12:50:34 risc-v
-_assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: /system/bin/init 0xc000004a
-up_dump_register: EPC: 00000000c005321c
-up_dump_register: A0: 0000000000000150 A1: 00000000c0211b70 A2: 0000000000000000 A3: fffffffffc000000
-up_dump_register: A4: ffffffffffffe000 A5: 00000000000000c0 A6: 0000000000000009 A7: fffffffffffffffc
-up_dump_register: T0: 00000000800074b2 T1: 000000000000006a T2: 00000000000001ff T3: 000000000000006c
-up_dump_register: T4: 0000000000000068 T5: 0000000000000009 T6: 000000000000002a
-up_dump_register: S0: 0000000000000150 S1: 0000000000000148 S2: 0000000000000065 S3: 00000000c0202037
-up_dump_register: S4: 0000000000000003 S5: 0000000000000000 S6: ffffffffffffffff S7: 00000000c0202037
-up_dump_register: S8: 0000000000000000 S9: 0000000000000000 S10: 0000000000000000 S11: 0000000000000000
-up_dump_register: SP: 00000000c02024f0 FP: 0000000000000150 TP: 0000000000000000 RA: 00000000c005340c
-dump_stack: User Stack:
-dump_stack:   base: 0xc0202040
-dump_stack:   size: 00003008
-dump_stack:     sp: 0xc02024f0
-stack_dump: 0xc02024d0: 000001db 00000000 c0200e00 00000000 c0062a30 00000000 c003551a 00000000
-stack_dump: 0xc02024f0: 00000150 00000000 c005340c 00000000 c0057ec8 00000000 c00539d6 00000000
-stack_dump: 0xc0202510: 00000065 00000000 c0202010 00000000 c0200e00 00000000 c0202010 00000000
-stack_dump: 0xc0202530: c0200e00 00000000 c00035b2 00000000 c02005d0 00000000 c0003b2a 00000000
-stack_dump: 0xc0202550: deadbeef deadbeef 00000000 00000000 00000000 00000000 00000000 00000000
-stack_dump: 0xc0202570: 00000000 00000000 0000002d 00000000 00000000 00000000 deadbeef deadbeef
-stack_dump: 0xc0202590: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc02025b0: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc02025d0: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc02025f0: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202610: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202630: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202650: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202670: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202690: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc02026b0: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc02026d0: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc02026f0: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202710: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202730: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202750: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
-stack_dump: 0xc0202770: deadbeef deadbeef 00000000 00000000 deadbeef deadbeef 00000000 00000000
-stack_dump: 0xc0202790: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-stack_dump: 0xc02027b0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
-stack_dump: 0xc02027d0: 00000000 00000000 00000000 00000000 00000000 00000000 c00033b6 00000000
-stack_dump: 0xc02027f0: deadbeef deadbeef 8000b138 00000000 00000000 00000000 00000021 00000000
-stack_dump: 0xc0202810: 00000001 00000005 4bf70049 00000000 696c7073 00000074 00000031 00000000
-stack_dump: 0xc0202830: 00000001 00000009 6b4c5396 00000000 736e6f63 63757274 00000074 00000000
-stack_dump: 0xc0202850: 00000000 00000000 00000031 00000000 00000001 0000000e 65300f94 00000000
-stack_dump: 0xc0202870: 50746567 6f746f72 65707974 0000664f 00000000 00000000 00000031 00000000
-stack_dump: 0xc0202890: 00000001 0000000e 51a7d668 00000000 50746573 6f746f72 65707974 0000664f
-stack_dump: 0xc02028b0: 00000000 00000000 00000031 00000000 00000001 0000000c 7ec5152e 00000000
-stack_dump: 0xc02028d0: 78457369 736e6574 656c6269 00000000 00000000 00000000 00000031 00000000
-stack_dump: 0xc02028f0: 00000001 00000011 52c48273 00000000 76657270 45746e65 6e657478 6e6f6973
-stack_dump: 0xc0202910: 00000073 00000000 00000021 00000000 00000001 00000003 4183bc59 0000003c
-stack_dump: 0xc0202930: 00736168 00000000 00000031 00000000 00000001 0000000e 7d2fe111 00000000
-stack_dump: 0xc0202950: 656c6564 72506574 7265706f 00007974 00000000 00000000 00000031 00000000
-stack_dump: 0xc0202970: 00000001 0000000e 435ee5a1 00000000 69666564 7250656e 7265706f 00007974
-stack_dump: 0xc0202990: 00000000 00000000 00000041 00000000 00000001 00000018 556a19f5 00000000
-stack_dump: 0xc02029b0: 4f746567 72506e77 7265706f 65447974 69726373 726f7470 00000000 00000000
-stack_dump: 0xc02029d0: 00000000 00000000 00000021 00000000 00000001 00000007 427d54b9 00000000
-stack_dump: 0xc02029f0: 4b6e776f 00737965 00000021 00000000 00000001 00000003 417c5c08 00000000
-stack_dump: 0xc0202a10: 00646461 00000000 00000021 00000000 00000001 00000004 4a0ef003 00000000
-stack_dump: 0xc0202a30: 656e6f64 00000000 00000021 00000000 00000001 00000004 54dc37d4 00000000
-stack_dump: 0xc0202a50: 7478656e 00000000 00000021 00000000 00000004 00000006 7c02699b 00000000
-stack_dump: 0xc0202a70: 756c6176 00007365 00000021 00000000 00000001 00000006 77618b54 00000000
-stack_dump: 0xc0202a90: 72756f73 00006563 00000021 00000000 00000001 00000005 4c60ead6 00000000
-stack_dump: 0xc0202ab0: 67616c66 00000073 00000021 00000000 00000001 00000006 7e4f2c3c 00000000
-stack_dump: 0xc0202ad0: 626f6c67 00006c61 00000021 00000000 00000001 00000007 73d69fcc 00000000
-stack_dump: 0xc0202af0: 63696e75 0065646f 00000021 00000000 00000001 00000003 418e4a47 00000000
-stack_dump: 0xc0202b10: 00776172 00000000 00000031 00000000 00000001 0000000a 4cee6f90 00000000
-stack_dump: 0xc0202b30: 2e77656e 67726174 00007465 00000000 00000000 00000000 00000031 00000000
-stack_dump: 0xc0202b50: 00000001 00000010 58af09be 00000000 73696874 7463612e 5f657669 636e7566
-stack_dump: 0xc0202b70: 00000000 00000000 00000031 00000000 00000001 0000000d 4e95a32a 00000000
-stack_dump: 0xc0202b90: 6d6f683c 626f5f65 7463656a 0000003e 00000000 00000000 00000031 00000000
-stack_dump: 0xc0202bb0: 00000001 00000010 738f9c0b 00000000 6d6f633c 65747570 69665f64 3e646c65
-stack_dump: 0xc0202bd0: 00000000 00000000 00000031 00000000 00000001 00000017 47de42e8 00000016
-stack_dump: 0xc0202bf0: 6174733c 5f636974 706d6f63 64657475 00000000 00000000 00000000 00000000
-dump_tasks:    PID GROUP PRI POLICY   TYPE    NPX STATE   EVENT      SIGMASK          STACKBASE  STACKSIZE      USED   FILLED    COMMAND
-dump_tasks:   ----   --- --- -------- ------- --- ------- ---------- ---------------- 0x802002b0      2048      2040    99.6%!   irq
-dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000000 0x80206010      3056      1840    60.2%    Idle_Task
-dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020a050      1968       720    36.5%    lpwork 0x802015f0 0x80201618
-dump_task:       2     2 100 RR       Task    - Waiting Semaphore  0000000000000000 0xc0202040      3008       744    24.7%    /system/bin/init
-_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 12:50:34 risc-v
-_assert: Assertion failed : at file: common/riscv_doirq.c:79 task: /system/bin/init process: /system/bin/init 0xc000004a
+_assert: Assertion failed : at file: mm_heap/mm_free.c:112 task: qjs process: qjs 0xc000339e
 up_dump_register: EPC: 0000000080001faa
-up_dump_register
+up_dump_regi
