@@ -1172,6 +1172,8 @@ From here...
 
 TODO: Do we disable stdio buffering?
 
+TODO: Are we out of Heap Memory?
+
 TODO: Where in main() are we?
 
 # Heap Memory for QuickJS on NuttX
