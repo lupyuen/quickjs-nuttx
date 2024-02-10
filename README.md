@@ -602,7 +602,7 @@ We [copied the Command-Line Arg to Local Buffer](https://github.com/lupyuen/quic
 
 # Stack is Full
 
-TODO: Increase the Stack, it's 100% full
+Let's increase the Stack Size, it's 100% full...
 
 ```text
 riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006d52, MTVAL: ffffffffffffffff
@@ -615,7 +615,9 @@ dump_task:       2     2 100 RR       Task    - Waiting Semaphore  0000000000000
 dump_task:       3     3 100 RR       Task    - Running            0000000000000000 0xc0202050      1968      1968   100.0%!   qjs }¼uq¦ü®઄²äÅ
 ```
 
-TODO `make menuconfig` > Library Routines > Program Execution Options > Default task_spawn Stack Size. Set to 8192
+We follow these steps to [increase Stack Size](https://github.com/lupyuen/nuttx-star64#increase-stack-size): `make menuconfig` > Library Routines > Program Execution Options > Default task_spawn Stack Size. Set to 8192
+
+Here are all the settings we changed so far...
 
 ```bash
 CONFIG_DEBUG_BINFMT=y
