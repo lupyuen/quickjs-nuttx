@@ -631,7 +631,7 @@ CONFIG_STDIO_DISABLE_BUFFERING=y
 ## Remove CONFIG_SYSLOG_TIMESTAMP=y
 ```
 
-And 123 is printed OK yay!
+And 123 is printed OK yay! [nuttx/qemu.log](nuttx/qemu.log)
 
 ```text
 F 00000000C0216460
