@@ -17,6 +17,7 @@ qjs_options=" \
   -fwrapv  \
   -D_GNU_SOURCE \
   -DCONFIG_VERSION=\"2024-01-13\" \
+  -DEMSCRIPTEN \
 "
 
 ## GCC Options for NuttX
