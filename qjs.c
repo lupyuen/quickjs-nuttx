@@ -44,6 +44,7 @@
 #define _d(s) write(1, s, strlen(s))////
 char *debug_expr = NULL;////
 
+#ifdef NOTUSED
 //// Begin Test
 uint8_t debug_heap[1024 * 1024];
 size_t debug_heap_next = 0;
@@ -70,10 +71,11 @@ void debug_free(void *ptr) {
     // TODO
 }
 
-#define malloc(size) debug_malloc(size)
-#define realloc(ptr, size) debug_realloc(ptr, size)
-#define free(ptr) debug_free(ptr)
+// #define malloc(size) debug_malloc(size)
+// #define realloc(ptr, size) debug_realloc(ptr, size)
+// #define free(ptr) debug_free(ptr)
 //// End Test
+#endif // NOTUSED
 
 extern const uint8_t qjsc_repl[];
 extern const uint32_t qjsc_repl_size;

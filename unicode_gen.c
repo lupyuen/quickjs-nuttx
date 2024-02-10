@@ -68,12 +68,12 @@
 //// Begin Test
 #define _d(s) write(1, s, strlen(s))
 extern char *debug_expr;
-void *debug_malloc(size_t size);
-void *debug_realloc(void *ptr, size_t size);
-void debug_free(void *ptr);
-#define malloc(size) debug_malloc(size)
-#define realloc(ptr, size) debug_realloc(ptr, size)
-#define free(ptr) debug_free(ptr)
+// void *debug_malloc(size_t size);
+// void *debug_realloc(void *ptr, size_t size);
+// void debug_free(void *ptr);
+// #define malloc(size) debug_malloc(size)
+// #define realloc(ptr, size) debug_realloc(ptr, size)
+// #define free(ptr) debug_free(ptr)
 //// End Test
 
 void *mallocz(size_t size)
