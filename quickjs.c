@@ -8871,6 +8871,7 @@ static int JS_CreateProperty(JSContext *ctx, JSObject *p,
                              JSValueConst getter, JSValueConst setter,
                              int flags)
 {
+write(1, "JS_CreateProperty: a\n", 21);////
     JSProperty *pr;
     int ret, prop_flags;
 
@@ -8943,20 +8944,25 @@ static int JS_CreateProperty(JSContext *ctx, JSObject *p,
         }
     }
 
+write(1, "JS_CreateProperty: b\n", 21);////
     if (!p->extensible) {
     not_extensible:
         return JS_ThrowTypeErrorOrFalse(ctx, flags, "object is not extensible");
     }
 
+write(1, "JS_CreateProperty: c\n", 21);////
     if (flags & (JS_PROP_HAS_GET | JS_PROP_HAS_SET)) {
         prop_flags = (flags & (JS_PROP_CONFIGURABLE | JS_PROP_ENUMERABLE)) |
             JS_PROP_GETSET;
     } else {
         prop_flags = flags & JS_PROP_C_W_E;
     }
+write(1, "JS_CreateProperty: d\n", 21);////
     pr = add_property(ctx, p, prop, prop_flags);
+write(1, "JS_CreateProperty: e\n", 21);////
     if (unlikely(!pr))
         return -1;
+write(1, "JS_CreateProperty: f\n", 21);////
     if (flags & (JS_PROP_HAS_GET | JS_PROP_HAS_SET)) {
         pr->u.getset.getter = NULL;
         if ((flags & JS_PROP_HAS_GET) && JS_IsFunction(ctx, getter)) {
@@ -8975,6 +8981,7 @@ static int JS_CreateProperty(JSContext *ctx, JSObject *p,
             pr->u.value = JS_UNDEFINED;
         }
     }
+write(1, "JS_CreateProperty: g\n", 21);////
     return TRUE;
 }
 
