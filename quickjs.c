@@ -5087,11 +5087,15 @@ static JSValue JS_NewCFunction3(JSContext *ctx, JSCFunction *func,
     JSObject *p;
     JSAtom name_atom;
     
+_d("JS_NewCFunction3: 0="); _d(debug_expr); _d("\n"); ////
     func_obj = JS_NewObjectProtoClass(ctx, proto_val, JS_CLASS_C_FUNCTION);
+_d("JS_NewCFunction3: 1="); _d(debug_expr); _d("\n"); ////
     if (JS_IsException(func_obj))
         return func_obj;
     p = JS_VALUE_GET_OBJ(func_obj);
+_d("JS_NewCFunction3: 2="); _d(debug_expr); _d("\n"); ////
     p->u.cfunc.realm = JS_DupContext(ctx);
+_d("JS_NewCFunction3: 3="); _d(debug_expr); _d("\n"); ////
     p->u.cfunc.c_function.generic = func;
     p->u.cfunc.length = length;
     p->u.cfunc.cproto = cproto;
@@ -5100,6 +5104,7 @@ static JSValue JS_NewCFunction3(JSContext *ctx, JSCFunction *func,
                          cproto == JS_CFUNC_constructor_magic ||
                          cproto == JS_CFUNC_constructor_or_func ||
                          cproto == JS_CFUNC_constructor_or_func_magic);
+_d("JS_NewCFunction3: 4="); _d(debug_expr); _d("\n"); ////
     if (!name)
         name = "";
 _d("JS_NewCFunction3: a="); _d(debug_expr); _d("\n"); ////
