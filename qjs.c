@@ -51,6 +51,7 @@ size_t debug_heap_next = 0;
 void *debug_malloc(size_t size) {
     if (debug_heap_next + size >= sizeof(debug_heap)) {
         _d("**** debug_malloc: No more heap space!\n");
+        exit(1);
         return NULL;
     }
     void *ret = debug_heap + debug_heap_next;
