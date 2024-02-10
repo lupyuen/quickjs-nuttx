@@ -407,13 +407,14 @@ int main(int argc, char **argv)
                 }
                 if (optind < argc) {
                     expr = argv[optind++];
-                    _d("main: expr="); _d(expr); _d("\n"); ////
-                    _d("main: &expr="); print_hex(expr); _d("\n"); ////
-                    _d("main: argv="); print_hex(argv); _d("\n"); ////
                     // debug_expr = expr; ////
                     assert(strlen(expr) < sizeof(debug_buf) - 1);////
                     strcpy(debug_buf, expr);////
                     debug_expr = debug_buf;////
+                    expr = debug_buf;////
+                    _d("main: expr="); _d(expr); _d("\n"); ////
+                    _d("main: &expr="); print_hex(expr); _d("\n"); ////
+                    _d("main: argv="); print_hex(argv); _d("\n"); ////
                     break;
                 }
                 fprintf(stderr, "qjs: missing expression for -e\n");
