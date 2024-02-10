@@ -2870,29 +2870,30 @@ static JSAtom __JS_NewAtomInit(JSRuntime *rt, const char *str, int len,
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
 {
-write(1, "__JS_FindAtom: 0\n", 17);
+write(1, "__JS_FindAtom: 0\n", 17);////
+if (len > 0) { write(1, str, len); write(1, "\n", 1); };////
 // printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
 // if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
 ////static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
-write(1, "__JS_FindAtom: a\n", 17);
+write(1, "__JS_FindAtom: a\n", 17);////
     uint32_t h, h1, i;
     JSAtomStruct *p;
 
-write(1, "__JS_FindAtom: b\n", 17);
+write(1, "__JS_FindAtom: b\n", 17);////
     h = hash_string8((const uint8_t *)str, len, JS_ATOM_TYPE_STRING);
-write(1, "__JS_FindAtom: c\n", 17);
+write(1, "__JS_FindAtom: c\n", 17);////
 // printf("__JS_FindAtom: h=%p\n", h);////
     h &= JS_ATOM_HASH_MASK;
 // printf("__JS_FindAtom: h=%p\n", h);////
     h1 = h & (rt->atom_hash_size - 1);
-write(1, "__JS_FindAtom: d\n", 17);
+write(1, "__JS_FindAtom: d\n", 17);////
 // printf("__JS_FindAtom: h1=%p\n", h1);////
     i = rt->atom_hash[h1];
     while (i != 0) {
-write(1, "__JS_FindAtom: e\n", 17);
+write(1, "__JS_FindAtom: e\n", 17);////
 // printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
         p = rt->atom_array[i];
-write(1, "__JS_FindAtom: f\n", 17);
+write(1, "__JS_FindAtom: f\n", 17);////
         if (p->hash == h &&
             p->atom_type == JS_ATOM_TYPE_STRING &&
             p->len == len &&
@@ -2900,7 +2901,7 @@ write(1, "__JS_FindAtom: f\n", 17);
             memcmp(p->u.str8, str, len) == 0) {
             if (!__JS_AtomIsConst(i))
                 p->header.ref_count++;
-write(1, "__JS_FindAtom: g\n", 17);
+write(1, "__JS_FindAtom: g\n", 17);////
 // printf("__JS_FindAtom: rt=%p, return i=%d\n", rt, i);////
             return i;
         }
