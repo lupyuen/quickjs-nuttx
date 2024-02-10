@@ -529,7 +529,19 @@ bool nxmutex_is_hold(FAR mutex_t *mutex) {
     c0053046:	047030ef          	jal	ra,c005688c <gettid>
 ```
 
-Which comes from fprintf(). So we change fprintf() to write() because it doesn't use Mutex.
+Which comes from fprintf(). So we [change fprintf() to write()](https://github.com/lupyuen/quickjs-nuttx/commit/28b001034e18e23b58825e942b8a70e18a98fa84#diff-95fe784bea3e0fbdf30ba834b1a74b538090f4d70f4f8770ef397ef68ec37aa3) because it doesn't use Mutex.
+
+Now we see...
+
+```text
+js_dump_obj: SyntaxError: unexpected character
+__JS_FindAtom: 0
+stack
+js_dump_obj:     at <cmdline>:1
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c000697c, MTVAL: 00000008c0212088
+```
+
+TODO: Check our Command Line
 
 TODO: Are we out of Heap Memory?
 
