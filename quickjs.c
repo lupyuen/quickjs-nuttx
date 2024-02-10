@@ -48,6 +48,20 @@
 
 #define _d(s) write(1, s, strlen(s))////
 
+//// Begin Test
+void print_hex(uint64_t n) {
+    const char dec_to_hex[] = "0123456789ABCDEF";
+    static char hex_str[17];
+    for (int i = 0; i < 16; i++) {
+        const uint8_t d = n & 0xf;
+        n = n >> 4;
+        hex_str[15 - i] = dec_to_hex[d];
+    }
+    hex_str[16] = 0;
+    write(1, hex_str, 16);
+}
+//// End Test
+
 #define OPTIMIZE         1
 #define SHORT_OPCODES    1
 #if defined(EMSCRIPTEN)
@@ -2869,20 +2883,6 @@ static JSAtom __JS_NewAtomInit(JSRuntime *rt, const char *str, int len,
     p->u.str8[len] = '\0';
     return __JS_NewAtom(rt, p, atom_type);
 }
-
-//// Begin Test
-void print_hex(uint64_t n) {
-    const char dec_to_hex[] = "0123456789ABCDEF";
-    static char hex_str[17];
-    for (int i = 0; i < 16; i++) {
-        const uint8_t d = n & 0xf;
-        n = n >> 4;
-        hex_str[15 - i] = dec_to_hex[d];
-    }
-    hex_str[16] = 0;
-    write(1, hex_str, 16);
-}
-//// End Test
 
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
@@ -21090,9 +21090,11 @@ static __exception int next_token(JSParseState *s)
         }
         break;
     default:
+        _d("next_token: c="); print_hex(c); _d("\n");////
         if (c >= 128) {
             /* unicode value */
             c = unicode_from_utf8(p, UTF8_CHAR_LEN_MAX, &p);
+            _d("next_token: c2="); print_hex(c); _d("\n");////
             switch(c) {
             case CP_PS:
             case CP_LS:
@@ -21335,6 +21337,7 @@ static __exception int json_next_token(JSParseState *s)
         }
         break;
     default:
+        _d("json_next_token: c="); print_hex(c); _d("\n");////
         if (c >= 128) {
             js_parse_error(s, "unexpected character");
             goto fail;
