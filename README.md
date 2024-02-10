@@ -1134,9 +1134,9 @@ up_dump_register: EPC: 0000000080001faa
 up_dump_register: A0:+ true
 ```
 
-TODO: What is this Heap Free Error?
+TODO: What is this Heap Free Error? [Sanity check against double-frees](https://github.com/apache/nuttx/blob/master/mm/mm_heap/mm_free.c#L109-L112)
 
-And another corrupted printf Mutex....
+After cleaning up the logs: We get another corrupted printf Mutex....
 
 ```text
 __JS_FindAtom: 0
@@ -1175,6 +1175,8 @@ TODO: Do we disable stdio buffering?
 TODO: Are we out of Heap Memory?
 
 TODO: Where in main() are we?
+
+TODO: Something is seriously getting corrupted!
 
 # Heap Memory for QuickJS on NuttX
 
