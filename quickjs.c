@@ -8123,9 +8123,12 @@ static JSProperty *add_property(JSContext *ctx,
     JSShape *sh, *new_sh;
 
     sh = p->shape;
+_d("add_property: a="); _d(debug_expr); _d("\n"); ////
     if (sh->is_hashed) {
         /* try to find an existing shape */
+_d("add_property: b="); _d(debug_expr); _d("\n"); ////
         new_sh = find_hashed_shape_prop(ctx->rt, sh, prop, prop_flags);
+_d("add_property: c="); _d(debug_expr); _d("\n"); ////
         if (new_sh) {
             /* matching shape found: use it */
             /*  the property array may need to be resized */
@@ -8133,28 +8136,36 @@ static JSProperty *add_property(JSContext *ctx,
                 JSProperty *new_prop;
                 new_prop = js_realloc(ctx, p->prop, sizeof(p->prop[0]) *
                                       new_sh->prop_size);
+_d("add_property: d="); _d(debug_expr); _d("\n"); ////
                 if (!new_prop)
                     return NULL;
                 p->prop = new_prop;
             }
             p->shape = js_dup_shape(new_sh);
+_d("add_property: e="); _d(debug_expr); _d("\n"); ////
             js_free_shape(ctx->rt, sh);
+_d("add_property: f="); _d(debug_expr); _d("\n"); ////
             return &p->prop[new_sh->prop_count - 1];
         } else if (sh->header.ref_count != 1) {
             /* if the shape is shared, clone it */
             new_sh = js_clone_shape(ctx, sh);
+_d("add_property: g="); _d(debug_expr); _d("\n"); ////
             if (!new_sh)
                 return NULL;
             /* hash the cloned shape */
             new_sh->is_hashed = TRUE;
             js_shape_hash_link(ctx->rt, new_sh);
+_d("add_property: h="); _d(debug_expr); _d("\n"); ////
             js_free_shape(ctx->rt, p->shape);
+_d("add_property: i="); _d(debug_expr); _d("\n"); ////
             p->shape = new_sh;
         }
     }
     assert(p->shape->header.ref_count == 1);
+_d("add_property: j="); _d(debug_expr); _d("\n"); ////
     if (add_shape_property(ctx, &p->shape, p, prop, prop_flags))
         return NULL;
+_d("add_property: k="); _d(debug_expr); _d("\n"); ////
     return &p->prop[p->shape->prop_count - 1];
 }
 

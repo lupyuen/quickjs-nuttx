@@ -594,7 +594,7 @@ js_def_malloc: d=
 
 NuttX malloc() erased our JavaScript from the Command-Line Arg!
 
-TODO: Why?
+Why? We [switched to our own barebones malloc](https://github.com/lupyuen/quickjs-nuttx/commit/3283e9f16631f6d9f1babbe2e0cd5cba635f34e0) for testing.
 
 TODO: Who is corrupting our memory with FF?
 
