@@ -1365,11 +1365,15 @@ static void *js_bf_realloc(void *opaque, void *ptr, size_t size)
 void *js_malloc(JSContext *ctx, size_t size)
 {
     void *ptr;
+_d("js_malloc: a="); _d(debug_expr); _d("\n"); ////
     ptr = js_malloc_rt(ctx->rt, size);
+_d("js_malloc: b="); _d(debug_expr); _d("\n"); ////
     if (unlikely(!ptr)) {
+_d("js_malloc: b="); _d(debug_expr); _d("\n"); ////
         JS_ThrowOutOfMemory(ctx);
         return NULL;
     }
+_d("js_malloc: d="); _d(debug_expr); _d("\n"); ////
     return ptr;
 }
 
@@ -1733,15 +1737,19 @@ static void *js_def_malloc(JSMallocState *s, size_t size)
     /* Do not allocate zero bytes: behavior is platform dependent */
     assert(size != 0);
 
+_d("js_def_malloc: a="); _d(debug_expr); _d("\n"); ////
     if (unlikely(s->malloc_size + size > s->malloc_limit))
         return NULL;
 
+_d("js_def_malloc: b="); _d(debug_expr); _d("\n"); ////
     ptr = malloc(size);
     if (!ptr)
         return NULL;
 
     s->malloc_count++;
+_d("js_def_malloc: c="); _d(debug_expr); _d("\n"); ////
     s->malloc_size += js_def_malloc_usable_size(ptr) + MALLOC_OVERHEAD;
+_d("js_def_malloc: d="); _d(debug_expr); _d("\n"); ////
     return ptr;
 }
 
