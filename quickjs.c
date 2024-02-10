@@ -2471,10 +2471,10 @@ uint32_t hash_string8(const uint8_t *str, size_t len, uint32_t h)
 {
     size_t i;
 
-printf("hash_string8: str=%s, len=%d\n", str, len);////
+// printf("hash_string8: str=%s, len=%d\n", str, len);////
     for(i = 0; i < len; i++)
         h = h * 263 + str[i];
-printf("hash_string8: str=%s, h=%p\n", str, h);////
+// printf("hash_string8: str=%s, h=%p\n", str, h);////
     return h;
 }
 
@@ -2870,22 +2870,29 @@ static JSAtom __JS_NewAtomInit(JSRuntime *rt, const char *str, int len,
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
 {
-printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
-if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
-static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
+write(1, "__JS_FindAtom: 0\n", 17);
+// printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
+// if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
+////static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
+write(1, "__JS_FindAtom: a\n", 17);
     uint32_t h, h1, i;
     JSAtomStruct *p;
 
+write(1, "__JS_FindAtom: b\n", 17);
     h = hash_string8((const uint8_t *)str, len, JS_ATOM_TYPE_STRING);
-printf("__JS_FindAtom: h=%p\n", h);////
+write(1, "__JS_FindAtom: c\n", 17);
+// printf("__JS_FindAtom: h=%p\n", h);////
     h &= JS_ATOM_HASH_MASK;
-printf("__JS_FindAtom: h=%p\n", h);////
+// printf("__JS_FindAtom: h=%p\n", h);////
     h1 = h & (rt->atom_hash_size - 1);
-printf("__JS_FindAtom: h1=%p\n", h1);////
+write(1, "__JS_FindAtom: d\n", 17);
+// printf("__JS_FindAtom: h1=%p\n", h1);////
     i = rt->atom_hash[h1];
     while (i != 0) {
-printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
+write(1, "__JS_FindAtom: e\n", 17);
+// printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
         p = rt->atom_array[i];
+write(1, "__JS_FindAtom: f\n", 17);
         if (p->hash == h &&
             p->atom_type == JS_ATOM_TYPE_STRING &&
             p->len == len &&
@@ -2893,7 +2900,8 @@ printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
             memcmp(p->u.str8, str, len) == 0) {
             if (!__JS_AtomIsConst(i))
                 p->header.ref_count++;
-printf("__JS_FindAtom: rt=%p, return i=%d\n", rt, i);////
+write(1, "__JS_FindAtom: g\n", 17);
+// printf("__JS_FindAtom: rt=%p, return i=%d\n", rt, i);////
             return i;
         }
         i = p->hash_next;
@@ -9055,19 +9063,25 @@ int JS_DefineProperty(JSContext *ctx, JSValueConst this_obj,
                       JSAtom prop, JSValueConst val,
                       JSValueConst getter, JSValueConst setter, int flags)
 {
+write(1, "JS_DefineProperty: a\n", 21);////
     JSObject *p;
     JSShapeProperty *prs;
     JSProperty *pr;
     int mask, res;
 
     if (JS_VALUE_GET_TAG(this_obj) != JS_TAG_OBJECT) {
+write(1, "JS_DefineProperty: b\n", 21);////
         JS_ThrowTypeErrorNotAnObject(ctx);
         return -1;
     }
+write(1, "JS_DefineProperty: c\n", 21);////
     p = JS_VALUE_GET_OBJ(this_obj);
+write(1, "JS_DefineProperty: d\n", 21);////
 
  redo_prop_update:
+write(1, "JS_DefineProperty: e\n", 21);////
     prs = find_own_property(&pr, p, prop);
+write(1, "JS_DefineProperty: f\n", 21);////
     if (prs) {
         /* the range of the Array length property is always tested before */
         if ((prs->flags & JS_PROP_LENGTH) && (flags & JS_PROP_HAS_VALUE)) {
@@ -9249,6 +9263,7 @@ int JS_DefineProperty(JSContext *ctx, JSValueConst this_obj,
     }
 
     /* handle modification of fast array elements */
+write(1, "JS_DefineProperty: g\n", 21);////
     if (p->fast_array) {
         uint32_t idx;
         uint32_t prop_flags;
@@ -9320,6 +9335,7 @@ int JS_DefineProperty(JSContext *ctx, JSValueConst this_obj,
         }
     }
 
+write(1, "JS_DefineProperty: h\n", 21);////
     return JS_CreateProperty(ctx, p, prop, val, getter, setter, flags);
 }
 
