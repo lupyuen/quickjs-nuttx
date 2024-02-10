@@ -4897,15 +4897,23 @@ JSValue JS_NewObjectProtoClass(JSContext *ctx, JSValueConst proto_val,
     JSShape *sh;
     JSObject *proto;
 
+_d("JS_NewObjectProtoClass: a="); _d(debug_expr); _d("\n"); ////
     proto = get_proto_obj(proto_val);
+_d("JS_NewObjectProtoClass: b="); _d(debug_expr); _d("\n"); ////
     sh = find_hashed_shape_proto(ctx->rt, proto);
+_d("JS_NewObjectProtoClass: c="); _d(debug_expr); _d("\n"); ////
     if (likely(sh)) {
+_d("JS_NewObjectProtoClass: d="); _d(debug_expr); _d("\n"); ////
         sh = js_dup_shape(sh);
+_d("JS_NewObjectProtoClass: e="); _d(debug_expr); _d("\n"); ////
     } else {
+_d("JS_NewObjectProtoClass: f="); _d(debug_expr); _d("\n"); ////
         sh = js_new_shape(ctx, proto);
+_d("JS_NewObjectProtoClass: g="); _d(debug_expr); _d("\n"); ////
         if (!sh)
             return JS_EXCEPTION;
     }
+_d("JS_NewObjectProtoClass: h="); _d(debug_expr); _d("\n"); ////
     return JS_NewObjectFromShape(ctx, sh, class_id);
 }
 
