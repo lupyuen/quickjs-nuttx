@@ -399,6 +399,7 @@ int main(int argc, char **argv)
                     expr = argv[optind++];
                     _d("main: expr="); _d(expr); _d("\n"); ////
                     _d("main: &expr="); print_hex(expr); _d("\n"); ////
+                    _d("main: argv="); print_hex(argv); _d("\n"); ////
                     debug_expr = expr; ////
                     break;
                 }
