@@ -8937,7 +8937,7 @@ static int JS_CreateProperty(JSContext *ctx, JSObject *p,
                              JSValueConst getter, JSValueConst setter,
                              int flags)
 {
-write(1, "JS_CreateProperty: a\n", 21);////
+_d("JS_CreateProperty: a="); _d(debug_expr); _d("\n"); ////
     JSProperty *pr;
     int ret, prop_flags;
 
@@ -9010,25 +9010,25 @@ write(1, "JS_CreateProperty: a\n", 21);////
         }
     }
 
-// write(1, "JS_CreateProperty: b\n", 21);////
+_d("JS_CreateProperty: b="); _d(debug_expr); _d("\n"); ////
     if (!p->extensible) {
     not_extensible:
         return JS_ThrowTypeErrorOrFalse(ctx, flags, "object is not extensible");
     }
 
-// write(1, "JS_CreateProperty: c\n", 21);////
+_d("JS_CreateProperty: c="); _d(debug_expr); _d("\n"); ////
     if (flags & (JS_PROP_HAS_GET | JS_PROP_HAS_SET)) {
         prop_flags = (flags & (JS_PROP_CONFIGURABLE | JS_PROP_ENUMERABLE)) |
             JS_PROP_GETSET;
     } else {
         prop_flags = flags & JS_PROP_C_W_E;
     }
-// write(1, "JS_CreateProperty: d\n", 21);////
+_d("JS_CreateProperty: d="); _d(debug_expr); _d("\n"); ////
     pr = add_property(ctx, p, prop, prop_flags);
-// write(1, "JS_CreateProperty: e\n", 21);////
+_d("JS_CreateProperty: e="); _d(debug_expr); _d("\n"); ////
     if (unlikely(!pr))
         return -1;
-// write(1, "JS_CreateProperty: f\n", 21);////
+_d("JS_CreateProperty: f="); _d(debug_expr); _d("\n"); ////
     if (flags & (JS_PROP_HAS_GET | JS_PROP_HAS_SET)) {
         pr->u.getset.getter = NULL;
         if ((flags & JS_PROP_HAS_GET) && JS_IsFunction(ctx, getter)) {
@@ -9047,7 +9047,7 @@ write(1, "JS_CreateProperty: a\n", 21);////
             pr->u.value = JS_UNDEFINED;
         }
     }
-// write(1, "JS_CreateProperty: g\n", 21);////
+_d("JS_CreateProperty: g="); _d(debug_expr); _d("\n"); ////
     return TRUE;
 }
 
@@ -9136,25 +9136,25 @@ int JS_DefineProperty(JSContext *ctx, JSValueConst this_obj,
                       JSAtom prop, JSValueConst val,
                       JSValueConst getter, JSValueConst setter, int flags)
 {
-write(1, "JS_DefineProperty: a\n", 21);////
     JSObject *p;
     JSShapeProperty *prs;
     JSProperty *pr;
     int mask, res;
 
+_d("JS_DefineProperty: a="); _d(debug_expr); _d("\n"); ////
     if (JS_VALUE_GET_TAG(this_obj) != JS_TAG_OBJECT) {
-// write(1, "JS_DefineProperty: b\n", 21);////
+_d("JS_DefineProperty: b="); _d(debug_expr); _d("\n"); ////
         JS_ThrowTypeErrorNotAnObject(ctx);
         return -1;
     }
-// write(1, "JS_DefineProperty: c\n", 21);////
+_d("JS_DefineProperty: c="); _d(debug_expr); _d("\n"); ////
     p = JS_VALUE_GET_OBJ(this_obj);
-// write(1, "JS_DefineProperty: d\n", 21);////
+_d("JS_DefineProperty: d="); _d(debug_expr); _d("\n"); ////
 
  redo_prop_update:
-// write(1, "JS_DefineProperty: e\n", 21);////
+_d("JS_DefineProperty: e="); _d(debug_expr); _d("\n"); ////
     prs = find_own_property(&pr, p, prop);
-// write(1, "JS_DefineProperty: f\n", 21);////
+_d("JS_DefineProperty: f="); _d(debug_expr); _d("\n"); ////
     if (prs) {
         /* the range of the Array length property is always tested before */
         if ((prs->flags & JS_PROP_LENGTH) && (flags & JS_PROP_HAS_VALUE)) {
@@ -9336,7 +9336,7 @@ write(1, "JS_DefineProperty: a\n", 21);////
     }
 
     /* handle modification of fast array elements */
-// write(1, "JS_DefineProperty: g\n", 21);////
+_d("JS_DefineProperty: g="); _d(debug_expr); _d("\n"); ////
     if (p->fast_array) {
         uint32_t idx;
         uint32_t prop_flags;
@@ -9408,7 +9408,7 @@ write(1, "JS_DefineProperty: a\n", 21);////
         }
     }
 
-// write(1, "JS_DefineProperty: h\n", 21);////
+_d("JS_DefineProperty: h="); _d(debug_expr); _d("\n"); ////
     return JS_CreateProperty(ctx, p, prop, val, getter, setter, flags);
 }
 
