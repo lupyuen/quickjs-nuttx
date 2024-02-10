@@ -596,6 +596,25 @@ NuttX malloc() erased our JavaScript from the Command-Line Arg!
 
 Why? We [switched to our own barebones malloc](https://github.com/lupyuen/quickjs-nuttx/commit/3283e9f16631f6d9f1babbe2e0cd5cba635f34e0) for testing.
 
+But nope doesn't work.
+
+We [copied the Command-Line Arg to Local Buffer](https://github.com/lupyuen/quickjs-nuttx/commit/a4e0b308089c69ce08439a7812fbe1a8836dfc6e#diff-93a38cdf6b6645fff66fa78773011a5330ea9ed48cc1f70f4c65a6f6b707e246). Works much better!
+
+# Stack is Full
+
+TODO: Increase the Stack, it's 100% full
+
+```text
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006d52, MTVAL: ffffffffffffffff
+...
+dump_tasks:    PID GROUP PRI POLICY   TYPE    NPX STATE   EVENT      SIGMASK          STACKBASE  STACKSIZE      USED   FILLED    COMMAND
+dump_tasks:   ----   --- --- -------- ------- --- ------- ---------- ---------------- 0x802002b0      2048      2040    99.6%!   irq
+dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000000 0x80206010      3056      1856    60.7%    Idle_Task
+dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020a050      1968       704    35.7%    lpwork 0x802015f0 0x80201618
+dump_task:       2     2 100 RR       Task    - Waiting Semaphore  0000000000000000 0xc0202040      3008       744    24.7%    /system/bin/init
+dump_task:       3     3 100 RR       Task    - Running            0000000000000000 0xc0202050      1968      1968   100.0%!   qjs }¼uq¦ü®઄²äÅ
+```
+
 TODO: Who is corrupting our memory with FF?
 
 TODO: assert() is failing because of printf Mutex
