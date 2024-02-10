@@ -692,7 +692,7 @@ mm_malloc: Allocated 0x80207f90, size 80
 mm_malloc: Allocated 0xc02004b0, size 848
 
 NuttShell (NSH) NuttX-12.4.0-RC0
-nsh> [Kqjs -e "console.log(123)" 
+nsh> [Kqjs -e console.log(123) 
 mm_malloc: Allocated 0x80208920, size 112
 mm_malloc: Allocated 0x80208820, size 48
 mm_malloc: Allocated 0x80208990, size 32
@@ -4800,10 +4800,10 @@ stack_dump: 0xc0202bd0: 6665642a 746c7561 0000002a 00000000 00000000 00000000 00
 stack_dump: 0xc0202bf0: 00000001 00000001 40000131 00000000 00000000 00000000 00000000 00000000
 dump_tasks:    PID GROUP PRI POLICY   TYPE    NPX STATE   EVENT      SIGMASK          STACKBASE  STACKSIZE      USED   FILLED    COMMAND
 dump_tasks:   ----   --- --- -------- ------- --- ------- ---------- ---------------- 0x802002b0      2048      2040    99.6%!   irq
-dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000000 0x80206010      3056      1840    60.2%    Idle_Task
-dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020a050      1968       752    38.2%    lpwork 0x802015f0 0x80201618
+dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000000 0x80206010      3056      1792    58.6%    Idle_Task
+dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020a050      1968       704    35.7%    lpwork 0x802015f0 0x80201618
 dump_task:       2     2 100 RR       Task    - Waiting Semaphore  0000000000000000 0xc0202040      3008       744    24.7%    /system/bin/init
 _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 18:58:20 risc-v
 _assert: Assertion failed : at file: common/riscv_doirq.c:79 task: /system/bin/init process: /system/bin/init 0xc000004a
 up_dump_register: EPC: 0000000080001faa
-up_du
+up_dump_

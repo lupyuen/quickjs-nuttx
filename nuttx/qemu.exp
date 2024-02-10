@@ -16,7 +16,7 @@ spawn qemu-system-riscv64 \
 
 ## Wait for the prompt and enter this command
 expect "nsh> "
-send -s "qjs -e \"console.log(123)\" \r"
+send -s "qjs -e console.log(123) \r"
 
 ## Wait at most 30 seconds
 set timeout 30
