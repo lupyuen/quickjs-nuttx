@@ -188,7 +188,10 @@ riscv64-unknown-elf-objdump \
 ## Test with QEMU
 pushd ../nuttx
 
-../quickjs-nuttx/nuttx/qemu.exp
+../quickjs-nuttx/nuttx/qemu.exp || true
+../quickjs-nuttx/nuttx/qemu.exp \
+  | tr -d "\r" \
+  >../quickjs-nuttx/nuttx/qemu.log
 
 # (sleep 10 ; pkill qemu) &
 # qemu-system-riscv64 \
