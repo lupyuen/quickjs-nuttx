@@ -560,6 +560,42 @@ next_token: c=00000000000000FF
 next_token: c2=FFFFFFFFFFFFFFFF
 ```
 
+# Malloc Problems in NuttX
+
+We [logged the calls to malloc](https://github.com/lupyuen/quickjs-nuttx/commit/571b0487ed86d00cfaa15e0a3e5ff1e370844c55#diff-45f1ae674139f993bf8a99c382c1ba4863272a6fec2f492d76d7ff1b2cfcfbe2)...
+
+```c
+void *js_malloc(JSContext *ctx, size_t size)
+{
+    void *ptr;
+_d("js_malloc: a="); _d(debug_expr); _d("\n"); ////
+    ptr = js_malloc_rt(ctx->rt, size);
+_d("js_malloc: b="); _d(debug_expr); _d("\n"); ////
+    if (unlikely(!ptr)) {
+_d("js_malloc: b="); _d(debug_expr); _d("\n"); ////
+        JS_ThrowOutOfMemory(ctx);
+        return NULL;
+    }
+_d("js_malloc: d="); _d(debug_expr); _d("\n"); ////
+    return ptr;
+}
+```
+
+Something strange happens...
+
+```text
+js_malloc: a=console.log(123)
+js_def_malloc: a=console.log(123)
+js_def_malloc: b=console.log(123)
+mm_malloc: Allocated 0xc0205580, size 112
+js_def_malloc: c=
+js_def_malloc: d=
+```
+
+NuttX malloc() erased our JavaScript from the Command-Line Arg!
+
+TODO: Why?
+
 TODO: Who is corrupting our memory with FF?
 
 TODO: assert() is failing because of printf Mutex
