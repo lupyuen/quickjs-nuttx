@@ -46,10 +46,16 @@
 #include "libregexp.h"
 #include "libbf.h"
 
-#define _d(s) write(1, s, strlen(s))////
-extern char *debug_expr;////
-
 //// Begin Test
+#define _d(s) write(1, s, strlen(s))
+extern char *debug_expr;
+void *debug_malloc(size_t size);
+void *debug_realloc(void *ptr, size_t size);
+void debug_free(void *ptr);
+#define malloc(size) debug_malloc(size)
+#define realloc(ptr, size) debug_realloc(ptr, size)
+#define free(ptr) debug_free(ptr)
+
 void print_hex(uint64_t n) {
     const char dec_to_hex[] = "0123456789ABCDEF";
     static char hex_str[17];
@@ -1729,15 +1735,6 @@ static size_t js_def_malloc_usable_size(const void *ptr)
     return malloc_usable_size((void *)ptr);
 #endif
 }
-
-//// Begin Test
-void *debug_malloc(size_t size);
-void *debug_realloc(void *ptr, size_t size);
-void debug_free(void *ptr);
-#define malloc(size) debug_malloc(size)
-#define realloc(ptr, size) debug_realloc(ptr, size)
-#define free(ptr) debug_free(ptr)
-//// End Test
 
 static void *js_def_malloc(JSMallocState *s, size_t size)
 {
