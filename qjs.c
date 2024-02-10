@@ -41,11 +41,12 @@
 #include "cutils.h"
 #include "quickjs-libc.h"
 
-#define _d(s) write(1, s, strlen(s))////
-char *debug_expr = NULL;////
+//// Begin Test
+#define _d(s) write(1, s, strlen(s))
+char *debug_expr = NULL;
+char debug_buf[256];
 
 #ifdef NOTUSED
-//// Begin Test
 uint8_t debug_heap[1024 * 1024];
 size_t debug_heap_next = 0;
 
@@ -74,8 +75,9 @@ void debug_free(void *ptr) {
 // #define malloc(size) debug_malloc(size)
 // #define realloc(ptr, size) debug_realloc(ptr, size)
 // #define free(ptr) debug_free(ptr)
-//// End Test
 #endif // NOTUSED
+
+//// End Test
 
 extern const uint8_t qjsc_repl[];
 extern const uint32_t qjsc_repl_size;
@@ -408,7 +410,10 @@ int main(int argc, char **argv)
                     _d("main: expr="); _d(expr); _d("\n"); ////
                     _d("main: &expr="); print_hex(expr); _d("\n"); ////
                     _d("main: argv="); print_hex(argv); _d("\n"); ////
-                    debug_expr = expr; ////
+                    // debug_expr = expr; ////
+                    assert(strlen(expr) < sizeof(debug_buf) - 1);////
+                    strcpy(debug_buf, expr);////
+                    debug_expr = debug_buf;////
                     break;
                 }
                 fprintf(stderr, "qjs: missing expression for -e\n");
