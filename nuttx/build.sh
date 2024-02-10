@@ -125,14 +125,14 @@ riscv64-unknown-elf-gcc \
   cutils.c
 fi
 
-if [ ! -e ".obj/quickjs-libc.o" ] 
-then
+# if [ ! -e ".obj/quickjs-libc.o" ] 
+# then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/quickjs-libc.o \
   quickjs-libc.c
-fi
+# fi
 
 if [ ! -e ".obj/libbf.o" ] 
 then

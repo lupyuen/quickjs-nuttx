@@ -529,6 +529,8 @@ bool nxmutex_is_hold(FAR mutex_t *mutex) {
     c0053046:	047030ef          	jal	ra,c005688c <gettid>
 ```
 
+Which comes from fprintf(). So we change fprintf() to write() because it doesn't use Mutex.
+
 TODO: Are we out of Heap Memory?
 
 TODO: Where in main() are we?
