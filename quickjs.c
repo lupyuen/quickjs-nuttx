@@ -8121,6 +8121,7 @@ static JSProperty *add_property(JSContext *ctx,
                                 JSObject *p, JSAtom prop, int prop_flags)
 {
 _d("add_property: 0="); _d(debug_expr); _d("\n"); ////
+if (strlen(debug_expr) < 10) { assert(0); } ////
     JSShape *sh, *new_sh;
 
     sh = p->shape;
