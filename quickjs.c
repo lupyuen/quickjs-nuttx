@@ -8120,6 +8120,7 @@ JSValue JS_GetPropertyStr(JSContext *ctx, JSValueConst this_obj,
 static JSProperty *add_property(JSContext *ctx,
                                 JSObject *p, JSAtom prop, int prop_flags)
 {
+_d("add_property: 0="); _d(debug_expr); _d("\n"); ////
     JSShape *sh, *new_sh;
 
     sh = p->shape;

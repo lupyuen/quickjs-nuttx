@@ -708,7 +708,7 @@ elf_dumploadinfo:   textsize:     0
 elf_dumploadinfo:   datasize:     0
 elf_dumploadinfo:   textalign:    0
 elf_dumploadinfo:   dataalign:    0
-elf_dumploadinfo:   filelen:      4090088
+elf_dumploadinfo:   filelen:      4090232
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -718,7 +718,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4087464
+elf_dumploadinfo:   e_shoff:      4087608
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -730,53 +730,53 @@ elf_load: loadinfo: 0x80209a38
 mm_malloc: Allocated 0x802089d0, size 128
 elf_read: Read 112 bytes from offset 64
 mm_malloc: Allocated 0x8020a810, size 2640
-elf_read: Read 2624 bytes from offset 4087464
+elf_read: Read 2624 bytes from offset 4087608
 mm_malloc: Allocated 0x80208a50, size 128
 elf_loadfile: Loaded sections:
-elf_read: Read 363176 bytes from offset 4096
+elf_read: Read 363230 bytes from offset 4096
 elf_loadfile: 1. c0000000->c0000000
-elf_read: Read 117200 bytes from offset 367280
-elf_loadfile: 2. c0058ab0->c0058ab0
-elf_read: Read 488 bytes from offset 484480
-elf_loadfile: 3. c0075480->c0075480
-elf_read: Read 4 bytes from offset 484968
-elf_loadfile: 4. c0075668->c0075668
-elf_read: Read 4 bytes from offset 484976
-elf_loadfile: 5. c0075670->c0075670
-elf_read: Read 4 bytes from offset 484984
-elf_loadfile: 6. c0075678->c0075678
-elf_read: Read 8 bytes from offset 484992
-elf_loadfile: 7. c0075680->c0075680
-elf_read: Read 6 bytes from offset 485000
-elf_loadfile: 8. c0075688->c0075688
-elf_read: Read 6 bytes from offset 485008
-elf_loadfile: 9. c0075690->c0075690
-elf_read: Read 5 bytes from offset 485016
-elf_loadfile: 10. c0075698->c0075698
-elf_read: Read 4 bytes from offset 485024
-elf_loadfile: 11. c00756a0->c00756a0
-elf_read: Read 5 bytes from offset 485032
-elf_loadfile: 12. c00756a8->c00756a8
+elf_read: Read 117216 bytes from offset 367328
+elf_loadfile: 2. c0058ae0->c0058ae0
+elf_read: Read 488 bytes from offset 484544
+elf_loadfile: 3. c00754c0->c00754c0
+elf_read: Read 4 bytes from offset 485032
+elf_loadfile: 4. c00756a8->c00756a8
 elf_read: Read 4 bytes from offset 485040
-elf_loadfile: 13. c00756b0->c00756b0
+elf_loadfile: 5. c00756b0->c00756b0
 elf_read: Read 4 bytes from offset 485048
-elf_loadfile: 14. c00756b8->c00756b8
-elf_read: Read 4 bytes from offset 485056
-elf_loadfile: 15. c00756c0->c00756c0
-elf_read: Read 4 bytes from offset 485064
-elf_loadfile: 16. c00756c8->c00756c8
-elf_read: Read 5 bytes from offset 485072
-elf_loadfile: 17. c00756d0->c00756d0
-elf_read: Read 8 bytes from offset 485080
-elf_loadfile: 18. c00756d8->c00756d8
-elf_read: Read 7 bytes from offset 485088
-elf_loadfile: 19. c00756e0->c00756e0
-elf_read: Read 3 bytes from offset 485096
-elf_loadfile: 20. c00756e8->c00756e8
-elf_read: Read 6 bytes from offset 485104
-elf_loadfile: 21. c00756f0->c00756f0
-elf_read: Read 108 bytes from offset 485112
-elf_loadfile: 22. c00756f8->c00756f8
+elf_loadfile: 6. c00756b8->c00756b8
+elf_read: Read 8 bytes from offset 485056
+elf_loadfile: 7. c00756c0->c00756c0
+elf_read: Read 6 bytes from offset 485064
+elf_loadfile: 8. c00756c8->c00756c8
+elf_read: Read 6 bytes from offset 485072
+elf_loadfile: 9. c00756d0->c00756d0
+elf_read: Read 5 bytes from offset 485080
+elf_loadfile: 10. c00756d8->c00756d8
+elf_read: Read 4 bytes from offset 485088
+elf_loadfile: 11. c00756e0->c00756e0
+elf_read: Read 5 bytes from offset 485096
+elf_loadfile: 12. c00756e8->c00756e8
+elf_read: Read 4 bytes from offset 485104
+elf_loadfile: 13. c00756f0->c00756f0
+elf_read: Read 4 bytes from offset 485112
+elf_loadfile: 14. c00756f8->c00756f8
+elf_read: Read 4 bytes from offset 485120
+elf_loadfile: 15. c0075700->c0075700
+elf_read: Read 4 bytes from offset 485128
+elf_loadfile: 16. c0075708->c0075708
+elf_read: Read 5 bytes from offset 485136
+elf_loadfile: 17. c0075710->c0075710
+elf_read: Read 8 bytes from offset 485144
+elf_loadfile: 18. c0075718->c0075718
+elf_read: Read 7 bytes from offset 485152
+elf_loadfile: 19. c0075720->c0075720
+elf_read: Read 3 bytes from offset 485160
+elf_loadfile: 20. c0075728->c0075728
+elf_read: Read 6 bytes from offset 485168
+elf_loadfile: 21. c0075730->c0075730
+elf_read: Read 108 bytes from offset 485176
+elf_loadfile: 22. c0075738->c0075738
 elf_read: Read 152 bytes from offset 487424
 elf_loadfile: 23. c0101000->c0101000
 elf_read: Read 4 bytes from offset 487576
@@ -789,11 +789,11 @@ elf_loadfile: 27. c01010b0->c01010b0
 elf_dumploadinfo: LOAD_INFO:
 elf_dumploadinfo:   textalloc:    c0000000
 elf_dumploadinfo:   dataalloc:    c0101000
-elf_dumploadinfo:   textsize:     481124
+elf_dumploadinfo:   textsize:     481188
 elf_dumploadinfo:   datasize:     1048880
 elf_dumploadinfo:   textalign:    16
 elf_dumploadinfo:   dataalign:    8
-elf_dumploadinfo:   filelen:      4090088
+elf_dumploadinfo:   filelen:      4090232
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -803,7 +803,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4087464
+elf_dumploadinfo:   e_shoff:      4087608
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -816,8 +816,8 @@ elf_dumploadinfo:   p_type:       00000001
 elf_dumploadinfo:   p_offset:     00001000
 elf_dumploadinfo:   p_vaddr:      c0000000
 elf_dumploadinfo:   p_paddr:      c0000000
-elf_dumploadinfo:   p_filesz:     00075764
-elf_dumploadinfo:   p_memsz:      00075764
+elf_dumploadinfo:   p_filesz:     000757a4
+elf_dumploadinfo:   p_memsz:      000757a4
 elf_dumploadinfo:   p_flags:      00000005
 elf_dumploadinfo:   p_align:      00001000
 elf_dumploadinfo: Programs 1:
@@ -846,7 +846,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000006
 elf_dumploadinfo:   sh_addr:      c0000000
 elf_dumploadinfo:   sh_offset:    4096
-elf_dumploadinfo:   sh_size:      363176
+elf_dumploadinfo:   sh_size:      363230
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 2
@@ -855,9 +855,9 @@ elf_dumploadinfo: Sections 2:
 elf_dumploadinfo:   sh_name:      00000021
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0058ab0
-elf_dumploadinfo:   sh_offset:    367280
-elf_dumploadinfo:   sh_size:      117200
+elf_dumploadinfo:   sh_addr:      c0058ae0
+elf_dumploadinfo:   sh_offset:    367328
+elf_dumploadinfo:   sh_size:      117216
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 16
@@ -866,8 +866,8 @@ elf_dumploadinfo: Sections 3:
 elf_dumploadinfo:   sh_name:      00000029
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000012
-elf_dumploadinfo:   sh_addr:      c0075480
-elf_dumploadinfo:   sh_offset:    484480
+elf_dumploadinfo:   sh_addr:      c00754c0
+elf_dumploadinfo:   sh_offset:    484544
 elf_dumploadinfo:   sh_size:      488
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -877,8 +877,8 @@ elf_dumploadinfo: Sections 4:
 elf_dumploadinfo:   sh_name:      00000037
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0075668
-elf_dumploadinfo:   sh_offset:    484968
+elf_dumploadinfo:   sh_addr:      c00756a8
+elf_dumploadinfo:   sh_offset:    485032
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -888,8 +888,8 @@ elf_dumploadinfo: Sections 5:
 elf_dumploadinfo:   sh_name:      0000004f
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0075670
-elf_dumploadinfo:   sh_offset:    484976
+elf_dumploadinfo:   sh_addr:      c00756b0
+elf_dumploadinfo:   sh_offset:    485040
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -899,8 +899,8 @@ elf_dumploadinfo: Sections 6:
 elf_dumploadinfo:   sh_name:      00000064
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0075678
-elf_dumploadinfo:   sh_offset:    484984
+elf_dumploadinfo:   sh_addr:      c00756b8
+elf_dumploadinfo:   sh_offset:    485048
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -910,8 +910,8 @@ elf_dumploadinfo: Sections 7:
 elf_dumploadinfo:   sh_name:      00000079
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0075680
-elf_dumploadinfo:   sh_offset:    484992
+elf_dumploadinfo:   sh_addr:      c00756c0
+elf_dumploadinfo:   sh_offset:    485056
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -921,8 +921,8 @@ elf_dumploadinfo: Sections 8:
 elf_dumploadinfo:   sh_name:      00000098
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0075688
-elf_dumploadinfo:   sh_offset:    485000
+elf_dumploadinfo:   sh_addr:      c00756c8
+elf_dumploadinfo:   sh_offset:    485064
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -932,8 +932,8 @@ elf_dumploadinfo: Sections 9:
 elf_dumploadinfo:   sh_name:      000000ba
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0075690
-elf_dumploadinfo:   sh_offset:    485008
+elf_dumploadinfo:   sh_addr:      c00756d0
+elf_dumploadinfo:   sh_offset:    485072
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -943,8 +943,8 @@ elf_dumploadinfo: Sections 10:
 elf_dumploadinfo:   sh_name:      000000d0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0075698
-elf_dumploadinfo:   sh_offset:    485016
+elf_dumploadinfo:   sh_addr:      c00756d8
+elf_dumploadinfo:   sh_offset:    485080
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -954,8 +954,8 @@ elf_dumploadinfo: Sections 11:
 elf_dumploadinfo:   sh_name:      000000fc
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756a0
-elf_dumploadinfo:   sh_offset:    485024
+elf_dumploadinfo:   sh_addr:      c00756e0
+elf_dumploadinfo:   sh_offset:    485088
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -965,8 +965,8 @@ elf_dumploadinfo: Sections 12:
 elf_dumploadinfo:   sh_name:      00000127
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756a8
-elf_dumploadinfo:   sh_offset:    485032
+elf_dumploadinfo:   sh_addr:      c00756e8
+elf_dumploadinfo:   sh_offset:    485096
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -976,8 +976,8 @@ elf_dumploadinfo: Sections 13:
 elf_dumploadinfo:   sh_name:      00000157
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756b0
-elf_dumploadinfo:   sh_offset:    485040
+elf_dumploadinfo:   sh_addr:      c00756f0
+elf_dumploadinfo:   sh_offset:    485104
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -987,8 +987,8 @@ elf_dumploadinfo: Sections 14:
 elf_dumploadinfo:   sh_name:      00000188
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756b8
-elf_dumploadinfo:   sh_offset:    485048
+elf_dumploadinfo:   sh_addr:      c00756f8
+elf_dumploadinfo:   sh_offset:    485112
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -998,8 +998,8 @@ elf_dumploadinfo: Sections 15:
 elf_dumploadinfo:   sh_name:      000001b1
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756c0
-elf_dumploadinfo:   sh_offset:    485056
+elf_dumploadinfo:   sh_addr:      c0075700
+elf_dumploadinfo:   sh_offset:    485120
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1009,8 +1009,8 @@ elf_dumploadinfo: Sections 16:
 elf_dumploadinfo:   sh_name:      000001e0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756c8
-elf_dumploadinfo:   sh_offset:    485064
+elf_dumploadinfo:   sh_addr:      c0075708
+elf_dumploadinfo:   sh_offset:    485128
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1020,8 +1020,8 @@ elf_dumploadinfo: Sections 17:
 elf_dumploadinfo:   sh_name:      000001ff
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756d0
-elf_dumploadinfo:   sh_offset:    485072
+elf_dumploadinfo:   sh_addr:      c0075710
+elf_dumploadinfo:   sh_offset:    485136
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1031,8 +1031,8 @@ elf_dumploadinfo: Sections 18:
 elf_dumploadinfo:   sh_name:      0000021d
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756d8
-elf_dumploadinfo:   sh_offset:    485080
+elf_dumploadinfo:   sh_addr:      c0075718
+elf_dumploadinfo:   sh_offset:    485144
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1042,8 +1042,8 @@ elf_dumploadinfo: Sections 19:
 elf_dumploadinfo:   sh_name:      00000235
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756e0
-elf_dumploadinfo:   sh_offset:    485088
+elf_dumploadinfo:   sh_addr:      c0075720
+elf_dumploadinfo:   sh_offset:    485152
 elf_dumploadinfo:   sh_size:      7
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1053,8 +1053,8 @@ elf_dumploadinfo: Sections 20:
 elf_dumploadinfo:   sh_name:      0000024b
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756e8
-elf_dumploadinfo:   sh_offset:    485096
+elf_dumploadinfo:   sh_addr:      c0075728
+elf_dumploadinfo:   sh_offset:    485160
 elf_dumploadinfo:   sh_size:      3
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1064,8 +1064,8 @@ elf_dumploadinfo: Sections 21:
 elf_dumploadinfo:   sh_name:      0000025e
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756f0
-elf_dumploadinfo:   sh_offset:    485104
+elf_dumploadinfo:   sh_addr:      c0075730
+elf_dumploadinfo:   sh_offset:    485168
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1075,8 +1075,8 @@ elf_dumploadinfo: Sections 22:
 elf_dumploadinfo:   sh_name:      00000271
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00756f8
-elf_dumploadinfo:   sh_offset:    485112
+elf_dumploadinfo:   sh_addr:      c0075738
+elf_dumploadinfo:   sh_offset:    485176
 elf_dumploadinfo:   sh_size:      108
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1176,7 +1176,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
 elf_dumploadinfo:   sh_offset:    564667
-elf_dumploadinfo:   sh_size:      966490
+elf_dumploadinfo:   sh_size:      966629
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1186,8 +1186,8 @@ elf_dumploadinfo:   sh_name:      000002fd
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    1531157
-elf_dumploadinfo:   sh_size:      930327
+elf_dumploadinfo:   sh_offset:    1531296
+elf_dumploadinfo:   sh_size:      930367
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1197,7 +1197,7 @@ elf_dumploadinfo:   sh_name:      00000309
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2461484
+elf_dumploadinfo:   sh_offset:    2461663
 elf_dumploadinfo:   sh_size:      36160
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1208,8 +1208,8 @@ elf_dumploadinfo:   sh_name:      00000318
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2497644
-elf_dumploadinfo:   sh_size:      1153540
+elf_dumploadinfo:   sh_offset:    2497823
+elf_dumploadinfo:   sh_size:      1153497
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1219,7 +1219,7 @@ elf_dumploadinfo:   sh_name:      00000323
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3651184
+elf_dumploadinfo:   sh_offset:    3651320
 elf_dumploadinfo:   sh_size:      155408
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1230,7 +1230,7 @@ elf_dumploadinfo:   sh_name:      00000331
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000030
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3806592
+elf_dumploadinfo:   sh_offset:    3806728
 elf_dumploadinfo:   sh_size:      94971
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1241,8 +1241,8 @@ elf_dumploadinfo:   sh_name:      0000033c
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3901568
-elf_dumploadinfo:   sh_size:      92656
+elf_dumploadinfo:   sh_offset:    3901704
+elf_dumploadinfo:   sh_size:      92664
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 8
@@ -1252,7 +1252,7 @@ elf_dumploadinfo:   sh_name:      00000001
 elf_dumploadinfo:   sh_type:      00000002
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3994224
+elf_dumploadinfo:   sh_offset:    3994368
 elf_dumploadinfo:   sh_size:      54816
 elf_dumploadinfo:   sh_link:      39
 elf_dumploadinfo:   sh_info:      1551
@@ -1263,7 +1263,7 @@ elf_dumploadinfo:   sh_name:      00000009
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4049040
+elf_dumploadinfo:   sh_offset:    4049184
 elf_dumploadinfo:   sh_size:      37576
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1274,7 +1274,7 @@ elf_dumploadinfo:   sh_name:      00000011
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4086616
+elf_dumploadinfo:   sh_offset:    4086760
 elf_dumploadinfo:   sh_size:      841
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -2309,6 +2309,7 @@ JS_CreateProperty: a=console.log(123)
 JS_CreateProperty: b=console.log(123)
 JS_CreateProperty: c=console.log(123)
 JS_CreateProperty: d=console.log(123)
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2332,6 +2333,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2382,18 +2384,21 @@ js_def_malloc: d=c
 js_malloc: b=c
 js_malloc: d=c
 __JS_FindAtom: toString
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
 add_property: j=c
 add_property: k=c
 __JS_FindAtom: name
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
 add_property: j=c
 add_property: k=c
 __JS_FindAtom: message
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2455,6 +2460,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2477,6 +2483,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2536,6 +2543,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2558,6 +2566,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2617,6 +2626,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2639,6 +2649,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2698,6 +2709,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2720,6 +2732,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2779,6 +2792,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2801,6 +2815,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2860,6 +2875,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2882,6 +2898,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2941,6 +2958,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -2963,6 +2981,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -3026,6 +3045,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -3048,6 +3068,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -3094,6 +3115,7 @@ js_def_malloc: c=c
 js_def_malloc: d=c
 js_malloc: b=c
 js_malloc: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -3174,6 +3196,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -3197,6 +3220,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -3268,6 +3292,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -3291,6 +3316,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=c
 add_property: a=c
 add_property: b=c
 add_property: c=c
@@ -3316,6 +3342,7 @@ JS_CreateProperty: a=c
 JS_CreateProperty: b=c
 JS_CreateProperty: c=c
 JS_CreateProperty: d=c
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3343,6 +3370,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3499,6 +3527,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3522,6 +3551,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3548,6 +3578,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3570,6 +3601,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3609,6 +3641,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3634,6 +3667,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3647,6 +3681,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: getPrototypeOf
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3660,12 +3695,14 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: setPrototypeOf
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: defineProperty
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3679,6 +3716,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: defineProperties
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3689,6 +3727,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3699,6 +3738,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3716,6 +3756,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3726,12 +3767,14 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: values
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3742,6 +3785,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3755,18 +3799,21 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: isExtensible
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: preventExtensions
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: getOwnPropertyDescriptor
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3777,6 +3824,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3787,6 +3835,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3797,6 +3846,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3814,6 +3864,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3824,6 +3875,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3834,6 +3886,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3844,6 +3897,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3854,6 +3908,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3864,6 +3919,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3874,18 +3930,21 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: toString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: toLocaleString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3899,6 +3958,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: valueOf
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3916,6 +3976,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3933,6 +3994,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -3943,6 +4005,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4017,6 +4080,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4040,6 +4104,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4114,6 +4179,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4137,6 +4203,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4161,6 +4228,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4174,6 +4242,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4184,6 +4253,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4201,6 +4271,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4211,6 +4282,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4221,6 +4293,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4234,6 +4307,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: apply
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4244,6 +4318,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4257,11 +4332,13 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: toString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4329,6 +4406,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4352,6 +4430,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4376,6 +4455,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4453,6 +4533,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4476,6 +4557,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4500,6 +4582,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4565,6 +4648,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4588,6 +4672,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4614,6 +4699,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4636,6 +4722,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4675,6 +4762,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4742,6 +4830,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4765,6 +4854,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4791,6 +4881,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4820,6 +4911,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4843,6 +4935,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4917,6 +5010,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4940,6 +5034,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4966,6 +5061,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -4995,6 +5091,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5024,6 +5121,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5108,6 +5206,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5131,6 +5230,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5157,6 +5257,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5186,6 +5287,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5209,6 +5311,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5277,6 +5380,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5300,6 +5404,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5326,6 +5431,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5348,6 +5454,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5371,6 +5478,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5439,6 +5547,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5462,6 +5571,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5488,6 +5598,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5517,6 +5628,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5540,6 +5652,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5608,6 +5721,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5631,6 +5745,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5657,6 +5772,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5679,6 +5795,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5702,6 +5819,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5770,6 +5888,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5793,6 +5912,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5819,6 +5939,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5841,6 +5962,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5864,6 +5986,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5932,6 +6055,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5955,6 +6079,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -5981,6 +6106,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6010,6 +6136,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6033,6 +6160,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6101,6 +6229,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6124,6 +6253,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6150,6 +6280,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6172,6 +6303,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6195,6 +6327,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6242,6 +6375,7 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6252,12 +6386,14 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: with
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6271,6 +6407,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: concat
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6288,6 +6425,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6305,6 +6443,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6315,6 +6454,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6332,6 +6472,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6342,6 +6483,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6352,6 +6494,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6369,6 +6512,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6379,6 +6523,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6389,6 +6534,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6399,6 +6545,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6416,6 +6563,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6426,6 +6574,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6436,6 +6585,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6446,6 +6596,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6456,12 +6607,14 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: join
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6475,12 +6628,14 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: toString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: toLocaleString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6491,6 +6646,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6501,6 +6657,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6511,6 +6668,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6521,6 +6679,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6531,6 +6690,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6541,6 +6701,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6551,6 +6712,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6568,6 +6730,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6578,6 +6741,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6588,6 +6752,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6598,6 +6763,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6608,6 +6774,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6618,6 +6785,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6628,12 +6796,14 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: values
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6697,6 +6867,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6720,6 +6891,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6745,6 +6917,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -6754,10 +6927,12 @@ JS_CreateProperty: g=
 JS_DefinePropertyValue: b=
 JS_DefinePropertyValue: c=
 __JS_FindAtom: keys
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
 __JS_FindAtom: entries
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -6818,6 +6993,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6841,6 +7017,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6867,6 +7044,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6889,6 +7067,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6912,6 +7091,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -6925,6 +7105,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6948,6 +7129,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: from
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -6961,6 +7143,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: of
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7027,6 +7210,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7050,6 +7234,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7074,6 +7259,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7122,6 +7308,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7155,6 +7342,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7178,6 +7366,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7208,6 +7397,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7238,6 +7428,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7268,6 +7459,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7291,6 +7483,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7321,6 +7514,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7344,6 +7538,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7367,6 +7562,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7397,6 +7593,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7420,6 +7617,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7443,6 +7641,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7466,6 +7665,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7496,6 +7696,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7518,6 +7719,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -7563,11 +7765,13 @@ js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
 __JS_FindAtom: next
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7578,6 +7782,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7588,6 +7793,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7605,6 +7811,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7615,6 +7822,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7625,6 +7833,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7635,6 +7844,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7645,6 +7855,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7655,6 +7866,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7672,6 +7884,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7682,6 +7895,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7704,6 +7918,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7731,6 +7946,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7754,6 +7970,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7805,6 +8022,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7815,6 +8033,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7825,6 +8044,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7838,6 +8058,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: toString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7851,6 +8072,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: toLocaleString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7864,6 +8086,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: valueOf
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7930,6 +8153,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7953,6 +8177,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -7979,6 +8204,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8001,6 +8227,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8024,6 +8251,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8100,6 +8328,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8123,6 +8352,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8148,6 +8378,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8234,6 +8465,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8257,6 +8489,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8282,6 +8515,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8300,12 +8534,14 @@ JS_CreateProperty: g=
 JS_DefinePropertyValue: b=
 JS_DefinePropertyValue: c=
 __JS_FindAtom: isNaN
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: isFinite
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8323,6 +8559,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8333,6 +8570,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8355,6 +8593,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8389,6 +8628,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8412,6 +8652,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8439,6 +8680,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8466,6 +8708,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8500,6 +8743,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8527,6 +8771,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8554,6 +8799,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8601,12 +8847,14 @@ js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
 __JS_FindAtom: toString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: valueOf
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8669,6 +8917,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8692,6 +8941,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8718,6 +8968,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -8738,6 +8989,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8761,6 +9013,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8871,6 +9124,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8894,6 +9148,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8920,6 +9175,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -8940,6 +9196,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8971,6 +9228,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -8986,6 +9244,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9013,6 +9272,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9026,6 +9286,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: raw
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9052,6 +9313,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9063,6 +9325,7 @@ JS_CreateProperty: g=
 JS_DefinePropertyValue: b=
 JS_DefinePropertyValue: c=
 __JS_FindAtom: at
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9080,6 +9343,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9097,6 +9361,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9110,6 +9375,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: concat
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9120,6 +9386,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9137,6 +9404,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9147,12 +9415,14 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: indexOf
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9166,12 +9436,14 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: lastIndexOf
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: includes
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9182,6 +9454,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9192,6 +9465,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9209,6 +9483,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9219,6 +9494,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9229,12 +9505,14 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: split
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9245,6 +9523,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9255,6 +9534,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9268,6 +9548,7 @@ js_malloc: b=
 js_malloc: d=
 add_property: k=
 __JS_FindAtom: slice
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9278,6 +9559,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9288,6 +9570,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9298,6 +9581,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9308,6 +9592,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9318,6 +9603,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9328,6 +9614,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9338,6 +9625,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9406,6 +9694,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9429,6 +9718,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9462,6 +9752,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 js_malloc: a=
@@ -9482,6 +9773,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9548,6 +9840,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9571,6 +9864,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9604,6 +9898,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9613,10 +9908,12 @@ JS_CreateProperty: g=
 JS_DefinePropertyValue: b=
 JS_DefinePropertyValue: c=
 __JS_FindAtom: toString
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
 __JS_FindAtom: valueOf
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9625,6 +9922,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9633,6 +9931,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9641,6 +9940,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9649,6 +9949,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9657,6 +9958,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9665,9 +9967,11 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9676,6 +9980,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9684,6 +9989,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9692,6 +9998,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 js_malloc: a=
@@ -9707,6 +10014,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9715,6 +10023,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9723,6 +10032,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9731,6 +10041,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9739,6 +10050,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9747,6 +10059,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9755,6 +10068,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9763,6 +10077,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9771,6 +10086,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9779,6 +10095,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9819,17 +10136,20 @@ js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
 __JS_FindAtom: next
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: e=
 add_property: f=
 __JS_FindAtom: Math
+add_property: 0=
 add_property: a=
 add_property: j=
 js_malloc: a=
@@ -9845,6 +10165,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -9885,17 +10206,20 @@ js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
 __JS_FindAtom: toString
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
 __JS_FindAtom: valueOf
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
 add_property: j=
 add_property: k=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9908,6 +10232,7 @@ js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
 add_property: k=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -9986,6 +10311,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10009,6 +10335,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10033,6 +10360,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10105,6 +10433,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10128,6 +10457,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10154,6 +10484,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: j=
 add_property: k=
@@ -10174,6 +10505,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10197,6 +10529,7 @@ JS_CreateProperty: a=
 JS_CreateProperty: b=
 JS_CreateProperty: c=
 JS_CreateProperty: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10208,6 +10541,7 @@ JS_CreateProperty: g=
 JS_DefinePropertyValue: b=
 JS_DefinePropertyValue: c=
 __JS_FindAtom: for
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10235,6 +10569,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+add_property: 0=
 add_property: a=
 add_property: b=
 add_property: c=
@@ -10250,3 +10585,5 @@ add_property: k=
 _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 18:58:20 risc-v
 _assert: Assertion failed : at file: quickjs.c:3121 task: qjs process: qjs 0xc000339e
 up_dump_register: EPC: 0000000080001faa
+up_dump_register: A0: 0000000080200f30 A1: 0000000000000c31 A2: 0000000000000000 A3: 000000000000007e
+up_dump_register: A4: 0000000080208ad0 A5: 0000000000000001 A6: 00000000
