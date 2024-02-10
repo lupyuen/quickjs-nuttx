@@ -2885,8 +2885,7 @@ void print_hex(uint64_t n) {
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
 {
-write(1, "__JS_FindAtom: 0\n", 17);////
-if (len > 0) { write(1, str, len); write(1, "\n", 1); };////
+write(1, "__JS_FindAtom: ", 15); write(1, str, len); write(1, "\n", 1);////
 // printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
 // if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
 ////static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
