@@ -1059,6 +1059,62 @@ stack_dump: 0x8020bff0: 00000000 00000000 00000000 00000000 00000000 00000000 80
 stack_dump:
 ```
 
+# Atom Sentinel becomes 0xFFFF_FFFF
+
+We discover that the Atom Sentinel is actually 0xFFFF_FFFF (instead of 0), causing crashes while searching for an Atom...
+
+```text
+__JS_FindAtom: e
+00000000C0203DE0
+__JS_FindAtom: f
+00000000C0201F60
+__JS_FindAtom: h
+00000000C0201F6C
+__JS_FindAtom: i
+00000000FFFFFFFF
+```
+
+So we stop the Atom Search when we see Sentinel 0xFFFF_FFFF...
+
+- [__JS_FindAtom](https://github.com/lupyuen/quickjs-nuttx/commit/b9a53eca9a177ddeb7a4972c3ccf1388db606feb#diff-45f1ae674139f993bf8a99c382c1ba4863272a6fec2f492d76d7ff1b2cfcfbe2)
+
+- [__JS_NewAtom](https://github.com/lupyuen/quickjs-nuttx/commit/42eb9be1547dd42bf4eebf1e21b1be6732f95f7d#diff-45f1ae674139f993bf8a99c382c1ba4863272a6fec2f492d76d7ff1b2cfcfbe2)
+
+Now it halts inside the NuttX Mutex for printf...
+
+```text
+__JS_FindAtom: 0
+asIntN
+__JS_FindAtom: a
+__JS_FindAtom: b
+__JS_FindAtom: c
+__JS_FindAtom: d
+mm_malloc: Allocated 0xc0211b70, size 32
+mm_malloc: Allocated 0xc0212030, size 112
+mm_free: Freeing 0xc0211b20
+mm_malloc: Allocated 0xc0209790, size 160
+mm_free: Freeing 0xc0209710
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c005321c, MTVAL: 0000000000000168
+```
+
+Here...
+
+```text
+bool nxmutex_is_hold(FAR mutex_t *mutex)
+{
+    c0053216:	1141                	addi	sp,sp,-16
+    c0053218:	e406                	sd	ra,8(sp)
+    c005321a:	e022                	sd	s0,0(sp)
+/Users/Luppy/riscv/nuttx/libs/libc/misc/lib_mutex.c:149
+  return mutex->holder == _SCHED_GETTID();
+    c005321c:	4d00                	lw	s0,24(a0)
+    c005321e:	3b1030ef          	jal	ra,c0056dce <gettid>
+```
+
+TODO: Why is the Mutex corrupted?
+
+TODO: Where in main() are we?
+
 # Heap Memory for QuickJS on NuttX
 
 _Are we out of Heap Memory?_
