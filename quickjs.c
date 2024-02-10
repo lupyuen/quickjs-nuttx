@@ -4404,22 +4404,29 @@ static no_inline JSShape *js_new_shape2(JSContext *ctx, JSObject *proto,
     void *sh_alloc;
     JSShape *sh;
 
+_d("js_new_shape2: a="); _d(debug_expr); _d("\n"); ////
     /* resize the shape hash table if necessary */
     if (2 * (rt->shape_hash_count + 1) > rt->shape_hash_size) {
         resize_shape_hash(rt, rt->shape_hash_bits + 1);
     }
+_d("js_new_shape2: b="); _d(debug_expr); _d("\n"); ////
 
     sh_alloc = js_malloc(ctx, get_shape_size(hash_size, prop_size));
+_d("js_new_shape2: c="); _d(debug_expr); _d("\n"); ////
     if (!sh_alloc)
         return NULL;
     sh = get_shape_from_alloc(sh_alloc, hash_size);
+_d("js_new_shape2: d="); _d(debug_expr); _d("\n"); ////
     sh->header.ref_count = 1;
     add_gc_object(rt, &sh->header, JS_GC_OBJ_TYPE_SHAPE);
+_d("js_new_shape2: e="); _d(debug_expr); _d("\n"); ////
     if (proto)
         JS_DupValue(ctx, JS_MKPTR(JS_TAG_OBJECT, proto));
+_d("js_new_shape2: f="); _d(debug_expr); _d("\n"); ////
     sh->proto = proto;
     memset(prop_hash_end(sh) - hash_size, 0, sizeof(prop_hash_end(sh)[0]) *
            hash_size);
+_d("js_new_shape2: g="); _d(debug_expr); _d("\n"); ////
     sh->prop_hash_mask = hash_size - 1;
     sh->prop_size = prop_size;
     sh->prop_count = 0;
@@ -4427,9 +4434,11 @@ static no_inline JSShape *js_new_shape2(JSContext *ctx, JSObject *proto,
     
     /* insert in the hash table */
     sh->hash = shape_initial_hash(proto);
+_d("js_new_shape2: h="); _d(debug_expr); _d("\n"); ////
     sh->is_hashed = TRUE;
     sh->has_small_array_index = FALSE;
     js_shape_hash_link(ctx->rt, sh);
+_d("js_new_shape2: i="); _d(debug_expr); _d("\n"); ////
     return sh;
 }
 
