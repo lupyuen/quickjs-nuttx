@@ -372,6 +372,12 @@ JS_NewCFunction3 seems to crash the second time we call it.
 
 TODO: Are we running low on App Text / Data / Heap? According to Linker Map [nuttx/qjs.map](nuttx/qjs.map), we're using 486 KB of App Text (Code).
 
+```text
+$ riscv64-unknown-elf-size ../apps/bin/qjs
+   text    data     bss     dec     hex filename
+ 486371     260      94  486725   76d45 ../apps/bin/qjs
+```
+
 [NuttX Config](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/configs/knsh64/defconfig#L39-L40) says we have 128 pages of App Text. Assuming 8 KB per page, that's 1 MB of App Text.
 
 ```text
@@ -1057,6 +1063,8 @@ _Are we out of Heap Memory?_
 
 We enable Memory Manager Logging...
 
+TODO: Add up the total Heap Memory used. Doesn't seem much? Why?
+
 ```text
 + qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
 ABCmm_initialize: Heap: name=Kmem, start=0x80206c00 size=2069504
@@ -1739,13 +1747,13 @@ mm_free: Freeing 0x80209a70
 nsh> mm_free: Freeing 0x802092c0
 ```
 
-TODO: Add up the total Heap Memory used. Doesn't seem much? Why?
-
 # ELF Loader Log for QuickJS on NuttX
 
 _Can we get any clues from the ELF Loader Log?_
 
 Let's compare QuickJS ELF Loader Log with NuttX Shell ELF Loader Log...
+
+TODO: Check the sizes of each ELF Section
 
 ```text
 + qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
@@ -3620,4 +3628,16 @@ mm_free: Freeing 0x80209a70
 nsh> mm_free: Freeing 0x802092c0
 ```
 
-TODO: Check the sizes of each ELF Section
+# BSS Size of QuickJS on NuttS
+
+TODO: Why is the BSS so small compared with NuttX Shell?
+
+```text
+$ riscv64-unknown-elf-size ../apps/bin/qjs
+   text    data     bss     dec     hex filename
+ 486371     260      94  486725   76d45 ../apps/bin/qjs
+
+$ riscv64-unknown-elf-size ../apps/bin/init
+   text    data     bss     dec     hex filename
+  47011      49    1356   48416    bd20 ../apps/bin/init
+```

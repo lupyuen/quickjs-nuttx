@@ -175,6 +175,9 @@ riscv64-unknown-elf-ld \
   -o ../apps/bin/qjs \
   -Map nuttx/qjs.map
 
+## Show the size
+riscv64-unknown-elf-size ../apps/bin/qjs
+
 ## Dump the disassembly
 riscv64-unknown-elf-objdump \
   -t -S --demangle --line-numbers --wide \
