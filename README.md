@@ -280,22 +280,22 @@ We tested with our Expect Script: [nuttx/qemu.exp](nuttx/qemu.exp). Nope NuttX c
 + qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
 NuttShell (NSH) NuttX-12.4.0-RC0
 nsh> qjs
-[    2.350000] load_absmodule: Successfully loaded module /system/bin/qjs
-[    2.353000] exec_module: Executing qjs
-[    2.353000] exec_module: Initialize the user heap (heapsize=528384)
-[    2.378000] riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006484, MTVAL: 00000008c0203b88
-[    2.378000] riscv_exception: PANIC!!! Exception = 000000000000000d
-[    2.378000] _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb  9 2024 14:19:24 risc-v
-[    2.378000] _assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: /system/bin/init 0xc000004a
-[    2.378000] up_dump_register: EPC: 00000000c0006484
-[    2.378000] up_dump_register: A0: 00000000c02005d0 A1: 00000000c006b4e0 A2: 0000000000000074 A3: ffffffff00000000
-[    2.378000] up_dump_register: A4: 00000007fffffff8 A5: 00000008c0203b88 A6: ffffffffae012bc6 A7: 0000000000000000
-[    2.378000] up_dump_register: T0: 0000000080007474 T1: fffffffffc000000 T2: 00000000000001ff T3: 00000000c0207c40
-[    2.378000] up_dump_register: T4: 00000000c0207c38 T5: 0000000000000009 T6: 000000000000002a
-[    2.378000] up_dump_register: S0: 00000000c0201fc0 S1: ffffffffffffffff S2: 0000000003472fe9 S3: 00000000c02005d0
-[    2.378000] up_dump_register: S4: 0000000000000005 S5: 00000000c006b4e0 S6: 000000003fffffff S7: 000000007fffffff
-[    2.378000] up_dump_register: S8: 0000000040000000 S9: ffffffffc0000000 S10: 0000000000000000 S11: 0000000000000000
-[    2.378000] up_dump_register: SP: 00000000c0202220 FP: 00000000c0201fc0 TP: 0000000000000000 RA: 00000000c001b32c
+load_absmodule: Successfully loaded module /system/bin/qjs
+exec_module: Executing qjs
+exec_module: Initialize the user heap (heapsize=528384)
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006484, MTVAL: 00000008c0203b88
+riscv_exception: PANIC!!! Exception = 000000000000000d
+_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb  9 2024 14:19:24 risc-v
+_assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: /system/bin/init 0xc000004a
+up_dump_register: EPC: 00000000c0006484
+up_dump_register: A0: 00000000c02005d0 A1: 00000000c006b4e0 A2: 0000000000000074 A3: ffffffff00000000
+up_dump_register: A4: 00000007fffffff8 A5: 00000008c0203b88 A6: ffffffffae012bc6 A7: 0000000000000000
+up_dump_register: T0: 0000000080007474 T1: fffffffffc000000 T2: 00000000000001ff T3: 00000000c0207c40
+up_dump_register: T4: 00000000c0207c38 T5: 0000000000000009 T6: 000000000000002a
+up_dump_register: S0: 00000000c0201fc0 S1: ffffffffffffffff S2: 0000000003472fe9 S3: 00000000c02005d0
+up_dump_register: S4: 0000000000000005 S5: 00000000c006b4e0 S6: 000000003fffffff S7: 000000007fffffff
+up_dump_register: S8: 0000000040000000 S9: ffffffffc0000000 S10: 0000000000000000 S11: 0000000000000000
+up_dump_register: SP: 00000000c0202220 FP: 00000000c0201fc0 TP: 0000000000000000 RA: 00000000c001b32c
 ```
 
 We look up the disassembly: [nuttx/qjs.S](nuttx/qjs.S)
@@ -331,19 +331,19 @@ qjs -e console.log(123)
 It still crashes...
 
 ```text
-[    2.468000] riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006232, MTVAL: 00000008c0209718
-[    2.468000] riscv_exception: PANIC!!! Exception = 000000000000000d
-[    2.468000] _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb  9 2024 14:19:24 risc-v
-[    2.468000] _assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: /system/bin/init 0xc000004a
-[    2.468000] up_dump_register: EPC: 00000000c0006232
-[    2.468000] up_dump_register: A0: 00000000c02005d0 A1: 00000000c0062868 A2: 0000000000000067 A3: ffffffff00000000
-[    2.468000] up_dump_register: A4: 00000007fffffff8 A5: 00000008c0209718 A6: 0000000000000003 A7: 0000000000000000
-[    2.468000] up_dump_register: T0: 0000000080007474 T1: fffffffffc000000 T2: 00000000000001ff T3: 00000000c020b8a0
-[    2.468000] up_dump_register: T4: 00000000c020b898 T5: 0000000000000009 T6: 000000000000002a
-[    2.468000] up_dump_register: S0: 00000000c0201f90 S1: ffffffffffffffff S2: 00000000398dc555 S3: 00000000c02005d0
-[    2.468000] up_dump_register: S4: 0000000000000012 S5: 00000000c0062868 S6: 000000003fffffff S7: 000000007fffffff
-[    2.468000] up_dump_register: S8: 0000000040000000 S9: ffffffffc0000000 S10: 0000000000000000 S11: 0000000000000000
-[    2.468000] up_dump_register: SP: 00000000c0202440 FP: 00000000c0201f90 TP: 0000000000000000 RA: 00000000c0019fa4
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006232, MTVAL: 00000008c0209718
+riscv_exception: PANIC!!! Exception = 000000000000000d
+_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb  9 2024 14:19:24 risc-v
+_assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: /system/bin/init 0xc000004a
+up_dump_register: EPC: 00000000c0006232
+up_dump_register: A0: 00000000c02005d0 A1: 00000000c0062868 A2: 0000000000000067 A3: ffffffff00000000
+up_dump_register: A4: 00000007fffffff8 A5: 00000008c0209718 A6: 0000000000000003 A7: 0000000000000000
+up_dump_register: T0: 0000000080007474 T1: fffffffffc000000 T2: 00000000000001ff T3: 00000000c020b8a0
+up_dump_register: T4: 00000000c020b898 T5: 0000000000000009 T6: 000000000000002a
+up_dump_register: S0: 00000000c0201f90 S1: ffffffffffffffff S2: 00000000398dc555 S3: 00000000c02005d0
+up_dump_register: S4: 0000000000000012 S5: 00000000c0062868 S6: 000000003fffffff S7: 000000007fffffff
+up_dump_register: S8: 0000000040000000 S9: ffffffffc0000000 S10: 0000000000000000 S11: 0000000000000000
+up_dump_register: SP: 00000000c0202440 FP: 00000000c0201f90 TP: 0000000000000000 RA: 00000000c0019fa4
 ```
 
 EPC c0006232 in [qjs.S](nuttx/qjs.S) says...
@@ -480,6 +480,8 @@ __JS_FindAtom: rt=0xc02005d0, len=0
 ```
 
 TODO: Why does hash_string8 hang? Stack problems?
+
+TODO: Memory Corruption? Now `printf` seems to crash with Mutex problems
 
 TODO: Induce a crash with Assertion Failure, to observe the Stack:
 

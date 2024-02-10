@@ -4,7 +4,7 @@
 ## For every 1 character sent, wait 0.001 milliseconds
 set send_slow {1 0.001}
 
-## Start the Ox64 BL808 Emulator
+## Start NuttX on QEMU Emulator
 spawn qemu-system-riscv64 \
   -semihosting \
   -M virt,aclint=on \
@@ -14,7 +14,7 @@ spawn qemu-system-riscv64 \
   -kernel nuttx \
   -nographic
 
-## Wait for the prompt and enter `uname -a`
+## Wait for the prompt and enter this command
 expect "nsh> "
 send -s "qjs -e \"console.log(123)\" \r"
 
