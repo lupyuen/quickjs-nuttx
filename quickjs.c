@@ -2161,9 +2161,9 @@ JSContext *JS_NewContext(JSRuntime *rt)
     if (!ctx)
         return NULL;
 
-puts("JS_NewContext: e");////
+//puts("JS_NewContext: e");////
     JS_AddIntrinsicBaseObjects(ctx);
-puts("JS_NewContext: f");////
+//puts("JS_NewContext: f");////
     JS_AddIntrinsicDate(ctx);
     JS_AddIntrinsicEval(ctx);
     JS_AddIntrinsicStringNormalize(ctx);
@@ -4960,14 +4960,14 @@ JSValue JS_NewObject(JSContext *ctx)
 static void js_function_set_properties(JSContext *ctx, JSValueConst func_obj,
                                        JSAtom name, int len)
 {
-puts("js_function_set_properties: a");////
+//puts("js_function_set_properties: a");////
     /* ES6 feature non compatible with ES5.1: length is configurable */
     JS_DefinePropertyValue(ctx, func_obj, JS_ATOM_length, JS_NewInt32(ctx, len),
                            JS_PROP_CONFIGURABLE);
-puts("js_function_set_properties: b");////
+//puts("js_function_set_properties: b");////
     JS_DefinePropertyValue(ctx, func_obj, JS_ATOM_name,
                            JS_AtomToString(ctx, name), JS_PROP_CONFIGURABLE);
-puts("js_function_set_properties: c");////
+//puts("js_function_set_properties: c");////
 }
 
 static BOOL js_class_has_bytecode(JSClassID class_id)
@@ -5075,13 +5075,13 @@ static JSValue JS_NewCFunction3(JSContext *ctx, JSCFunction *func,
                          cproto == JS_CFUNC_constructor_or_func_magic);
     if (!name)
         name = "";
-puts("JS_NewCFunction3: c");////
+//puts("JS_NewCFunction3: c");////
     name_atom = JS_NewAtom(ctx, name);
-puts("JS_NewCFunction3: d");////
+//puts("JS_NewCFunction3: d");////
     js_function_set_properties(ctx, func_obj, name_atom, length);
-puts("JS_NewCFunction3: e");////
+//puts("JS_NewCFunction3: e");////
     JS_FreeAtom(ctx, name_atom);
-puts("JS_NewCFunction3: f");////
+//puts("JS_NewCFunction3: f");////
     return func_obj;
 }
 
@@ -14700,7 +14700,7 @@ static __exception int js_operator_delete(JSContext *ctx, JSValue *sp)
 static JSValue js_throw_type_error(JSContext *ctx, JSValueConst this_val,
                                    int argc, JSValueConst *argv)
 {
-puts("js_throw_type_error");////
+//puts("js_throw_type_error");////
     return JS_ThrowTypeError(ctx, "invalid property access");
 }
 
@@ -52402,18 +52402,18 @@ void JS_AddIntrinsicBaseObjects(JSContext *ctx)
     JSValueConst obj, number_obj;
     JSValue obj1;
 
-puts("JS_AddIntrinsicBaseObjects: g");////
+//puts("JS_AddIntrinsicBaseObjects: g");////
     ctx->throw_type_error = JS_NewCFunction(ctx, js_throw_type_error, NULL, 0);
 
     /* add caller and arguments properties to throw a TypeError */
-puts("JS_AddIntrinsicBaseObjects: h");////
+//puts("JS_AddIntrinsicBaseObjects: h");////
     obj1 = JS_NewCFunction(ctx, js_function_proto_caller, NULL, 0);
-puts("JS_AddIntrinsicBaseObjects: i");////
+//puts("JS_AddIntrinsicBaseObjects: i");////
     JS_DefineProperty(ctx, ctx->function_proto, JS_ATOM_caller, JS_UNDEFINED,
                       obj1, ctx->throw_type_error,
                       JS_PROP_HAS_GET | JS_PROP_HAS_SET |
                       JS_PROP_HAS_CONFIGURABLE | JS_PROP_CONFIGURABLE);
-puts("JS_AddIntrinsicBaseObjects: j");////
+//puts("JS_AddIntrinsicBaseObjects: j");////
     JS_DefineProperty(ctx, ctx->function_proto, JS_ATOM_arguments, JS_UNDEFINED,
                       obj1, ctx->throw_type_error,
                       JS_PROP_HAS_GET | JS_PROP_HAS_SET |
