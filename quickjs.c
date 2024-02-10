@@ -47,6 +47,7 @@
 #include "libbf.h"
 
 #define _d(s) write(1, s, strlen(s))////
+extern char *debug_expr;////
 
 //// Begin Test
 void print_hex(uint64_t n) {
@@ -2177,8 +2178,10 @@ JSContext *JS_NewContext(JSRuntime *rt)
     if (!ctx)
         return NULL;
 
+_d("JS_NewContext: a="); _d(debug_expr); _d("\n"); ////
 //puts("JS_NewContext: e");////
     JS_AddIntrinsicBaseObjects(ctx);
+_d("JS_NewContext: b="); _d(debug_expr); _d("\n"); ////
 //puts("JS_NewContext: f");////
     JS_AddIntrinsicDate(ctx);
     JS_AddIntrinsicEval(ctx);
@@ -34486,6 +34489,7 @@ JSValue JS_EvalThis(JSContext *ctx, JSValueConst this_obj,
 
     assert(eval_type == JS_EVAL_TYPE_GLOBAL ||
            eval_type == JS_EVAL_TYPE_MODULE);
+    _d("JS_EvalThis: input="); write(1, input, input_len); _d("\n");////
     ret = JS_EvalInternal(ctx, this_obj, input, input_len, filename,
                           eval_flags, -1);
     return ret;
@@ -52431,18 +52435,18 @@ void JS_AddIntrinsicBaseObjects(JSContext *ctx)
     JSValueConst obj, number_obj;
     JSValue obj1;
 
-//puts("JS_AddIntrinsicBaseObjects: g");////
+_d("JS_AddIntrinsicBaseObjects: a="); _d(debug_expr); _d("\n"); ////
     ctx->throw_type_error = JS_NewCFunction(ctx, js_throw_type_error, NULL, 0);
 
     /* add caller and arguments properties to throw a TypeError */
-//puts("JS_AddIntrinsicBaseObjects: h");////
+_d("JS_AddIntrinsicBaseObjects: b="); _d(debug_expr); _d("\n"); ////
     obj1 = JS_NewCFunction(ctx, js_function_proto_caller, NULL, 0);
-//puts("JS_AddIntrinsicBaseObjects: i");////
+_d("JS_AddIntrinsicBaseObjects: c="); _d(debug_expr); _d("\n"); ////
     JS_DefineProperty(ctx, ctx->function_proto, JS_ATOM_caller, JS_UNDEFINED,
                       obj1, ctx->throw_type_error,
                       JS_PROP_HAS_GET | JS_PROP_HAS_SET |
                       JS_PROP_HAS_CONFIGURABLE | JS_PROP_CONFIGURABLE);
-//puts("JS_AddIntrinsicBaseObjects: j");////
+_d("JS_AddIntrinsicBaseObjects: d="); _d(debug_expr); _d("\n"); ////
     JS_DefineProperty(ctx, ctx->function_proto, JS_ATOM_arguments, JS_UNDEFINED,
                       obj1, ctx->throw_type_error,
                       JS_PROP_HAS_GET | JS_PROP_HAS_SET |

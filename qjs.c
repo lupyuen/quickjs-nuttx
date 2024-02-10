@@ -42,6 +42,7 @@
 #include "quickjs-libc.h"
 
 #define _d(s) write(1, s, strlen(s))////
+char *debug_expr = NULL;////
 
 extern const uint8_t qjsc_repl[];
 extern const uint32_t qjsc_repl_size;
@@ -68,6 +69,7 @@ static int eval_buf(JSContext *ctx, const void *buf, int buf_len,
         }
         val = js_std_await(ctx, val);
     } else {
+        _d("eval_buf: buf="); write(1, buf, buf_len); _d("\n");////
         val = JS_Eval(ctx, buf, buf_len, filename, eval_flags);
     }
     if (JS_IsException(val)) {
@@ -109,10 +111,12 @@ static int eval_file(JSContext *ctx, const char *filename, int module)
 static JSContext *JS_NewCustomContext(JSRuntime *rt)
 {
     JSContext *ctx;
-write(1, "JS_NewCustomContext: c\n", 23);////
+_d("JS_NewCustomContext: a="); _d(debug_expr); _d("\n"); ////
+//write(1, "JS_NewCustomContext: c\n", 23);////
 //puts("JS_NewCustomContext: c");////
     ctx = JS_NewContext(rt);
-write(1, "JS_NewCustomContext: d\n", 23);////
+_d("JS_NewCustomContext: b="); _d(debug_expr); _d("\n"); ////
+//write(1, "JS_NewCustomContext: d\n", 23);////
 //puts("JS_NewCustomContext: d");////
     if (!ctx)
         return NULL;
@@ -367,6 +371,7 @@ int main(int argc, char **argv)
                 if (optind < argc) {
                     expr = argv[optind++];
                     _d("main: expr="); _d(expr); _d("\n"); ////
+                    debug_expr = expr; ////
                     break;
                 }
                 fprintf(stderr, "qjs: missing expression for -e\n");
@@ -456,24 +461,32 @@ int main(int argc, char **argv)
         bignum_ext = 1;
 #endif
 
+_d("main: expr2="); _d(debug_expr); _d("\n"); ////
     if (trace_memory) {
         js_trace_malloc_init(&trace_data);
         rt = JS_NewRuntime2(&trace_mf, &trace_data);
     } else {
         rt = JS_NewRuntime();
     }
+_d("main: expr3="); _d(debug_expr); _d("\n"); ////
     if (!rt) {
         fprintf(stderr, "qjs: cannot allocate JS runtime\n");
         exit(2);
     }
+_d("main: expr4="); _d(debug_expr); _d("\n"); ////
     if (memory_limit != 0)
         JS_SetMemoryLimit(rt, memory_limit);
+_d("main: expr5="); _d(debug_expr); _d("\n"); ////
     if (stack_size != 0)
         JS_SetMaxStackSize(rt, stack_size);
+_d("main: expr6="); _d(debug_expr); _d("\n"); ////
     js_std_set_worker_new_context_func(JS_NewCustomContext);
+_d("main: expr7="); _d(debug_expr); _d("\n"); ////
     js_std_init_handlers(rt);
+_d("main: expr8="); _d(debug_expr); _d("\n"); ////
 //puts("main: a");////
     ctx = JS_NewCustomContext(rt);
+_d("main: expr9="); _d(debug_expr); _d("\n"); ////
 //puts("main: b");////
     if (!ctx) {
         fprintf(stderr, "qjs: cannot allocate JS context\n");

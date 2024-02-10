@@ -562,6 +562,8 @@ next_token: c2=FFFFFFFFFFFFFFFF
 
 TODO: Who is corrupting our memory with FF?
 
+TODO: assert() is failing because of printf Mutex
+
 TODO: Are we out of Heap Memory?
 
 TODO: Where in main() are we?
