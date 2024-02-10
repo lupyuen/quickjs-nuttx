@@ -20654,6 +20654,7 @@ static __exception int next_token(JSParseState *s)
     s->token.line_num = s->line_num;
     s->token.ptr = p;
     c = *p;
+    _d("next_token: c0="); print_hex(c); _d("\n");////
     switch(c) {
     case 0:
         if (p >= s->buf_end) {
