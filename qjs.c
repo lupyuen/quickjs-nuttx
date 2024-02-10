@@ -427,7 +427,8 @@ int main(int argc, char **argv)
                     // debug_expr = expr; ////
                     assert(strlen(expr) < sizeof(debug_buf) - 1);////
                     strcpy(debug_buf, expr);////
-                    debug_expr = debug_buf;////
+                    // debug_expr = debug_buf;////
+                    debug_expr = "";////
                     expr = debug_buf;////
                     _d("main: expr="); _d(expr); _d("\n"); ////
                     _d("main: &expr="); print_hex(expr); _d("\n"); ////
