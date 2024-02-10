@@ -41,6 +41,8 @@
 #include "cutils.h"
 #include "quickjs-libc.h"
 
+#define _d(s) write(1, s, strlen(s))////
+
 extern const uint8_t qjsc_repl[];
 extern const uint32_t qjsc_repl_size;
 #ifdef CONFIG_BIGNUM
@@ -364,6 +366,7 @@ int main(int argc, char **argv)
                 }
                 if (optind < argc) {
                     expr = argv[optind++];
+                    _d("main: expr="); _d(expr); _d("\n"); ////
                     break;
                 }
                 fprintf(stderr, "qjs: missing expression for -e\n");

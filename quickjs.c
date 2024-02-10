@@ -46,6 +46,8 @@
 #include "libregexp.h"
 #include "libbf.h"
 
+#define _d(s) write(1, s, strlen(s))////
+
 #define OPTIMIZE         1
 #define SHORT_OPCODES    1
 #if defined(EMSCRIPTEN)

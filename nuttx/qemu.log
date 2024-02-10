@@ -708,7 +708,7 @@ elf_dumploadinfo:   textsize:     0
 elf_dumploadinfo:   datasize:     0
 elf_dumploadinfo:   textalign:    0
 elf_dumploadinfo:   dataalign:    0
-elf_dumploadinfo:   filelen:      4066408
+elf_dumploadinfo:   filelen:      4066600
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -718,7 +718,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4063784
+elf_dumploadinfo:   e_shoff:      4063976
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -730,53 +730,53 @@ elf_load: loadinfo: 0x80209a38
 mm_malloc: Allocated 0x802089d0, size 128
 elf_read: Read 112 bytes from offset 64
 mm_malloc: Allocated 0x8020a810, size 2640
-elf_read: Read 2624 bytes from offset 4063784
+elf_read: Read 2624 bytes from offset 4063976
 mm_malloc: Allocated 0x80208a50, size 128
 elf_loadfile: Loaded sections:
-elf_read: Read 358016 bytes from offset 4096
+elf_read: Read 358068 bytes from offset 4096
 elf_loadfile: 1. c0000000->c0000000
-elf_read: Read 115104 bytes from offset 362112
-elf_loadfile: 2. c0057680->c0057680
-elf_read: Read 488 bytes from offset 477216
-elf_loadfile: 3. c0073820->c0073820
-elf_read: Read 4 bytes from offset 477704
-elf_loadfile: 4. c0073a08->c0073a08
-elf_read: Read 4 bytes from offset 477712
-elf_loadfile: 5. c0073a10->c0073a10
-elf_read: Read 4 bytes from offset 477720
-elf_loadfile: 6. c0073a18->c0073a18
-elf_read: Read 8 bytes from offset 477728
-elf_loadfile: 7. c0073a20->c0073a20
-elf_read: Read 6 bytes from offset 477736
-elf_loadfile: 8. c0073a28->c0073a28
-elf_read: Read 6 bytes from offset 477744
-elf_loadfile: 9. c0073a30->c0073a30
-elf_read: Read 5 bytes from offset 477752
-elf_loadfile: 10. c0073a38->c0073a38
-elf_read: Read 4 bytes from offset 477760
-elf_loadfile: 11. c0073a40->c0073a40
-elf_read: Read 5 bytes from offset 477768
-elf_loadfile: 12. c0073a48->c0073a48
-elf_read: Read 4 bytes from offset 477776
-elf_loadfile: 13. c0073a50->c0073a50
+elf_read: Read 115120 bytes from offset 362176
+elf_loadfile: 2. c00576c0->c00576c0
+elf_read: Read 488 bytes from offset 477296
+elf_loadfile: 3. c0073870->c0073870
 elf_read: Read 4 bytes from offset 477784
-elf_loadfile: 14. c0073a58->c0073a58
+elf_loadfile: 4. c0073a58->c0073a58
 elf_read: Read 4 bytes from offset 477792
-elf_loadfile: 15. c0073a60->c0073a60
+elf_loadfile: 5. c0073a60->c0073a60
 elf_read: Read 4 bytes from offset 477800
-elf_loadfile: 16. c0073a68->c0073a68
-elf_read: Read 5 bytes from offset 477808
-elf_loadfile: 17. c0073a70->c0073a70
-elf_read: Read 8 bytes from offset 477816
-elf_loadfile: 18. c0073a78->c0073a78
-elf_read: Read 7 bytes from offset 477824
-elf_loadfile: 19. c0073a80->c0073a80
-elf_read: Read 3 bytes from offset 477832
-elf_loadfile: 20. c0073a88->c0073a88
-elf_read: Read 6 bytes from offset 477840
-elf_loadfile: 21. c0073a90->c0073a90
-elf_read: Read 108 bytes from offset 477848
-elf_loadfile: 22. c0073a98->c0073a98
+elf_loadfile: 6. c0073a68->c0073a68
+elf_read: Read 8 bytes from offset 477808
+elf_loadfile: 7. c0073a70->c0073a70
+elf_read: Read 6 bytes from offset 477816
+elf_loadfile: 8. c0073a78->c0073a78
+elf_read: Read 6 bytes from offset 477824
+elf_loadfile: 9. c0073a80->c0073a80
+elf_read: Read 5 bytes from offset 477832
+elf_loadfile: 10. c0073a88->c0073a88
+elf_read: Read 4 bytes from offset 477840
+elf_loadfile: 11. c0073a90->c0073a90
+elf_read: Read 5 bytes from offset 477848
+elf_loadfile: 12. c0073a98->c0073a98
+elf_read: Read 4 bytes from offset 477856
+elf_loadfile: 13. c0073aa0->c0073aa0
+elf_read: Read 4 bytes from offset 477864
+elf_loadfile: 14. c0073aa8->c0073aa8
+elf_read: Read 4 bytes from offset 477872
+elf_loadfile: 15. c0073ab0->c0073ab0
+elf_read: Read 4 bytes from offset 477880
+elf_loadfile: 16. c0073ab8->c0073ab8
+elf_read: Read 5 bytes from offset 477888
+elf_loadfile: 17. c0073ac0->c0073ac0
+elf_read: Read 8 bytes from offset 477896
+elf_loadfile: 18. c0073ac8->c0073ac8
+elf_read: Read 7 bytes from offset 477904
+elf_loadfile: 19. c0073ad0->c0073ad0
+elf_read: Read 3 bytes from offset 477912
+elf_loadfile: 20. c0073ad8->c0073ad8
+elf_read: Read 6 bytes from offset 477920
+elf_loadfile: 21. c0073ae0->c0073ae0
+elf_read: Read 108 bytes from offset 477928
+elf_loadfile: 22. c0073ae8->c0073ae8
 elf_read: Read 152 bytes from offset 479232
 elf_loadfile: 23. c0101000->c0101000
 elf_read: Read 4 bytes from offset 479384
@@ -789,11 +789,11 @@ elf_loadfile: 27. c01010b0->c01010b0
 elf_dumploadinfo: LOAD_INFO:
 elf_dumploadinfo:   textalloc:    c0000000
 elf_dumploadinfo:   dataalloc:    c0101000
-elf_dumploadinfo:   textsize:     473860
+elf_dumploadinfo:   textsize:     473940
 elf_dumploadinfo:   datasize:     288
 elf_dumploadinfo:   textalign:    16
 elf_dumploadinfo:   dataalign:    8
-elf_dumploadinfo:   filelen:      4066408
+elf_dumploadinfo:   filelen:      4066600
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -803,7 +803,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4063784
+elf_dumploadinfo:   e_shoff:      4063976
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -816,8 +816,8 @@ elf_dumploadinfo:   p_type:       00000001
 elf_dumploadinfo:   p_offset:     00001000
 elf_dumploadinfo:   p_vaddr:      c0000000
 elf_dumploadinfo:   p_paddr:      c0000000
-elf_dumploadinfo:   p_filesz:     00073b04
-elf_dumploadinfo:   p_memsz:      00073b04
+elf_dumploadinfo:   p_filesz:     00073b54
+elf_dumploadinfo:   p_memsz:      00073b54
 elf_dumploadinfo:   p_flags:      00000005
 elf_dumploadinfo:   p_align:      00001000
 elf_dumploadinfo: Programs 1:
@@ -846,7 +846,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000006
 elf_dumploadinfo:   sh_addr:      c0000000
 elf_dumploadinfo:   sh_offset:    4096
-elf_dumploadinfo:   sh_size:      358016
+elf_dumploadinfo:   sh_size:      358068
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 2
@@ -855,9 +855,9 @@ elf_dumploadinfo: Sections 2:
 elf_dumploadinfo:   sh_name:      00000021
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0057680
-elf_dumploadinfo:   sh_offset:    362112
-elf_dumploadinfo:   sh_size:      115104
+elf_dumploadinfo:   sh_addr:      c00576c0
+elf_dumploadinfo:   sh_offset:    362176
+elf_dumploadinfo:   sh_size:      115120
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 16
@@ -866,8 +866,8 @@ elf_dumploadinfo: Sections 3:
 elf_dumploadinfo:   sh_name:      00000029
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000012
-elf_dumploadinfo:   sh_addr:      c0073820
-elf_dumploadinfo:   sh_offset:    477216
+elf_dumploadinfo:   sh_addr:      c0073870
+elf_dumploadinfo:   sh_offset:    477296
 elf_dumploadinfo:   sh_size:      488
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -877,8 +877,8 @@ elf_dumploadinfo: Sections 4:
 elf_dumploadinfo:   sh_name:      00000037
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a08
-elf_dumploadinfo:   sh_offset:    477704
+elf_dumploadinfo:   sh_addr:      c0073a58
+elf_dumploadinfo:   sh_offset:    477784
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -888,8 +888,8 @@ elf_dumploadinfo: Sections 5:
 elf_dumploadinfo:   sh_name:      0000004f
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a10
-elf_dumploadinfo:   sh_offset:    477712
+elf_dumploadinfo:   sh_addr:      c0073a60
+elf_dumploadinfo:   sh_offset:    477792
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -899,8 +899,8 @@ elf_dumploadinfo: Sections 6:
 elf_dumploadinfo:   sh_name:      00000064
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a18
-elf_dumploadinfo:   sh_offset:    477720
+elf_dumploadinfo:   sh_addr:      c0073a68
+elf_dumploadinfo:   sh_offset:    477800
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -910,8 +910,8 @@ elf_dumploadinfo: Sections 7:
 elf_dumploadinfo:   sh_name:      00000079
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a20
-elf_dumploadinfo:   sh_offset:    477728
+elf_dumploadinfo:   sh_addr:      c0073a70
+elf_dumploadinfo:   sh_offset:    477808
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -921,8 +921,8 @@ elf_dumploadinfo: Sections 8:
 elf_dumploadinfo:   sh_name:      00000098
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a28
-elf_dumploadinfo:   sh_offset:    477736
+elf_dumploadinfo:   sh_addr:      c0073a78
+elf_dumploadinfo:   sh_offset:    477816
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -932,8 +932,8 @@ elf_dumploadinfo: Sections 9:
 elf_dumploadinfo:   sh_name:      000000ba
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a30
-elf_dumploadinfo:   sh_offset:    477744
+elf_dumploadinfo:   sh_addr:      c0073a80
+elf_dumploadinfo:   sh_offset:    477824
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -943,8 +943,8 @@ elf_dumploadinfo: Sections 10:
 elf_dumploadinfo:   sh_name:      000000d0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a38
-elf_dumploadinfo:   sh_offset:    477752
+elf_dumploadinfo:   sh_addr:      c0073a88
+elf_dumploadinfo:   sh_offset:    477832
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -954,8 +954,8 @@ elf_dumploadinfo: Sections 11:
 elf_dumploadinfo:   sh_name:      000000fc
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a40
-elf_dumploadinfo:   sh_offset:    477760
+elf_dumploadinfo:   sh_addr:      c0073a90
+elf_dumploadinfo:   sh_offset:    477840
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -965,8 +965,8 @@ elf_dumploadinfo: Sections 12:
 elf_dumploadinfo:   sh_name:      00000127
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a48
-elf_dumploadinfo:   sh_offset:    477768
+elf_dumploadinfo:   sh_addr:      c0073a98
+elf_dumploadinfo:   sh_offset:    477848
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -976,8 +976,8 @@ elf_dumploadinfo: Sections 13:
 elf_dumploadinfo:   sh_name:      00000157
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a50
-elf_dumploadinfo:   sh_offset:    477776
+elf_dumploadinfo:   sh_addr:      c0073aa0
+elf_dumploadinfo:   sh_offset:    477856
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -987,8 +987,8 @@ elf_dumploadinfo: Sections 14:
 elf_dumploadinfo:   sh_name:      00000188
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a58
-elf_dumploadinfo:   sh_offset:    477784
+elf_dumploadinfo:   sh_addr:      c0073aa8
+elf_dumploadinfo:   sh_offset:    477864
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -998,8 +998,8 @@ elf_dumploadinfo: Sections 15:
 elf_dumploadinfo:   sh_name:      000001b1
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a60
-elf_dumploadinfo:   sh_offset:    477792
+elf_dumploadinfo:   sh_addr:      c0073ab0
+elf_dumploadinfo:   sh_offset:    477872
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1009,8 +1009,8 @@ elf_dumploadinfo: Sections 16:
 elf_dumploadinfo:   sh_name:      000001e0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a68
-elf_dumploadinfo:   sh_offset:    477800
+elf_dumploadinfo:   sh_addr:      c0073ab8
+elf_dumploadinfo:   sh_offset:    477880
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1020,8 +1020,8 @@ elf_dumploadinfo: Sections 17:
 elf_dumploadinfo:   sh_name:      000001ff
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a70
-elf_dumploadinfo:   sh_offset:    477808
+elf_dumploadinfo:   sh_addr:      c0073ac0
+elf_dumploadinfo:   sh_offset:    477888
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1031,8 +1031,8 @@ elf_dumploadinfo: Sections 18:
 elf_dumploadinfo:   sh_name:      0000021d
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a78
-elf_dumploadinfo:   sh_offset:    477816
+elf_dumploadinfo:   sh_addr:      c0073ac8
+elf_dumploadinfo:   sh_offset:    477896
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1042,8 +1042,8 @@ elf_dumploadinfo: Sections 19:
 elf_dumploadinfo:   sh_name:      00000235
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a80
-elf_dumploadinfo:   sh_offset:    477824
+elf_dumploadinfo:   sh_addr:      c0073ad0
+elf_dumploadinfo:   sh_offset:    477904
 elf_dumploadinfo:   sh_size:      7
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1053,8 +1053,8 @@ elf_dumploadinfo: Sections 20:
 elf_dumploadinfo:   sh_name:      0000024b
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a88
-elf_dumploadinfo:   sh_offset:    477832
+elf_dumploadinfo:   sh_addr:      c0073ad8
+elf_dumploadinfo:   sh_offset:    477912
 elf_dumploadinfo:   sh_size:      3
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1064,8 +1064,8 @@ elf_dumploadinfo: Sections 21:
 elf_dumploadinfo:   sh_name:      0000025e
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a90
-elf_dumploadinfo:   sh_offset:    477840
+elf_dumploadinfo:   sh_addr:      c0073ae0
+elf_dumploadinfo:   sh_offset:    477920
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1075,8 +1075,8 @@ elf_dumploadinfo: Sections 22:
 elf_dumploadinfo:   sh_name:      00000271
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0073a98
-elf_dumploadinfo:   sh_offset:    477848
+elf_dumploadinfo:   sh_addr:      c0073ae8
+elf_dumploadinfo:   sh_offset:    477928
 elf_dumploadinfo:   sh_size:      108
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1176,7 +1176,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
 elf_dumploadinfo:   sh_offset:    556215
-elf_dumploadinfo:   sh_size:      954185
+elf_dumploadinfo:   sh_size:      954321
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1186,8 +1186,8 @@ elf_dumploadinfo:   sh_name:      000002fd
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    1510400
-elf_dumploadinfo:   sh_size:      926924
+elf_dumploadinfo:   sh_offset:    1510536
+elf_dumploadinfo:   sh_size:      926956
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1197,7 +1197,7 @@ elf_dumploadinfo:   sh_name:      00000309
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2437324
+elf_dumploadinfo:   sh_offset:    2437492
 elf_dumploadinfo:   sh_size:      36096
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1208,8 +1208,8 @@ elf_dumploadinfo:   sh_name:      00000318
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2473420
-elf_dumploadinfo:   sh_size:      1154662
+elf_dumploadinfo:   sh_offset:    2473588
+elf_dumploadinfo:   sh_size:      1154681
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1219,7 +1219,7 @@ elf_dumploadinfo:   sh_name:      00000323
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3628082
+elf_dumploadinfo:   sh_offset:    3628269
 elf_dumploadinfo:   sh_size:      155424
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1230,7 +1230,7 @@ elf_dumploadinfo:   sh_name:      00000331
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000030
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3783506
+elf_dumploadinfo:   sh_offset:    3783693
 elf_dumploadinfo:   sh_size:      94902
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1241,7 +1241,7 @@ elf_dumploadinfo:   sh_name:      0000033c
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3878408
+elf_dumploadinfo:   sh_offset:    3878600
 elf_dumploadinfo:   sh_size:      92384
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1252,7 +1252,7 @@ elf_dumploadinfo:   sh_name:      00000001
 elf_dumploadinfo:   sh_type:      00000002
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3970792
+elf_dumploadinfo:   sh_offset:    3970984
 elf_dumploadinfo:   sh_size:      54648
 elf_dumploadinfo:   sh_link:      39
 elf_dumploadinfo:   sh_info:      1550
@@ -1263,7 +1263,7 @@ elf_dumploadinfo:   sh_name:      00000009
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4025440
+elf_dumploadinfo:   sh_offset:    4025632
 elf_dumploadinfo:   sh_size:      37500
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1274,7 +1274,7 @@ elf_dumploadinfo:   sh_name:      00000011
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4062940
+elf_dumploadinfo:   sh_offset:    4063132
 elf_dumploadinfo:   sh_size:      841
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1314,6 +1314,7 @@ mm_malloc: Allocated 0x80208d60, size 160
 mm_malloc: Allocated 0xc02004b0, size 18448
 mm_free: Freeing 0x80208820
 mm_free: Freeing 0x80208990
+main: expr=console.log(123)
 mm_malloc: Allocated 0xc02004b0, size 592
 mm_malloc: Allocated 0xc0200700, size 1040
 mm_malloc: Allocated 0xc0200b10, size 32
@@ -4717,11 +4718,11 @@ mm_free: Freeing 0xc0205760
 mm_free: Freeing 0xc0205730
 mm_free: Freeing 0xc020eba0
 mm_free: Freeing 0xc02082c0
-riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c000697c, MTVAL: 00000008c0212088
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c00069ac, MTVAL: 00000008c0212088
 riscv_exception: PANIC!!! Exception = 000000000000000d
 _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 18:58:20 risc-v
 _assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: /system/bin/init 0xc000004a
-up_dump_register: EPC: 00000000c000697c
+up_dump_register: EPC: 00000000c00069ac
 up_dump_register: A0: ffffffff00000000 A1: 00000000c02082f0 A2: 00000000c0212090 A3: 00000000c0201ef0
 up_dump_register: A4: ffffffffffffffff A5: 00000008c0212088 A6: 0000000000000009 A7: 000000000000000d
 up_dump_register: T0: 0000000080007452 T1: 000000000000006a T2: 00000000000001ff T3: 000000000000006c
@@ -4729,21 +4730,21 @@ up_dump_register: T4: 0000000000000068 T5: 0000000000000009 T6: 000000000000002a
 up_dump_register: S0: 00000000c02004b0 S1: 00000000c02004b0 S2: 0000000000000011 S3: 00000000c020f170
 up_dump_register: S4: 00000000c020f2c8 S5: 0000000000000004 S6: ffffffffffffffff S7: 00000000c0202037
 up_dump_register: S8: 0000000000000000 S9: 0000000000000000 S10: 00000000c0202670 S11: 0000000000000000
-up_dump_register: SP: 00000000c0202430 FP: 00000000c02004b0 TP: 0000000000000000 RA: 00000000c0008524
+up_dump_register: SP: 00000000c0202430 FP: 00000000c02004b0 TP: 0000000000000000 RA: 00000000c0008554
 dump_stack: User Stack:
 dump_stack:   base: 0xc0202040
 dump_stack:   size: 00003008
 dump_stack:     sp: 0xc0202430
-stack_dump: 0xc0202410: c02004b0 00000000 c0052c66 00000000 c02004b0 00000000 c0006918 00000000
-stack_dump: 0xc0202430: c020f0a0 00000000 c0008524 00000000 c0200000 00000000 c0053190 00000000
+stack_dump: 0xc0202410: c02004b0 00000000 c0052c9a 00000000 c02004b0 00000000 c0006948 00000000
+stack_dump: 0xc0202430: c020f0a0 00000000 c0008554 00000000 c0200000 00000000 c00531c4 00000000
 stack_dump: 0xc0202450: c020eba0 00000000 c020f0a0 00000000 0000003d 00000000 c02004b0 00000000
-stack_dump: 0xc0202470: c0205850 00000000 c0008014 00000000 ffffffff ffffffff c00057b6 00000000
+stack_dump: 0xc0202470: c0205850 00000000 c0008044 00000000 ffffffff ffffffff c00057e6 00000000
 stack_dump: 0xc0202490: 00000001 00000000 c0200548 00000000 c0200558 00000000 c0205858 00000000
-stack_dump: 0xc02024b0: c02004b0 00000000 c0009508 00000000 c0200c80 00000000 00000000 00000000
+stack_dump: 0xc02024b0: c02004b0 00000000 c0009538 00000000 c0200c80 00000000 00000000 00000000
 stack_dump: 0xc02024d0: c02005d0 00000000 c02005d0 00000000 c0200ce0 00000000 c02005d0 00000000
-stack_dump: 0xc02024f0: c02004b0 00000000 c0009636 00000000 c0200c80 00000000 c0052c66 00000000
-stack_dump: 0xc0202510: c0200c80 00000000 c004ba6c 00000000 00000003 00000000 00000000 00000000
-stack_dump: 0xc0202530: c0200ce0 00000000 c0202010 00000000 c02004b0 00000000 c0003d64 00000000
+stack_dump: 0xc02024f0: c02004b0 00000000 c0009666 00000000 c0200c80 00000000 c0052c9a 00000000
+stack_dump: 0xc0202510: c0200c80 00000000 c004baa0 00000000 00000003 00000000 00000000 00000000
+stack_dump: 0xc0202530: c0200ce0 00000000 c0202010 00000000 c02004b0 00000000 c0003d94 00000000
 stack_dump: 0xc0202550: deadbeef deadbeef 00000000 00000000 00000000 00000000 00000000 00000000
 stack_dump: 0xc0202570: 00000000 00000000 0000002d 00000000 00000000 00000000 deadbeef deadbeef
 stack_dump: 0xc0202590: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
@@ -4781,7 +4782,7 @@ stack_dump: 0xc0202970: 00000001 00000005 4c60ead6 00000000 67616c66 00000073 00
 stack_dump: 0xc0202990: 00000001 00000006 7e4f2c3c 00000141 626f6c67 00006c61 00000021 00000000
 stack_dump: 0xc02029b0: 00000001 00000007 73d69fcc 00000000 63696e75 0065646f 00000021 00000000
 stack_dump: 0xc02029d0: 00000001 00000003 418e4a47 00000000 00776172 00000000 00000031 00000000
-stack_dump: 0xc02029f0: 00000001 0000000a 4cee6f90 0000005e 2e77656e 67726174 00007465 00000000
+stack_dump: 0xc02029f0: 00000001 0000000a 4cee6f90 00000000 2e77656e 67726174 00007465 00000000
 stack_dump: 0xc0202a10: 00000000 00000000 00000031 00000000 00000001 00000010 58af09be 00000000
 stack_dump: 0xc0202a30: 73696874 7463612e 5f657669 636e7566 00000000 00000000 00000031 00000000
 stack_dump: 0xc0202a50: 00000001 0000000d 4e95a32a 00000000 6d6f683c 626f5f65 7463656a 0000003e
@@ -4801,9 +4802,9 @@ stack_dump: 0xc0202bf0: 00000001 00000001 40000131 00000000 00000000 00000000 00
 dump_tasks:    PID GROUP PRI POLICY   TYPE    NPX STATE   EVENT      SIGMASK          STACKBASE  STACKSIZE      USED   FILLED    COMMAND
 dump_tasks:   ----   --- --- -------- ------- --- ------- ---------- ---------------- 0x802002b0      2048      2040    99.6%!   irq
 dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000000 0x80206010      3056      1792    58.6%    Idle_Task
-dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020a050      1968       704    35.7%    lpwork 0x802015f0 0x80201618
+dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020a050      1968       752    38.2%    lpwork 0x802015f0 0x80201618
 dump_task:       2     2 100 RR       Task    - Waiting Semaphore  0000000000000000 0xc0202040      3008       744    24.7%    /system/bin/init
 _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 18:58:20 risc-v
 _assert: Assertion failed : at file: common/riscv_doirq.c:79 task: /system/bin/init process: /system/bin/init 0xc000004a
 up_dump_register: EPC: 0000000080001faa
-up_dump_
+up_dump
