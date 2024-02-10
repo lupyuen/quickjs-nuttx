@@ -27,7 +27,7 @@ expect {
   "nsh>" { exit 0 }
 
   ## If we see this message, exit with an error
-  "stack_dump" { exit 1 }
+  "EPC: 0000000080001faa" { exit 1 }
 
   ## If timeout, exit with an error
   timeout { exit 1 }
