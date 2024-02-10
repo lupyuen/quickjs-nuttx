@@ -1049,4 +1049,688 @@ stack_dump: 0x8020bff0: 00000000 00000000 00000000 00000000 00000000 00000000 80
 stack_dump:
 ```
 
+TODO: Are we out of Heap Memory? With Memory Manager Logging:
+
+```text
++ qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
+ABCmm_initialize: Heap: name=Kmem, start=0x80206c00 size=2069504
+mm_addregion: [Kmem] Region 1: base=0x80206ea8 size=2068816
+mm_malloc: Allocated 0x80206ed0, size 192
+mm_malloc: Allocated 0x80206f90, size 48
+mm_malloc: Allocated 0x80206fc0, size 288
+mm_malloc: Allocated 0x802070e0, size 32
+mm_malloc: Allocated 0x80207100, size 672
+mm_malloc: Allocated 0x802073a0, size 80
+mm_malloc: Allocated 0x802073f0, size 240
+mm_malloc: Allocated 0x802074e0, size 464
+mm_malloc: Allocated 0x802076b0, size 176
+mm_malloc: Allocated 0x80207760, size 336
+mm_malloc: Allocated 0x802078b0, size 464
+mm_malloc: Allocated 0x80207a80, size 464
+mm_malloc: Allocated 0x80207c50, size 528
+mm_malloc: Allocated 0x80207e60, size 80
+mm_malloc: Allocated 0x80207eb0, size 80
+mm_malloc: Allocated 0x80207f00, size 80
+mm_malloc: Allocated 0x80207f50, size 80
+mm_malloc: Allocated 0x80207fa0, size 80
+mm_malloc: Allocated 0x80207ff0, size 32
+mm_malloc: Allocated 0x80208010, size 160
+mm_malloc: Allocated 0x802080b0, size 32
+mm_malloc: Allocated 0x802080d0, size 32
+mm_malloc: Allocated 0x802080f0, size 32
+mm_malloc: Allocated 0x80208110, size 368
+mm_malloc: Allocated 0x80208280, size 288
+mm_malloc: Allocated 0x802083a0, size 32
+mm_malloc: Allocated 0x802083c0, size 672
+mm_malloc: Allocated 0x80208660, size 32
+mm_malloc: Allocated 0x80208680, size 160
+mm_malloc: Allocated 0x80208720, size 18448
+mm_malloc: Allocated 0x80208720, size 32
+mm_free: Freeing 0x80208720
+mm_malloc: Allocated 0x80208720, size 80
+mm_malloc: Allocated 0x80208770, size 272
+mm_malloc: Allocated 0x80208880, size 32
+mm_free: Freeing 0x80208880
+mm_malloc: Allocated 0x80208880, size 112
+mm_malloc: Allocated 0x802088f0, size 32
+mm_malloc: Allocated 0x80208910, size 128
+mm_malloc: Allocated 0x80208990, size 2768
+mm_malloc: Allocated 0x80209460, size 128
+mm_free: Freeing 0x80208910
+mm_free: Freeing 0x80208990
+mm_free: Freeing 0x802088f0
+mm_malloc: Allocated 0x802094e0, size 368
+mm_malloc: Allocated 0x80209650, size 64
+mm_initialize: Heap: name=(null), start=0xc0200000 size=528384
+mm_addregion: [(null)] Region 1: base=0xc02002a8 size=527696
+mm_malloc: Allocated 0x8020a810, size 3088
+mm_malloc: Allocated 0x80209690, size 288
+mm_malloc: Allocated 0x802097b0, size 32
+mm_malloc: Allocated 0xc02002d0, size 672
+mm_malloc: Allocated 0xc0200570, size 32
+mm_malloc: Allocated 0xc0200590, size 32
+mm_malloc: Allocated 0xc02005b0, size 32
+mm_malloc: Allocated 0x802097d0, size 32
+mm_malloc: Allocated 0x802097f0, size 160
+mm_malloc: Allocated 0xc02005d0, size 19472
+mm_free: Freeing 0x80209650
+mm_free: Freeing 0x802080b0
+mm_free: Freeing 0x802080f0
+mm_free: Freeing 0x802080d0
+mm_malloc: Allocated 0x802080b0, size 80
+mm_malloc: Allocated 0xc02005d0, size 848
+
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> qjs
+mm_malloc: Allocated 0x80209890, size 112
+mm_malloc: Allocated 0x80209650, size 48
+mm_malloc: Allocated 0x80209900, size 32
+mm_malloc: Allocated 0x80209920, size 32
+mm_malloc: Allocated 0x80209940, size 128
+mm_malloc: Allocated 0x802088f0, size 2512
+mm_malloc: Allocated 0x802092c0, size 128
+mm_free: Freeing 0x80209940
+mm_free: Freeing 0x802088f0
+mm_free: Freeing 0x80209920
+mm_free: Freeing 0x80209900
+mm_free: Freeing 0x80209650
+mm_malloc: Allocated 0x80209900, size 368
+mm_malloc: Allocated 0x80209650, size 32
+mm_malloc: Allocated 0x80209340, size 64
+mm_initialize: Heap: name=(null), start=0xc0200000 size=528384
+mm_addregion: [(null)] Region 1: base=0xc02002a8 size=527696
+mm_malloc: Allocated 0x8020b420, size 3088
+mm_malloc: Allocated 0x80209a70, size 288
+mm_malloc: Allocated 0x80209670, size 32
+mm_malloc: Allocated 0xc02002d0, size 672
+mm_malloc: Allocated 0xc0200570, size 32
+mm_malloc: Allocated 0xc0200590, size 32
+mm_malloc: Allocated 0xc02005b0, size 32
+mm_malloc: Allocated 0x80209380, size 32
+mm_malloc: Allocated 0x802093a0, size 160
+mm_malloc: Allocated 0xc02005d0, size 18448
+mm_free: Freeing 0x80209650
+mm_free: Freeing 0x80209340
+hash_string8: str=null, len=4
+hash_string8: str=null, h=0xffffffff94ed0e88
+hash_string8: str=false, len=5
+hash_string8: str=false, h=0x7f337a
+hash_string8: str=true, len=4
+hash_string8: str=true, h=0xffffffff9b6b6737
+hash_string8: str=if, len=2
+hash_string8: str=if, h=0x17a76
+hash_string8: str=else, len=4
+hash_string8: str=else, h=0xffffffff8b215eea
+hash_string8: str=return, len=6
+hash_string8: str=return, h=0xffffffff9b081491
+hash_string8: str=var, len=3
+hash_string8: str=var, h=0x1928306
+hash_string8: str=this, len=4
+hash_string8: str=this, h=0xffffffff9b60cd07
+hash_string8: str=delete, len=6
+hash_string8: str=delete, h=0x82273ac
+hash_string8: str=void, len=4
+hash_string8: str=void, h=0xffffffff9d9358fd
+hash_string8: str=typeof, len=6
+hash_string8: str=typeof, h=0xffffffffcd2f15ea
+hash_string8: str=new, len=3
+hash_string8: str=new, h=0x18a159f
+hash_string8: str=in, len=2
+hash_string8: str=in, h=0x17a7e
+hash_string8: str=instanceof, len=10
+hash_string8: str=instanceof, h=0xffffffffdd1cf505
+hash_string8: str=do, len=2
+hash_string8: str=do, h=0x1755c
+hash_string8: str=while, len=5
+hash_string8: str=while, h=0xfffffffff7f4cb88
+hash_string8: str=for, len=3
+hash_string8: str=for, h=0x181ae58
+hash_string8: str=break, len=5
+hash_string8: str=break, h=0xffffffff9e3901ee
+hash_string8: str=continue, len=8
+hash_string8: str=continue, h=0x5163f230
+hash_string8: str=switch, len=6
+hash_string8: str=switch, h=0xffffffff93bbdead
+hash_string8: str=case, len=4
+hash_string8: str=case, h=0xffffffff88ea9a21
+hash_string8: str=default, len=7
+hash_string8: str=default, h=0xffffffffa80b39e8
+hash_string8: str=throw, len=5
+hash_string8: str=throw, h=0xffffffffa07c1e45
+hash_string8: str=try, len=3
+hash_string8: str=try, h=0x1907822
+hash_string8: str=catch, len=5
+hash_string8: str=catch, h=0xffffffffa9056472
+hash_string8: str=finally, len=7
+hash_string8: str=finally, h=0x2426eafa
+hash_string8: str=function, len=8
+hash_string8: str=function, h=0xffffffffa1bc22b1
+hash_string8: str=debugger, len=8
+hash_string8: str=debugger, h=0xfffffffffd645ba2
+hash_string8: str=with, len=4
+hash_string8: str=with, h=0xffffffff9ea2a37f
+hash_string8: str=class, len=5
+hash_string8: str=class, h=0xffffffffb4dec707
+hash_string8: str=const, len=5
+hash_string8: str=const, h=0xffffffffb82d3c8a
+hash_string8: str=enum, len=4
+hash_string8: str=enum, h=0xffffffff8b237d62
+hash_string8: str=export, len=6
+hash_string8: str=export, h=0x2e50fdcd
+hash_string8: str=extends, len=7
+hash_string8: str=extends, h=0xffffffffff063ef8
+hash_string8: str=import, len=6
+hash_string8: str=import, h=0xffffffffcbc83d3e
+hash_string8: str=super, len=5
+hash_string8: str=super, h=0xffffffff91671aa2
+hash_string8: str=implements, len=10
+hash_string8: str=implements, h=0xffffffff86f7e4a9
+hash_string8: str=interface, len=9
+hash_string8: str=interface, h=0xffffffffa92b2db0
+hash_string8: str=let, len=3
+hash_string8: str=let, h=0x187f93a
+hash_string8: str=package, len=7
+hash_string8: str=package, h=0xffffffffb7b79c55
+hash_string8: str=private, len=7
+hash_string8: str=private, h=0xffffffffe390faca
+hash_string8: str=protected, len=9
+hash_string8: str=protected, h=0x7c5f985
+hash_string8: str=public, len=6
+hash_string8: str=public, h=0x6b062632
+hash_string8: str=static, len=6
+hash_string8: str=static, h=0x338d11f7
+hash_string8: str=yield, len=5
+hash_string8: str=yield, h=0x335cf1dc
+hash_string8: str=await, len=5
+hash_string8: str=await, h=0xffffffff867551bd
+hash_string8: str=, len=0
+hash_string8: str=, h=0x1
+hash_string8: str=length, len=6
+hash_string8: str=length, h=0xffffffffc6f8edf7
+hash_string8: str=fileName, len=8
+hash_string8: str=fileName, h=0xffffffff88eba4d0
+hash_string8: str=lineNumber, len=10
+hash_string8: str=lineNumber, h=0xffffffffcdd3569e
+hash_string8: str=message, len=7
+hash_string8: str=message, h=0x62bf0f06
+hash_string8: str=cause, len=5
+hash_string8: str=cause, h=0xffffffffa9068310
+hash_string8: str=errors, len=6
+hash_string8: str=errors, h=0xffffffff8177c634
+hash_string8: str=stack, len=5
+hash_string8: str=stack, h=0xffffffff9041af57
+hash_string8: str=name, len=4
+hash_string8: str=name, h=0xffffffff94d7f3b4
+hash_string8: str=toString, len=8
+hash_string8: str=toString, h=0x15becee5
+hash_string8: str=toLocaleString, len=14
+hash_string8: str=toLocaleString, h=0xffffffff84732bf7
+hash_string8: str=valueOf, len=7
+hash_string8: str=valueOf, h=0xffffffffe67a59a7
+hash_string8: str=eval, len=4
+hash_string8: str=eval, h=0xffffffff8b2bda5d
+hash_string8: str=prototype, len=9
+hash_string8: str=prototype, h=0x3dec1b59
+hash_string8: str=constructor, len=11
+hash_string8: str=constructor, h=0xffffffff89c4a631
+hash_string8: str=configurable, len=12
+hash_string8: str=configurable, h=0x266667aa
+hash_string8: str=writable, len=8
+hash_string8: str=writable, h=0x6fbb9aa9
+hash_string8: str=enumerable, len=10
+hash_string8: str=enumerable, h=0xffffffffd7b4c6a9
+hash_string8: str=value, len=5
+hash_string8: str=value, h=0xffffffffd3358b98
+hash_string8: str=get, len=3
+hash_string8: str=get, h=0x182b245
+hash_string8: str=set, len=3
+hash_string8: str=set, h=0x18f5c91
+hash_string8: str=of, len=2
+hash_string8: str=of, h=0x180a0
+hash_string8: str=__proto__, len=9
+hash_string8: str=__proto__, h=0x3081320f
+hash_string8: str=undefined, len=9
+hash_string8: str=undefined, h=0xfffffffff391bcaf
+hash_string8: str=number, len=6
+hash_string8: str=number, h=0xffffffff87bea6aa
+hash_string8: str=boolean, len=7
+hash_string8: str=boolean, h=0xffffffffb1cc530f
+hash_string8: str=string, len=6
+hash_string8: str=string, h=0x45f054ca
+hash_string8: str=object, len=6
+hash_string8: str=object, h=0x51ddb2a0
+hash_string8: str=symbol, len=6
+hash_string8: str=symbol, h=0xffffffffd25607b1
+hash_string8: str=integer, len=7
+hash_string8: str=integer, h=0xffffffffbc163065
+hash_string8: str=unknown, len=7
+hash_string8: str=unknown, h=0xfffffffffa1addd9
+hash_string8: str=arguments, len=9
+hash_string8: str=arguments, h=0x3e06445d
+hash_string8: str=callee, len=6
+hash_string8: str=callee, h=0xffffffff9be70b6f
+hash_string8: str=caller, len=6
+hash_string8: str=caller, h=0xffffffff9be70b7c
+hash_string8: str=<eval>, len=6
+hash_string8: str=<eval>, h=0x63a7f3d7
+hash_string8: str=<ret>, len=5
+hash_string8: str=<ret>, h=0x49c808e0
+hash_string8: str=<var>, len=5
+hash_string8: str=<var>, h=0x4e1a1f6a
+hash_string8: str=<arg_var>, len=9
+hash_string8: str=<arg_var>, h=0x2bec3ee3
+hash_string8: str=<with>, len=6
+hash_string8: str=<with>, h=0x62b095c5
+hash_string8: str=lastIndex, len=9
+hash_string8: str=lastIndex, h=0xffffffffb1867383
+hash_string8: str=target, len=6
+hash_string8: str=target, h=0x134acfaa
+hash_string8: str=index, len=5
+hash_string8: str=index, h=0x66116c31
+hash_string8: str=input, len=5
+hash_string8: str=input, h=0x661e26e9
+hash_string8: str=defineProperties, len=16
+hash_string8: str=defineProperties, h=0x3b4946f7
+hash_string8: str=apply, len=5
+hash_string8: str=apply, h=0x7eee1b55
+hash_string8: str=join, len=4
+hash_string8: str=join, h=0xffffffff909064f3
+hash_string8: str=concat, len=6
+hash_string8: str=concat, h=0x36683ba5
+hash_string8: str=split, len=5
+hash_string8: str=split, h=0xffffffff8bf70049
+hash_string8: str=construct, len=9
+hash_string8: str=construct, h=0xffffffffeb4c5396
+hash_string8: str=getPrototypeOf, len=14
+hash_string8: str=getPrototypeOf, h=0xffffffffa5300f94
+hash_string8: str=setPrototypeOf, len=14
+hash_string8: str=setPrototypeOf, h=0xffffffff91a7d668
+hash_string8: str=isExtensible, len=12
+hash_string8: str=isExtensible, h=0x3ec5152e
+hash_string8: str=preventExtensions, len=17
+hash_string8: str=preventExtensions, h=0x12c48273
+hash_string8: str=has, len=3
+hash_string8: str=has, h=0x183bc59
+hash_string8: str=deleteProperty, len=14
+hash_string8: str=deleteProperty, h=0xffffffffbd2fe111
+hash_string8: str=defineProperty, len=14
+hash_string8: str=defineProperty, h=0xffffffff835ee5a1
+hash_string8: str=getOwnPropertyDescriptor, len=24
+hash_string8: str=getOwnPropertyDescriptor, h=0x156a19f5
+hash_string8: str=ownKeys, len=7
+hash_string8: str=ownKeys, h=0xffffffffc27d54b9
+hash_string8: str=add, len=3
+hash_string8: str=add, h=0x17c5c08
+hash_string8: str=done, len=4
+hash_string8: str=done, h=0xffffffff8a0ef003
+hash_string8: str=next, len=4
+hash_string8: str=next, h=0xffffffff94dc37d4
+hash_string8: str=values, len=6
+hash_string8: str=values, h=0xfffffffffc02699b
+hash_string8: str=source, len=6
+hash_string8: str=source, h=0xffffffffb7618b54
+hash_string8: str=flags, len=5
+hash_string8: str=flags, h=0xc60ead6
+hash_string8: str=global, len=6
+hash_string8: str=global, h=0xffffffffbe4f2c3c
+hash_string8: str=unicode, len=7
+hash_string8: str=unicode, h=0xffffffffb3d69fcc
+hash_string8: str=raw, len=3
+hash_string8: str=raw, h=0x18e4a47
+hash_string8: str=new.target, len=10
+hash_string8: str=new.target, h=0xffffffff8cee6f90
+hash_string8: str=this.active_func, len=16
+hash_string8: str=this.active_func, h=0xffffffff98af09be
+hash_string8: str=<home_object>, len=13
+hash_string8: str=<home_object>, h=0xffffffffce95a32a
+hash_string8: str=<computed_field>, len=16
+hash_string8: str=<computed_field>, h=0xffffffffb38f9c0b
+hash_string8: str=<static_computed_field>, len=23
+hash_string8: str=<static_computed_field>, h=0x47de42e8
+hash_string8: str=<class_fields_init>, len=19
+hash_string8: str=<class_fields_init>, h=0x5d5715ea
+hash_string8: str=<brand>, len=7
+hash_string8: str=<brand>, h=0x620bc12
+hash_string8: str=#constructor, len=12
+hash_string8: str=#constructor, h=0xffffffff8827e460
+hash_string8: str=as, len=2
+hash_string8: str=as, h=0x1724b
+hash_string8: str=from, len=4
+hash_string8: str=from, h=0xffffffff8c3d4453
+hash_string8: str=meta, len=4
+hash_string8: str=meta, h=0xffffffff93c69f4e
+hash_string8: str=*default*, len=9
+hash_string8: str=*default*, h=0xffffffff826802b2
+hash_string8: str=*, len=1
+hash_string8: str=*, h=0x131
+hash_string8: str=Module, len=6
+hash_string8: str=Module, h=0xffffffffe4d22895
+hash_string8: str=then, len=4
+hash_string8: str=then, h=0xffffffff9b60c8e6
+hash_string8: str=resolve, len=7
+hash_string8: str=resolve, h=0x2199f503
+hash_string8: str=reject, len=6
+hash_string8: str=reject, h=0xffffffff901f56b8
+hash_string8: str=promise, len=7
+hash_string8: str=promise, h=0xffffffff88db9482
+hash_string8: str=proxy, len=5
+hash_string8: str=proxy, h=0x36a332d5
+hash_string8: str=revoke, len=6
+hash_string8: str=revoke, h=0xffffffff9d2ce0df
+hash_string8: str=async, len=5
+hash_string8: str=async, h=0xffffffff82385a0b
+hash_string8: str=exec, len=4
+hash_string8: str=exec, h=0xffffffff8b2dfad2
+hash_string8: str=groups, len=6
+hash_string8: str=groups, h=0x6d67a995
+hash_string8: str=indices, len=7
+hash_string8: str=indices, h=0xffffffffedb1f2ee
+hash_string8: str=status, len=6
+hash_string8: str=status, h=0x338d1e5b
+hash_string8: str=reason, len=6
+hash_string8: str=reason, h=0xffffffff866bf2a5
+hash_string8: str=globalThis, len=10
+hash_string8: str=globalThis, h=0xffffffffee0a4b82
+hash_string8: str=bigint, len=6
+hash_string8: str=bigint, h=0xffffffff883e08d8
+hash_string8: str=not-equal, len=9
+hash_string8: str=not-equal, h=0xffffffffb753fe81
+hash_string8: str=timed-out, len=9
+hash_string8: str=timed-out, h=0xfffffffff7ef57bf
+hash_string8: str=ok, len=2
+hash_string8: str=ok, h=0x180a5
+hash_string8: str=toJSON, len=6
+hash_string8: str=toJSON, h=0xffffffff8035facc
+hash_string8: str=Object, len=6
+hash_string8: str=Object, h=0x5f38ddc0
+hash_string8: str=Array, len=5
+hash_string8: str=Array, h=0xffffffffdbaea8f8
+hash_string8: str=Error, len=5
+hash_string8: str=Error, h=0x505c4cd7
+hash_string8: str=Number, len=6
+hash_string8: str=Number, h=0xffffffff9519d1ca
+hash_string8: str=String, len=6
+hash_string8: str=String, h=0x534b7fea
+hash_string8: str=Boolean, len=7
+hash_string8: str=Boolean, h=0x6a75a0ef
+hash_string8: str=Symbol, len=6
+hash_string8: str=Symbol, h=0xffffffffdfb132d1
+hash_string8: str=Arguments, len=9
+hash_string8: str=Arguments, h=0x26906c3d
+hash_string8: str=Math, len=4
+hash_string8: str=Math, h=0x710fdbb1
+hash_string8: str=JSON, len=4
+hash_string8: str=JSON, h=0x6dc031e1
+hash_string8: str=Date, len=4
+hash_string8: str=Date, h=0x674da49f
+hash_string8: str=Function, len=8
+hash_string8: str=Function, h=0x57ab23d1
+hash_string8: str=GeneratorFunction, len=17
+hash_string8: str=GeneratorFunction, h=0xffffffff81855bda
+hash_string8: str=ForInIterator, len=13
+hash_string8: str=ForInIterator, h=0xffffffff94ea15c3
+hash_string8: str=RegExp, len=6
+hash_string8: str=RegExp, h=0xffffffff9a181442
+hash_string8: str=ArrayBuffer, len=11
+hash_string8: str=ArrayBuffer, h=0xfffffffffbe38340
+hash_string8: str=SharedArrayBuffer, len=17
+hash_string8: str=SharedArrayBuffer, h=0x539959eb
+hash_string8: str=Uint8ClampedArray, len=17
+hash_string8: str=Uint8ClampedArray, h=0x7eb01ab4
+hash_string8: str=Int8Array, len=9
+hash_string8: str=Int8Array, h=0xffffffff844405ff
+hash_string8: str=Uint8Array, len=10
+hash_string8: str=Uint8Array, h=0x6662965c
+hash_string8: str=Int16Array, len=10
+hash_string8: str=Int16Array, h=0x31a1fa56
+hash_string8: str=Uint16Array, len=11
+hash_string8: str=Uint16Array, h=0x7f0849e1
+hash_string8: str=Int32Array, len=10
+hash_string8: str=Int32Array, h=0x7c2cadc
+hash_string8: str=Uint32Array, len=11
+hash_string8: str=Uint32Array, h=0x55291a67
+hash_string8: str=BigInt64Array, len=13
+hash_string8: str=BigInt64Array, h=0xffffffffeb6f8c3b
+hash_string8: str=BigUint64Array, len=14
+hash_string8: str=BigUint64Array, h=0x6e172dfa
+hash_string8: str=Float32Array, len=12
+hash_string8: str=Float32Array, h=0xfffffffff9d999bf
+hash_string8: str=Float64Array, len=12
+hash_string8: str=Float64Array, h=0xfffffffff7b407c0
+hash_string8: str=DataView, len=8
+hash_string8: str=DataView, h=0x59149548
+hash_string8: str=BigInt, len=6
+hash_string8: str=BigInt, h=0xffffffff95776dd8
+hash_string8: str=Map, len=3
+hash_string8: str=Map, h=0x1673d2b
+hash_string8: str=Set, len=3
+hash_string8: str=Set, h=0x16d9671
+hash_string8: str=WeakMap, len=7
+hash_string8: str=WeakMap, h=0xffffffff8be48f13
+hash_string8: str=WeakSet, len=7
+hash_string8: str=WeakSet, h=0xffffffff8beae859
+hash_string8: str=Map Iterator, len=12
+hash_string8: str=Map Iterator, h=0xffffffff86eb2ceb
+hash_string8: str=Set Iterator, len=12
+hash_string8: str=Set Iterator, h=0xffffffffd0fb1f55
+hash_string8: str=Array Iterator, len=14
+hash_string8: str=Array Iterator, h=0x688efac6
+hash_string8: str=String Iterator, len=15
+hash_string8: str=String Iterator, h=0xffffffffabdf27e4
+hash_string8: str=RegExp String Iterator, len=22
+hash_string8: str=RegExp String Iterator, h=0xfffffffffc617acf
+hash_string8: str=Generator, len=9
+hash_string8: str=Generator, h=0xffffffffc8b1234a
+hash_string8: str=Proxy, len=5
+hash_string8: str=Proxy, h=0xffffffff913686b5
+hash_string8: str=Promise, len=7
+hash_string8: str=Promise, h=0x4184e262
+hash_string8: str=PromiseResolveFunction, len=22
+hash_string8: str=PromiseResolveFunction, h=0x4971520a
+hash_string8: str=PromiseRejectFunction, len=21
+hash_string8: str=PromiseRejectFunction, h=0xfffffffffe403999
+hash_string8: str=AsyncFunction, len=13
+hash_string8: str=AsyncFunction, h=0x275c4d3b
+hash_string8: str=AsyncFunctionResolve, len=20
+hash_string8: str=AsyncFunctionResolve, h=0xfffffffff72b5bd9
+hash_string8: str=AsyncFunctionReject, len=19
+hash_string8: str=AsyncFunctionReject, h=0xe8041b2
+hash_string8: str=AsyncGeneratorFunction, len=22
+hash_string8: str=AsyncGeneratorFunction, h=0x7fc82840
+hash_string8: str=AsyncGenerator, len=14
+hash_string8: str=AsyncGenerator, h=0x27b2af30
+hash_string8: str=EvalError, len=9
+hash_string8: str=EvalError, h=0x60778ebb
+hash_string8: str=RangeError, len=10
+hash_string8: str=RangeError, h=0x12fdbe5c
+hash_string8: str=ReferenceError, len=14
+hash_string8: str=ReferenceError, h=0x62f79d9e
+hash_string8: str=SyntaxError, len=11
+hash_string8: str=SyntaxError, h=0x33bc728c
+hash_string8: str=TypeError, len=9
+hash_string8: str=TypeError, h=0xffffffffd6c4f8dd
+hash_string8: str=URIError, len=8
+hash_string8: str=URIError, h=0x3e962805
+hash_string8: str=InternalError, len=13
+hash_string8: str=InternalError, h=0xffffffff8d11fe12
+main: a
+JS_NewCustomContext: c
+JS_NewCFunction3: c
+__JS_FindAtom: rt=0xc02005d0, len=0
+hash_string8: str=, len=0
+hash_string8: str=, h=0x1
+__JS_FindAtom: h=0x1
+__JS_FindAtom: h=0x1
+__JS_FindAtom: h1=0x1
+__JS_FindAtom: rt=0xc02005d0, i=47
+__JS_FindAtom: rt=0xc02005d0, return i=47
+JS_NewCFunction3: d
+js_function_set_properties: a
+js_function_set_properties: b
+js_function_set_properties: c
+JS_NewCFunction3: e
+JS_NewCFunction3: f
+__JS_FindAtom: rt=0xc02005d0, len=8
+__JS_FindAtom: rt=0xc02005d0, str=toString
+hash_string8: str=toString, len=8
+hash_string8: str=toString, h=0x15becee5
+__JS_FindAtom: h=0x15becee5
+__JS_FindAtom: h=0x15becee5
+__JS_FindAtom: h1=0xe5
+__JS_FindAtom: rt=0xc02005d0, i=56
+__JS_FindAtom: rt=0xc02005d0, return i=56
+__JS_FindAtom: rt=0xc02005d0, len=4
+__JS_FindAtom: rt=0xc02005d0, str=name
+hash_string8: str=name, len=4
+hash_string8: str=name, h=0xffffffff94d7f3b4
+__JS_FindAtom: h=0xffffffff94d7f3b4
+__JS_FindAtom: h=0x14d7f3b4
+__JS_FindAtom: h1=0xb4
+__JS_FindAtom: rt=0xc02005d0, i=163
+__JS_FindAtom: rt=0xc02005d0, i=55
+__JS_FindAtom: rt=0xc02005d0, return i=55
+__JS_FindAtom: rt=0xc02005d0, len=7
+__JS_FindAtom: rt=0xc02005d0, str=message
+hash_string8: str=message, len=7
+hash_string8: str=message, h=0x62bf0f06
+__JS_FindAtom: h=0x62bf0f06
+__JS_FindAtom: h=0x22bf0f06
+__JS_FindAtom: h1=0x6
+__JS_FindAtom: rt=0xc02005d0, i=51
+__JS_FindAtom: rt=0xc02005d0, return i=51
+__JS_FindAtom: rt=0xc02005d0, len=9
+__JS_FindAtom: rt=0xc02005d0, str=EvalError
+hash_string8: str=EvalError, len=9
+hash_string8: str=EvalError, h=0x60778ebb
+__JS_FindAtom: h=0x60778ebb
+__JS_FindAtom: h=0x20778ebb
+__JS_FindAtom: h1=0xbb
+__JS_FindAtom: rt=0xc02005d0, i=195
+__JS_FindAtom: rt=0xc02005d0, return i=195
+__JS_FindAtom: rt=0xc02005d0, len=10
+__JS_FindAtom: rt=0xc02005d0, str=RangeError
+hash_string8: str=RangeError, len=10
+hash_string8: str=RangeError, h=0x12fdbe5c
+__JS_FindAtom: h=0x12fdbe5c
+__JS_FindAtom: h=0x12fdbe5c
+__JS_FindAtom: h1=0x5c
+__JS_FindAtom: rt=0xc02005d0, i=196
+__JS_FindAtom: rt=0xc02005d0, return i=196
+__JS_FindAtom: rt=0xc02005d0, len=14
+__JS_FindAtom: rt=0xc02005d0, str=ReferenceError
+hash_string8: str=ReferenceError, len=14
+hash_string8: str=ReferenceError, h=0x62f79d9e
+__JS_FindAtom: h=0x62f79d9e
+__JS_FindAtom: h=0x22f79d9e
+__JS_FindAtom: h1=0x9e
+__JS_FindAtom: rt=0xc02005d0, i=197
+__JS_FindAtom: rt=0xc02005d0, return i=197
+__JS_FindAtom: rt=0xc02005d0, len=11
+__JS_FindAtom: rt=0xc02005d0, str=SyntaxError
+hash_string8: str=SyntaxError, len=11
+hash_string8: str=SyntaxError, h=0x33bc728c
+__JS_FindAtom: h=0x33bc728c
+__JS_FindAtom: h=0x33bc728c
+__JS_FindAtom: h1=0x8c
+__JS_FindAtom: rt=0xc02005d0, i=198
+__JS_FindAtom: rt=0xc02005d0, return i=198
+__JS_FindAtom: rt=0xc02005d0, len=9
+__JS_FindAtom: rt=0xc02005d0, str=TypeError
+hash_string8: str=TypeError, len=9
+hash_string8: str=TypeError, h=0xffffffffd6c4f8dd
+__JS_FindAtom: h=0xffffffffd6c4f8dd
+__JS_FindAtom: h=0x16c4f8dd
+__JS_FindAtom: h1=0xdd
+__JS_FindAtom: rt=0xc02005d0, i=199
+__JS_FindAtom: rt=0xc02005d0, return i=199
+__JS_FindAtom: rt=0xc02005d0, len=8
+__JS_FindAtom: rt=0xc02005d0, str=URIError
+hash_string8: str=URIError, len=8
+hash_string8: str=URIError, h=0x3e962805
+__JS_FindAtom: h=0x3e962805
+__JS_FindAtom: h=0x3e962805
+__JS_FindAtom: h1=0x5
+__JS_FindAtom: rt=0xc02005d0, i=200
+__JS_FindAtom: rt=0xc02005d0, return i=200
+__JS_FindAtom: rt=0xc02005d0, len=13
+__JS_FindAtom: rt=0xc02005d0, str=InternalError
+hash_string8: str=InternalError, len=13
+hash_string8: str=InternalError, h=0xffffffff8d11fe12
+__JS_FindAtom: h=0xffffffff8d11fe12
+__JS_FindAtom: h=0xd11fe12
+__JS_FindAtom: h1=0x12
+__JS_FindAtom: rt=0xc02005d0, i=201
+__JS_FindAtom: rt=0xc02005d0, return i=201
+__JS_FindAtom: rt=0xc02005d0, len=14
+__JS_FindAtom: rt=0xc02005d0, str=AggregateError
+hash_string8: str=AggregateError, len=14
+hash_string8: str=AggregateError, h=0x384dee5a
+__JS_FindAtom: h=0x384dee5a
+__JS_FindAtom: h=0x384dee5a
+__JS_FindAtom: h1=0x5a
+hash_string8: str=AggregateError, len=14
+hash_string8: str=AggregateError, h=0x384dee5a
+JS_NewContext: e
+JS_AddIntrinsicBaseObjects: g
+JS_NewCFunction3: c
+__JS_FindAtom: rt=0xc02005d0, len=0
+_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 09:49:22 risc-v
+_assert: Assertion failed : at file: quickjs.c:2875 task: qjs process: qjs 0xc000339e
+up_dump_register: EPC: 0000000080001f2e
+up_dump_register: A0: 0000000080200f30 A1: 0000000000000b3b A2: 0000000000000000 A3: 000000000000007e
+up_dump_register: A4: 0000000080209900 A5: 0000000000000001 A6: 0000000000000b3b A7: 00000000c005e758
+up_dump_register: T0: 0000000080006f7c T1: 000000000000006a T2: 00000000000001ff T3: 000000000000006c
+up_dump_register: T4: 0000000000000068 T5: 0000000000000009 T6: 000000000000002a
+up_dump_register: S0: 0000000000000000 S1: 0000000080209900 S2: 00000000c0200e00 S3: 0000000080209900
+up_dump_register: S4: 0000000000000000 S5: 00000000c005e758 S6: 0000000200042022 S7: 0000000080201898
+up_dump_register: S8: 0000000000000b3b S9: 0000000000000000 S10: 0000000000000000 S11: 0000000000000000
+up_dump_register: SP: 000000008020bcb0 FP: 0000000000000000 TP: 0000000000000000 RA: 0000000080001f2e
+dump_stack: Kernel Stack:
+dump_stack:   base: 0x8020b420
+dump_stack:   size: 00003072
+dump_stack:     sp: 0x8020bcb0
+stack_dump: 0x8020bc90: 00000000 00000000 80209900 00000000 00000000 00000000 800020d2 00000000
+stack_dump: 0x8020bcb0: c000339e 00000000 c001522e 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bcd0: 80209900 00000000 80200f30 00000000 00000000 00000000 c005e758 00000000
+stack_dump: 0x8020bcf0: 00000b3b 00000000 7474754e 00000058 00042020 00000002 00000000 00000000
+stack_dump: 0x8020bd10: 802093b8 00000000 fffffffc ffffffff 00000000 00000000 00000024 2e323100
+stack_dump: 0x8020bd30: 2d302e34 00304352 80200030 00000000 386600b0 30623062 65462036 30312062
+stack_dump: 0x8020bd50: 32303220 39302034 3a39343a 00003232 00000024 00000000 8000672a 00000000
+stack_dump: 0x8020bd70: 00000000 73697200 00762d63 00000000 c005e865 00000000 00000001 00000000
+stack_dump: 0x8020bd90: 00000000 00000000 00000000 00000000 00000000 00000000 c001522e 00000000
+stack_dump: 0x8020bdb0: 00000000 00000000 c005ed80 00000000 c005ed80 00000000 00000000 00000000
+stack_dump: 0x8020bdd0: c0200e00 00000000 c02005d0 00000000 c0200e00 00000000 80006f8e 00000000
+stack_dump: 0x8020bdf0: c02003d8 00000000 800013aa 00000000 c00553a0 00000000 8000019a 00000000
+stack_dump: 0x8020be10: 80001392 00000000 c00553a0 00000000 8020be10 00000000 00000000 00000000
+stack_dump: 0x8020be30: 00000000 00000000 80007434 00000000 0000006a 00000000 000001ff 00000000
+stack_dump: 0x8020be50: c0200e00 00000000 c02005d0 00000000 00000001 00000000 c005e758 00000000
+stack_dump: 0x8020be70: 00000b3b 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020be90: 00000b3b 00000000 c005e758 00000000 c0200e00 00000000 00000000 00000000
+stack_dump: 0x8020beb0: c005ed80 00000000 c005ed80 00000000 00000000 00000000 c001522e 00000000
+stack_dump: 0x8020bed0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bef0: 0000006c 00000000 00000068 00000000 00000009 00000000 0000002a 00000000
+stack_dump: 0x8020bf10: 00042120 00000002 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bf30: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bf50: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bf70: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bf90: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bfb0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bfd0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020bff0: 00000000 00000000 00000000 00000000 00000000 00000000 8000452c 00000000
+stack_dump: 0x8020c010: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+mm_free: Freeing 0xc02002d0
+mm_free: Freeing 0x802093a0
+mm_free: Freeing 0x80209380
+mm_free: Freeing 0xc02005b0
+mm_free: Freeing 0xc0200590
+mm_free: Freeing 0xc0200570
+mm_free: Freeing 0x80209670
+mm_free: Freeing 0x80209890
+mm_free: Freeing 0xc0202000
+mm_free: Freeing 0x8020b420
+mm_free: Freeing 0x80209900
+mm_free: Freeing 0x80209a70
+nsh> mm_free: Freeing 0x802092c0
+```
+
 TODO
