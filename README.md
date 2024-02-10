@@ -1051,7 +1051,11 @@ stack_dump: 0x8020bff0: 00000000 00000000 00000000 00000000 00000000 00000000 80
 stack_dump:
 ```
 
-TODO: Are we out of Heap Memory? With Memory Manager Logging:
+# Heap Memory for QuickJS on NuttX
+
+_Are we out of Heap Memory?_
+
+We enable Memory Manager Logging...
 
 ```text
 + qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
