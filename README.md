@@ -531,6 +531,8 @@ bool nxmutex_is_hold(FAR mutex_t *mutex) {
 
 Which comes from fprintf(). So we [change fprintf() to write()](https://github.com/lupyuen/quickjs-nuttx/commit/28b001034e18e23b58825e942b8a70e18a98fa84#diff-95fe784bea3e0fbdf30ba834b1a74b538090f4d70f4f8770ef397ef68ec37aa3) because it doesn't use Mutex.
 
+# Unexpected Character in QuickJS
+
 Now we see...
 
 ```text
@@ -541,7 +543,22 @@ js_dump_obj:     at <cmdline>:1
 riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c000697c, MTVAL: 00000008c0212088
 ```
 
-TODO: Check our Command Line
+_What is this unexpected character?_
+
+We [log the unexpected character](https://github.com/lupyuen/quickjs-nuttx/commit/6435e45d09016a8b9fbc29fdae707c59d876e20e#diff-45f1ae674139f993bf8a99c382c1ba4863272a6fec2f492d76d7ff1b2cfcfbe2). And we see our old friend FF...
+
+```text
+__JS_FindAtom: __loadScript
+mm_malloc: Allocated 0xc0214d80, size 560
+__JS_FindAtom: <cmdline>
+mm_malloc: Allocated 0xc0214bc0, size 48
+mm_malloc: Allocated 0xc0214bf0, size 32
+next_token: c0=00000000000000FF
+next_token: c=00000000000000FF
+next_token: c2=FFFFFFFFFFFFFFFF
+```
+
+TODO: Who is corrupting our memory with FF?
 
 TODO: Are we out of Heap Memory?
 
