@@ -1730,6 +1730,15 @@ static size_t js_def_malloc_usable_size(const void *ptr)
 #endif
 }
 
+//// Begin Test
+void *debug_malloc(size_t size);
+void *debug_realloc(void *ptr, size_t size);
+void debug_free(void *ptr);
+#define malloc(size) debug_malloc(size)
+#define realloc(ptr, size) debug_realloc(ptr, size)
+#define free(ptr) debug_free(ptr)
+//// End Test
+
 static void *js_def_malloc(JSMallocState *s, size_t size)
 {
     void *ptr;

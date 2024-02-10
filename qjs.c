@@ -44,6 +44,32 @@
 #define _d(s) write(1, s, strlen(s))////
 char *debug_expr = NULL;////
 
+//// Begin Test
+uint8_t debug_heap[1024 * 1024];
+size_t debug_heap_next = 0;
+
+void *debug_malloc(size_t size) {
+    if (debug_heap_next + size >= sizeof(debug_heap)) {
+        _d("**** debug_malloc: No more heap space!\n");
+        return NULL;
+    }
+    void *ret = debug_heap + debug_heap_next;
+    debug_heap_next += size;
+    return ret;
+}
+
+void *debug_realloc(void *ptr, size_t size) {
+    void *ret = debug_malloc(size);
+    if (ret == NULL) { return NULL; }
+    memcpy(ret, ptr, size);
+    debug_free(ptr);
+}
+
+void debug_free(void *ptr) {
+    // TODO
+}
+//// End Test
+
 extern const uint8_t qjsc_repl[];
 extern const uint32_t qjsc_repl_size;
 #ifdef CONFIG_BIGNUM
