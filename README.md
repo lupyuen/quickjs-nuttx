@@ -475,6 +475,8 @@ __JS_FindAtom: rt=0xc02005d0, len=0
 
 TODO: Why does hash_string8 hang? Stack problems?
 
+TODO: Induce a crash with Assertion Failure, to observe the Stack:
+
 ```text
 → qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
 ABC
