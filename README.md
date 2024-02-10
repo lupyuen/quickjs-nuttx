@@ -615,6 +615,42 @@ dump_task:       2     2 100 RR       Task    - Waiting Semaphore  0000000000000
 dump_task:       3     3 100 RR       Task    - Running            0000000000000000 0xc0202050      1968      1968   100.0%!   qjs }¼uq¦ü®઄²äÅ
 ```
 
+TODO `make menuconfig` > Library Routines > Program Execution Options > Default task_spawn Stack Size. Set to 8192
+
+```bash
+CONFIG_DEBUG_BINFMT=y
+CONFIG_DEBUG_BINFMT_ERROR=y
+CONFIG_DEBUG_BINFMT_INFO=y
+CONFIG_DEBUG_BINFMT_WARN=y
+CONFIG_DEBUG_MM=y
+CONFIG_DEBUG_MM_ERROR=y
+CONFIG_DEBUG_MM_INFO=y
+CONFIG_DEBUG_MM_WARN=y
+CONFIG_POSIX_SPAWN_DEFAULT_STACKSIZE=8192
+CONFIG_STDIO_DISABLE_BUFFERING=y
+## Remove CONFIG_SYSLOG_TIMESTAMP=y
+```
+
+And 123 is printed OK yay!
+
+```text
+F 00000000C0216460
+mm_free: Freeing 0xc0216460
+add_property: f=
+JS_CreateProperty: e=
+JS_CreateProperty: f=
+JS_CreateProperty: g=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
+mm_malloc: Allocated 0xc02009f0, size 32
+A 0000000000000014 -> 00000000C02009F0
+123
+F 00000000C02009F0
+mm_free: Freeing 0xc02009f0
+QuickJS memory usage -- 2024-01-13 version, 64-bit, malloc limit: -1
+```
+
 TODO: Who is corrupting our memory with FF?
 
 TODO: assert() is failing because of printf Mutex
