@@ -1,5 +1,5 @@
 #!/usr/bin/expect
-## Expect Script for Testing NuttX with Ox64 BL808 Emulator
+## Expect Script for Testing NuttX with QEMU Emulator
 
 ## For every 1 character sent, wait 0.001 milliseconds
 set send_slow {1 0.001}
