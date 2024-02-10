@@ -69,6 +69,10 @@ void *debug_realloc(void *ptr, size_t size) {
 void debug_free(void *ptr) {
     // TODO
 }
+
+#define malloc(size) debug_malloc(size)
+#define realloc(ptr, size) debug_realloc(ptr, size)
+#define free(ptr) debug_free(ptr)
 //// End Test
 
 extern const uint8_t qjsc_repl[];

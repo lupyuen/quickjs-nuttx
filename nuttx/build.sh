@@ -11,10 +11,10 @@ pushd ..
 mkdir -p .obj
 
 ## GCC Options for QuickJS
-## TODO: -fwrapv  \
 qjs_options=" \
   -Wno-array-bounds \
   -Wno-format-truncation \
+  -fwrapv  \
   -D_GNU_SOURCE \
   -DCONFIG_VERSION=\"2024-01-13\" \
 "
