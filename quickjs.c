@@ -5021,14 +5021,14 @@ JSValue JS_NewObject(JSContext *ctx)
 static void js_function_set_properties(JSContext *ctx, JSValueConst func_obj,
                                        JSAtom name, int len)
 {
-//puts("js_function_set_properties: a");////
+_d("js_function_set_properties: a="); _d(debug_expr); _d("\n"); ////
     /* ES6 feature non compatible with ES5.1: length is configurable */
     JS_DefinePropertyValue(ctx, func_obj, JS_ATOM_length, JS_NewInt32(ctx, len),
                            JS_PROP_CONFIGURABLE);
-//puts("js_function_set_properties: b");////
+_d("js_function_set_properties: b="); _d(debug_expr); _d("\n"); ////
     JS_DefinePropertyValue(ctx, func_obj, JS_ATOM_name,
                            JS_AtomToString(ctx, name), JS_PROP_CONFIGURABLE);
-//puts("js_function_set_properties: c");////
+_d("js_function_set_properties: c="); _d(debug_expr); _d("\n"); ////
 }
 
 static BOOL js_class_has_bytecode(JSClassID class_id)
@@ -9447,9 +9447,12 @@ int JS_DefinePropertyValue(JSContext *ctx, JSValueConst this_obj,
                            JSAtom prop, JSValue val, int flags)
 {
     int ret;
+_d("JS_DefinePropertyValue: a="); _d(debug_expr); _d("\n"); ////
     ret = JS_DefineProperty(ctx, this_obj, prop, val, JS_UNDEFINED, JS_UNDEFINED,
                             flags | JS_PROP_HAS_VALUE | JS_PROP_HAS_CONFIGURABLE | JS_PROP_HAS_WRITABLE | JS_PROP_HAS_ENUMERABLE);
+_d("JS_DefinePropertyValue: b="); _d(debug_expr); _d("\n"); ////
     JS_FreeValue(ctx, val);
+_d("JS_DefinePropertyValue: c="); _d(debug_expr); _d("\n"); ////
     return ret;
 }
 

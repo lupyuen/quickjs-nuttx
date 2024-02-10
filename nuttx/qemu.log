@@ -708,7 +708,7 @@ elf_dumploadinfo:   textsize:     0
 elf_dumploadinfo:   datasize:     0
 elf_dumploadinfo:   textalign:    0
 elf_dumploadinfo:   dataalign:    0
-elf_dumploadinfo:   filelen:      4080848
+elf_dumploadinfo:   filelen:      4081848
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -718,7 +718,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4078224
+elf_dumploadinfo:   e_shoff:      4079224
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -730,53 +730,53 @@ elf_load: loadinfo: 0x80209a38
 mm_malloc: Allocated 0x802089d0, size 128
 elf_read: Read 112 bytes from offset 64
 mm_malloc: Allocated 0x8020a810, size 2640
-elf_read: Read 2624 bytes from offset 4078224
+elf_read: Read 2624 bytes from offset 4079224
 mm_malloc: Allocated 0x80208a50, size 128
 elf_loadfile: Loaded sections:
-elf_read: Read 361386 bytes from offset 4096
+elf_read: Read 361764 bytes from offset 4096
 elf_loadfile: 1. c0000000->c0000000
-elf_read: Read 116432 bytes from offset 365488
-elf_loadfile: 2. c00583b0->c00583b0
-elf_read: Read 488 bytes from offset 481920
-elf_loadfile: 3. c0074a80->c0074a80
-elf_read: Read 4 bytes from offset 482408
-elf_loadfile: 4. c0074c68->c0074c68
-elf_read: Read 4 bytes from offset 482416
-elf_loadfile: 5. c0074c70->c0074c70
-elf_read: Read 4 bytes from offset 482424
-elf_loadfile: 6. c0074c78->c0074c78
-elf_read: Read 8 bytes from offset 482432
-elf_loadfile: 7. c0074c80->c0074c80
-elf_read: Read 6 bytes from offset 482440
-elf_loadfile: 8. c0074c88->c0074c88
-elf_read: Read 6 bytes from offset 482448
-elf_loadfile: 9. c0074c90->c0074c90
-elf_read: Read 5 bytes from offset 482456
-elf_loadfile: 10. c0074c98->c0074c98
-elf_read: Read 4 bytes from offset 482464
-elf_loadfile: 11. c0074ca0->c0074ca0
-elf_read: Read 5 bytes from offset 482472
-elf_loadfile: 12. c0074ca8->c0074ca8
-elf_read: Read 4 bytes from offset 482480
-elf_loadfile: 13. c0074cb0->c0074cb0
-elf_read: Read 4 bytes from offset 482488
-elf_loadfile: 14. c0074cb8->c0074cb8
-elf_read: Read 4 bytes from offset 482496
-elf_loadfile: 15. c0074cc0->c0074cc0
-elf_read: Read 4 bytes from offset 482504
-elf_loadfile: 16. c0074cc8->c0074cc8
-elf_read: Read 5 bytes from offset 482512
-elf_loadfile: 17. c0074cd0->c0074cd0
-elf_read: Read 8 bytes from offset 482520
-elf_loadfile: 18. c0074cd8->c0074cd8
-elf_read: Read 7 bytes from offset 482528
-elf_loadfile: 19. c0074ce0->c0074ce0
-elf_read: Read 3 bytes from offset 482536
-elf_loadfile: 20. c0074ce8->c0074ce8
-elf_read: Read 6 bytes from offset 482544
-elf_loadfile: 21. c0074cf0->c0074cf0
-elf_read: Read 108 bytes from offset 482552
-elf_loadfile: 22. c0074cf8->c0074cf8
+elf_read: Read 116624 bytes from offset 365872
+elf_loadfile: 2. c0058530->c0058530
+elf_read: Read 488 bytes from offset 482496
+elf_loadfile: 3. c0074cc0->c0074cc0
+elf_read: Read 4 bytes from offset 482984
+elf_loadfile: 4. c0074ea8->c0074ea8
+elf_read: Read 4 bytes from offset 482992
+elf_loadfile: 5. c0074eb0->c0074eb0
+elf_read: Read 4 bytes from offset 483000
+elf_loadfile: 6. c0074eb8->c0074eb8
+elf_read: Read 8 bytes from offset 483008
+elf_loadfile: 7. c0074ec0->c0074ec0
+elf_read: Read 6 bytes from offset 483016
+elf_loadfile: 8. c0074ec8->c0074ec8
+elf_read: Read 6 bytes from offset 483024
+elf_loadfile: 9. c0074ed0->c0074ed0
+elf_read: Read 5 bytes from offset 483032
+elf_loadfile: 10. c0074ed8->c0074ed8
+elf_read: Read 4 bytes from offset 483040
+elf_loadfile: 11. c0074ee0->c0074ee0
+elf_read: Read 5 bytes from offset 483048
+elf_loadfile: 12. c0074ee8->c0074ee8
+elf_read: Read 4 bytes from offset 483056
+elf_loadfile: 13. c0074ef0->c0074ef0
+elf_read: Read 4 bytes from offset 483064
+elf_loadfile: 14. c0074ef8->c0074ef8
+elf_read: Read 4 bytes from offset 483072
+elf_loadfile: 15. c0074f00->c0074f00
+elf_read: Read 4 bytes from offset 483080
+elf_loadfile: 16. c0074f08->c0074f08
+elf_read: Read 5 bytes from offset 483088
+elf_loadfile: 17. c0074f10->c0074f10
+elf_read: Read 8 bytes from offset 483096
+elf_loadfile: 18. c0074f18->c0074f18
+elf_read: Read 7 bytes from offset 483104
+elf_loadfile: 19. c0074f20->c0074f20
+elf_read: Read 3 bytes from offset 483112
+elf_loadfile: 20. c0074f28->c0074f28
+elf_read: Read 6 bytes from offset 483120
+elf_loadfile: 21. c0074f30->c0074f30
+elf_read: Read 108 bytes from offset 483128
+elf_loadfile: 22. c0074f38->c0074f38
 elf_read: Read 152 bytes from offset 483328
 elf_loadfile: 23. c0101000->c0101000
 elf_read: Read 4 bytes from offset 483480
@@ -789,11 +789,11 @@ elf_loadfile: 27. c01010b0->c01010b0
 elf_dumploadinfo: LOAD_INFO:
 elf_dumploadinfo:   textalloc:    c0000000
 elf_dumploadinfo:   dataalloc:    c0101000
-elf_dumploadinfo:   textsize:     478564
+elf_dumploadinfo:   textsize:     479140
 elf_dumploadinfo:   datasize:     1048880
 elf_dumploadinfo:   textalign:    16
 elf_dumploadinfo:   dataalign:    8
-elf_dumploadinfo:   filelen:      4080848
+elf_dumploadinfo:   filelen:      4081848
 elf_dumploadinfo:   symtabidx:    0
 elf_dumploadinfo:   strtabidx:    0
 elf_dumploadinfo: ELF Header:
@@ -803,7 +803,7 @@ elf_dumploadinfo:   e_machine:    00f3
 elf_dumploadinfo:   e_version:    00000001
 elf_dumploadinfo:   e_entry:      c000339e
 elf_dumploadinfo:   e_phoff:      64
-elf_dumploadinfo:   e_shoff:      4078224
+elf_dumploadinfo:   e_shoff:      4079224
 elf_dumploadinfo:   e_flags:      00000005
 elf_dumploadinfo:   e_ehsize:     64
 elf_dumploadinfo:   e_phentsize:  56
@@ -816,8 +816,8 @@ elf_dumploadinfo:   p_type:       00000001
 elf_dumploadinfo:   p_offset:     00001000
 elf_dumploadinfo:   p_vaddr:      c0000000
 elf_dumploadinfo:   p_paddr:      c0000000
-elf_dumploadinfo:   p_filesz:     00074d64
-elf_dumploadinfo:   p_memsz:      00074d64
+elf_dumploadinfo:   p_filesz:     00074fa4
+elf_dumploadinfo:   p_memsz:      00074fa4
 elf_dumploadinfo:   p_flags:      00000005
 elf_dumploadinfo:   p_align:      00001000
 elf_dumploadinfo: Programs 1:
@@ -846,7 +846,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000006
 elf_dumploadinfo:   sh_addr:      c0000000
 elf_dumploadinfo:   sh_offset:    4096
-elf_dumploadinfo:   sh_size:      361386
+elf_dumploadinfo:   sh_size:      361764
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 2
@@ -855,9 +855,9 @@ elf_dumploadinfo: Sections 2:
 elf_dumploadinfo:   sh_name:      00000021
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c00583b0
-elf_dumploadinfo:   sh_offset:    365488
-elf_dumploadinfo:   sh_size:      116432
+elf_dumploadinfo:   sh_addr:      c0058530
+elf_dumploadinfo:   sh_offset:    365872
+elf_dumploadinfo:   sh_size:      116624
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 16
@@ -866,8 +866,8 @@ elf_dumploadinfo: Sections 3:
 elf_dumploadinfo:   sh_name:      00000029
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000012
-elf_dumploadinfo:   sh_addr:      c0074a80
-elf_dumploadinfo:   sh_offset:    481920
+elf_dumploadinfo:   sh_addr:      c0074cc0
+elf_dumploadinfo:   sh_offset:    482496
 elf_dumploadinfo:   sh_size:      488
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -877,8 +877,8 @@ elf_dumploadinfo: Sections 4:
 elf_dumploadinfo:   sh_name:      00000037
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074c68
-elf_dumploadinfo:   sh_offset:    482408
+elf_dumploadinfo:   sh_addr:      c0074ea8
+elf_dumploadinfo:   sh_offset:    482984
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -888,8 +888,8 @@ elf_dumploadinfo: Sections 5:
 elf_dumploadinfo:   sh_name:      0000004f
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074c70
-elf_dumploadinfo:   sh_offset:    482416
+elf_dumploadinfo:   sh_addr:      c0074eb0
+elf_dumploadinfo:   sh_offset:    482992
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -899,8 +899,8 @@ elf_dumploadinfo: Sections 6:
 elf_dumploadinfo:   sh_name:      00000064
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074c78
-elf_dumploadinfo:   sh_offset:    482424
+elf_dumploadinfo:   sh_addr:      c0074eb8
+elf_dumploadinfo:   sh_offset:    483000
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -910,8 +910,8 @@ elf_dumploadinfo: Sections 7:
 elf_dumploadinfo:   sh_name:      00000079
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074c80
-elf_dumploadinfo:   sh_offset:    482432
+elf_dumploadinfo:   sh_addr:      c0074ec0
+elf_dumploadinfo:   sh_offset:    483008
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -921,8 +921,8 @@ elf_dumploadinfo: Sections 8:
 elf_dumploadinfo:   sh_name:      00000098
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074c88
-elf_dumploadinfo:   sh_offset:    482440
+elf_dumploadinfo:   sh_addr:      c0074ec8
+elf_dumploadinfo:   sh_offset:    483016
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -932,8 +932,8 @@ elf_dumploadinfo: Sections 9:
 elf_dumploadinfo:   sh_name:      000000ba
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074c90
-elf_dumploadinfo:   sh_offset:    482448
+elf_dumploadinfo:   sh_addr:      c0074ed0
+elf_dumploadinfo:   sh_offset:    483024
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -943,8 +943,8 @@ elf_dumploadinfo: Sections 10:
 elf_dumploadinfo:   sh_name:      000000d0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074c98
-elf_dumploadinfo:   sh_offset:    482456
+elf_dumploadinfo:   sh_addr:      c0074ed8
+elf_dumploadinfo:   sh_offset:    483032
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -954,8 +954,8 @@ elf_dumploadinfo: Sections 11:
 elf_dumploadinfo:   sh_name:      000000fc
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074ca0
-elf_dumploadinfo:   sh_offset:    482464
+elf_dumploadinfo:   sh_addr:      c0074ee0
+elf_dumploadinfo:   sh_offset:    483040
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -965,8 +965,8 @@ elf_dumploadinfo: Sections 12:
 elf_dumploadinfo:   sh_name:      00000127
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074ca8
-elf_dumploadinfo:   sh_offset:    482472
+elf_dumploadinfo:   sh_addr:      c0074ee8
+elf_dumploadinfo:   sh_offset:    483048
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -976,8 +976,8 @@ elf_dumploadinfo: Sections 13:
 elf_dumploadinfo:   sh_name:      00000157
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074cb0
-elf_dumploadinfo:   sh_offset:    482480
+elf_dumploadinfo:   sh_addr:      c0074ef0
+elf_dumploadinfo:   sh_offset:    483056
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -987,8 +987,8 @@ elf_dumploadinfo: Sections 14:
 elf_dumploadinfo:   sh_name:      00000188
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074cb8
-elf_dumploadinfo:   sh_offset:    482488
+elf_dumploadinfo:   sh_addr:      c0074ef8
+elf_dumploadinfo:   sh_offset:    483064
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -998,8 +998,8 @@ elf_dumploadinfo: Sections 15:
 elf_dumploadinfo:   sh_name:      000001b1
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074cc0
-elf_dumploadinfo:   sh_offset:    482496
+elf_dumploadinfo:   sh_addr:      c0074f00
+elf_dumploadinfo:   sh_offset:    483072
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1009,8 +1009,8 @@ elf_dumploadinfo: Sections 16:
 elf_dumploadinfo:   sh_name:      000001e0
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074cc8
-elf_dumploadinfo:   sh_offset:    482504
+elf_dumploadinfo:   sh_addr:      c0074f08
+elf_dumploadinfo:   sh_offset:    483080
 elf_dumploadinfo:   sh_size:      4
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1020,8 +1020,8 @@ elf_dumploadinfo: Sections 17:
 elf_dumploadinfo:   sh_name:      000001ff
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074cd0
-elf_dumploadinfo:   sh_offset:    482512
+elf_dumploadinfo:   sh_addr:      c0074f10
+elf_dumploadinfo:   sh_offset:    483088
 elf_dumploadinfo:   sh_size:      5
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1031,8 +1031,8 @@ elf_dumploadinfo: Sections 18:
 elf_dumploadinfo:   sh_name:      0000021d
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074cd8
-elf_dumploadinfo:   sh_offset:    482520
+elf_dumploadinfo:   sh_addr:      c0074f18
+elf_dumploadinfo:   sh_offset:    483096
 elf_dumploadinfo:   sh_size:      8
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1042,8 +1042,8 @@ elf_dumploadinfo: Sections 19:
 elf_dumploadinfo:   sh_name:      00000235
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074ce0
-elf_dumploadinfo:   sh_offset:    482528
+elf_dumploadinfo:   sh_addr:      c0074f20
+elf_dumploadinfo:   sh_offset:    483104
 elf_dumploadinfo:   sh_size:      7
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1053,8 +1053,8 @@ elf_dumploadinfo: Sections 20:
 elf_dumploadinfo:   sh_name:      0000024b
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074ce8
-elf_dumploadinfo:   sh_offset:    482536
+elf_dumploadinfo:   sh_addr:      c0074f28
+elf_dumploadinfo:   sh_offset:    483112
 elf_dumploadinfo:   sh_size:      3
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1064,8 +1064,8 @@ elf_dumploadinfo: Sections 21:
 elf_dumploadinfo:   sh_name:      0000025e
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074cf0
-elf_dumploadinfo:   sh_offset:    482544
+elf_dumploadinfo:   sh_addr:      c0074f30
+elf_dumploadinfo:   sh_offset:    483120
 elf_dumploadinfo:   sh_size:      6
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1075,8 +1075,8 @@ elf_dumploadinfo: Sections 22:
 elf_dumploadinfo:   sh_name:      00000271
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000002
-elf_dumploadinfo:   sh_addr:      c0074cf8
-elf_dumploadinfo:   sh_offset:    482552
+elf_dumploadinfo:   sh_addr:      c0074f38
+elf_dumploadinfo:   sh_offset:    483128
 elf_dumploadinfo:   sh_size:      108
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1176,7 +1176,7 @@ elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
 elf_dumploadinfo:   sh_offset:    560571
-elf_dumploadinfo:   sh_size:      962117
+elf_dumploadinfo:   sh_size:      962970
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1186,8 +1186,8 @@ elf_dumploadinfo:   sh_name:      000002fd
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    1522688
-elf_dumploadinfo:   sh_size:      929470
+elf_dumploadinfo:   sh_offset:    1523541
+elf_dumploadinfo:   sh_size:      929536
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1197,7 +1197,7 @@ elf_dumploadinfo:   sh_name:      00000309
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2452158
+elf_dumploadinfo:   sh_offset:    2453077
 elf_dumploadinfo:   sh_size:      36160
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1208,8 +1208,8 @@ elf_dumploadinfo:   sh_name:      00000318
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    2488318
-elf_dumploadinfo:   sh_size:      1153589
+elf_dumploadinfo:   sh_offset:    2489237
+elf_dumploadinfo:   sh_size:      1153699
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1219,8 +1219,8 @@ elf_dumploadinfo:   sh_name:      00000323
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3641907
-elf_dumploadinfo:   sh_size:      155472
+elf_dumploadinfo:   sh_offset:    3642936
+elf_dumploadinfo:   sh_size:      155424
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 1
@@ -1230,7 +1230,7 @@ elf_dumploadinfo:   sh_name:      00000331
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000030
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3797379
+elf_dumploadinfo:   sh_offset:    3798360
 elf_dumploadinfo:   sh_size:      94971
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1241,8 +1241,8 @@ elf_dumploadinfo:   sh_name:      0000033c
 elf_dumploadinfo:   sh_type:      00000001
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3892352
-elf_dumploadinfo:   sh_size:      92632
+elf_dumploadinfo:   sh_offset:    3893336
+elf_dumploadinfo:   sh_size:      92648
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
 elf_dumploadinfo:   sh_addralign: 8
@@ -1252,7 +1252,7 @@ elf_dumploadinfo:   sh_name:      00000001
 elf_dumploadinfo:   sh_type:      00000002
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    3984984
+elf_dumploadinfo:   sh_offset:    3985984
 elf_dumploadinfo:   sh_size:      54816
 elf_dumploadinfo:   sh_link:      39
 elf_dumploadinfo:   sh_info:      1551
@@ -1263,7 +1263,7 @@ elf_dumploadinfo:   sh_name:      00000009
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4039800
+elf_dumploadinfo:   sh_offset:    4040800
 elf_dumploadinfo:   sh_size:      37576
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -1274,7 +1274,7 @@ elf_dumploadinfo:   sh_name:      00000011
 elf_dumploadinfo:   sh_type:      00000003
 elf_dumploadinfo:   sh_flags:     00000000
 elf_dumploadinfo:   sh_addr:      00000000
-elf_dumploadinfo:   sh_offset:    4077376
+elf_dumploadinfo:   sh_offset:    4078376
 elf_dumploadinfo:   sh_size:      841
 elf_dumploadinfo:   sh_link:      0
 elf_dumploadinfo:   sh_info:      0
@@ -2296,492 +2296,558 @@ JS_NewCFunction3: 4=console.log(123)
 JS_NewCFunction3: a=console.log(123)
 __JS_FindAtom: 
 JS_NewCFunction3: b=console.log(123)
+js_function_set_properties: a=console.log(123)
+JS_DefinePropertyValue: a=console.log(123)
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewCFunction3: c=console.log(123)
-JS_NewCFunction3: d=console.log(123)
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
+JS_NewCFunction3: c=
+JS_NewCFunction3: d=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: toString
 __JS_FindAtom: name
 __JS_FindAtom: message
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: EvalError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: RangeError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: ReferenceError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: SyntaxError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: TypeError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: URIError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: InternalError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
 __JS_FindAtom: AggregateError
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewContext: a=console.log(123)
-JS_AddIntrinsicBaseObjects: a=console.log(123)
-JS_NewCFunction3: 0=console.log(123)
-JS_NewObjectProtoClass: a=console.log(123)
-JS_NewObjectProtoClass: b=console.log(123)
-JS_NewObjectProtoClass: c=console.log(123)
-JS_NewObjectProtoClass: f=console.log(123)
-js_new_shape2: a=console.log(123)
-js_new_shape2: b=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_new_shape2: c=console.log(123)
-js_new_shape2: d=console.log(123)
-js_new_shape2: e=console.log(123)
-js_new_shape2: f=console.log(123)
-js_new_shape2: g=console.log(123)
-js_new_shape2: h=console.log(123)
-js_new_shape2: i=console.log(123)
-JS_NewObjectProtoClass: g=console.log(123)
-JS_NewObjectProtoClass: h=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-js_malloc: a=console.log(123)
-js_def_malloc: a=console.log(123)
-js_def_malloc: b=console.log(123)
-js_def_malloc: c=console.log(123)
-js_def_malloc: d=console.log(123)
-js_malloc: b=console.log(123)
-js_malloc: d=console.log(123)
-JS_NewCFunction3: 1=console.log(123)
-JS_NewCFunction3: 2=console.log(123)
-JS_NewCFunction3: 3=console.log(123)
-JS_NewCFunction3: 4=console.log(123)
-JS_NewCFunction3: a=console.log(123)
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewContext: a=
+JS_AddIntrinsicBaseObjects: a=
+JS_NewCFunction3: 0=
+JS_NewObjectProtoClass: a=
+JS_NewObjectProtoClass: b=
+JS_NewObjectProtoClass: c=
+JS_NewObjectProtoClass: f=
+js_new_shape2: a=
+js_new_shape2: b=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_new_shape2: c=
+js_new_shape2: d=
+js_new_shape2: e=
+js_new_shape2: f=
+js_new_shape2: g=
+js_new_shape2: h=
+js_new_shape2: i=
+JS_NewObjectProtoClass: g=
+JS_NewObjectProtoClass: h=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+JS_NewCFunction3: 1=
+JS_NewCFunction3: 2=
+JS_NewCFunction3: 3=
+JS_NewCFunction3: 4=
+JS_NewCFunction3: a=
 __JS_FindAtom: 
-JS_NewCFunction3: b=console.log(123)
+JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 JS_AddIntrinsicBaseObjects: b=
@@ -2829,10 +2895,19 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: 
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 JS_AddIntrinsicBaseObjects: c=
@@ -2975,31 +3050,28 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: Object
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: Object
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_DefineProperty: a
-JS_CreateProperty: a
-js_malloc: a=
-js_def_malloc: a=
-js_def_malloc: b=
-js_def_malloc: c=
-js_def_malloc: d=
-js_malloc: b=
-js_malloc: d=
-js_malloc: a=
-js_def_malloc: a=
-js_def_malloc: b=
-js_def_malloc: c=
-js_def_malloc: d=
-js_malloc: b=
-js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3009,6 +3081,27 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
+JS_DefineProperty: a
+JS_CreateProperty: a
+js_malloc: a=
+js_def_malloc: a=
+js_def_malloc: b=
+js_def_malloc: c=
+js_def_malloc: d=
+js_malloc: b=
+js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: create
 js_def_malloc: a=
 js_def_malloc: b=
@@ -3234,10 +3327,19 @@ js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 JS_NewCFunction3: 0=
@@ -3288,10 +3390,19 @@ js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 JS_DefineProperty: a
@@ -3398,10 +3509,19 @@ js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 JS_DefineProperty: a
@@ -3462,10 +3582,19 @@ js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 JS_DefineProperty: a
@@ -3514,15 +3643,28 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: Function
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: Function
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3539,8 +3681,13 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -3585,13 +3732,23 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: Error
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: Error
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3601,8 +3758,14 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3612,6 +3775,8 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -3656,13 +3821,23 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: EvalError
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: EvalError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3672,6 +3847,9 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3681,6 +3859,9 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3697,6 +3878,8 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -3741,13 +3924,23 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: RangeError
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: RangeError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3757,10 +3950,18 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -3805,19 +4006,37 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: ReferenceError
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: ReferenceError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -3862,13 +4081,23 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: SyntaxError
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: SyntaxError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -3878,10 +4107,18 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -3926,19 +4163,37 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: TypeError
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: TypeError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -3983,19 +4238,37 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: URIError
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: URIError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -4040,13 +4313,23 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: InternalError
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: InternalError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4056,10 +4339,18 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewCFunction3: 0=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
@@ -4104,19 +4395,37 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: AggregateError
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: AggregateError
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
 JS_NewObjectProtoClass: c=
@@ -4410,14 +4719,26 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: values
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: keys
 __JS_FindAtom: entries
 JS_NewCFunction3: 0=
@@ -4464,19 +4785,37 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: Array
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: Array
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: isArray
 js_def_malloc: a=
 js_def_malloc: b=
@@ -4553,10 +4892,19 @@ js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 JS_DefineProperty: a
@@ -4589,6 +4937,7 @@ js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
 __JS_FindAtom: copyWithin
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4598,10 +4947,16 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: entries
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: fill
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4611,7 +4966,10 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: find
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4621,7 +4979,10 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: findIndex
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4631,10 +4992,16 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: findLast
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: findLastIndex
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4644,13 +5011,22 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: flat
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: flatMap
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: includes
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4660,16 +5036,28 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: keys
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: toReversed
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: toSorted
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: toSpliced
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4679,11 +5067,19 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: values
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
 JS_NewObjectProtoClass: c=
@@ -4790,18 +5186,27 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: NaN
 js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: undefined
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
 JS_NewObjectProtoClass: c=
@@ -4925,17 +5330,33 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: Number
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: Number
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -4945,6 +5366,8 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: parseInt
 __JS_FindAtom: parseInt
 JS_NewCFunction3: 0=
@@ -4991,12 +5414,22 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: parseInt
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -5013,6 +5446,8 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: parseFloat
 __JS_FindAtom: parseFloat
 JS_NewCFunction3: 0=
@@ -5059,12 +5494,22 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: parseFloat
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -5074,6 +5519,8 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: isNaN
 __JS_FindAtom: isFinite
 js_malloc: a=
@@ -5098,6 +5545,7 @@ js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -5107,28 +5555,40 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: MIN_VALUE
 js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: NaN
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: NEGATIVE_INFINITY
 js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: POSITIVE_INFINITY
 js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -5138,27 +5598,38 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: EPSILON
 js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: MAX_SAFE_INTEGER
 js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: MIN_SAFE_INTEGER
 js_def_malloc: a=
 js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
 JS_NewObjectProtoClass: c=
@@ -5241,17 +5712,33 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: Boolean
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: Boolean
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 js_malloc: a=
@@ -5261,6 +5748,8 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 JS_NewObjectProtoClass: a=
 JS_NewObjectProtoClass: b=
 JS_NewObjectProtoClass: c=
@@ -5341,21 +5830,39 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: String
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: String
+JS_DefinePropertyValue: a=
+JS_DefineProperty: a
+JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
+JS_DefineProperty: a
+JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
-JS_DefineProperty: a
-JS_CreateProperty: a
-JS_DefineProperty: a
-JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: fromCharCode
 js_def_malloc: a=
 js_def_malloc: b=
@@ -5389,10 +5896,13 @@ js_malloc: b=
 js_malloc: d=
 __JS_FindAtom: raw
 __JS_FindAtom: length
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: at
 js_malloc: a=
 js_def_malloc: a=
@@ -5594,12 +6104,22 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: trimEnd
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
@@ -5611,6 +6131,8 @@ js_def_malloc: c=
 js_def_malloc: d=
 js_malloc: b=
 js_malloc: d=
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: trimStart
 js_def_malloc: a=
 js_def_malloc: b=
@@ -5666,16 +6188,28 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: trimStart
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: toString
 __JS_FindAtom: valueOf
 __JS_FindAtom: __quote
@@ -5935,10 +6469,19 @@ js_def_malloc: b=
 js_def_malloc: c=
 js_def_malloc: d=
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 JS_DefineProperty: a
@@ -5994,19 +6537,37 @@ JS_NewCFunction3: 4=
 JS_NewCFunction3: a=
 __JS_FindAtom: Symbol
 JS_NewCFunction3: b=
+js_function_set_properties: a=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: b=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+js_function_set_properties: c=
 JS_NewCFunction3: c=
 JS_NewCFunction3: d=
 __JS_FindAtom: Symbol
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
+JS_DefinePropertyValue: a=
 JS_DefineProperty: a
 JS_CreateProperty: a
+JS_DefinePropertyValue: b=
+JS_DefinePropertyValue: c=
 __JS_FindAtom: for
 js_malloc: a=
 js_def_malloc: a=
@@ -6037,3 +6598,4 @@ js_malloc: d=
 _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06 Feb 10 2024 18:58:20 risc-v
 _assert: Assertion failed : at file: quickjs.c:3121 task: qjs process: qjs 0xc000339e
 up_dump_register: EPC: 0000000080001faa
+up_du
