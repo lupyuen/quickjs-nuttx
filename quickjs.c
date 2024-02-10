@@ -2724,7 +2724,8 @@ static JSAtom __JS_NewAtom(JSRuntime *rt, JSString *str, int atom_type)
         h &= JS_ATOM_HASH_MASK;
         h1 = h & (rt->atom_hash_size - 1);
         i = rt->atom_hash[h1];
-        while (i != 0) {
+        ////while (i != 0) {
+        while (i != 0 && i != 0xffffffff) {////
             p = rt->atom_array[i];
             if (p->hash == h &&
                 p->atom_type == atom_type &&
