@@ -2903,7 +2903,8 @@ write(1, "__JS_FindAtom: c\n", 17);////
 write(1, "__JS_FindAtom: d\n", 17);////
 // printf("__JS_FindAtom: h1=%p\n", h1);////
     i = rt->atom_hash[h1];
-    while (i != 0) {
+    ////while (i != 0) {
+    while (i != 0 && i != 0xffffffff) {////
 write(1, "__JS_FindAtom: e\n", 17);////
 print_hex(&(rt->atom_array[i])); write(1, "\n", 1); ////
 // printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
