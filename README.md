@@ -651,6 +651,8 @@ mm_free: Freeing 0xc02009f0
 QuickJS memory usage -- 2024-01-13 version, 64-bit, malloc limit: -1
 ```
 
+TODO: Undo all our changes. Does it still work?
+
 TODO: Who is corrupting our memory with FF?
 
 TODO: assert() is failing because of printf Mutex
