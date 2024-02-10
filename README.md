@@ -274,7 +274,9 @@ After fixing the missing functions, QuickJS compiles OK for NuttX yay!
 
 _Does QuickJS run on NuttX?_
 
-We tested with our Expect Script: [nuttx/qemu.exp](nuttx/qemu.exp). Nope NuttX crashes...
+We tested with our Expect Script: [nuttx/qemu.exp](nuttx/qemu.exp). The latest NuttX Log is always at [qemu.log](nuttx/qemu.log)
+
+Nope NuttX crashes...
 
 ```text
 + qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
