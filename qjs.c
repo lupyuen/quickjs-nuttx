@@ -46,6 +46,18 @@
 char *debug_expr = NULL;
 char debug_buf[256];
 
+void print_hex(uint64_t n) {
+    const char dec_to_hex[] = "0123456789ABCDEF";
+    static char hex_str[17];
+    for (int i = 0; i < 16; i++) {
+        const uint8_t d = n & 0xf;
+        n = n >> 4;
+        hex_str[15 - i] = dec_to_hex[d];
+    }
+    hex_str[16] = 0;
+    write(1, hex_str, 16);
+}
+
 #ifdef NOTUSED
 uint8_t debug_heap[1024 * 1024];
 size_t debug_heap_next = 0;
@@ -257,7 +269,8 @@ static void *js_trace_malloc(JSMallocState *s, size_t size)
     if (unlikely(s->malloc_size + size > s->malloc_limit))
         return NULL;
     ptr = malloc(size);
-    js_trace_malloc_printf(s, "A %zd -> %p\n", size, ptr);
+    ////js_trace_malloc_printf(s, "A %zd -> %p\n", size, ptr);
+    _d("A "); print_hex(size); _d(" -> "); print_hex(ptr); _d("\n"); ////
     if (ptr) {
         s->malloc_count++;
         s->malloc_size += js_trace_malloc_usable_size(ptr) + MALLOC_OVERHEAD;
@@ -270,7 +283,8 @@ static void js_trace_free(JSMallocState *s, void *ptr)
     if (!ptr)
         return;
 
-    js_trace_malloc_printf(s, "F %p\n", ptr);
+    ////js_trace_malloc_printf(s, "F %p\n", ptr);
+    _d("F "); print_hex(ptr); _d("\n"); ////
     s->malloc_count--;
     s->malloc_size -= js_trace_malloc_usable_size(ptr) + MALLOC_OVERHEAD;
     free(ptr);
@@ -287,7 +301,8 @@ static void *js_trace_realloc(JSMallocState *s, void *ptr, size_t size)
     }
     old_size = js_trace_malloc_usable_size(ptr);
     if (size == 0) {
-        js_trace_malloc_printf(s, "R %zd %p\n", size, ptr);
+        ////js_trace_malloc_printf(s, "R %zd %p\n", size, ptr);
+        _d("R "); print_hex(size); _d(" "); print_hex(ptr); _d("\n"); ////
         s->malloc_count--;
         s->malloc_size -= old_size + MALLOC_OVERHEAD;
         free(ptr);
@@ -296,10 +311,12 @@ static void *js_trace_realloc(JSMallocState *s, void *ptr, size_t size)
     if (s->malloc_size + size - old_size > s->malloc_limit)
         return NULL;
 
-    js_trace_malloc_printf(s, "R %zd %p", size, ptr);
+    ////js_trace_malloc_printf(s, "R %zd %p", size, ptr);
+    _d("R "); print_hex(size); _d(" "); print_hex(ptr); ////
 
     ptr = realloc(ptr, size);
-    js_trace_malloc_printf(s, " -> %p\n", ptr);
+    ////js_trace_malloc_printf(s, " -> %p\n", ptr);
+    _d(" -> "); print_hex(ptr); _d("\n"); ////
     if (ptr) {
         s->malloc_size += js_trace_malloc_usable_size(ptr) - old_size;
     }
