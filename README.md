@@ -662,4 +662,16 @@ _assert: Current Version: NuttX  12.4.0-RC0 f8b0b06-dirty Feb 11 2024 08:30:16 r
 _assert: Assertion failed : at file: common/riscv_createstack.c:89 task: /system/bin/init process: /system/bin/init 0xc000004a
 ```
 
-TODO: Fix the big stack
+Which comes from [riscv_createstack.c](https://github.com/apache/nuttx/blob/master/arch/risc-v/src/common/riscv_createstack.c#L82-L89)
+
+```c
+int up_create_stack(struct tcb_s *tcb, size_t stack_size, uint8_t ttype) {
+#ifdef CONFIG_TLS_ALIGNED
+  /* The allocated stack size must not exceed the maximum possible for the
+   * TLS feature.
+   */
+
+  DEBUGASSERT(stack_size <= TLS_MAXSTACK);
+```
+
+TODO: Increase TLS_MAXSTACK
