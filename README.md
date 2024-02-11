@@ -720,7 +720,7 @@ qjs >
 
 # QuickJS calls POSIX `open()` on NuttX
 
-POSIX `open()` works OK too!
+[POSIX `open()`](https://bellard.org/quickjs/quickjs.html#os-module) works OK too!
 
 ```text
 NuttShell (NSH) NuttX-12.4.0-RC0
