@@ -2,5 +2,241 @@ spawn qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios 
 ABC
 NuttShell (NSH) NuttX-12.4.0-RC0
 nsh> [Kqjs -e console.log(123) 
-123
-nsh> 
+_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06-dirty Feb 11 2024 08:30:16 risc-v
+_assert: Assertion failed : at file: common/riscv_createstack.c:89 task: /system/bin/init process: /system/bin/init 0xc000004a
+up_dump_register: EPC: 0000000080001eae
+up_dump_register: A0: 0000000080200f30 A1: 0000000000000059 A2: 0000000000000000 A3: 000000000000007e
+up_dump_register: A4: 00000000802088f0 A5: 0000000000000002 A6: 0000000000000000 A7: fffffffffffffff8
+up_dump_register: T0: 0000000000000003 T1: 0000000000000007 T2: 0000000000000020 T3: 0000000080209070
+up_dump_register: T4: 0000000080209068 T5: 00000000000000ff T6: 000000000000000f
+up_dump_register: S0: 0000000000000000 S1: 00000000802088f0 S2: 0000000000000000 S3: 00000000802088f0
+up_dump_register: S4: 0000000000000000 S5: 0000000080017fb8 S6: 0000000200042020 S7: 0000000080201898
+up_dump_register: S8: 0000000000000059 S9: 0000000080209fb0 S10: 0000000000000000 S11: 0000000000000000
+up_dump_register: SP: 000000008020ade0 FP: 0000000000000000 TP: 0000000000000000 RA: 0000000080001eae
+dump_stack: Kernel Stack:
+dump_stack:   base: 0x8020a810
+dump_stack:   size: 00003072
+dump_stack:     sp: 0x8020ade0
+stack_dump: 0x8020adc0: 00000000 00000000 802088f0 00000000 00000000 00000000 80002052 00000000
+stack_dump: 0x8020ade0: c000004a 00000000 fffffffc ffffffff ffffff83 ffffffff 80209010 00000000
+stack_dump: 0x8020ae00: 802088f0 00000000 80200f30 00000000 00000000 00000000 80017fb8 00000000
+stack_dump: 0x8020ae20: 00000059 00000000 7474754e 00000058 00000000 00000000 8000c264 00000000
+stack_dump: 0x8020ae40: 00000000 00000000 00000000 00000000 80207eb0 00000000 80208c30 2e323100
+stack_dump: 0x8020ae60: 2d302e34 00304352 8000c22c 00000000 38660006 30623062 69642d36 20797472
+stack_dump: 0x8020ae80: 20626546 32203131 20343230 333a3830 36313a30 00000000 00000000 00000000
+stack_dump: 0x8020aea0: 00000000 73697200 00762d63 00000000 00000002 00000000 8000ba52 00000000
+stack_dump: 0x8020aec0: 00000000 00000000 80209fb0 00000000 00004000 00000000 c00033cc 00000000
+stack_dump: 0x8020aee0: 00000064 00000000 80208a68 00000000 80208a80 00000000 00000000 00000000
+stack_dump: 0x8020af00: 00000000 00000000 80208d10 00000000 00000000 00000000 80007942 00000000
+stack_dump: 0x8020af20: 80208d10 00000000 80001118 00000000 00000000 00000000 80208d10 00000000
+stack_dump: 0x8020af40: 00000000 00000000 80004084 00000000 c0200000 00000000 00000000 00000000
+stack_dump: 0x8020af60: 00000001 00000000 00000000 00000000 80209f30 00000000 c02008c8 00000000
+stack_dump: 0x8020af80: 00000001 00000000 c0202988 00000000 80208ca0 00000000 80208d10 00000000
+stack_dump: 0x8020afa0: 00000000 00000000 80013160 00000000 00000000 00000000 c0000000 00000000
+stack_dump: 0x8020afc0: c0101000 00000000 00000000 00000000 80209fb0 00000000 80208a60 00000000
+stack_dump: 0x8020afe0: 00000008 00000000 c0200000 00000000 00000000 000081ff 464c457f 00010102
+stack_dump: 0x8020b000: 00000000 00000000 00f30002 00000001 c00033cc 00000000 00000040 00000000
+stack_dump: 0x8020b020: 00453f20 00000000 00000005 00380040 00400002 0029002a 00000000 00000000
+stack_dump: 0x8020b040: 00000000 00000000 00000000 00000000 80209f30 00000000 80209420 00000000
+stack_dump: 0x8020b060: 80208d10 00000000 fffffffc ffffffff ffffff83 ffffffff 80206c00 00000000
+stack_dump: 0x8020b080: 80208a60 00000000 800098c4 00000000 c02008c8 00000000 80208ca0 00000000
+stack_dump: 0x8020b0a0: 80206c00 00000000 80007b96 00000000 80208a60 00000000 80208ca0 00000000
+stack_dump: 0x8020b0c0: 00000000 00000000 80009800 00000000 00000000 00000000 80013026 00000000
+stack_dump: 0x8020b0e0: 80208c90 00000000 00000064 00000000 c0200570 00000000 c0202a28 00000000
+stack_dump: 0x8020b100: c02008c8 00000000 00042022 00000002 c0202988 00000000 80208ca0 00000000
+stack_dump: 0x8020b120: 00000000 00000000 80012354 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b140: 0000000a 00000000 0000000b 00000000 c000b5b0 00000000 00000000 00000000
+stack_dump: 0x8020b160: c0202a28 00000000 c0202a28 00000000 c0202978 00000000 c02008c8 00000000
+stack_dump: 0x8020b180: 00000000 00000000 80015c4e 00000000 c0202988 00000000 c0200570 00000000
+stack_dump: 0x8020b1a0: c0202a9f 00000000 00000000 00000000 ffffffff ffffffff 00000000 00000000
+stack_dump: 0x8020b1c0: c02008c8 00000000 c02005d0 00000000 00000000 00000000 80007444 00000000
+stack_dump: 0x8020b1e0: c0202b40 00000000 800013aa 00000000 c00045b0 00000000 8000019a 00000000
+stack_dump: 0x8020b200: 80001392 00000000 c00045b0 00000000 8020b200 00000000 00000000 00000000
+stack_dump: 0x8020b220: 00000000 00000000 8000710a 00000000 c0202988 00000000 00000000 00000000
+stack_dump: 0x8020b240: 00000000 00000000 c02005d0 00000000 0000001b 00000000 c0202978 00000000
+stack_dump: 0x8020b260: c02008c8 00000000 c0202980 00000000 c0202988 00000000 c0202a28 00000000
+stack_dump: 0x8020b280: c0200570 00000000 c0202a28 00000000 c02008c8 00000000 00000000 00000000
+stack_dump: 0x8020b2a0: c0202a28 00000000 00000000 00000000 c000b5b0 00000000 0000000b 00000000
+stack_dump: 0x8020b2c0: 0000000a 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b2e0: c0202980 00000000 c02008c8 00000000 c0202978 00000000 00000000 00000000
+stack_dump: 0x8020b300: 00042120 00000002 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b320: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b340: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b360: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b380: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b3a0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b3c0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x8020b3e0: 00000000 00000000 00000000 00000000 00000000 00000000 800044ac 00000000
+stack_dump: 0x8020b400: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06-dirty Feb 11 2024 08:30:16 risc-v
+_assert: Assertion failed : at file: semaphore/sem_wait.c:80 task: Idle_Task process: Kernel 0x80001802
+up_dump_register: EPC: 0000000080001eae
+up_dump_register: A0: 0000000080200f30 A1: 0000000000000050 A2: 0000000000000000 A3: 000000000000007e
+up_dump_register: A4: 0000000080200b28 A5: 0000000000000002 A6: 0000000080206c88 A7: fffffffffffffff8
+up_dump_register: T0: 000000000000002e T1: 0000000000000007 T2: 00000000000001ff T3: 0000000080208c18
+up_dump_register: T4: 0000000080208c10 T5: 0000000000000009 T6: 000000000000002a
+up_dump_register: S0: 0000000000000000 S1: 0000000080200b28 S2: ffffffffffffff83 S3: 0000000000000000
+up_dump_register: S4: 0000000000000000 S5: 0000000080018b00 S6: 0000000200042020 S7: 0000000080201898
+up_dump_register: S8: 0000000000000050 S9: 0000000080209fb0 S10: 0000000000000000 S11: 0000000000000000
+up_dump_register: SP: 000000008020ac20 FP: 0000000000000000 TP: 0000000000000000 RA: 0000000080001eae
+dump_stacks: ERROR: Stack pointer is not within the stack
+dump_stack: IRQ Stack:
+dump_stack:   base: 0x802002b0
+dump_stack:   size: 00002048
+stack_dump: 0x802002b8: 80017a54 00000000 deadbeef deadbeef deadbeef deadbeef 00000000 00000000
+stack_dump: 0x802002d8: 0000002e 00000000 0000006a 00000000 000001ff 00000000 00000020 00000000
+stack_dump: 0x802002f8: 80200298 00000000 00000030 00000000 00000030 00000000 00000010 00000000
+stack_dump: 0x80200318: 10000000 00000000 00000030 00000000 00042020 00000002 00000009 00000000
+stack_dump: 0x80200338: 00000000 00000000 fffffffc ffffffff 00000021 00000000 00000001 00000000
+stack_dump: 0x80200358: 00000001 00000000 80018469 00000000 00000a00 00000000 8020ab28 00000000
+stack_dump: 0x80200378: 00000008 00000000 00000081 00000000 00000081 00000000 0000006c 00000000
+stack_dump: 0x80200398: 00000068 00000000 00000009 00000000 0000002a 00000000 deadbeef deadbeef
+stack_dump: 0x802003b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802003d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802003f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200418: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200438: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200458: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200478: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200498: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802004b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802004d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802004f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200518: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200538: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200558: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200578: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200598: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802005b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802005d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802005f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200618: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200638: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200658: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200678: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200698: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802006b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802006d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802006f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200718: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200738: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200758: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200778: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200798: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802007b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802007d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802007f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200818: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200838: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200858: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200878: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200898: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802008b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802008d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802008f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200918: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200938: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200958: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200978: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200998: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802009b8: deadbeef deadbeef deadbeef deadbeef 00044120 00000002 802088f0 00000000
+stack_dump: 0x802009d8: 80003d3e 00000000 00000018 00000000 0000001a 00000000 80200058 00000000
+stack_dump: 0x802009f8: 800068ce 00000000 00000000 00000000 80006a36 00000002 ffffffff ffffffff
+stack_dump: 0x80200a18: 802088f0 00000000 8020aff0 00000000 8000264c 00000000 80200140 00000000
+stack_dump: 0x80200a38: 00000100 00000000 80200030 00000000 80201898 00000000 8020ada0 00000000
+stack_dump: 0x80200a58: 8000249e 00000000 8020ada0 00000000 800009f8 00000000 8020b200 00000000
+stack_dump: 0x80200a78: 80000cc0 00000000 8020aff0 00000000 00000000 00000000 00000011 00000000
+stack_dump: 0x80200a98: 800009c0 00000000 80012476 00000000 80000180 00000000 00000000 00000000
+riscv_exception: EXCEPTION: Load access fault. MCAUSE: 0000000000000005, EPC: 000000008000aa66, MTVAL: 0000000000000010
+riscv_exception: PANIC!!! Exception = 0000000000000005
+_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06-dirty Feb 11 2024 08:30:16 risc-v
+_assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: Kernel 0xc000004a
+up_dump_register: EPC: 000000008000aa66
+up_dump_register: A0: 0000000000000000 A1: 000000000000000a A2: 0000000010000000 A3: 0000000010000000
+up_dump_register: A4: 000000000000000a A5: 000000000000000a A6: 0000000000000009 A7: 0000000000000000
+up_dump_register: T0: 000000000000002e T1: 000000000000006a T2: 00000000000001ff T3: 000000000000006c
+up_dump_register: T4: 0000000000000068 T5: 0000000000000009 T6: 000000000000002a
+up_dump_register: S0: 0000000000000000 S1: 0000000080200b28 S2: 0000000000000001 S3: 0000000000000001
+up_dump_register: S4: 00000000802002b0 S5: 0000000080206010 S6: 0000000200042020 S7: 0000000080201898
+up_dump_register: S8: 0000000000000bf0 S9: 0000000080206c00 S10: 0000000000000000 S11: 0000000000000000
+up_dump_register: SP: 000000008020ac20 FP: 0000000000000000 TP: 0000000000000000 RA: 0000000080001fe8
+dump_stacks: ERROR: Stack pointer is not within the stack
+dump_stack: IRQ Stack:
+dump_stack:   base: 0x802002b0
+dump_stack:   size: 00002048
+stack_dump: 0x802002b8: 80017b08 00000000 deadbeef deadbeef deadbeef deadbeef 00000000 00000000
+stack_dump: 0x802002d8: 0000002e 00000000 0000006a 00000000 000001ff 00000000 80018765 00000000
+stack_dump: 0x802002f8: 80200298 00000000 00000035 00000000 00000035 00000000 00000010 00000000
+stack_dump: 0x80200318: 80200140 00000000 80016bee 00000000 00042100 00000002 00000009 00000000
+stack_dump: 0x80200338: 00000000 00000000 fffffffc ffffffff 802008e8 00000000 80018482 00000000
+stack_dump: 0x80200358: 00000001 00000000 80018483 00000000 00000a00 00000000 80200828 00000000
+stack_dump: 0x80200378: 00000008 00000000 00000081 00000000 00000081 00000000 0000006c 00000000
+stack_dump: 0x80200398: 00000068 00000000 00000009 00000000 0000002a 00000000 deadbeef deadbeef
+stack_dump: 0x802003b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802003d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802003f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200418: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200438: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200458: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200478: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200498: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802004b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802004d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802004f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200518: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200538: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200558: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200578: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200598: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802005b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802005d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802005f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200618: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200638: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200658: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200678: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200698: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802006b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802006d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802006f8: deadbeef deadbeef deadbeef deadbeef fffffffc ffffffff 80018750 00000000
+stack_dump: 0x80200718: 0000000a 00000000 80200828 00000000 0000000a 00000000 80200828 00000000
+stack_dump: 0x80200738: 80016c20 00000000 0000000a 00000000 00000008 00000000 0000005f 00000000
+stack_dump: 0x80200758: 8000810e 00000000 802008f0 00000000 00000008 00000000 ffff9fef ffffffff
+stack_dump: 0x80200778: 00004010 00000000 802008d0 00000000 66666666 66666666 ffff9fef ffffffff
+stack_dump: 0x80200798: 00004010 00000000 00000039 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x802007b8: 00000000 00000000 00000000 00000000 80201898 00000000 00042100 00000002
+stack_dump: 0x802007d8: 00000000 00000000 802002b0 00000000 80018458 00000000 80018750 00000000
+stack_dump: 0x802007f8: 80200ab0 00000000 80200868 00000000 80016262 00000000 802002b0 00000000
+stack_dump: 0x80200818: 80018458 00000000 80200888 00000000 00000060 00000000 80016bee 00000000
+stack_dump: 0x80200838: 80016b8e 00000000 80008ea8 00000000 0000000a 00000000 80200818 00000000
+stack_dump: 0x80200858: 800090b0 00000000 80008ea8 00000000 802008a0 00000000 00000800 00000000
+stack_dump: 0x80200878: 800090d0 00000000 80016bee 00000000 802008a0 00000000 80008ea8 00000000
+stack_dump: 0x80200898: 80001c4c 00000000 80018750 00000000 80200878 00000000 800090d0 ffffffff
+stack_dump: 0x802008b8: 00000000 00000000 80018750 ffffffff 00000000 00000000 80200878 ffffffff
+stack_dump: 0x802008d8: 00000000 00000000 80200878 ffffffff ffffffff ffffffff 80018770 00000000
+stack_dump: 0x802008f8: 00000001 00000000 00000001 00000000 802088f0 00000000 00000000 00000000
+stack_dump: 0x80200918: 80001fe0 00000000 c000004a 00000000 deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80200938: 00000000 00000000 802088f0 00000000 8020aa10 00000000 80017f98 00000000
+stack_dump: 0x80200958: 80018048 00000000 00000055 00000002 7474754e 00000058 802002b0 00000000
+stack_dump: 0x80200978: 00000001 00000000 00000001 00000000 8020aa10 00000000 802009f8 00000000
+stack_dump: 0x80200998: 80016262 2e323100 2d302e34 00304352 80018020 00000000 3866beef 30623062
+stack_dump: 0x802009b8: 69642d36 20797472 20626546 32203131 20343230 333a3830 36313a30 00000000
+stack_dump: 0x802009d8: 0000000a 00000000 00000005 73697200 00762d63 00000000 80200058 00000000
+stack_dump: 0x802009f8: 80200a30 00000000 00000000 00000000 80206c00 00000000 00000bf0 00000000
+stack_dump: 0x80200a18: 80201898 00000000 00042020 00000002 80206010 00000000 802002b0 00000000
+stack_dump: 0x80200a38: 00000001 00000000 00000001 00000000 8020aa10 00000000 00000005 00000000
+stack_dump: 0x80200a58: 8000120e 00000000 8020ada0 00000000 80201898 00000000 8020aa10 00000000
+stack_dump: 0x80200a78: 80000cc0 00000000 8020aff0 00000000 80200b28 00000000 00000005 00000000
+stack_dump: 0x80200a98: 800009c0 00000000 8000aa66 00000000 80000180 00000000 00000000 00000000
+dump_stack: Kernel Stack:
+dump_stack:   base: 0
+dump_stack:   size: 00003072
+stack_dump: 0xc00: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+dump_stack: User Stack:
+dump_stack:   base: 0
+dump_stack:   size: 00000000
+stack_dump: 0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+dump_tasks:    PID GROUP PRI POLICY   TYPE    NPX STATE   EVENT      SIGMASK          STACKBASE  STACKSIZE      USED   FILLED    COMMAND
+dump_tasks:   ----   --- --- -------- ------- --- ------- ---------- ---------------- 0x802002b0      2048      2040    99.6%!   irq
+dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000000 0x80206010      3056      1840    60.2%    Idle_Task
+dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020a050      1968       720    36.5%    lpwork 0x802015f0 0x80201618

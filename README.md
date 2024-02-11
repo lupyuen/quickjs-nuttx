@@ -652,3 +652,14 @@ We increase Stack from 8 KB to 16 KB (looks too little?)...
 ```bash
 CONFIG_POSIX_SPAWN_DEFAULT_STACKSIZE=16384
 ```
+
+Oops too much (I think)...
+
+```text
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> qjs -e console.log(123) 
+_assert: Current Version: NuttX  12.4.0-RC0 f8b0b06-dirty Feb 11 2024 08:30:16 risc-v
+_assert: Assertion failed : at file: common/riscv_createstack.c:89 task: /system/bin/init process: /system/bin/init 0xc000004a
+```
+
+TODO: Fix the big stack
