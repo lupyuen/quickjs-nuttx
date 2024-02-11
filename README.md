@@ -674,4 +674,4 @@ int up_create_stack(struct tcb_s *tcb, size_t stack_size, uint8_t ttype) {
   DEBUGASSERT(stack_size <= TLS_MAXSTACK);
 ```
 
-TODO: Increase TLS_MAXSTACK
+TODO: Increase CONFIG_TLS_LOG2_MAXSTACK from 13 to 14
