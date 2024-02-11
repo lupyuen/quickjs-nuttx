@@ -41,56 +41,6 @@
 #include "cutils.h"
 #include "quickjs-libc.h"
 
-//// Begin Test
-#define _d(s) write(1, s, strlen(s))
-char *debug_expr = NULL;
-char debug_buf[256];
-
-void print_hex(uint64_t n) {
-    const char dec_to_hex[] = "0123456789ABCDEF";
-    static char hex_str[17];
-    for (int i = 0; i < 16; i++) {
-        const uint8_t d = n & 0xf;
-        n = n >> 4;
-        hex_str[15 - i] = dec_to_hex[d];
-    }
-    hex_str[16] = 0;
-    write(1, hex_str, 16);
-}
-
-#ifdef NOTUSED
-uint8_t debug_heap[1024 * 1024];
-size_t debug_heap_next = 0;
-
-void *debug_malloc(size_t size) {
-    if (debug_heap_next + size >= sizeof(debug_heap)) {
-        _d("**** debug_malloc: No more heap space!\n");
-        exit(1);
-        return NULL;
-    }
-    void *ret = debug_heap + debug_heap_next;
-    debug_heap_next += size;
-    return ret;
-}
-
-void *debug_realloc(void *ptr, size_t size) {
-    void *ret = debug_malloc(size);
-    if (ret == NULL) { return NULL; }
-    memcpy(ret, ptr, size);
-    debug_free(ptr);
-}
-
-void debug_free(void *ptr) {
-    // TODO
-}
-
-// #define malloc(size) debug_malloc(size)
-// #define realloc(ptr, size) debug_realloc(ptr, size)
-// #define free(ptr) debug_free(ptr)
-#endif // NOTUSED
-
-//// End Test
-
 extern const uint8_t qjsc_repl[];
 extern const uint32_t qjsc_repl_size;
 #ifdef CONFIG_BIGNUM
@@ -116,7 +66,6 @@ static int eval_buf(JSContext *ctx, const void *buf, int buf_len,
         }
         val = js_std_await(ctx, val);
     } else {
-        _d("eval_buf: buf="); write(1, buf, buf_len); _d("\n");////
         val = JS_Eval(ctx, buf, buf_len, filename, eval_flags);
     }
     if (JS_IsException(val)) {
@@ -158,13 +107,7 @@ static int eval_file(JSContext *ctx, const char *filename, int module)
 static JSContext *JS_NewCustomContext(JSRuntime *rt)
 {
     JSContext *ctx;
-_d("JS_NewCustomContext: a="); _d(debug_expr); _d("\n"); ////
-//write(1, "JS_NewCustomContext: c\n", 23);////
-//puts("JS_NewCustomContext: c");////
     ctx = JS_NewContext(rt);
-_d("JS_NewCustomContext: b="); _d(debug_expr); _d("\n"); ////
-//write(1, "JS_NewCustomContext: d\n", 23);////
-//puts("JS_NewCustomContext: d");////
     if (!ctx)
         return NULL;
 #ifdef CONFIG_BIGNUM
@@ -269,8 +212,7 @@ static void *js_trace_malloc(JSMallocState *s, size_t size)
     if (unlikely(s->malloc_size + size > s->malloc_limit))
         return NULL;
     ptr = malloc(size);
-    ////js_trace_malloc_printf(s, "A %zd -> %p\n", size, ptr);
-    _d("A "); print_hex(size); _d(" -> "); print_hex(ptr); _d("\n"); ////
+    js_trace_malloc_printf(s, "A %zd -> %p\n", size, ptr);
     if (ptr) {
         s->malloc_count++;
         s->malloc_size += js_trace_malloc_usable_size(ptr) + MALLOC_OVERHEAD;
@@ -283,8 +225,7 @@ static void js_trace_free(JSMallocState *s, void *ptr)
     if (!ptr)
         return;
 
-    ////js_trace_malloc_printf(s, "F %p\n", ptr);
-    _d("F "); print_hex(ptr); _d("\n"); ////
+    js_trace_malloc_printf(s, "F %p\n", ptr);
     s->malloc_count--;
     s->malloc_size -= js_trace_malloc_usable_size(ptr) + MALLOC_OVERHEAD;
     free(ptr);
@@ -301,8 +242,7 @@ static void *js_trace_realloc(JSMallocState *s, void *ptr, size_t size)
     }
     old_size = js_trace_malloc_usable_size(ptr);
     if (size == 0) {
-        ////js_trace_malloc_printf(s, "R %zd %p\n", size, ptr);
-        _d("R "); print_hex(size); _d(" "); print_hex(ptr); _d("\n"); ////
+        js_trace_malloc_printf(s, "R %zd %p\n", size, ptr);
         s->malloc_count--;
         s->malloc_size -= old_size + MALLOC_OVERHEAD;
         free(ptr);
@@ -311,12 +251,10 @@ static void *js_trace_realloc(JSMallocState *s, void *ptr, size_t size)
     if (s->malloc_size + size - old_size > s->malloc_limit)
         return NULL;
 
-    ////js_trace_malloc_printf(s, "R %zd %p", size, ptr);
-    _d("R "); print_hex(size); _d(" "); print_hex(ptr); ////
+    js_trace_malloc_printf(s, "R %zd %p", size, ptr);
 
     ptr = realloc(ptr, size);
-    ////js_trace_malloc_printf(s, " -> %p\n", ptr);
-    _d(" -> "); print_hex(ptr); _d("\n"); ////
+    js_trace_malloc_printf(s, " -> %p\n", ptr);
     if (ptr) {
         s->malloc_size += js_trace_malloc_usable_size(ptr) - old_size;
     }
@@ -422,15 +360,6 @@ int main(int argc, char **argv)
                 }
                 if (optind < argc) {
                     expr = argv[optind++];
-                    // debug_expr = expr; ////
-                    assert(strlen(expr) < sizeof(debug_buf) - 1);////
-                    strcpy(debug_buf, expr);////
-                    // debug_expr = debug_buf;////
-                    debug_expr = "";////
-                    expr = debug_buf;////
-                    _d("main: expr="); _d(expr); _d("\n"); ////
-                    _d("main: &expr="); print_hex(expr); _d("\n"); ////
-                    _d("main: argv="); print_hex(argv); _d("\n"); ////
                     break;
                 }
                 fprintf(stderr, "qjs: missing expression for -e\n");
@@ -520,33 +449,23 @@ int main(int argc, char **argv)
         bignum_ext = 1;
 #endif
 
-_d("main: expr2="); _d(debug_expr); _d("\n"); ////
     if (trace_memory) {
         js_trace_malloc_init(&trace_data);
         rt = JS_NewRuntime2(&trace_mf, &trace_data);
     } else {
         rt = JS_NewRuntime();
     }
-_d("main: expr3="); _d(debug_expr); _d("\n"); ////
     if (!rt) {
         fprintf(stderr, "qjs: cannot allocate JS runtime\n");
         exit(2);
     }
-_d("main: expr4="); _d(debug_expr); _d("\n"); ////
     if (memory_limit != 0)
         JS_SetMemoryLimit(rt, memory_limit);
-_d("main: expr5="); _d(debug_expr); _d("\n"); ////
     if (stack_size != 0)
         JS_SetMaxStackSize(rt, stack_size);
-_d("main: expr6="); _d(debug_expr); _d("\n"); ////
     js_std_set_worker_new_context_func(JS_NewCustomContext);
-_d("main: expr7="); _d(debug_expr); _d("\n"); ////
     js_std_init_handlers(rt);
-_d("main: expr8="); _d(debug_expr); _d("\n"); ////
-//puts("main: a");////
     ctx = JS_NewCustomContext(rt);
-_d("main: expr9="); _d(debug_expr); _d("\n"); ////
-//puts("main: b");////
     if (!ctx) {
         fprintf(stderr, "qjs: cannot allocate JS context\n");
         exit(2);
