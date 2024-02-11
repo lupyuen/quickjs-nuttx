@@ -738,3 +738,19 @@ expect {
   timeout { exit 1 }
 }
 ```
+
+POSIX `open()` works OK too!
+
+```text
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> ls /system/bin/init
+ /system/bin/init
+nsh> qjs
+QuickJS - Type "\h" for help
+qjs > os.open("/system/bin/init", os.O_RDONLY)
+3
+qjs > os.open("/system/bin/init", os.O_RDONLY)
+4
+qjs > os.open("/system/bin/init", os.O_RDONLY)
+5
+```
