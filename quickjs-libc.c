@@ -1637,6 +1637,31 @@ static JSValue js_os_seek(JSContext *ctx, JSValueConst this_val,
         return JS_NewInt64(ctx, ret);
 }
 
+//// Begin Test: Add ioctl() for NuttX
+static JSValue js_os_ioctl(JSContext *ctx, JSValueConst this_val,
+                           int argc, JSValueConst *argv)
+{
+    int fd, req;
+    int64_t arg, ret;
+    BOOL is_bigint;
+    
+    if (JS_ToInt32(ctx, &fd, argv[0]))
+        return JS_EXCEPTION;
+    if (JS_ToInt32(ctx, &req, argv[1]))
+        return JS_EXCEPTION;
+    is_bigint = JS_IsBigInt(ctx, argv[2]);
+    if (JS_ToInt64Ext(ctx, &arg, argv[2]))
+        return JS_EXCEPTION;
+    ret = ioctl(fd, req, arg);
+    if (ret == -1)
+        ret = -errno;
+    if (is_bigint)
+        return JS_NewBigInt64(ctx, ret);
+    else
+        return JS_NewInt64(ctx, ret);
+}
+//// End Test
+
 static JSValue js_os_read_write(JSContext *ctx, JSValueConst this_val,
                                       int argc, JSValueConst *argv, int magic)
 {
@@ -3641,6 +3666,9 @@ static const JSCFunctionListEntry js_os_funcs[] = {
 #endif
     JS_CFUNC_DEF("close", 1, js_os_close ),
     JS_CFUNC_DEF("seek", 3, js_os_seek ),
+    //// Begin Test: Add ioctl() for NuttX
+    JS_CFUNC_DEF("ioctl", 3, js_os_ioctl ),
+    //// End Test
     JS_CFUNC_MAGIC_DEF("read", 4, js_os_read_write, 0 ),
     JS_CFUNC_MAGIC_DEF("write", 4, js_os_read_write, 1 ),
     JS_CFUNC_DEF("isatty", 1, js_os_isatty ),
