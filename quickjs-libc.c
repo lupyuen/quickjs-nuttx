@@ -1115,26 +1115,6 @@ static JSValue js_std_file_seek(JSContext *ctx, JSValueConst this_val,
     return JS_NewInt32(ctx, ret);
 }
 
-//// Begin Test: Add ioctl() for NuttX
-static JSValue js_std_file_ioctl(JSContext *ctx, JSValueConst this_val,
-                                int argc, JSValueConst *argv)
-{
-    FILE *f = js_std_file_get(ctx, this_val);
-    int req, ret;
-    int64_t arg;
-    if (!f)
-        return JS_EXCEPTION;
-    if (JS_ToInt32(ctx, &req, argv[0]))
-        return JS_EXCEPTION;
-    if (JS_ToInt64Ext(ctx, &arg, argv[1]))
-        return JS_EXCEPTION;
-    ret = ioctl(f, req, arg);
-    if (ret < 0)
-        ret = -errno;
-    return JS_NewInt32(ctx, ret);
-}
-//// End Test
-
 static JSValue js_std_file_eof(JSContext *ctx, JSValueConst this_val,
                                int argc, JSValueConst *argv)
 {
@@ -1554,9 +1534,6 @@ static const JSCFunctionListEntry js_std_file_proto_funcs[] = {
     JS_CFUNC_DEF("getByte", 0, js_std_file_getByte ),
     JS_CFUNC_DEF("putByte", 1, js_std_file_putByte ),
     /* setvbuf, ...  */
-    //// Begin Test: Add ioctl() for NuttX
-    JS_CFUNC_DEF("ioctl", 2, js_std_file_ioctl ),
-    //// End Test
 };
 
 static int js_std_init(JSContext *ctx, JSModuleDef *m)
@@ -3902,12 +3879,10 @@ static void js_dump_obj(JSContext *ctx, FILE *f, JSValueConst val)
     
     str = JS_ToCString(ctx, val);
     if (str) {
-write(1, "js_dump_obj: ", 13); write(1, str, strlen(str)); write(1, "\n", 1);////
-        ////fprintf(f, "%s\n", str);
+        fprintf(f, "%s\n", str);
         JS_FreeCString(ctx, str);
     } else {
-write(1, "js_dump_obj: [exception]\n", 25);////
-        ////fprintf(f, "[exception]\n");
+        fprintf(f, "[exception]\n");
     }
 }
 
