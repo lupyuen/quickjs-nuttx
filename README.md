@@ -636,7 +636,7 @@ nsh> qjs -e console.log(123)
 nsh>
 ```
 
-TODO: Interactive Mode REPL fails. Need to increase stack some more. We see our old friend 8_c021_8308, which appears when we run out of stack
+But QuickJS nteractive Mode REPL fails. Need to increase stack some more. We see our old friend 8_c021_8308, which appears when we run out of stack
 
 ```text
 $ qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
@@ -677,7 +677,7 @@ We increase CONFIG_TLS_LOG2_MAXSTACK from 13 to 14:
 - Library Routines > Thread Local Storage (TLS) > Maximum stack size (log2)
 - Set to 14
 
-TODO: Stack is still full. Increase Stack some more
+Stack is still full. Increase Stack some more...
 
 ```text
 → qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
@@ -692,4 +692,26 @@ dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000
 dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020c050      1968       704    35.7%    lpwork 0x802015f0 0x80201618
 dump_task:       2     2 100 RR       Task    - Waiting Semaphore  0000000000000000 0xc0204040      3008       744    24.7%    /system/bin/init
 dump_task:       3     3 100 RR       Task    - Running            0000000000000000 0xc0204030     16336     16320    99.9%!   qjs
+```
+
+We increase the Stack to 64 KB...
+
+```bash
+CONFIG_POSIX_SPAWN_DEFAULT_STACKSIZE=65536
+CONFIG_TLS_LOG2_MAXSTACK=16
+```
+
+QuickJS Interactive Mode REPL finally works OK on NuttX QEMU (64-bit RISC-V) yay!
+
+```text
+$ qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
+
+ABC
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> qjs
+QuickJS - Type "\h" for help
+qjs > console.log(123)
+123
+undefined
+qjs > 
 ```

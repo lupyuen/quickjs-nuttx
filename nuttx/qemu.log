@@ -3,4 +3,4 @@ ABC
 NuttShell (NSH) NuttX-12.4.0-RC0
 nsh> [Kqjs -e console.log(123) 
 123
-nsh> [K
+nsh> 
