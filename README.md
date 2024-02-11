@@ -670,8 +670,9 @@ int up_create_stack(struct tcb_s *tcb, size_t stack_size, uint8_t ttype) {
   /* The allocated stack size must not exceed the maximum possible for the
    * TLS feature.
    */
-
   DEBUGASSERT(stack_size <= TLS_MAXSTACK);
 ```
 
-TODO: Increase CONFIG_TLS_LOG2_MAXSTACK from 13 to 14
+TODO: Increase CONFIG_TLS_LOG2_MAXSTACK from 13 to 14:
+- Library Routines > Thread Local Storage (TLS) > Maximum stack size (log2)
+- Set to 14
