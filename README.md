@@ -736,6 +736,8 @@ qjs > os.open("/system/bin/init", os.O_RDONLY)
 5
 ```
 
+TODO: Add support for IOCTL so we can control the NuttX LED Driver (and other devices)
+
 We update our Expect Script for Automated Testing of QuickJS Interactive Mode REPL: [nuttx/qemu.exp](nuttx/qemu.exp)
 
 ```bash
@@ -762,4 +764,12 @@ expect {
 }
 ```
 
-TODO: Add support for IOCTL so we can control the NuttX LED Driver (and other devices)
+Current size of QuickJS....
+
+```text
+$ riscv64-unknown-elf-size ../apps/bin/qjs
+   text    data     bss     dec     hex filename
+ 554847     260      94  555201   878c1 ../apps/bin/qjs
+```
+
+Mostly Text (Code), very little Data and BSS. Most of the Dynamic Data comes from the Heap. Stack is currently under 64 KB, but above 16 KB.
