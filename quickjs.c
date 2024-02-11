@@ -46,19 +46,6 @@
 #include "libregexp.h"
 #include "libbf.h"
 
-//// Begin Test
-#define _d(s) write(1, s, strlen(s))
-extern char *debug_expr;
-void print_hex(uint64_t n);
-
-// void *debug_malloc(size_t size);
-// void *debug_realloc(void *ptr, size_t size);
-// void debug_free(void *ptr);
-// #define malloc(size) debug_malloc(size)
-// #define realloc(ptr, size) debug_realloc(ptr, size)
-// #define free(ptr) debug_free(ptr)
-//// End Test
-
 #define OPTIMIZE         1
 #define SHORT_OPCODES    1
 #if defined(EMSCRIPTEN)
@@ -1361,15 +1348,11 @@ static void *js_bf_realloc(void *opaque, void *ptr, size_t size)
 void *js_malloc(JSContext *ctx, size_t size)
 {
     void *ptr;
-_d("js_malloc: a="); _d(debug_expr); _d("\n"); ////
     ptr = js_malloc_rt(ctx->rt, size);
-_d("js_malloc: b="); _d(debug_expr); _d("\n"); ////
     if (unlikely(!ptr)) {
-_d("js_malloc: b="); _d(debug_expr); _d("\n"); ////
         JS_ThrowOutOfMemory(ctx);
         return NULL;
     }
-_d("js_malloc: d="); _d(debug_expr); _d("\n"); ////
     return ptr;
 }
 
@@ -1733,19 +1716,15 @@ static void *js_def_malloc(JSMallocState *s, size_t size)
     /* Do not allocate zero bytes: behavior is platform dependent */
     assert(size != 0);
 
-_d("js_def_malloc: a="); _d(debug_expr); _d("\n"); ////
     if (unlikely(s->malloc_size + size > s->malloc_limit))
         return NULL;
 
-_d("js_def_malloc: b="); _d(debug_expr); _d("\n"); ////
     ptr = malloc(size);
     if (!ptr)
         return NULL;
 
     s->malloc_count++;
-_d("js_def_malloc: c="); _d(debug_expr); _d("\n"); ////
     s->malloc_size += js_def_malloc_usable_size(ptr) + MALLOC_OVERHEAD;
-_d("js_def_malloc: d="); _d(debug_expr); _d("\n"); ////
     return ptr;
 }
 
@@ -2182,11 +2161,7 @@ JSContext *JS_NewContext(JSRuntime *rt)
     if (!ctx)
         return NULL;
 
-_d("JS_NewContext: a="); _d(debug_expr); _d("\n"); ////
-//puts("JS_NewContext: e");////
     JS_AddIntrinsicBaseObjects(ctx);
-_d("JS_NewContext: b="); _d(debug_expr); _d("\n"); ////
-//puts("JS_NewContext: f");////
     JS_AddIntrinsicDate(ctx);
     JS_AddIntrinsicEval(ctx);
     JS_AddIntrinsicStringNormalize(ctx);
@@ -2489,15 +2464,12 @@ static inline BOOL is_num_string(uint32_t *pval, const JSString *p)
 }
 
 /* XXX: could use faster version ? */
-////static inline 
-uint32_t hash_string8(const uint8_t *str, size_t len, uint32_t h)
+static inline uint32_t hash_string8(const uint8_t *str, size_t len, uint32_t h)
 {
     size_t i;
 
-// printf("hash_string8: str=%s, len=%d\n", str, len);////
     for(i = 0; i < len; i++)
         h = h * 263 + str[i];
-// printf("hash_string8: str=%s, h=%p\n", str, h);////
     return h;
 }
 
@@ -2747,8 +2719,7 @@ static JSAtom __JS_NewAtom(JSRuntime *rt, JSString *str, int atom_type)
         h &= JS_ATOM_HASH_MASK;
         h1 = h & (rt->atom_hash_size - 1);
         i = rt->atom_hash[h1];
-        ////while (i != 0) {
-        while (i != 0 && i != 0xffffffff) {////
+        while (i != 0) {
             p = rt->atom_array[i];
             if (p->hash == h &&
                 p->atom_type == atom_type &&
@@ -2894,32 +2865,15 @@ static JSAtom __JS_NewAtomInit(JSRuntime *rt, const char *str, int len,
 static JSAtom __JS_FindAtom(JSRuntime *rt, const char *str, size_t len,
                             int atom_type)
 {
-write(1, "__JS_FindAtom: ", 15); write(1, str, len); write(1, "\n", 1);////
-// printf("__JS_FindAtom: rt=%p, len=%d\n", rt, len);////
-// if(len > 0) { printf("__JS_FindAtom: rt=%p, str=%s\n", rt, str); }////
-////static int halt = 0; if (len == 0 && halt++ == 1) { assert(0); }////
-// write(1, "__JS_FindAtom: a\n", 17);////
     uint32_t h, h1, i;
     JSAtomStruct *p;
 
-// write(1, "__JS_FindAtom: b\n", 17);////
     h = hash_string8((const uint8_t *)str, len, JS_ATOM_TYPE_STRING);
-// write(1, "__JS_FindAtom: c\n", 17);////
-// printf("__JS_FindAtom: h=%p\n", h);////
     h &= JS_ATOM_HASH_MASK;
-// printf("__JS_FindAtom: h=%p\n", h);////
     h1 = h & (rt->atom_hash_size - 1);
-// write(1, "__JS_FindAtom: d\n", 17);////
-// printf("__JS_FindAtom: h1=%p\n", h1);////
     i = rt->atom_hash[h1];
-    ////while (i != 0) {
-    while (i != 0 && i != 0xffffffff) {////
-// write(1, "__JS_FindAtom: e\n", 17);////
-// print_hex(&(rt->atom_array[i])); write(1, "\n", 1); ////
-// printf("__JS_FindAtom: rt=%p, i=%d\n", rt, i);////
+    while (i != 0) {
         p = rt->atom_array[i];
-// write(1, "__JS_FindAtom: f\n", 17);////
-// print_hex(p); write(1, "\n", 1); ////
         if (p->hash == h &&
             p->atom_type == JS_ATOM_TYPE_STRING &&
             p->len == len &&
@@ -2927,15 +2881,9 @@ write(1, "__JS_FindAtom: ", 15); write(1, str, len); write(1, "\n", 1);////
             memcmp(p->u.str8, str, len) == 0) {
             if (!__JS_AtomIsConst(i))
                 p->header.ref_count++;
-// write(1, "__JS_FindAtom: g\n", 17);////
-// printf("__JS_FindAtom: rt=%p, return i=%d\n", rt, i);////
             return i;
         }
-// write(1, "__JS_FindAtom: h\n", 17);////
-// print_hex(&(p->hash_next)); write(1, "\n", 1); ////
         i = p->hash_next;
-// write(1, "__JS_FindAtom: i\n", 17);////
-// print_hex(i); write(1, "\n", 1); ////
     }
     return JS_ATOM_NULL;
 }
@@ -4408,29 +4356,22 @@ static no_inline JSShape *js_new_shape2(JSContext *ctx, JSObject *proto,
     void *sh_alloc;
     JSShape *sh;
 
-_d("js_new_shape2: a="); _d(debug_expr); _d("\n"); ////
     /* resize the shape hash table if necessary */
     if (2 * (rt->shape_hash_count + 1) > rt->shape_hash_size) {
         resize_shape_hash(rt, rt->shape_hash_bits + 1);
     }
-_d("js_new_shape2: b="); _d(debug_expr); _d("\n"); ////
 
     sh_alloc = js_malloc(ctx, get_shape_size(hash_size, prop_size));
-_d("js_new_shape2: c="); _d(debug_expr); _d("\n"); ////
     if (!sh_alloc)
         return NULL;
     sh = get_shape_from_alloc(sh_alloc, hash_size);
-_d("js_new_shape2: d="); _d(debug_expr); _d("\n"); ////
     sh->header.ref_count = 1;
     add_gc_object(rt, &sh->header, JS_GC_OBJ_TYPE_SHAPE);
-_d("js_new_shape2: e="); _d(debug_expr); _d("\n"); ////
     if (proto)
         JS_DupValue(ctx, JS_MKPTR(JS_TAG_OBJECT, proto));
-_d("js_new_shape2: f="); _d(debug_expr); _d("\n"); ////
     sh->proto = proto;
     memset(prop_hash_end(sh) - hash_size, 0, sizeof(prop_hash_end(sh)[0]) *
            hash_size);
-_d("js_new_shape2: g="); _d(debug_expr); _d("\n"); ////
     sh->prop_hash_mask = hash_size - 1;
     sh->prop_size = prop_size;
     sh->prop_count = 0;
@@ -4438,11 +4379,9 @@ _d("js_new_shape2: g="); _d(debug_expr); _d("\n"); ////
     
     /* insert in the hash table */
     sh->hash = shape_initial_hash(proto);
-_d("js_new_shape2: h="); _d(debug_expr); _d("\n"); ////
     sh->is_hashed = TRUE;
     sh->has_small_array_index = FALSE;
     js_shape_hash_link(ctx->rt, sh);
-_d("js_new_shape2: i="); _d(debug_expr); _d("\n"); ////
     return sh;
 }
 
@@ -4910,23 +4849,15 @@ JSValue JS_NewObjectProtoClass(JSContext *ctx, JSValueConst proto_val,
     JSShape *sh;
     JSObject *proto;
 
-_d("JS_NewObjectProtoClass: a="); _d(debug_expr); _d("\n"); ////
     proto = get_proto_obj(proto_val);
-_d("JS_NewObjectProtoClass: b="); _d(debug_expr); _d("\n"); ////
     sh = find_hashed_shape_proto(ctx->rt, proto);
-_d("JS_NewObjectProtoClass: c="); _d(debug_expr); _d("\n"); ////
     if (likely(sh)) {
-_d("JS_NewObjectProtoClass: d="); _d(debug_expr); _d("\n"); ////
         sh = js_dup_shape(sh);
-_d("JS_NewObjectProtoClass: e="); _d(debug_expr); _d("\n"); ////
     } else {
-_d("JS_NewObjectProtoClass: f="); _d(debug_expr); _d("\n"); ////
         sh = js_new_shape(ctx, proto);
-_d("JS_NewObjectProtoClass: g="); _d(debug_expr); _d("\n"); ////
         if (!sh)
             return JS_EXCEPTION;
     }
-_d("JS_NewObjectProtoClass: h="); _d(debug_expr); _d("\n"); ////
     return JS_NewObjectFromShape(ctx, sh, class_id);
 }
 
@@ -5008,14 +4939,11 @@ JSValue JS_NewObject(JSContext *ctx)
 static void js_function_set_properties(JSContext *ctx, JSValueConst func_obj,
                                        JSAtom name, int len)
 {
-_d("js_function_set_properties: a="); _d(debug_expr); _d("\n"); ////
     /* ES6 feature non compatible with ES5.1: length is configurable */
     JS_DefinePropertyValue(ctx, func_obj, JS_ATOM_length, JS_NewInt32(ctx, len),
                            JS_PROP_CONFIGURABLE);
-_d("js_function_set_properties: b="); _d(debug_expr); _d("\n"); ////
     JS_DefinePropertyValue(ctx, func_obj, JS_ATOM_name,
                            JS_AtomToString(ctx, name), JS_PROP_CONFIGURABLE);
-_d("js_function_set_properties: c="); _d(debug_expr); _d("\n"); ////
 }
 
 static BOOL js_class_has_bytecode(JSClassID class_id)
@@ -5108,15 +5036,11 @@ static JSValue JS_NewCFunction3(JSContext *ctx, JSCFunction *func,
     JSObject *p;
     JSAtom name_atom;
     
-_d("JS_NewCFunction3: 0="); _d(debug_expr); _d("\n"); ////
     func_obj = JS_NewObjectProtoClass(ctx, proto_val, JS_CLASS_C_FUNCTION);
-_d("JS_NewCFunction3: 1="); _d(debug_expr); _d("\n"); ////
     if (JS_IsException(func_obj))
         return func_obj;
     p = JS_VALUE_GET_OBJ(func_obj);
-_d("JS_NewCFunction3: 2="); _d(debug_expr); _d("\n"); ////
     p->u.cfunc.realm = JS_DupContext(ctx);
-_d("JS_NewCFunction3: 3="); _d(debug_expr); _d("\n"); ////
     p->u.cfunc.c_function.generic = func;
     p->u.cfunc.length = length;
     p->u.cfunc.cproto = cproto;
@@ -5125,16 +5049,11 @@ _d("JS_NewCFunction3: 3="); _d(debug_expr); _d("\n"); ////
                          cproto == JS_CFUNC_constructor_magic ||
                          cproto == JS_CFUNC_constructor_or_func ||
                          cproto == JS_CFUNC_constructor_or_func_magic);
-_d("JS_NewCFunction3: 4="); _d(debug_expr); _d("\n"); ////
     if (!name)
         name = "";
-_d("JS_NewCFunction3: a="); _d(debug_expr); _d("\n"); ////
     name_atom = JS_NewAtom(ctx, name);
-_d("JS_NewCFunction3: b="); _d(debug_expr); _d("\n"); ////
     js_function_set_properties(ctx, func_obj, name_atom, length);
-_d("JS_NewCFunction3: c="); _d(debug_expr); _d("\n"); ////
     JS_FreeAtom(ctx, name_atom);
-_d("JS_NewCFunction3: d="); _d(debug_expr); _d("\n"); ////
     return func_obj;
 }
 
@@ -8107,17 +8026,12 @@ JSValue JS_GetPropertyStr(JSContext *ctx, JSValueConst this_obj,
 static JSProperty *add_property(JSContext *ctx,
                                 JSObject *p, JSAtom prop, int prop_flags)
 {
-_d("add_property: 0="); _d(debug_expr); _d("\n"); ////
-// if (strlen(debug_expr) < 10) { assert(0); } ////
     JSShape *sh, *new_sh;
 
     sh = p->shape;
-_d("add_property: a="); _d(debug_expr); _d("\n"); ////
     if (sh->is_hashed) {
         /* try to find an existing shape */
-_d("add_property: b="); _d(debug_expr); _d("\n"); ////
         new_sh = find_hashed_shape_prop(ctx->rt, sh, prop, prop_flags);
-_d("add_property: c="); _d(debug_expr); _d("\n"); ////
         if (new_sh) {
             /* matching shape found: use it */
             /*  the property array may need to be resized */
@@ -8125,36 +8039,28 @@ _d("add_property: c="); _d(debug_expr); _d("\n"); ////
                 JSProperty *new_prop;
                 new_prop = js_realloc(ctx, p->prop, sizeof(p->prop[0]) *
                                       new_sh->prop_size);
-_d("add_property: d="); _d(debug_expr); _d("\n"); ////
                 if (!new_prop)
                     return NULL;
                 p->prop = new_prop;
             }
             p->shape = js_dup_shape(new_sh);
-_d("add_property: e="); _d(debug_expr); _d("\n"); ////
             js_free_shape(ctx->rt, sh);
-_d("add_property: f="); _d(debug_expr); _d("\n"); ////
             return &p->prop[new_sh->prop_count - 1];
         } else if (sh->header.ref_count != 1) {
             /* if the shape is shared, clone it */
             new_sh = js_clone_shape(ctx, sh);
-_d("add_property: g="); _d(debug_expr); _d("\n"); ////
             if (!new_sh)
                 return NULL;
             /* hash the cloned shape */
             new_sh->is_hashed = TRUE;
             js_shape_hash_link(ctx->rt, new_sh);
-_d("add_property: h="); _d(debug_expr); _d("\n"); ////
             js_free_shape(ctx->rt, p->shape);
-_d("add_property: i="); _d(debug_expr); _d("\n"); ////
             p->shape = new_sh;
         }
     }
     assert(p->shape->header.ref_count == 1);
-_d("add_property: j="); _d(debug_expr); _d("\n"); ////
     if (add_shape_property(ctx, &p->shape, p, prop, prop_flags))
         return NULL;
-_d("add_property: k="); _d(debug_expr); _d("\n"); ////
     return &p->prop[p->shape->prop_count - 1];
 }
 
@@ -8937,7 +8843,6 @@ static int JS_CreateProperty(JSContext *ctx, JSObject *p,
                              JSValueConst getter, JSValueConst setter,
                              int flags)
 {
-_d("JS_CreateProperty: a="); _d(debug_expr); _d("\n"); ////
     JSProperty *pr;
     int ret, prop_flags;
 
@@ -9010,25 +8915,20 @@ _d("JS_CreateProperty: a="); _d(debug_expr); _d("\n"); ////
         }
     }
 
-_d("JS_CreateProperty: b="); _d(debug_expr); _d("\n"); ////
     if (!p->extensible) {
     not_extensible:
         return JS_ThrowTypeErrorOrFalse(ctx, flags, "object is not extensible");
     }
 
-_d("JS_CreateProperty: c="); _d(debug_expr); _d("\n"); ////
     if (flags & (JS_PROP_HAS_GET | JS_PROP_HAS_SET)) {
         prop_flags = (flags & (JS_PROP_CONFIGURABLE | JS_PROP_ENUMERABLE)) |
             JS_PROP_GETSET;
     } else {
         prop_flags = flags & JS_PROP_C_W_E;
     }
-_d("JS_CreateProperty: d="); _d(debug_expr); _d("\n"); ////
     pr = add_property(ctx, p, prop, prop_flags);
-_d("JS_CreateProperty: e="); _d(debug_expr); _d("\n"); ////
     if (unlikely(!pr))
         return -1;
-_d("JS_CreateProperty: f="); _d(debug_expr); _d("\n"); ////
     if (flags & (JS_PROP_HAS_GET | JS_PROP_HAS_SET)) {
         pr->u.getset.getter = NULL;
         if ((flags & JS_PROP_HAS_GET) && JS_IsFunction(ctx, getter)) {
@@ -9047,7 +8947,6 @@ _d("JS_CreateProperty: f="); _d(debug_expr); _d("\n"); ////
             pr->u.value = JS_UNDEFINED;
         }
     }
-_d("JS_CreateProperty: g="); _d(debug_expr); _d("\n"); ////
     return TRUE;
 }
 
@@ -9141,20 +9040,14 @@ int JS_DefineProperty(JSContext *ctx, JSValueConst this_obj,
     JSProperty *pr;
     int mask, res;
 
-_d("JS_DefineProperty: a="); _d(debug_expr); _d("\n"); ////
     if (JS_VALUE_GET_TAG(this_obj) != JS_TAG_OBJECT) {
-_d("JS_DefineProperty: b="); _d(debug_expr); _d("\n"); ////
         JS_ThrowTypeErrorNotAnObject(ctx);
         return -1;
     }
-_d("JS_DefineProperty: c="); _d(debug_expr); _d("\n"); ////
     p = JS_VALUE_GET_OBJ(this_obj);
-_d("JS_DefineProperty: d="); _d(debug_expr); _d("\n"); ////
 
  redo_prop_update:
-_d("JS_DefineProperty: e="); _d(debug_expr); _d("\n"); ////
     prs = find_own_property(&pr, p, prop);
-_d("JS_DefineProperty: f="); _d(debug_expr); _d("\n"); ////
     if (prs) {
         /* the range of the Array length property is always tested before */
         if ((prs->flags & JS_PROP_LENGTH) && (flags & JS_PROP_HAS_VALUE)) {
@@ -9336,7 +9229,6 @@ _d("JS_DefineProperty: f="); _d(debug_expr); _d("\n"); ////
     }
 
     /* handle modification of fast array elements */
-_d("JS_DefineProperty: g="); _d(debug_expr); _d("\n"); ////
     if (p->fast_array) {
         uint32_t idx;
         uint32_t prop_flags;
@@ -9408,7 +9300,6 @@ _d("JS_DefineProperty: g="); _d(debug_expr); _d("\n"); ////
         }
     }
 
-_d("JS_DefineProperty: h="); _d(debug_expr); _d("\n"); ////
     return JS_CreateProperty(ctx, p, prop, val, getter, setter, flags);
 }
 
@@ -9447,12 +9338,9 @@ int JS_DefinePropertyValue(JSContext *ctx, JSValueConst this_obj,
                            JSAtom prop, JSValue val, int flags)
 {
     int ret;
-_d("JS_DefinePropertyValue: a="); _d(debug_expr); _d("\n"); ////
     ret = JS_DefineProperty(ctx, this_obj, prop, val, JS_UNDEFINED, JS_UNDEFINED,
                             flags | JS_PROP_HAS_VALUE | JS_PROP_HAS_CONFIGURABLE | JS_PROP_HAS_WRITABLE | JS_PROP_HAS_ENUMERABLE);
-_d("JS_DefinePropertyValue: b="); _d(debug_expr); _d("\n"); ////
     JS_FreeValue(ctx, val);
-_d("JS_DefinePropertyValue: c="); _d(debug_expr); _d("\n"); ////
     return ret;
 }
 
@@ -14769,7 +14657,6 @@ static __exception int js_operator_delete(JSContext *ctx, JSValue *sp)
 static JSValue js_throw_type_error(JSContext *ctx, JSValueConst this_val,
                                    int argc, JSValueConst *argv)
 {
-//puts("js_throw_type_error");////
     return JS_ThrowTypeError(ctx, "invalid property access");
 }
 
@@ -20699,7 +20586,6 @@ static __exception int next_token(JSParseState *s)
     s->token.line_num = s->line_num;
     s->token.ptr = p;
     c = *p;
-    _d("next_token: c0="); print_hex(c); _d("\n");////
     switch(c) {
     case 0:
         if (p >= s->buf_end) {
@@ -21136,11 +21022,9 @@ static __exception int next_token(JSParseState *s)
         }
         break;
     default:
-        _d("next_token: c="); print_hex(c); _d("\n");////
         if (c >= 128) {
             /* unicode value */
             c = unicode_from_utf8(p, UTF8_CHAR_LEN_MAX, &p);
-            _d("next_token: c2="); print_hex(c); _d("\n");////
             switch(c) {
             case CP_PS:
             case CP_LS:
@@ -21383,7 +21267,6 @@ static __exception int json_next_token(JSParseState *s)
         }
         break;
     default:
-        _d("json_next_token: c="); print_hex(c); _d("\n");////
         if (c >= 128) {
             js_parse_error(s, "unexpected character");
             goto fail;
@@ -34499,7 +34382,6 @@ static JSValue JS_EvalInternal(JSContext *ctx, JSValueConst this_obj,
     if (unlikely(!ctx->eval_internal)) {
         return JS_ThrowTypeError(ctx, "eval is not supported");
     }
-    _d("JS_EvalInternal: input="); write(1, input, input_len); _d("\n");////
     return ctx->eval_internal(ctx, this_obj, input, input_len, filename,
                               flags, scope_idx);
 }
@@ -34531,7 +34413,6 @@ JSValue JS_EvalThis(JSContext *ctx, JSValueConst this_obj,
 
     assert(eval_type == JS_EVAL_TYPE_GLOBAL ||
            eval_type == JS_EVAL_TYPE_MODULE);
-    _d("JS_EvalThis: input="); write(1, input, input_len); _d("\n");////
     ret = JS_EvalInternal(ctx, this_obj, input, input_len, filename,
                           eval_flags, -1);
     return ret;
@@ -52477,18 +52358,14 @@ void JS_AddIntrinsicBaseObjects(JSContext *ctx)
     JSValueConst obj, number_obj;
     JSValue obj1;
 
-_d("JS_AddIntrinsicBaseObjects: a="); _d(debug_expr); _d("\n"); ////
     ctx->throw_type_error = JS_NewCFunction(ctx, js_throw_type_error, NULL, 0);
 
     /* add caller and arguments properties to throw a TypeError */
-_d("JS_AddIntrinsicBaseObjects: b="); _d(debug_expr); _d("\n"); ////
     obj1 = JS_NewCFunction(ctx, js_function_proto_caller, NULL, 0);
-_d("JS_AddIntrinsicBaseObjects: c="); _d(debug_expr); _d("\n"); ////
     JS_DefineProperty(ctx, ctx->function_proto, JS_ATOM_caller, JS_UNDEFINED,
                       obj1, ctx->throw_type_error,
                       JS_PROP_HAS_GET | JS_PROP_HAS_SET |
                       JS_PROP_HAS_CONFIGURABLE | JS_PROP_CONFIGURABLE);
-_d("JS_AddIntrinsicBaseObjects: d="); _d(debug_expr); _d("\n"); ////
     JS_DefineProperty(ctx, ctx->function_proto, JS_ATOM_arguments, JS_UNDEFINED,
                       obj1, ctx->throw_type_error,
                       JS_PROP_HAS_GET | JS_PROP_HAS_SET |

@@ -636,6 +636,9 @@ CONFIG_STDIO_DISABLE_BUFFERING=y
 And 123 is printed OK yay! [nuttx/qemu.log](nuttx/qemu.log)
 
 ```text
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> qjs -e console.log(123) 
+...
 F 00000000C0216460
 mm_free: Freeing 0xc0216460
 add_property: f=
