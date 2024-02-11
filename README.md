@@ -716,29 +716,6 @@ undefined
 qjs > 
 ```
 
-We update our Expect Script for Automated Testing of QuickJS Interactive Mode REPL: [nuttx/qemu.exp](nuttx/qemu.exp)
-
-```bash
-## Wait for the prompt and enter this command
-expect "nsh> "
-send -s "qjs \r"
-
-expect "qjs > "
-send -s "console.log(123) \r"
-
-## Wait at most 30 seconds
-set timeout 30
-
-## Check the response...
-expect {
-  ## If we see this message, exit normally
-  "qjs >" { exit 0 }
-
-  ## If timeout, exit with an error
-  timeout { exit 1 }
-}
-```
-
 POSIX `open()` works OK too!
 
 ```text
@@ -753,4 +730,30 @@ qjs > os.open("/system/bin/init", os.O_RDONLY)
 4
 qjs > os.open("/system/bin/init", os.O_RDONLY)
 5
+```
+
+We update our Expect Script for Automated Testing of QuickJS Interactive Mode REPL: [nuttx/qemu.exp](nuttx/qemu.exp)
+
+```bash
+## Wait for the prompt and enter this command
+expect "nsh> "
+send -s "qjs \r"
+
+expect "qjs > "
+send -s "console.log(123) \r"
+
+expect "qjs > "
+send -s "os.open('/system/bin/init', os.O_RDONLY) \r"
+
+## Wait at most 30 seconds
+set timeout 30
+
+## Check the response...
+expect {
+  ## If we see this message, exit normally
+  "qjs >" { exit 0 }
+
+  ## If timeout, exit with an error
+  timeout { exit 1 }
+}
 ```

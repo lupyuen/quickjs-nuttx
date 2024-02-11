@@ -21,6 +21,9 @@ send -s "qjs \r"
 expect "qjs > "
 send -s "console.log(123) \r"
 
+expect "qjs > "
+send -s "os.open('/system/bin/init', os.O_RDONLY) \r"
+
 ## Wait at most 30 seconds
 set timeout 30
 
