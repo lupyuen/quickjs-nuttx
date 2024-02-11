@@ -636,11 +636,13 @@ nsh> qjs -e console.log(123)
 nsh>
 ```
 
-TODO: Maybe we shouldn't copy [nuttx/repl.c](nuttx/repl.c) from another platform? (Debian x64)
+TODO: Interactive Mode REPL fails. Need to increase stack some more. We see our old friend 8_c021_8308, which appears when we run out of stack
 
 ```text
+$ qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
+
+ABC
+NuttShell (NSH) NuttX-12.4.0-RC0
 nsh> qjs
-js_dump_obj: SyntaxError: invalid version (2 expected=1)
-js_dump_obj: 
-nsh> 
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006484, MTVAL: 00000008c0218308
 ```
