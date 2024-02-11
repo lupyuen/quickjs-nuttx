@@ -635,3 +635,12 @@ nsh> qjs -e console.log(123)
 123
 nsh>
 ```
+
+TODO: Maybe we shouldn't copy [nuttx/repl.c](nuttx/repl.c) from another platform? (Debian x64)
+
+```text
+nsh> qjs
+js_dump_obj: SyntaxError: invalid version (2 expected=1)
+js_dump_obj: 
+nsh> 
+```
