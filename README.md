@@ -636,6 +636,8 @@ nsh> qjs -e console.log(123)
 nsh>
 ```
 
+# Fix QuickJS Interactive Mode on NuttX
+
 But QuickJS nteractive Mode REPL fails. Need to increase stack some more. We see our old friend 8_c021_8308, which appears when we run out of stack
 
 ```text
@@ -715,6 +717,8 @@ qjs > console.log(123)
 undefined
 qjs > 
 ```
+
+# QuickJS calls POSIX `open()` on NuttX
 
 POSIX `open()` works OK too!
 
