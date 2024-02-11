@@ -47,17 +47,6 @@
 #include <sys/ioctl.h>
 #include <sys/wait.h>
 
-//// Begin Test
-#define _d(s) write(1, s, strlen(s))
-extern char *debug_expr;
-// void *debug_malloc(size_t size);
-// void *debug_realloc(void *ptr, size_t size);
-// void debug_free(void *ptr);
-// #define malloc(size) debug_malloc(size)
-// #define realloc(ptr, size) debug_realloc(ptr, size)
-// #define free(ptr) debug_free(ptr)
-//// End Test
-
 #if defined(__APPLE__)
 typedef sig_t sighandler_t;
 #if !defined(environ)
@@ -1126,6 +1115,26 @@ static JSValue js_std_file_seek(JSContext *ctx, JSValueConst this_val,
     return JS_NewInt32(ctx, ret);
 }
 
+//// Begin Test: Add ioctl() for NuttX
+static JSValue js_std_file_ioctl(JSContext *ctx, JSValueConst this_val,
+                                int argc, JSValueConst *argv)
+{
+    FILE *f = js_std_file_get(ctx, this_val);
+    int req, ret;
+    int64_t arg;
+    if (!f)
+        return JS_EXCEPTION;
+    if (JS_ToInt32(ctx, &req, argv[0]))
+        return JS_EXCEPTION;
+    if (JS_ToInt64Ext(ctx, &arg, argv[1]))
+        return JS_EXCEPTION;
+    ret = ioctl(f, req, arg);
+    if (ret < 0)
+        ret = -errno;
+    return JS_NewInt32(ctx, ret);
+}
+//// End Test
+
 static JSValue js_std_file_eof(JSContext *ctx, JSValueConst this_val,
                                int argc, JSValueConst *argv)
 {
@@ -1545,6 +1554,9 @@ static const JSCFunctionListEntry js_std_file_proto_funcs[] = {
     JS_CFUNC_DEF("getByte", 0, js_std_file_getByte ),
     JS_CFUNC_DEF("putByte", 1, js_std_file_putByte ),
     /* setvbuf, ...  */
+    //// Begin Test: Add ioctl() for NuttX
+    JS_CFUNC_DEF("ioctl", 2, js_std_file_ioctl ),
+    //// End Test
 };
 
 static int js_std_init(JSContext *ctx, JSModuleDef *m)
