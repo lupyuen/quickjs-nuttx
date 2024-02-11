@@ -364,10 +364,8 @@ int main(int argc, char **argv)
     int optind;
     char *expr = NULL;
     int interactive = 0;
-    ////int dump_memory = 0;
-    int dump_memory = 1;
-    ////int trace_memory = 0;
-    int trace_memory = 1;
+    int dump_memory = 0;
+    int trace_memory = 0;
     int empty_run = 0;
     int module = -1;
     int load_std = 0;
