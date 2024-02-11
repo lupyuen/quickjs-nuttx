@@ -776,43 +776,52 @@ Mostly Text (Code), very little Data and BSS. Most of the Dynamic Data comes fro
 
 Let's add ioctl() so we can control the NuttX LED Driver (and other devices)!
 
-We copied os.seek() from QuickJS and modded it [to become os.ioctl()](https://github.com/lupyuen/quickjs-nuttx/commit/c353ddd5be3cd60ef9e9ad6768bf7d63f86ecdaa)...
+We copied os.seek() from QuickJS and modded it [to become os.ioctl()](https://github.com/lupyuen/quickjs-nuttx/commit/91aaf4257992c08b01590f0d61fa37a386933a4b#diff-95fe784bea3e0fbdf30ba834b1a74b538090f4d70f4f8770ef397ef68ec37aa3)...
 
 ```c
-static const JSCFunctionListEntry js_std_file_proto_funcs[] = {
+static const JSCFunctionListEntry js_os_funcs[] = {
     ...
-    JS_CFUNC_DEF("ioctl", 2, js_std_file_ioctl ),
+    JS_CFUNC_DEF("ioctl", 3, js_os_ioctl ),
+    ...
 };
 
-static JSValue js_std_file_ioctl(JSContext *ctx, JSValueConst this_val,
-                                int argc, JSValueConst *argv)
+static JSValue js_os_ioctl(JSContext *ctx, JSValueConst this_val,
+                           int argc, JSValueConst *argv)
 {
-    FILE *f = js_std_file_get(ctx, this_val);
-    int req, ret;
-    int64_t arg;
-    if (!f)
+    int fd, req;
+    int64_t arg, ret;
+    BOOL is_bigint;
+    
+    if (JS_ToInt32(ctx, &fd, argv[0]))
         return JS_EXCEPTION;
-    if (JS_ToInt32(ctx, &req, argv[0]))
+    if (JS_ToInt32(ctx, &req, argv[1]))
         return JS_EXCEPTION;
-    if (JS_ToInt64Ext(ctx, &arg, argv[1]))
+    is_bigint = JS_IsBigInt(ctx, argv[2]);
+    if (JS_ToInt64Ext(ctx, &arg, argv[2]))
         return JS_EXCEPTION;
-    ret = ioctl(f, req, arg);
-    if (ret < 0)
+    ret = ioctl(fd, req, arg);
+    if (ret == -1)
         ret = -errno;
-    return JS_NewInt32(ctx, ret);
+    if (is_bigint)
+        return JS_NewBigInt64(ctx, ret);
+    else
+        return JS_NewInt64(ctx, ret);
 }
 ```
 
-But nope it doesn't work...
+Yep it seems to work...
 
 ```text
 NuttShell (NSH) NuttX-12.4.0-RC0
 nsh> qjs
 QuickJS - Type "\h" for help
-qjs > os.seek
-function seek()
 qjs > os.ioctl
-undefined
+function ioctl()
+qjs > os.ioctl(1,2,3)
+-25
+qjs > os.ioctl(100,2,3)
+-9
+qjs > 
 ```
 
 TODO
