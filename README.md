@@ -736,8 +736,6 @@ qjs > os.open("/system/bin/init", os.O_RDONLY)
 5
 ```
 
-TODO: Add support for IOCTL so we can control the NuttX LED Driver (and other devices)
-
 We update our Expect Script for Automated Testing of QuickJS Interactive Mode REPL: [nuttx/qemu.exp](nuttx/qemu.exp)
 
 ```bash
@@ -773,3 +771,48 @@ $ riscv64-unknown-elf-size ../apps/bin/qjs
 ```
 
 Mostly Text (Code), very little Data and BSS. Most of the Dynamic Data comes from the Heap. Stack is currently under 64 KB, but above 16 KB.
+
+# Add ioctl() to QuickJS for NuttX
+
+Let's add ioctl() so we can control the NuttX LED Driver (and other devices)!
+
+We copied os.seek() from QuickJS and modded it [to become os.ioctl()](https://github.com/lupyuen/quickjs-nuttx/commit/c353ddd5be3cd60ef9e9ad6768bf7d63f86ecdaa)...
+
+```c
+static const JSCFunctionListEntry js_std_file_proto_funcs[] = {
+    ...
+    JS_CFUNC_DEF("ioctl", 2, js_std_file_ioctl ),
+};
+
+static JSValue js_std_file_ioctl(JSContext *ctx, JSValueConst this_val,
+                                int argc, JSValueConst *argv)
+{
+    FILE *f = js_std_file_get(ctx, this_val);
+    int req, ret;
+    int64_t arg;
+    if (!f)
+        return JS_EXCEPTION;
+    if (JS_ToInt32(ctx, &req, argv[0]))
+        return JS_EXCEPTION;
+    if (JS_ToInt64Ext(ctx, &arg, argv[1]))
+        return JS_EXCEPTION;
+    ret = ioctl(f, req, arg);
+    if (ret < 0)
+        ret = -errno;
+    return JS_NewInt32(ctx, ret);
+}
+```
+
+But nope it doesn't work...
+
+```text
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> qjs
+QuickJS - Type "\h" for help
+qjs > os.seek
+function seek()
+qjs > os.ioctl
+undefined
+```
+
+TODO
