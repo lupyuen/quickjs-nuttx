@@ -646,3 +646,9 @@ NuttShell (NSH) NuttX-12.4.0-RC0
 nsh> qjs
 riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c0006484, MTVAL: 00000008c0218308
 ```
+
+We increase Stack from 8 KB to 16 KB (looks too little?)...
+
+```bash
+CONFIG_POSIX_SPAWN_DEFAULT_STACKSIZE=16384
+```
