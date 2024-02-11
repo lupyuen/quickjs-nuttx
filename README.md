@@ -673,6 +673,23 @@ int up_create_stack(struct tcb_s *tcb, size_t stack_size, uint8_t ttype) {
   DEBUGASSERT(stack_size <= TLS_MAXSTACK);
 ```
 
-TODO: Increase CONFIG_TLS_LOG2_MAXSTACK from 13 to 14:
+We increase CONFIG_TLS_LOG2_MAXSTACK from 13 to 14:
 - Library Routines > Thread Local Storage (TLS) > Maximum stack size (log2)
 - Set to 14
+
+TODO: Stack is still full. Increase Stack some more
+
+```text
+→ qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
+ABC
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> qjs
+riscv_exception: EXCEPTION: Load page fault. MCAUSE: 000000000000000d, EPC: 00000000c005cc8c, MTVAL: 0000000000040129
+...
+SIGMASK          STACKBASE  STACKSIZE      USED   FILLED    COMMAND
+dump_tasks:   ----   --- --- -------- ------- --- ------- ---------- ---------------- 0x802002b0      2048      2040    99.6%!   irq
+dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000000 0x80206010      3056      1440    47.1%    Idle_Task
+dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x8020c050      1968       704    35.7%    lpwork 0x802015f0 0x80201618
+dump_task:       2     2 100 RR       Task    - Waiting Semaphore  0000000000000000 0xc0204040      3008       744    24.7%    /system/bin/init
+dump_task:       3     3 100 RR       Task    - Running            0000000000000000 0xc0204030     16336     16320    99.9%!   qjs
+```
