@@ -929,3 +929,13 @@ qjs > ret = os.ioctl(fd, ULEDIOC_SETALL, 0);
 0
 qjs > 
 ```
+
+# Add LED Driver to NuttX Ox64 BL808 SBC
+
+Now we test on a Real Device with a Real LED: Ox64 BL808 SBC...
+
+- We add the [GPIO Driver for Ox64 BL808](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/8f75f3744f3964bd3ed0596421a93e59fb39cdd8)
+
+- We add the LED Driver for Ox64 BL808
+
+TODO
