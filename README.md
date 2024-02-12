@@ -942,4 +942,13 @@ Now we test on a Real Device with a Real LED: Ox64 BL808 SBC...
 
 - We fix the `leds` app because [task_create is missing from QEMU knsh64](https://github.com/lupyuen2/wip-pinephone-nuttx-apps/commit/66f1389c8d17eecdc5ef7baa62d13435bd053ee3)
 
+But our RAM Disk Region is too small...
+
+```text
+Starting kernel ...
+bl808_copy_ramdisk: RAM Disk Region too small. Increase by 586288l bytes.
+```
+
+We increase the RAM Disk Region...
+
 TODO
