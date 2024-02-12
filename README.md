@@ -942,13 +942,109 @@ Now we test on a Real Device with a Real LED: Ox64 BL808 SBC...
 
 - We fix the `leds` app because [task_create is missing from QEMU knsh64](https://github.com/lupyuen2/wip-pinephone-nuttx-apps/commit/66f1389c8d17eecdc5ef7baa62d13435bd053ee3)
 
-But our RAM Disk Region is too small...
+But our RAM Disk Region is too small (16 MB)...
 
 ```text
 Starting kernel ...
 bl808_copy_ramdisk: RAM Disk Region too small. Increase by 586288l bytes.
 ```
 
-We increase the RAM Disk Region...
+Initial RAM Disk (initrd) is now 17 MB...
 
-TODO
+```text
+→ ls -l $HOME/ox64/nuttx/initrd
+-rw-r--r--  1 17363968 Feb 12 13:06 /Users/Luppy/ox64/nuttx/initrd
+```
+
+We [increase the RAM Disk Region from](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/e5e2452920a6f0e1379a55df943e8f3c74d25274) 16 MB to 32 MB.
+
+But QuickJS crashes on Ox64...
+
+```text
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> qjs
+riscv_exception: EXCEPTION: Instruction page fault. MCAUSE: 000000000000000c, EPC: 0000000000007028, MTVAL: 0000000000007028
+riscv_exception: PANIC!!! Exception = 000000000000000c
+_assert: Current Version: NuttX  12.4.0-RC0 904b955-dirty Feb 12 2024 14:32:16 risc-v
+_assert: Assertion failed panic: at file: common/riscv_exception.c:85 task: /system/bin/init process: /system/bin/init 0x8000004a
+up_dump_register: EPC: 0000000000007028
+up_dump_register: A0: 0000000000000001 A1: 0000000080210010 A2: 0000000000000001 A3: 0000000080210010
+up_dump_register: A4: 0000000000000000 A5: 0000000000007028 A6: 0000000000000101 A7: 0000000000000000
+up_dump_register: T0: 0000000000000000 T1: 0000000000000000 T2: 0000000000000000 T3: 0000000000000000
+up_dump_register: T4: 0000000000000000 T5: 0000000000000000 T6: 0000000000000000
+up_dump_register: S0: 0000000000000000 S1: 0000000000000000 S2: 0000000000000000 S3: 0000000000000000
+up_dump_register: S4: 0000000000000000 S5: 0000000000000000 S6: 0000000000000000 S7: 0000000000000000
+up_dump_register: S8: 0000000000000000 S9: 0000000000000000 S10: 0000000000000000 S11: 0000000000000000
+up_dump_register: SP: 0000000080220000 FP: 0000000000000000 TP: 0000000000000000 RA: 000000005020b28e
+dump_stacks: ERROR: Stack pointer is not within the stack
+dump_stack: IRQ Stack:
+dump_stack:   base: 0x50400290
+dump_stack:   size: 00002048
+stack_dump: 0x50400708: 5021986a 00000000 5021a6d8 00000000 0000000a 00000000 50400828 00000000
+stack_dump: 0x50400728: 00000008 00000000 0000005f 00000000 5020825e 00000000 504008d0 00000000
+stack_dump: 0x50400748: 00000008 00000000 ffff9fef ffffffff 00004010 00000000 504008b0 00000000
+stack_dump: 0x50400768: 30386230 35303430 ffff9fef ffffffff 00004010 00000000 00000039 00000000
+stack_dump: 0x50400788: 00000000 00000000 5040b440 00000000 80210c00 00000000 00000bc0 00000000
+stack_dump: 0x504007a8: 50401b30 00000000 00042020 00000002 80210040 00000000 50400290 00000000
+stack_dump: 0x504007c8: 5021a3d0 00000000 5021a6c8 00000000 50400a90 00000000 50400848 00000000
+stack_dump: 0x504007e8: 502175bc 00000000 50400290 00000000 5021a3d0 00000000 50400868 00000000
+stack_dump: 0x50400808: 00000060 00000000 50218706 00000000 502186a0 00000000 50209008 00000000
+stack_dump: 0x50400828: 0000000a 00000000 50400808 00000000 5020923c 00000000 50209008 00000000
+stack_dump: 0x50400848: 50400880 00000000 00000800 00000000 5020925c 00000000 50218706 00000000
+stack_dump: 0x50400868: 50400880 00000000 50209008 00000000 50201dd0 00000000 5021a6c8 00000000
+stack_dump: 0x50400888: 50400868 00000000 50400880 00000000 00000000 00000000 50209008 00000000
+stack_dump: 0x504008a8: 00000000 00000000 00000000 00000000 00000000 00000000 50209008 00000000
+stack_dump: 0x504008c8: 00000000 00000000 5021a6e8 00000000 00000001 00000000 00000001 00000000
+stack_dump: 0x504008e8: 5040a630 00000000 00000000 00000000 5020216a 00000000 8000004a 00000000
+stack_dump: 0x50400908: deadbeef deadbeef deadbeef deadbeef 00000000 00000000 5040a630 00000000
+stack_dump: 0x50400928: 5040ca40 00000000 50219b20 00000000 50219df8 00000000 00000055 00000000
+stack_dump: 0x50400948: 7474754e 00000058 00000000 00000000 00000000 00000000 0000000c 00000000
+stack_dump: 0x50400968: 5040ca40 00000000 504009d8 00000000 502175bc 2e323100 2d302e34 00304352
+stack_dump: 0x50400988: 50219dd0 00000000 3039beef 35396234 69642d35 20797472 20626546 32203231
+stack_dump: 0x504009a8: 20343230 333a3431 36313a32 00000000 0000000a 00000000 0000000c 73697200
+stack_dump: 0x504009c8: 00762d63 00000000 50400028 00000000 50400a10 00000000 00000000 00000000
+stack_dump: 0x504009e8: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+stack_dump: 0x50400a08: 00000000 00000000 00000000 00000000 00000000 00000000 0000000c 00000000
+stack_dump: 0x50400a28: 5040ca40 00000000 0000000c 00000000 502012e8 00000000 00000008 00000000
+stack_dump: 0x50400a48: 50401b30 00000000 5040ca40 00000000 50200d66 00000000 00000000 00000000
+stack_dump: 0x50400a68: 00000000 00000000 0000000c 00000000 50200894 00000000 00007028 00000000
+stack_dump: 0x50400a88: 50200180 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+dump_stack: Kernel Stack:
+dump_stack:   base: 0x5040b440
+dump_stack:   size: 00003072
+stack_dump: 0x5040c040: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+dump_stack: User Stack:
+dump_stack:   base: 0x80210040
+dump_stack:   size: 00003008
+stack_dump:0x80210918: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210938: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210958: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210978: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210998: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802109b8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802109d8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x802109f8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210a18: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210a38: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210a58: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210a78: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210a98: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210ab8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210ad8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210af8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210b18: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210b38: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210b58: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210b78: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbee deadbeef
+stack_dump: 0x80210b98: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210bb8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210bd8: deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef deadbeef
+stack_dump: 0x80210bf8: deadbeef deadbeef 00000000 00000000 00000000 00000000 00000000 00000000
+dump_tasks:    PID GROUP PRI POLICY   TYPE    NPX STATE   EVENT      SIGMASK          STACKBASE  STACKSIZE      USED   FILLED    COMMAND
+dump_tasks:   ----   --- --- -------- ------- --- ------- ---------- ---------------- 0x50400290      2048       968    47.2%    irq
+dump_task:       0     0   0 FIFO     Kthread - Ready              0000000000000000 0x50407010      3056      1136    37.1%    Idle_Task
+dump_task:       1     1 100 RR       Kthread - Waiting Semaphore  0000000000000000 0x50410050      1968       704    35.7%    lpwork 0x50401a90 0x50401ab8
+dump_task:       6     6 100 RR       Task    - Running            0000000000000000 0x80210030     65488         0     0.0%    qjs
+dump_task:       3     3 100 RR       Task    - Waiting Semaphore  0000000000000000 0x80210040      3008       744    24.7%    /system/bin/init
+```
+
