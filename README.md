@@ -830,4 +830,43 @@ Let's test QuickJS ioctl() with NuttX LED Driver...
 
 # Add LED Driver to NuttX QEMU RISC-V
 
+We add the [LED Driver to NuttX QEMU RISC-V (knsh64)](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/1037eda906f11aef44f7670f8cc5a1c1d2141911).
+
+We fix the `leds` app because [task_create is missing from QEMU knsh64](https://github.com/lupyuen2/wip-pinephone-nuttx-apps/commit/45dbe5ce07239e7ca7dcb50cb0e55da151052429).
+
+The `leds` app works great with the LED Driver...
+
+```text
++ qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
+ABC[    0.015000] board_userled_all: ledset=0x0
+[    0.016000] board_userled_all: led=0, val=0
+[    0.016000] board_userled_all: led=1, val=0
+[    0.017000] board_userled_all: led=2, val=0
+
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> leds
+leds_main: Starting the led_daemon
+
+led_daemon (pid# 3): Running
+led_daemon: Opening /dev/userleds
+led_daemon: Supported LEDs 0x07
+led_daemon: LED set 0x01
+[   29.652000] board_userled_all: ledset=0x1
+[   29.652000] board_userled_all: led=0, val=1
+[   29.652000] board_userled_all: led=1, val=0
+[   29.653000] board_userled_all: led=2, val=0
+led_daemon: LED set 0x02
+[   30.154000] board_userled_all: ledset=0x2
+[   30.154000] board_userled_all: led=0, val=0
+[   30.155000] board_userled_all: led=1, val=1
+[   30.155000] board_userled_all: led=2, val=0
+led_daemon: LED set 0x03
+[   30.656000] board_userled_all: ledset=0x3
+[   30.656000] board_userled_all: led=0, val=1
+[   30.656000] board_userled_all: led=1, val=1
+[   30.657000] board_userled_all: led=2, val=0
+```
+
+Now we test with QuickJS...
+
 TODO
