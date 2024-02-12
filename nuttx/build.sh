@@ -4,6 +4,9 @@
 ## TODO: Set PATH
 export PATH="$HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/bin:$PATH"
 
+# target=$HOME/riscv
+target=$HOME/ox64
+
 set -e  #  Exit when any command fails
 set -x  #  Echo commands
 
@@ -44,10 +47,10 @@ nuttx_options=" \
   -mcmodel=medany \
   -march=rv64imafdc \
   -mabi=lp64d \
-  -isystem ../apps/import/include \
-  -isystem ../apps/import/include \
+  -isystem $target/apps/import/include \
+  -isystem $target/apps/import/include \
   -D__NuttX__  \
-  -I "../apps/include"   \
+  -I "$target/apps/include"   \
 "
 
 ## Compile the NuttX App
@@ -150,10 +153,10 @@ riscv64-unknown-elf-ld \
   --oformat elf64-littleriscv \
   -e _start \
   -Bstatic \
-  -T../apps/import/scripts/gnu-elf.ld \
-  -L../apps/import/libs \
+  -T$target/apps/import/scripts/gnu-elf.ld \
+  -L$target/apps/import/libs \
   -L "$HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
-  ../apps/import/startup/crt0.o  \
+  $target/apps/import/startup/crt0.o  \
   .obj/qjs.o \
   .obj/repl.o \
   .obj/quickjs.o \
@@ -171,19 +174,19 @@ riscv64-unknown-elf-ld \
   -lproxies \
   -lgcc \
   -lm \
-  ../apps/libapps.a \
+  $target/apps/libapps.a \
   $HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
-  -o ../apps/bin/qjs \
+  -o $target/apps/bin/qjs \
   -Map nuttx/qjs.map
 
 ## Show the size
-riscv64-unknown-elf-size ../apps/bin/qjs
+riscv64-unknown-elf-size $target/apps/bin/qjs
 
 ## Dump the disassembly
 riscv64-unknown-elf-objdump \
   -t -S --demangle --line-numbers --wide \
-  ../apps/bin/qjs \
+  $target/apps/bin/qjs \
   >nuttx/qjs.S \
   2>&1
 

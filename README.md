@@ -936,6 +936,10 @@ Now we test on a Real Device with a Real LED: Ox64 BL808 SBC...
 
 - We add the [GPIO Driver for Ox64 BL808](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/8f75f3744f3964bd3ed0596421a93e59fb39cdd8)
 
-- We add the LED Driver for Ox64 BL808
+- We add the [LED Driver for Ox64 BL808](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/4f3996959132ca0d35874b7be3eef89d6bf7f351)
+
+- We increase [Ox64 BL808 Stack Size to 64 KB](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/904b95534298378d64b99c1f9e649f8bc27a8048) for QuickJS
+
+- We fix the `leds` app because [task_create is missing from QEMU knsh64](https://github.com/lupyuen2/wip-pinephone-nuttx-apps/commit/66f1389c8d17eecdc5ef7baa62d13435bd053ee3)
 
 TODO
