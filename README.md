@@ -956,7 +956,7 @@ Initial RAM Disk (initrd) is now 17 MB...
 -rw-r--r--  1 17363968 Feb 12 13:06 /Users/Luppy/ox64/nuttx/initrd
 ```
 
-We [increase the RAM Disk Region from](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/e5e2452920a6f0e1379a55df943e8f3c74d25274) 16 MB to 32 MB.
+We [increase the RAM Disk Region from](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/e5e2452920a6f0e1379a55df943e8f3c74d25274) 16 MB to 40 MB.
 
 But QuickJS crashes on Ox64...
 
