@@ -1068,18 +1068,8 @@ Yep it works! https://lupyuen.github.io/nuttx-tinyemu/quickjs/
 ```text
 Loading...
 TinyEMU Emulator for Ox64 BL808 RISC-V SBC
-ABCbl808_configgpio: regaddr=0x20000938, cfg=0xb40
-board_userled_all: ledset=0x0
-board_userled_all: led=0, val=0
 bl808_gpiowrite: regaddr=0x20000938, clear=0x1000000
-board_userled_all: led=1, val=0
-board_userled_all: led=2, val=0
-board_late_initialize: Config GPIO: pin=29, attr=0xb
-bl808_configgpio: regaddr=0x20000938, cfg=0xb40
-board_late_initialize: Set GPIO: pin=29
 bl808_gpiowrite: regaddr=0x20000938, set=0x1000000
-board_late_initialize: Clear GPIO: pin=29
-bl808_gpiowrite: regaddr=0x20000938, clear=0x1000000
 
 NuttShell (NSH) NuttX-12.4.0-RC0
 nsh> qjs
@@ -1087,24 +1077,20 @@ QuickJS - Type "\h" for help
 qjs > console.log(123)
 123
 undefined
+
 qjs > ULEDIOC_SETALL = 0x1d03
 7427
+
 qjs > fd = os.open("/dev/userleds", os.O_WRONLY)
 3
-qjs > os.ioctl(fd, ULEDIOC_SETALL, 1)board_userled_all: ledset=0x1
-board_userled_all: led=0, val=1
+
+qjs > os.ioctl(fd, ULEDIOC_SETALL, 1)
 bl808_gpiowrite: regaddr=0x20000938, set=0x1000000
-board_userled_all: led=1, val=0
-board_userled_all: led=2, val=0
- 
 0
-qjs > os.ioctl(fd, ULEDIOC_SETALL, 0)board_userled_all: ledset=0x0
-board_userled_all: led=0, val=0
+
+qjs > os.ioctl(fd, ULEDIOC_SETALL, 0)
 bl808_gpiowrite: regaddr=0x20000938, clear=0x1000000
-board_userled_all: led=1, val=0
-board_userled_all: led=2, val=0
- 
 0
 ```
 
-TODO: Blink the LED on Ox64 Emulator
+TODO: Simulate the LED on Ox64 Emulator
