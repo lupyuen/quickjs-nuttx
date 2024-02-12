@@ -956,7 +956,7 @@ Initial RAM Disk (initrd) is now 17 MB...
 -rw-r--r--  1 17363968 Feb 12 13:06 /Users/Luppy/ox64/nuttx/initrd
 ```
 
-We [increase the RAM Disk Region from](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/e5e2452920a6f0e1379a55df943e8f3c74d25274) 16 MB to 40 MB.
+We [increase the RAM Disk Region from](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/28453790d06c0282b85e5df98624f8fa1c0b2226) 16 MB to 40 MB.
 
 But QuickJS crashes on Ox64...
 
@@ -1048,3 +1048,13 @@ dump_task:       6     6 100 RR       Task    - Running            0000000000000
 dump_task:       3     3 100 RR       Task    - Waiting Semaphore  0000000000000000 0x80210040      3008       744    24.7%    /system/bin/init
 ```
 
+That's because [Ox64 Build is different](https://github.com/lupyuen/quickjs-nuttx/commit/221f80518f175a080888f2824408d81c734b9877#diff-a1427809210c3d4b0e73ca2c8712d61eaa10652316dfdcb7ac0cec8a8a81e27d)
+
+We fix it, now it has doubled in size...
+
+```text
+→ ls -l $HOME/ox64/nuttx/initrd
+-rw-r--r--  1 Luppy  staff  35765248 Feb 12 14:57 /Users/Luppy/ox64/nuttx/initrd
+```
+
+And QuickJS blinks the LED on Ox64 yay!
