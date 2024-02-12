@@ -899,8 +899,8 @@ Which becomes this in QuickJS...
 ```text
 ULEDIOC_SETALL = 0x1d03
 fd = os.open("/dev/userleds", os.O_WRONLY)
-os.ioctl(fd, ULEDIOC_SETALL, 1);
-os.ioctl(fd, ULEDIOC_SETALL, 0);
+os.ioctl(fd, ULEDIOC_SETALL, 1)
+os.ioctl(fd, ULEDIOC_SETALL, 0)
 ```
 
 And it works yay!
@@ -1058,6 +1058,8 @@ We fix it, now it has doubled in size...
 ```
 
 And QuickJS blinks the LED on Ox64 yay!
+
+# QuickJS blinks the LED on Ox64 Emulator
 
 _Will QuickJS run on Ox64 Emulator?_
 
