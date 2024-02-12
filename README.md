@@ -869,7 +869,9 @@ led_daemon: LED set 0x03
 
 Now we test with QuickJS...
 
-TODO
+# QuickJS calls NuttX LED Driver
+
+This is how we blink an LED in C: [leds_main.c](https://github.com/lupyuen2/wip-pinephone-nuttx-apps/blob/qemuled/examples/leds/leds_main.c)
 
 ```c
 #define _ULEDBASE       (0x1d00) /* User LED ioctl commands */
@@ -890,4 +892,40 @@ int ret = ioctl(fd, ULEDIOC_SETALL, 0);
 assert(ret >= 0);
 
 close(fd);
+```
+
+Which becomes this in QuickJS...
+
+```text
+ULEDIOC_SETALL = 0x1d03
+fd = os.open("/dev/userleds", os.O_WRONLY)
+ret = os.ioctl(fd, ULEDIOC_SETALL, 1);
+ret = os.ioctl(fd, ULEDIOC_SETALL, 0);
+```
+
+And it works yay!
+
+```text
+→ qemu-system-riscv64 -semihosting -M virt,aclint=on -cpu rv64 -smp 8 -bios none -kernel nuttx -nographic
+
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> qjs
+QuickJS - Type "\h" for help
+qjs > ULEDIOC_SETALL = 0x1d03
+7427
+qjs > fd = os.open("/dev/userleds", os.O_WRONLY)
+3
+qjs > ret = os.ioctl(fd, ULEDIOC_SETALL, 1);
+[   24.851000] board_userled_all: ledset=0x1
+[   24.852000] board_userled_all: led=0, val=1
+[   24.852000] board_userled_all: led=1, val=0
+[   24.852000] board_userled_all: led=2, val=0
+0
+qjs > ret = os.ioctl(fd, ULEDIOC_SETALL, 0);
+[   29.617000] board_userled_all: ledset=0x0
+[   29.617000] board_userled_all: led=0, val=0
+[   29.617000] board_userled_all: led=1, val=0
+[   29.618000] board_userled_all: led=2, val=0
+0
+qjs > 
 ```
