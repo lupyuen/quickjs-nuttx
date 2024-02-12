@@ -870,3 +870,24 @@ led_daemon: LED set 0x03
 Now we test with QuickJS...
 
 TODO
+
+```c
+#define _ULEDBASE       (0x1d00) /* User LED ioctl commands */
+#define _IOC(type,nr)   ((type)|(nr))
+#define _ULEDIOC(nr)      _IOC(_ULEDBASE,nr)
+#define ULEDIOC_SETALL     _ULEDIOC(0x0003)
+
+// Open the LED Device
+int fd = open("/dev/userleds", os.O_WRONLY);
+assert(fd > 0);
+
+// Flip LED 0 to On
+int ret = ioctl(fd, ULEDIOC_SETALL, 1);
+assert(ret >= 0);
+
+// Flip LED 0 to Off
+int ret = ioctl(fd, ULEDIOC_SETALL, 0);
+assert(ret >= 0);
+
+close(fd);
+```
