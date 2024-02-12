@@ -809,6 +809,8 @@ static JSValue js_os_ioctl(JSContext *ctx, JSValueConst this_val,
 }
 ```
 
+TODO: Is arg int32 or int64?
+
 Yep it seems to work...
 
 ```text
@@ -823,5 +825,9 @@ qjs > os.ioctl(100,2,3)
 -9
 qjs > 
 ```
+
+Let's test QuickJS ioctl() with NuttX LED Driver...
+
+# Add LED Driver to NuttX QEMU RISC-V
 
 TODO
