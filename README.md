@@ -1058,3 +1058,7 @@ We fix it, now it has doubled in size...
 ```
 
 And QuickJS blinks the LED on Ox64 yay!
+
+TODO: Will QuickJS run on Ox64 Emulator?
+
+TODO: Blink the LED in on Ox64 Emulator
