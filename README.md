@@ -1094,3 +1094,7 @@ bl808_gpiowrite: regaddr=0x20000938, clear=0x1000000
 ```
 
 TODO: Simulate the LED on Ox64 Emulator
+
+When writing to BL808 GPIO Output: [Send an Emulator Notification](https://github.com/lupyuen/ox64-tinyemu/commit/622ba840fd40ac627de2bdb6a73354ce291754b9) to the Console: {"nuttxemu":{"gpio29":1}}
+
+In our Web Browser JavaScript: [Handle Emulator Notification](https://github.com/lupyuen/nuttx-tinyemu/commit/2cadf80b7a95e182d9ad0aef2edfd08e0948affa#diff-0935fa7cc51b2920653500625c6e64acb1c8b81b85a6042c716b049205c75a63)
