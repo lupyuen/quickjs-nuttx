@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #  Build QuickJS for Apache NuttX RTOS
+#  To force rebuild: rm -r .obj
 
 ## TODO: Set RISC-V Toolchain Path
 toolchain=$HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin
@@ -8,10 +9,12 @@ export PATH="$toolchain/bin:$PATH"
 ## Uncomment this to build for QEMU 64-bit RISC-V (Kernel Mode)
 ## We assume that NuttX is at $HOME/riscv/nuttx and $HOME/riscv/apps
 ## target=riscv
+## target_path=$HOME/$target
 
 ## Uncomment this to build for Ox64 BL808 RISC-V SBC
 ## We assume that NuttX is at $HOME/ox64/nuttx and $HOME/ox64/apps
 target=ox64
+target_path=$HOME/$target
 
 set -e  #  Exit when any command fails
 set -x  #  Echo commands
@@ -53,13 +56,23 @@ nuttx_options=" \
   -mcmodel=medany \
   -march=rv64imafdc \
   -mabi=lp64d \
-  -isystem $HOME/$target/apps/import/include \
-  -isystem $HOME/$target/apps/import/include \
+  -isystem $target_path/apps/import/include \
+  -isystem $target_path/apps/import/include \
   -D__NuttX__  \
-  -I "$HOME/$target/apps/include"   \
+  -I "$target_path/apps/include"   \
 "
 
 ## Compile the NuttX App
+## This one is slooooooow
+if [ ! -e ".obj/quickjs.o" ] 
+then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/quickjs.o \
+    quickjs.c
+fi
+
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   -o .obj/stub.o \
@@ -69,16 +82,6 @@ riscv64-unknown-elf-gcc \
   $nuttx_options \
   -o .obj/arch_atomic.o \
   nuttx/arch_atomic.c
-
-## This one is slooooooow
-# if [ ! -e ".obj/quickjs.o" ] 
-# then
-  riscv64-unknown-elf-gcc \
-    $nuttx_options \
-    $qjs_options \
-    -o .obj/quickjs.o \
-    quickjs.c
-# fi
 
 if [ ! -e ".obj/repl.o" ] 
 then
@@ -185,7 +188,7 @@ riscv64-unknown-elf-ld \
   -lgcc $HOME/ox64/apps/libapps.a \
   $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
-  -o $HOME/$target/apps/bin/qjs \
+  -o $target_path/apps/bin/qjs \
   -Map nuttx/qjs.map
 
 ## Link the NuttX App for QEMU
@@ -195,10 +198,10 @@ riscv64-unknown-elf-ld \
 #   --oformat elf64-littleriscv \
 #   -e _start \
 #   -Bstatic \
-#   -T$HOME/$target/apps/import/scripts/gnu-elf.ld \
-#   -L$HOME/$target/apps/import/libs \
+#   -T$target_path/apps/import/scripts/gnu-elf.ld \
+#   -L$target_path/apps/import/libs \
 #   -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
-#   $HOME/$target/apps/import/startup/crt0.o  \
+#   $target_path/apps/import/startup/crt0.o  \
 #   .obj/qjs.o \
 #   .obj/repl.o \
 #   .obj/quickjs.o \
@@ -216,19 +219,19 @@ riscv64-unknown-elf-ld \
 #   -lproxies \
 #   -lgcc \
 #   -lm \
-#   $HOME/$target/apps/libapps.a \
+#   $target_path/apps/libapps.a \
 #   $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
 #   --end-group \
-#   -o $HOME/$target/apps/bin/qjs \
+#   -o $target_path/apps/bin/qjs \
 #   -Map nuttx/qjs.map
 
 ## Show the size
-riscv64-unknown-elf-size $HOME/$target/apps/bin/qjs
+riscv64-unknown-elf-size $target_path/apps/bin/qjs
 
 ## Dump the disassembly
 riscv64-unknown-elf-objdump \
   -t -S --demangle --line-numbers --wide \
-  $HOME/$target/apps/bin/qjs \
+  $target_path/apps/bin/qjs \
   >nuttx/qjs-$target.S \
   2>&1
 
