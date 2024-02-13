@@ -1116,3 +1116,9 @@ And it works! https://lupyuen.github.io/nuttx-tinyemu/quickjs/
 [(Watch the __Demo on YouTube__)](https://youtu.be/AFDVceqQNRs)
 
 ![QuickJS JavaScript Engine to Apache NuttX RTOS](https://lupyuen.github.io/images/quickjs-title2.png)
+
+# How Small is QuickJS
+
+We ran [linkermapviz](https://github.com/PromyLOPh/linkermapviz) on the Linker Map: [nuttx/qjs-riscv.map](nuttx/qjs-riscv.map)
+
+To produce this [Visualised Linker Map](https://lupyuen.github.io/nuttx-tinyemu/quickjs/linkermap)
