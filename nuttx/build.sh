@@ -10,11 +10,18 @@ export PATH="$toolchain/bin:$PATH"
 ## We assume that NuttX is at $HOME/riscv/nuttx and $HOME/riscv/apps
 ## target=riscv
 ## target_path=$HOME/$target
+## target_options=
 
 ## Uncomment this to build for Ox64 BL808 RISC-V SBC
 ## We assume that NuttX is at $HOME/ox64/nuttx and $HOME/ox64/apps
 target=ox64
 target_path=$HOME/$target
+target_options=" \
+  -r \
+  -e main \
+  -T$target_path/nuttx/binfmt/libelf/gnu-elf.ld \
+  -r \
+"
 
 set -e  #  Exit when any command fails
 set -x  #  Echo commands
@@ -155,15 +162,12 @@ riscv64-unknown-elf-gcc \
   libbf.c
 fi
 
-## Link the NuttX App for Ox64
+## Link the NuttX App
 ## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
 ## For riscv64-unknown-elf-ld: "rv64imafdc/lp64d
 riscv64-unknown-elf-ld \
   --oformat elf64-littleriscv \
-  -r \
-  -e main \
-  -T $target_path/nuttx/binfmt/libelf/gnu-elf.ld \
-  -r \
+  $target_options \
   -e _start \
   -Bstatic \
   -T$target_path/apps/import/scripts/gnu-elf.ld \
@@ -186,45 +190,12 @@ riscv64-unknown-elf-ld \
   -lc \
   -lproxies \
   -lm \
-  -lgcc $target_path/apps/libapps.a \
+  -lgcc \
+  $target_path/apps/libapps.a \
   $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
   -o $target_path/apps/bin/qjs \
   -Map nuttx/qjs.map
-
-## Link the NuttX App for QEMU
-## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
-## For riscv64-unknown-elf-ld: "rv64imafdc/lp64d
-# riscv64-unknown-elf-ld \
-#   --oformat elf64-littleriscv \
-#   -e _start \
-#   -Bstatic \
-#   -T$target_path/apps/import/scripts/gnu-elf.ld \
-#   -L$target_path/apps/import/libs \
-#   -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
-#   $target_path/apps/import/startup/crt0.o  \
-#   .obj/qjs.o \
-#   .obj/repl.o \
-#   .obj/quickjs.o \
-#   .obj/libregexp.o \
-#   .obj/libunicode.o \
-#   .obj/cutils.o \
-#   .obj/quickjs-libc.o \
-#   .obj/libbf.o \
-#   .obj/qjscalc.o \
-#   .obj/arch_atomic.o \
-#   .obj/stub.o \
-#   --start-group \
-#   -lmm \
-#   -lc \
-#   -lproxies \
-#   -lgcc \
-#   -lm \
-#   $target_path/apps/libapps.a \
-#   $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
-#   --end-group \
-#   -o $target_path/apps/bin/qjs \
-#   -Map nuttx/qjs.map
 
 ## Show the size
 riscv64-unknown-elf-size $target_path/apps/bin/qjs
