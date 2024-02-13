@@ -156,19 +156,21 @@ riscv64-unknown-elf-gcc \
 fi
 
 ## Link the NuttX App for Ox64
+## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
+## For riscv64-unknown-elf-ld: "rv64imafdc/lp64d
 riscv64-unknown-elf-ld \
   --oformat elf64-littleriscv \
   -r \
   -e main \
-  -T $HOME/ox64/nuttx/binfmt/libelf/gnu-elf.ld \
+  -T $target_path/nuttx/binfmt/libelf/gnu-elf.ld \
   -r \
   -e _start \
   -Bstatic \
-  -T$HOME/ox64/apps/import/scripts/gnu-elf.ld \
-  -L$HOME/ox64/apps/import/libs \
+  -T$target_path/apps/import/scripts/gnu-elf.ld \
+  -L$target_path/apps/import/libs \
   -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d" \
   -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
-  $HOME/ox64/apps/import/startup/crt0.o  \
+  $target_path/apps/import/startup/crt0.o  \
   .obj/qjs.o \
   .obj/repl.o \
   .obj/quickjs.o \
@@ -185,7 +187,7 @@ riscv64-unknown-elf-ld \
   -lc \
   -lproxies \
   -lm \
-  -lgcc $HOME/ox64/apps/libapps.a \
+  -lgcc $target_path/apps/libapps.a \
   $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
   -o $target_path/apps/bin/qjs \
