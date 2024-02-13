@@ -378,7 +378,7 @@ _Where exactly in main() are we crashing?_
 
 JS_NewCFunction3 seems to crash the second time we call it.
 
-TODO: Are we running low on App Text / Data / Heap? According to Linker Map [nuttx/qjs.map](nuttx/qjs.map), we're using 486 KB of App Text (Code).
+TODO: Are we running low on App Text / Data / Heap? According to Linker Map [nuttx/qjs-riscv.map](nuttx/qjs-riscv.map), we're using 486 KB of App Text (Code).
 
 ```text
 $ riscv64-unknown-elf-size ../apps/bin/qjs

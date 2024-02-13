@@ -8,20 +8,20 @@ export PATH="$toolchain/bin:$PATH"
 
 ## Uncomment this to build for QEMU 64-bit RISC-V (Kernel Mode)
 ## We assume that NuttX is at $HOME/riscv/nuttx and $HOME/riscv/apps
-# target=riscv
-# target_path=$HOME/$target
-# target_options=
+target=riscv
+target_path=$HOME/$target
+target_options=
 
 ## Uncomment this to build for Ox64 BL808 RISC-V SBC
 ## We assume that NuttX is at $HOME/ox64/nuttx and $HOME/ox64/apps
-target=ox64
-target_path=$HOME/$target
-target_options=" \
-  -r \
-  -e main \
-  -T$target_path/nuttx/binfmt/libelf/gnu-elf.ld \
-  -r \
-"
+# target=ox64
+# target_path=$HOME/$target
+# target_options=" \
+#   -r \
+#   -e main \
+#   -T$target_path/nuttx/binfmt/libelf/gnu-elf.ld \
+#   -r \
+# "
 
 set -e  #  Exit when any command fails
 set -x  #  Echo commands
@@ -71,96 +71,102 @@ nuttx_options=" \
 
 ## Compile the NuttX App
 ## This one is slooooooow
-if [ ! -e ".obj/quickjs.o" ] 
-then
+# if [ ! -e ".obj/quickjs.o" ] 
+# then
   riscv64-unknown-elf-gcc \
     $nuttx_options \
     $qjs_options \
     -o .obj/quickjs.o \
     quickjs.c
-fi
+# fi
 
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  -o .obj/stub.o \
-  nuttx/stub.c
+# if [ ! -e ".obj/stub.o" ] 
+# then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    -o .obj/stub.o \
+    nuttx/stub.c
+# fi
 
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  -o .obj/arch_atomic.o \
-  nuttx/arch_atomic.c
+# if [ ! -e ".obj/arch_atomic.o" ] 
+# then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    -o .obj/arch_atomic.o \
+    nuttx/arch_atomic.c
+# fi
 
-if [ ! -e ".obj/repl.o" ] 
-then
+# if [ ! -e ".obj/repl.o" ] 
+# then
   riscv64-unknown-elf-gcc \
     $nuttx_options \
     $qjs_options \
     -o .obj/repl.o \
     nuttx/repl.c
-fi
+# fi
 
-if [ ! -e ".obj/qjscalc.o" ] 
-then
+# if [ ! -e ".obj/qjscalc.o" ] 
+# then
   riscv64-unknown-elf-gcc \
     $nuttx_options \
     $qjs_options \
     -o .obj/qjscalc.o \
     nuttx/qjscalc.c
-fi
+# fi
 
-if [ ! -e ".obj/qjs.o" ] 
-then
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/qjs.o \
-  qjs.c
-fi
+# if [ ! -e ".obj/qjs.o" ] 
+# then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/qjs.o \
+    qjs.c
+# fi
 
-if [ ! -e ".obj/libregexp.o" ] 
-then
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/libregexp.o \
-  libregexp.c
-fi
+# if [ ! -e ".obj/libregexp.o" ] 
+# then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/libregexp.o \
+    libregexp.c
+# fi
 
-if [ ! -e ".obj/libunicode.o" ] 
-then
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/libunicode.o \
-  libunicode.c
-fi
+# if [ ! -e ".obj/libunicode.o" ] 
+# then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/libunicode.o \
+    libunicode.c
+# fi
 
-if [ ! -e ".obj/cutils.o" ] 
-then
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/cutils.o \
-  cutils.c
-fi
+# if [ ! -e ".obj/cutils.o" ] 
+# then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/cutils.o \
+    cutils.c
+# fi
 
-if [ ! -e ".obj/quickjs-libc.o" ] 
-then
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/quickjs-libc.o \
-  quickjs-libc.c
-fi
+# if [ ! -e ".obj/quickjs-libc.o" ] 
+# then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/quickjs-libc.o \
+    quickjs-libc.c
+# fi
 
-if [ ! -e ".obj/libbf.o" ] 
-then
-riscv64-unknown-elf-gcc \
-  $nuttx_options \
-  $qjs_options \
-  -o .obj/libbf.o \
-  libbf.c
-fi
+# if [ ! -e ".obj/libbf.o" ] 
+# then
+  riscv64-unknown-elf-gcc \
+    $nuttx_options \
+    $qjs_options \
+    -o .obj/libbf.o \
+    libbf.c
+# fi
 
 ## Link the NuttX App
 ## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
@@ -195,7 +201,7 @@ riscv64-unknown-elf-ld \
   $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
   -o $target_path/apps/bin/qjs \
-  -Map nuttx/qjs.map
+  -Map nuttx/qjs-$target.map
 
 ## Show the size
 riscv64-unknown-elf-size $target_path/apps/bin/qjs
