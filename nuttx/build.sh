@@ -8,20 +8,20 @@ export PATH="$toolchain/bin:$PATH"
 
 ## Uncomment this to build for QEMU 64-bit RISC-V (Kernel Mode)
 ## We assume that NuttX is at $HOME/riscv/nuttx and $HOME/riscv/apps
-target=riscv
-target_path=$HOME/$target
-target_options=
+# target=riscv
+# target_path=$HOME/$target
+# target_options=
 
 ## Uncomment this to build for Ox64 BL808 RISC-V SBC
 ## We assume that NuttX is at $HOME/ox64/nuttx and $HOME/ox64/apps
-# target=ox64
-# target_path=$HOME/$target
-# target_options=" \
-#   -r \
-#   -e main \
-#   -T$target_path/nuttx/binfmt/libelf/gnu-elf.ld \
-#   -r \
-# "
+target=ox64
+target_path=$HOME/$target
+target_options=" \
+  -r \
+  -e main \
+  -T$target_path/nuttx/binfmt/libelf/gnu-elf.ld \
+  -r \
+"
 
 set -e  #  Exit when any command fails
 set -x  #  Echo commands
