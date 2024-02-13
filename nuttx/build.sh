@@ -168,7 +168,6 @@ riscv64-unknown-elf-ld \
   -Bstatic \
   -T$target_path/apps/import/scripts/gnu-elf.ld \
   -L$target_path/apps/import/libs \
-  -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d" \
   -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
   $target_path/apps/import/startup/crt0.o  \
   .obj/qjs.o \
