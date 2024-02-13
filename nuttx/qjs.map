@@ -9650,7 +9650,7 @@ LOAD /Users/Luppy/ox64/apps/import/libs/libproxies.a
 LOAD /Users/Luppy/ox64/apps/import/libs/libm.a
 LOAD /Users/Luppy/ox64/apps/import/libs/libgcc.a
 LOAD /Users/Luppy/ox64/apps/libapps.a
-LOAD /Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a
+LOAD /Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a
 END GROUP
 OUTPUT(/Users/Luppy/ox64/apps/bin/qjs elf64-littleriscv)
 

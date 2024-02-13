@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 #  Build QuickJS for Apache NuttX RTOS
 
-## TODO: Set PATH
-export PATH="$HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/bin:$PATH"
+## TODO: Set RISC-V Toolchain Path
+toolchain=$HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin
+export PATH="$toolchain/bin:$PATH"
 
-# target=riscv
+## Uncomment this to build for QEMU 64-bit RISC-V (Kernel Mode)
+## We assume that NuttX is at $HOME/riscv/nuttx and $HOME/riscv/apps
+## target=riscv
+
+## Uncomment this to build for Ox64 BL808 RISC-V SBC
+## We assume that NuttX is at $HOME/ox64/nuttx and $HOME/ox64/apps
 target=ox64
 
 set -e  #  Exit when any command fails
@@ -92,14 +98,14 @@ then
     nuttx/qjscalc.c
 fi
 
-# if [ ! -e ".obj/qjs.o" ] 
-# then
+if [ ! -e ".obj/qjs.o" ] 
+then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/qjs.o \
   qjs.c
-# fi
+fi
 
 if [ ! -e ".obj/libregexp.o" ] 
 then
@@ -128,14 +134,14 @@ riscv64-unknown-elf-gcc \
   cutils.c
 fi
 
-# if [ ! -e ".obj/quickjs-libc.o" ] 
-# then
+if [ ! -e ".obj/quickjs-libc.o" ] 
+then
 riscv64-unknown-elf-gcc \
   $nuttx_options \
   $qjs_options \
   -o .obj/quickjs-libc.o \
   quickjs-libc.c
-# fi
+fi
 
 if [ ! -e ".obj/libbf.o" ] 
 then
@@ -146,19 +152,20 @@ riscv64-unknown-elf-gcc \
   libbf.c
 fi
 
+## Link the NuttX App for Ox64
 riscv64-unknown-elf-ld \
   --oformat elf64-littleriscv \
   -r \
   -e main \
-  -T /Users/Luppy/ox64/nuttx/binfmt/libelf/gnu-elf.ld \
+  -T $HOME/ox64/nuttx/binfmt/libelf/gnu-elf.ld \
   -r \
   -e _start \
   -Bstatic \
-  -T/Users/Luppy/ox64/apps/import/scripts/gnu-elf.ld \
-  -L/Users/Luppy/ox64/apps/import/libs \
-  -L "/Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d" \
-  -L "/Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
-  /Users/Luppy/ox64/apps/import/startup/crt0.o  \
+  -T$HOME/ox64/apps/import/scripts/gnu-elf.ld \
+  -L$HOME/ox64/apps/import/libs \
+  -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/../../../../riscv64-unknown-elf/lib/rv64imafdc/lp64d" \
+  -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
+  $HOME/ox64/apps/import/startup/crt0.o  \
   .obj/qjs.o \
   .obj/repl.o \
   .obj/quickjs.o \
@@ -175,13 +182,13 @@ riscv64-unknown-elf-ld \
   -lc \
   -lproxies \
   -lm \
-  -lgcc /Users/Luppy/ox64/apps/libapps.a \
-  /Users/Luppy/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/bin/../lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
+  -lgcc $HOME/ox64/apps/libapps.a \
+  $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
   --end-group \
   -o $HOME/$target/apps/bin/qjs \
   -Map nuttx/qjs.map
 
-## Link the NuttX App
+## Link the NuttX App for QEMU
 ## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
 ## For riscv64-unknown-elf-ld: "rv64imafdc/lp64d
 # riscv64-unknown-elf-ld \
@@ -190,7 +197,7 @@ riscv64-unknown-elf-ld \
 #   -Bstatic \
 #   -T$HOME/$target/apps/import/scripts/gnu-elf.ld \
 #   -L$HOME/$target/apps/import/libs \
-#   -L "$HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
+#   -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
 #   $HOME/$target/apps/import/startup/crt0.o  \
 #   .obj/qjs.o \
 #   .obj/repl.o \
@@ -210,7 +217,7 @@ riscv64-unknown-elf-ld \
 #   -lgcc \
 #   -lm \
 #   $HOME/$target/apps/libapps.a \
-#   $HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
+#   $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
 #   --end-group \
 #   -o $HOME/$target/apps/bin/qjs \
 #   -Map nuttx/qjs.map
