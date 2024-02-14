@@ -1126,3 +1126,11 @@ Probably not? JavaScript needs quite a bit of RAM to run efficiently.
 We ran [linkermapviz](https://github.com/PromyLOPh/linkermapviz) on the Linker Map: [nuttx/qjs-riscv.map](nuttx/qjs-riscv.map)
 
 To produce this [Visualised Linker Map](https://lupyuen.github.io/nuttx-tinyemu/quickjs/linkermap)
+
+QuickJS Code Size:
+
+![QuickJS Code Size](https://lupyuen.github.io/images/quickjs-text.jpg)
+
+QuickJS Data Size:
+
+![QuickJS Data Size](https://lupyuen.github.io/images/quickjs-data.jpg)
