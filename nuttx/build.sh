@@ -71,14 +71,14 @@ nuttx_options=" \
 
 ## Compile the NuttX App
 ## This one is slooooooow
-# if [ ! -e ".obj/quickjs.o" ] 
-# then
+if [ ! -e ".obj/quickjs.o" ] 
+then
   riscv64-unknown-elf-gcc \
     $nuttx_options \
     $qjs_options \
     -o .obj/quickjs.o \
     quickjs.c
-# fi
+fi
 
 # if [ ! -e ".obj/stub.o" ] 
 # then
