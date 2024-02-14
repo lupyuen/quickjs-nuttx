@@ -14,40 +14,42 @@ spawn qemu-system-riscv64 \
   -kernel nuttx \
   -nographic
 
-## Wait for the prompt and enter this command
-expect "nsh> "
-send -s "qjs -e console.log(123) \r"
-
-## Check the response...
-expect {
-  ## If we see this message, exit normally
-  "nsh>" { exit 0 }
-
-  ## If timeout, exit with an error
-  timeout { exit 1 }
-}
-
+## Without REPL:
 ## Wait for the prompt and enter this command
 # expect "nsh> "
-# send -s "qjs \r"
-
-# expect "qjs > "
-# send -s "console.log(123) \r"
-
-# expect "qjs > "
-# send -s "os.open('/system/bin/init', os.O_RDONLY) \r"
-
-# ## Wait at most 30 seconds
-# set timeout 30
+# send -s "qjs -e console.log(123) \r"
 
 # ## Check the response...
 # expect {
 #   ## If we see this message, exit normally
-#   "qjs >" { exit 0 }
-
-#   ## If we see this message, exit with an error
-#   ## "EPC: 0000000080001faa" { exit 1 }
+#   "nsh>" { exit 0 }
 
 #   ## If timeout, exit with an error
 #   timeout { exit 1 }
 # }
+
+## With REPL:
+## Wait for the prompt and enter this command
+expect "nsh> "
+send -s "qjs \r"
+
+expect "qjs > "
+send -s "console.log(123) \r"
+
+expect "qjs > "
+send -s "os.open('/system/bin/init', os.O_RDONLY) \r"
+
+## Wait at most 30 seconds
+set timeout 30
+
+## Check the response...
+expect {
+  ## If we see this message, exit normally
+  "qjs >" { exit 0 }
+
+  ## If we see this message, exit with an error
+  ## "EPC: 0000000080001faa" { exit 1 }
+
+  ## If timeout, exit with an error
+  timeout { exit 1 }
+}
