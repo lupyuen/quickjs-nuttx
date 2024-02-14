@@ -1134,3 +1134,26 @@ QuickJS Code Size:
 QuickJS Data Size:
 
 ![QuickJS Data Size](https://lupyuen.github.io/images/quickjs-data.jpg)
+
+| Size of Code + Data (Read-Only) | |
+|:--------------------|:---:
+| QuickJS with All The Toppings | __554 KB__ |
+| Without REPL | __538 KB__ |
+| Without BigInt | __522 KB__ |
+| Without BigInt, REPL | __506 KB__ |
+
+_What about the Heap Memory Size?_
+
+Based on the NuttX Logs with Heap Logging Enabled...
+
+- [Heap Log: Without REPL](https://github.com/lupyuen/quickjs-nuttx/blob/d2dbef1afef26ae4cc76719d7cac3740da5f3387/nuttx/qemu.log)
+
+- [Heap Log: With REPL](https://github.com/lupyuen/quickjs-nuttx/blob/38e004e6eb643932f6957e03828ad25242cf803a/nuttx/qemu.log)
+
+We compute the Heap Usage in a Spreadsheet...
+
+- [Heap Usage: Without Repl](https://docs.google.com/spreadsheets/d/1EpdktueHxfAR4VR80d1XSZRwdO2UvNGf_sPetHHzAGQ/edit?usp=sharing)
+
+- TODO: Heap Usage: With Repl
+
+TODO: Static Linking
