@@ -306,7 +306,7 @@ up_dump_register: S8: 0000000040000000 S9: ffffffffc0000000 S10: 000000000000000
 up_dump_register: SP: 00000000c0202220 FP: 00000000c0201fc0 TP: 0000000000000000 RA: 00000000c001b32c
 ```
 
-We look up the disassembly: [nuttx/qjs.S](nuttx/qjs.S)
+We look up the disassembly: [nuttx/qjs-riscv.S](nuttx/qjs-riscv.S)
 
 EPC c0006484 is here...
 
@@ -354,7 +354,7 @@ up_dump_register: S8: 0000000040000000 S9: ffffffffc0000000 S10: 000000000000000
 up_dump_register: SP: 00000000c0202440 FP: 00000000c0201f90 TP: 0000000000000000 RA: 00000000c0019fa4
 ```
 
-EPC c0006232 in [qjs.S](nuttx/qjs.S) says...
+EPC c0006232 in [qjs-riscv.S](nuttx/qjs-riscv.S) says...
 
 ```text
 quickjs-nuttx/quickjs.c:2876

@@ -213,6 +213,9 @@ riscv64-unknown-elf-objdump \
   >nuttx/qjs-$target.S \
   2>&1
 
+## Copy the Demo Script
+cp nuttx/blink.js $target_path/apps/bin
+
 ## Test with QEMU
 pushd ../nuttx
 
