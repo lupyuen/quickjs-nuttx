@@ -1111,6 +1111,8 @@ Let's simulate the LED on Ox64 Emulator...
 
 - In our Web Browser JavaScript: [Handle Emulator Notification](https://github.com/lupyuen/nuttx-tinyemu/commit/2cadf80b7a95e182d9ad0aef2edfd08e0948affa#diff-0935fa7cc51b2920653500625c6e64acb1c8b81b85a6042c716b049205c75a63)
 
+![Simulate the LED on Ox64 Emulator](https://lupyuen.github.io/images/quickjs-led.jpg)
+
 And it works! https://lupyuen.github.io/nuttx-tinyemu/quickjs/
 
 [(Watch the __Demo on YouTube__)](https://youtu.be/AFDVceqQNRs)
