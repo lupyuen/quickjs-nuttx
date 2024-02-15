@@ -1121,7 +1121,7 @@ And it works! https://lupyuen.github.io/nuttx-tinyemu/quickjs/
 
 # How Small is QuickJS
 
-_Will QuickJS runs on all kinds of NuttX Devices?_
+_Will QuickJS run on all kinds of NuttX Devices?_
 
 Probably not? JavaScript needs quite a bit of RAM to run efficiently.
 
