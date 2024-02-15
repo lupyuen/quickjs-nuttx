@@ -274,7 +274,7 @@ riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:490: undefined reference to
 riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:495: undefined reference to `dlclose'
 ```
 
-After fixing the missing functions, QuickJS compiles OK for NuttX yay!
+After fixing the missing functions, QuickJS compiles OK for NuttX yay! No code changes!
 
 # QuickJS Crashes on NuttX
 
