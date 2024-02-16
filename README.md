@@ -1152,6 +1152,8 @@ Based on the NuttX Logs with Heap Logging Enabled...
 
 - [Heap Log: With REPL](https://github.com/lupyuen/quickjs-nuttx/blob/38e004e6eb643932f6957e03828ad25242cf803a/nuttx/qemu.log)
 
+![Computing the QuickJS Heap Usage with a Spreadsheet](https://lupyuen.github.io/images/quickjs-sheet.jpg)
+
 We compute the Heap Usage in a Spreadsheet...
 
 - [Heap Usage: Without Repl](https://docs.google.com/spreadsheets/d/1EpdktueHxfAR4VR80d1XSZRwdO2UvNGf_sPetHHzAGQ/edit?usp=sharing)
@@ -1163,6 +1165,8 @@ We compute the Heap Usage in a Spreadsheet...
   Max: __371 KB__
 
   (__"Free Size"__ might not be accurate because it uses __VLOOKUP__ for Top-Down Lookup)
+
+![QuickJS Heap Usage](https://lupyuen.github.io/images/quickjs-heap.jpg)
 
 # Full Linking for NuttX Apps
 
