@@ -1176,7 +1176,7 @@ Right now Ox64 QuickJS is slower and [__multi-deca-mega-chonky__](https://github
 
 ![QEMU vs Ox64 QuickJS: 4 MB vs 22 MB](https://lupyuen.github.io/images/quickjs-size.png)
 
-_How to do Static Linking for Ox64 Apps?_
+_How to do Full Linking for Ox64 Apps?_
 
 Let's figure out how [__Full Linking__](https://github.com/apache/nuttx/pull/11524) is implemented for NuttX QEMU...
 
