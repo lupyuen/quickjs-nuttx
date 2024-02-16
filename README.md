@@ -1180,34 +1180,67 @@ _How to do Full Linking for Ox64 Apps?_
 
 Let's figure out how [__Full Linking__](https://github.com/apache/nuttx/pull/11524) is implemented for NuttX QEMU...
 
-- [arch/risc-v/Kconfig](https://github.com/apache/nuttx/pull/11524/files#diff-9c348f27c59e1ed0d1d9c24e172d233747ee09835ab0aa7f156da1b7caa6a5fb)
+## Relocatable ELF vs Executable ELF
 
-  ```text
-  config ARCH_CHIP_QEMU_RV
-    select ARCH_HAVE_ELF_EXECUTABLE
-  ```
+From [arch/risc-v/Kconfig](https://github.com/apache/nuttx/pull/11524/files#diff-9c348f27c59e1ed0d1d9c24e172d233747ee09835ab0aa7f156da1b7caa6a5fb):
 
-  TODO: Why?
+```text
+config ARCH_CHIP_QEMU_RV
+  select ARCH_HAVE_ELF_EXECUTABLE
+```
 
-- [boards/risc-v/qemu-rv/rv-virt/configs/knsh64/defconfig](https://github.com/apache/nuttx/pull/11524/files#diff-4018c37bf9b08236b37a84273281d5511d48596be9e0e4c0980d730aa95dbbe8) (plus other QEMU Configs)
+_Why select ARCH_HAVE_ELF_EXECUTABLE?_
 
-  ```bash
-  CONFIG_BINFMT_ELF_EXECUTABLE=y
-  CONFIG_LIBM=y
-  ```
+NuttX supports 2 types of ELFs: Relocatable ELF vs Executable ELF. We select ARCH_HAVE_ELF_EXECUTABLE to create Executable ELFs that are Fully Linked. (Instead of Relocatable ELFs that are Partially Linked)
 
-  TODO: Why
+Which means the App Loading Address is hardcoded in the Executable ELF (and won't work on other RISC-V Platforms). But Executable ELFs are smaller because they don't contain Relocation Info.
 
-- [boards/risc-v/qemu-rv/rv-virt/scripts/Make.defs](https://github.com/apache/nuttx/pull/11524/files#diff-589710ee1c10fdb9688bc798ae3d98da3b3a4e30d790edd0678fbf6f2cc72de8)
+From [binfmt/Kconfig](https://github.com/apache/nuttx/blob/master/binfmt/Kconfig#L71-L88)
 
-  Change this...
+```text
+choice
+	prompt "File output format"
+	default BINFMT_ELF_RELOCATABLE
+	---help---
+		Defines the type of ELF file produced by the NuttX build system.
+
+config BINFMT_ELF_RELOCATABLE
+	bool "Relocatable ELF"
+	---help---
+		Produce a relocatable object as output. This is also known as partial linking.
+
+config BINFMT_ELF_EXECUTABLE
+	bool "Executable ELF"
+	depends on ARCH_HAVE_ELF_EXECUTABLE
+	---help---
+		Produce a full linked executable object as output.
+```
+
+## Select Executable ELF
+
+From [boards/risc-v/qemu-rv/rv-virt/configs/knsh64/defconfig](https://github.com/apache/nuttx/pull/11524/files#diff-4018c37bf9b08236b37a84273281d5511d48596be9e0e4c0980d730aa95dbbe8): (plus other QEMU Configs)
+
+```bash
+CONFIG_BINFMT_ELF_EXECUTABLE=y
+CONFIG_LIBM=y
+```
+
+Same as above, we select Executable ELF (Full Linking) instead of Relocatable ELF (Partial Linking).
+
+TODO: Why enable `libm`?
+
+## Disable Partial Linking
+
+From [boards/risc-v/qemu-rv/rv-virt/scripts/Make.defs](https://github.com/apache/nuttx/pull/11524/files#diff-589710ee1c10fdb9688bc798ae3d98da3b3a4e30d790edd0678fbf6f2cc72de8):
+
+- We change this...
 
   ```text
   LDELFFLAGS += -r -e main
   LDELFFLAGS += -T $(call CONVERT_PATH,$(TOPDIR)/binfmt/libelf/gnu-elf.ld)
   ```
 
-  To this...
+- To this...
 
   ```text
   ifeq ($(CONFIG_BINFMT_ELF_RELOCATABLE),y)
@@ -1215,12 +1248,19 @@ Let's figure out how [__Full Linking__](https://github.com/apache/nuttx/pull/115
   endif  
   ```
 
-  TODO: Why
+[GCC "-r" Option](https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-r) produces a Relocatable Object for Partial Linking. We disable this option, to create a Non-Relocatable Object for Full Linking.
 
-- [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/pull/11524/files#diff-40da5aa94ec5c0e9fb7ea37b649ed0340dfed0f9fac1a28f2623725a3cff8809)
+Also we no longer use the Linker Script for Relocatable ELF: [binfmt/libelf/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/binfmt/libelf/gnu-elf.ld) (See below)
 
-  TODO
+TODO: Why "-e main"? Isn't the Entry Point at "start"?
 
+## Linker Script
+
+From [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/pull/11524/files#diff-40da5aa94ec5c0e9fb7ea37b649ed0340dfed0f9fac1a28f2623725a3cff8809):
+
+- We switch the Linker Script from the Relocatable Linker Script: [binfmt/libelf/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/binfmt/libelf/gnu-elf.ld)
+
+- To the Non-Relocatable Linker Script: [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld)
 
 TODO: Partial Linking: binfmt/libelf/gnu-elf.ld
 
