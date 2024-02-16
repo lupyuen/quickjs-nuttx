@@ -1270,7 +1270,11 @@ Let's compare the 2 Linker Scripts...
 
 __Relocatable Linker Script (For Partial Linking):__ [binfmt/libelf/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/binfmt/libelf/gnu-elf.ld)
 
-TODO
+- Text Section is 0x0 (relocatable, resolved at runtime)
+
+- C++ Constructors and Destructors (`.ctors` / `.dtors`) look different from the Non-Relocatable Linker Script (below)
+
+  TODO: Why?
 
 From [binfmt/libelf/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/binfmt/libelf/gnu-elf.ld)
 
@@ -1300,7 +1304,17 @@ SECTIONS
 
 __Non-Relocatable Linker Script (For Full Linking):__ [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld)
 
-TODO
+- Text Section: Hardcoded at 0xC000_0000
+
+- Data Section: Hardcoded at 0xC010_1000
+
+- C++ Constructors and Destructors (`.ctors` / `.dtors`) look different from the Relocatable Linker Script (above)
+
+  TODO: Why?
+
+- Thread Local Storage Support: Missing from the Relocatable Linker Script (above)
+
+  TODO: Why?
 
 From [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld)
 
@@ -1346,4 +1360,14 @@ SECTIONS
   }
 ```
 
-TODO: App Load Address is different for Ox64, not 0xC000_0000
+_If we change the `.text` and `.data` addresses above, will it work for Ox64?_
+
+Probably? From [ox64/configs/nsh/defconfig](https://github.com/apache/nuttx/blob/master/boards/risc-v/bl808/ox64/configs/nsh/defconfig#L18-L30)
+
+```bash
+CONFIG_ARCH_TEXT_VBASE=0x80000000
+CONFIG_ARCH_DATA_VBASE=0x80100000
+CONFIG_ARCH_HEAP_VBASE=0x80200000
+```
+
+TODO: Try this for QuickJS Ox64
