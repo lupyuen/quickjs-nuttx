@@ -1266,8 +1266,14 @@ From [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apach
 
 - To the Non-Relocatable Linker Script: [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld)
 
-TODO: Partial Linking: binfmt/libelf/gnu-elf.ld
+Let's compare the 2 Linker Scripts...
 
-TODO: Full Linking: boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld
+__Relocatable Linker Script (For Partial Linking):__ [binfmt/libelf/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/binfmt/libelf/gnu-elf.ld)
+
+TODO
+
+__Non-Relocatable Linker Script (For Full Linking):__ [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld)
+
+TODO
 
 TODO: App Load Address is different for Ox64, not 0xC000_0000
