@@ -1195,7 +1195,7 @@ config ARCH_CHIP_QEMU_RV
 
 _Why select ARCH_HAVE_ELF_EXECUTABLE?_
 
-NuttX supports 2 types of ELFs: Relocatable ELF vs Executable ELF. We select ARCH_HAVE_ELF_EXECUTABLE to create Executable ELFs that are Fully Linked. (Instead of Relocatable ELFs that are Partially Linked)
+NuttX supports 2 types of ELFs: [Relocatable ELF](https://cwiki.apache.org/confluence/plugins/servlet/mobile?contentId=139629541#content/view/139629543) vs [Executable ELF](https://cwiki.apache.org/confluence/plugins/servlet/mobile?contentId=139629541#content/view/139629542). We select ARCH_HAVE_ELF_EXECUTABLE to create Executable ELFs that are Fully Linked. (Instead of Relocatable ELFs that are Partially Linked)
 
 Which means the App Loading Address is hardcoded in the Executable ELF (and won't work on other RISC-V Platforms). But Executable ELFs are smaller because they don't contain Relocation Info.
 
