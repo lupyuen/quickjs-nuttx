@@ -1258,7 +1258,7 @@ Also we no longer use the Linker Script for Relocatable ELF: [binfmt/libelf/gnu-
 
 TODO: Why "-e main"? Isn't the Entry Point at "start"?
 
-## Linker Script
+## Linker Scripts: Relocatable vs Non-Relocatable
 
 From [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/pull/11524/files#diff-40da5aa94ec5c0e9fb7ea37b649ed0340dfed0f9fac1a28f2623725a3cff8809):
 
@@ -1272,8 +1272,78 @@ __Relocatable Linker Script (For Partial Linking):__ [binfmt/libelf/gnu-elf.ld](
 
 TODO
 
+From [binfmt/libelf/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/binfmt/libelf/gnu-elf.ld)
+
+```text
+SECTIONS
+{
+  .text 0x00000000 :
+  ...
+  .ctors :
+    {
+      _sctors = . ;
+      *(.ctors)       /* Old ABI:  Unallocated */
+      *(.init_array)  /* New ABI:  Allocated */
+      *(SORT(.init_array.*))
+      _ectors = . ;
+    }
+
+  .dtors :
+    {
+      _sdtors = . ;
+      *(.dtors)       /* Old ABI:  Unallocated */
+      *(.fini_array)  /* New ABI:  Allocated */
+      *(SORT(.fini_array.*))
+      _edtors = . ;
+    }
+```
+
 __Non-Relocatable Linker Script (For Full Linking):__ [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld)
 
 TODO
+
+From [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/blob/master/boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld)
+
+```text
+SECTIONS
+{
+  . = 0xC0000000;
+  .text :
+  ...
+
+  . = 0xC0101000;
+  .data :
+  ...
+
+  .ctors :
+    {
+      _sctors = . ;
+      KEEP(*(SORT_BY_INIT_PRIORITY(.init_array.*) SORT_BY_INIT_PRIORITY(.ctors.*)))
+      KEEP(*(.init_array .ctors))
+      _ectors = . ;
+    }  
+
+  .dtors :
+    {
+      _sdtors = . ;
+      KEEP (*(.dtors))       /* Old ABI:  Unallocated */
+      KEEP (*(.fini_array))  /* New ABI:  Allocated */
+      KEEP (*(SORT(.fini_array.*)))
+      _edtors = . ;
+    }
+
+  /* Thread local storage support */
+  .tdata : {
+      _stdata = ABSOLUTE(.);
+      KEEP (*(.tdata .tdata.* .gnu.linkonce.td.*));
+      _etdata = ABSOLUTE(.);
+  }
+
+  .tbss : {
+      _stbss = ABSOLUTE(.);
+      KEEP (*(.tbss .tbss.* .gnu.linkonce.tb.* .tcommon));
+      _etbss = ABSOLUTE(.);
+  }
+```
 
 TODO: App Load Address is different for Ox64, not 0xC000_0000
