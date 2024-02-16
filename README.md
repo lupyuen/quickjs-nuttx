@@ -1164,15 +1164,15 @@ We compute the Heap Usage in a Spreadsheet...
 
   (__"Free Size"__ might not be accurate because it uses __VLOOKUP__ for Top-Down Lookup)
 
-# Static Linking for NuttX Apps
+# Full Linking for NuttX Apps
 
 _QEMU vs Ox64 QuickJS: Any diff?_
 
-QuickJS for NuttX QEMU is more Memory-Efficient because it uses [__Static Linking__](https://github.com/apache/nuttx/pull/11524).
+QuickJS for NuttX QEMU is more Memory-Efficient because it uses [__Full Linking__](https://github.com/apache/nuttx/pull/11524).
 
 (Instead of ELF Loader patching the [__Relocatable Symbols__](https://lupyuen.github.io/articles/app#inside-a-nuttx-app) at runtime)
 
-Right now Ox64 QuickJS is slower and [__multi-deca-mega-chonky__](https://github.com/lupyuen/nuttx-tinyemu/blob/main/docs/quickjs/qjs): 22 MB! We might downsize to 4 MB (like QEMU) when we switch to Static Linking.
+Right now Ox64 QuickJS is slower and [__multi-deca-mega-chonky__](https://github.com/lupyuen/nuttx-tinyemu/blob/main/docs/quickjs/qjs): 22 MB! We might downsize to 4 MB (like QEMU) when we switch to Full Linking.
 
 ![QEMU vs Ox64 QuickJS: 4 MB vs 22 MB](https://lupyuen.github.io/images/quickjs-size.png)
 
