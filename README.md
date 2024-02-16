@@ -1360,6 +1360,8 @@ SECTIONS
   }
 ```
 
+# Switch Ox64 QuickJS to Full Linking
+
 _If we change the `.text` and `.data` addresses above, will it work for Ox64?_
 
 Probably? From [ox64/configs/nsh/defconfig](https://github.com/apache/nuttx/blob/master/boards/risc-v/bl808/ox64/configs/nsh/defconfig#L18-L30)
@@ -1370,4 +1372,82 @@ CONFIG_ARCH_DATA_VBASE=0x80100000
 CONFIG_ARCH_HEAP_VBASE=0x80200000
 ```
 
-TODO: Try this for QuickJS Ox64
+We update the Linker Script: [boards/risc-v/bl808/ox64/scripts/gnu-elf.ld](https://github.com/lupyuen2/wip-pinephone-nuttx/blob/gpio2/boards/risc-v/bl808/ox64/scripts/gnu-elf.ld)
+
+```text
+SECTIONS
+{
+  . = 0x80000000;
+  .text :
+  ...
+  . = 0x80101000;
+  .data :
+```
+
+Rebuild Ox64 QuickJS with the above Linker Script...
+
+```bash
+## Build QuickJS
+function build_quickjs {
+  local toolchain=$HOME/riscv64-unknown-elf-toolchain-10.2.0-2020.12.8-x86_64-apple-darwin
+  local target=ox64
+  local target_path=$HOME/$target
+  local target_options=
+
+  pushd $HOME/riscv/quickjs-nuttx 
+
+  ## Link the NuttX App
+  ## For riscv-none-elf-ld: "rv64imafdc_zicsr/lp64d"
+  ## For riscv64-unknown-elf-ld: "rv64imafdc/lp64d
+  riscv64-unknown-elf-ld \
+    --oformat elf64-littleriscv \
+    $target_options \
+    -e _start \
+    -Bstatic \
+    -T$target_path/nuttx/boards/risc-v/bl808/ox64/scripts/gnu-elf.ld \
+    -L$target_path/apps/import/libs \
+    -L "$toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d" \
+    $target_path/apps/import/startup/crt0.o  \
+    .obj/qjs.o \
+    .obj/repl.o \
+    .obj/quickjs.o \
+    .obj/libregexp.o \
+    .obj/libunicode.o \
+    .obj/cutils.o \
+    .obj/quickjs-libc.o \
+    .obj/libbf.o \
+    .obj/qjscalc.o \
+    .obj/arch_atomic.o \
+    .obj/stub.o \
+    --start-group \
+    -lmm \
+    -lc \
+    -lproxies \
+    -lm \
+    -lgcc \
+    $target_path/apps/libapps.a \
+    $toolchain/lib/gcc/riscv64-unknown-elf/10.2.0/rv64imafdc/lp64d/libgcc.a \
+    --end-group \
+    -o $target_path/apps/bin/qjs  
+
+  ls -l $target_path/apps/bin/qjs
+  popd
+}
+```
+
+Test with Ox64 Emulator...
+
+```text
+$ $HOME/riscv/ox64-tinyemu/temu root-riscv64.cfg
+
+NuttShell (NSH) NuttX-12.4.0-RC0
+nsh> ls -l /system/bin/qjs
+ -r-xr-xr-x     4555328 /system/bin/qjs
+
+nsh> qjs
+QuickJS - Type "\h" for help
+qjs > console.log(123)
+123
+```
+
+Yep it works! From 22 MB to 5 MB!
