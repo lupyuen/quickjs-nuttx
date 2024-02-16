@@ -1182,17 +1182,48 @@ Let's figure out how [__Static Linking__](https://github.com/apache/nuttx/pull/1
 
 - [arch/risc-v/Kconfig](https://github.com/apache/nuttx/pull/11524/files#diff-9c348f27c59e1ed0d1d9c24e172d233747ee09835ab0aa7f156da1b7caa6a5fb)
 
-  TODO
+  ```text
+  config ARCH_CHIP_QEMU_RV
+    select ARCH_HAVE_ELF_EXECUTABLE
+  ```
+
+  TODO: Why?
 
 - [boards/risc-v/qemu-rv/rv-virt/configs/knsh64/defconfig](https://github.com/apache/nuttx/pull/11524/files#diff-4018c37bf9b08236b37a84273281d5511d48596be9e0e4c0980d730aa95dbbe8) (plus other QEMU Configs)
 
-  TODO
+  ```bash
+  CONFIG_BINFMT_ELF_EXECUTABLE=y
+  CONFIG_LIBM=y
+  ```
+
+  TODO: Why
 
 - [boards/risc-v/qemu-rv/rv-virt/scripts/Make.defs](https://github.com/apache/nuttx/pull/11524/files#diff-589710ee1c10fdb9688bc798ae3d98da3b3a4e30d790edd0678fbf6f2cc72de8)
 
-  TODO
+  Change this...
+
+  ```text
+  LDELFFLAGS += -r -e main
+  LDELFFLAGS += -T $(call CONVERT_PATH,$(TOPDIR)/binfmt/libelf/gnu-elf.ld)
+  ```
+
+  To this...
+
+  ```text
+  ifeq ($(CONFIG_BINFMT_ELF_RELOCATABLE),y)
+  LDELFFLAGS += -r
+  endif  
+  ```
+
+  TODO: Why
 
 - [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/pull/11524/files#diff-40da5aa94ec5c0e9fb7ea37b649ed0340dfed0f9fac1a28f2623725a3cff8809)
 
   TODO
 
+
+TODO: binfmt/libelf/gnu-elf.ld
+
+TODO: boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld
+
+TODO: Load Address
