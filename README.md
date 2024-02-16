@@ -1199,6 +1199,8 @@ NuttX supports 2 types of ELFs: [Relocatable ELF](https://cwiki.apache.org/confl
 
 Which means the App Loading Address is hardcoded in the Executable ELF (and won't work on other RISC-V Platforms). But Executable ELFs are smaller because they don't contain Relocation Info.
 
+(Why does NuttX support Relocatable ELFs? Because some Microcontrollers don't have a Memory Management Unit. So NuttX will relocate the ELF App to a Memory Region that's allocated for the app)
+
 From [binfmt/Kconfig](https://github.com/apache/nuttx/blob/master/binfmt/Kconfig#L71-L88)
 
 ```text
