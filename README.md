@@ -1164,4 +1164,35 @@ We compute the Heap Usage in a Spreadsheet...
 
   (__"Free Size"__ might not be accurate because it uses __VLOOKUP__ for Top-Down Lookup)
 
-TODO: Static Linking
+# Static Linking for NuttX Apps
+
+_QEMU vs Ox64 QuickJS: Any diff?_
+
+QuickJS for NuttX QEMU is more Memory-Efficient because it uses [__Static Linking__](https://github.com/apache/nuttx/pull/11524).
+
+(Instead of ELF Loader patching the [__Relocatable Symbols__](https://lupyuen.github.io/articles/app#inside-a-nuttx-app) at runtime)
+
+Right now Ox64 QuickJS is slower and [__multi-deca-mega-chonky__](https://github.com/lupyuen/nuttx-tinyemu/blob/main/docs/quickjs/qjs): 22 MB! We might downsize to 4 MB (like QEMU) when we switch to Static Linking.
+
+![QEMU vs Ox64 QuickJS: 4 MB vs 22 MB](https://lupyuen.github.io/images/quickjs-size.png)
+
+_How to do Static Linking for Ox64 Apps?_
+
+Let's figure out how [__Static Linking__](https://github.com/apache/nuttx/pull/11524) is implemented for NuttX QEMU...
+
+- [arch/risc-v/Kconfig](https://github.com/apache/nuttx/pull/11524/files#diff-9c348f27c59e1ed0d1d9c24e172d233747ee09835ab0aa7f156da1b7caa6a5fb)
+
+  TODO
+
+- [boards/risc-v/qemu-rv/rv-virt/configs/knsh64/defconfig](https://github.com/apache/nuttx/pull/11524/files#diff-4018c37bf9b08236b37a84273281d5511d48596be9e0e4c0980d730aa95dbbe8) (plus other QEMU Configs)
+
+  TODO
+
+- [boards/risc-v/qemu-rv/rv-virt/scripts/Make.defs](https://github.com/apache/nuttx/pull/11524/files#diff-589710ee1c10fdb9688bc798ae3d98da3b3a4e30d790edd0678fbf6f2cc72de8)
+
+  TODO
+
+- [boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld](https://github.com/apache/nuttx/pull/11524/files#diff-40da5aa94ec5c0e9fb7ea37b649ed0340dfed0f9fac1a28f2623725a3cff8809)
+
+  TODO
+
