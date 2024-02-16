@@ -1178,7 +1178,7 @@ Right now Ox64 QuickJS is slower and [__multi-deca-mega-chonky__](https://github
 
 _How to do Static Linking for Ox64 Apps?_
 
-Let's figure out how [__Static Linking__](https://github.com/apache/nuttx/pull/11524) is implemented for NuttX QEMU...
+Let's figure out how [__Full Linking__](https://github.com/apache/nuttx/pull/11524) is implemented for NuttX QEMU...
 
 - [arch/risc-v/Kconfig](https://github.com/apache/nuttx/pull/11524/files#diff-9c348f27c59e1ed0d1d9c24e172d233747ee09835ab0aa7f156da1b7caa6a5fb)
 
@@ -1222,8 +1222,8 @@ Let's figure out how [__Static Linking__](https://github.com/apache/nuttx/pull/1
   TODO
 
 
-TODO: binfmt/libelf/gnu-elf.ld
+TODO: Partial Linking: binfmt/libelf/gnu-elf.ld
 
-TODO: boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld
+TODO: Full Linking: boards/risc-v/qemu-rv/rv-virt/scripts/gnu-elf.ld
 
-TODO: Load Address
+TODO: App Load Address is different for Ox64, not 0xC000_0000
