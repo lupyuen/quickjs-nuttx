@@ -1231,7 +1231,7 @@ CONFIG_LIBM=y
 
 Same as above, we select Executable ELF (Full Linking) instead of Relocatable ELF (Partial Linking).
 
-TODO: Why enable `libm`?
+TODO: Why enable `libm`? "Enabling LIBM makes it convinient for users of toolchains lacking math library"
 
 ## Disable Partial Linking
 
