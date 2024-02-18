@@ -6,6 +6,10 @@
 
 # Porting QuickJS JavaScript Engine to Apache NuttX RTOS
 
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
+
 Let's port [QuickJS JavaScript Engine](https://bellard.org/quickjs/quickjs.html) to Apache NuttX RTOS! (64-bit RISC-V QEMU, Kernel Mode)
 
 _Why are we doing this?_
@@ -17,6 +21,10 @@ So we might run the JavaScript Interpreter on NuttX to control NuttX Devices, RE
 (But ioctl() is missing, maybe we can extend QuickJS?)
 
 # Compile QuickJS for NuttX
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 From the [Makefile Log](nuttx/make.log)...
 
@@ -144,6 +152,10 @@ const uint8_t qjsc_repl[16280] = {
 ```
 
 # Fix the Missing Functions
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 The NuttX Linking fails. The missing functions...
 
@@ -277,6 +289,10 @@ riscv64-unknown-elf-ld: quickjs-nuttx/quickjs-libc.c:495: undefined reference to
 After fixing the missing functions, QuickJS compiles OK for NuttX yay! No code changes!
 
 # QuickJS Crashes on NuttX
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 _Does QuickJS run on NuttX?_
 
@@ -608,6 +624,10 @@ We [copied the Command-Line Arg to Local Buffer](https://github.com/lupyuen/quic
 
 # NuttX Stack is Full of QuickJS
 
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
+
 Let's increase the Stack Size, it's 100% full...
 
 ```text
@@ -643,6 +663,10 @@ nsh>
 ```
 
 # Fix QuickJS Interactive Mode on NuttX
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 But QuickJS nteractive Mode REPL fails. Need to increase stack some more. We see our old friend 8_c021_8308, which appears when we run out of stack
 
@@ -726,6 +750,10 @@ qjs >
 
 # QuickJS calls POSIX `open()` on NuttX
 
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
+
 [POSIX `open()`](https://bellard.org/quickjs/quickjs.html#os-module) works OK too!
 
 ```text
@@ -779,6 +807,10 @@ $ riscv64-unknown-elf-size ../apps/bin/qjs
 Mostly Text (Code), very little Data and BSS. Most of the Dynamic Data comes from the Heap. Stack is currently under 64 KB, but above 16 KB.
 
 # Add ioctl() to QuickJS for NuttX
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 Let's add ioctl() so we can control the NuttX LED Driver (and other devices)!
 
@@ -836,6 +868,10 @@ Let's test QuickJS ioctl() with NuttX LED Driver...
 
 # Add LED Driver to NuttX QEMU RISC-V
 
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
+
 We add the [LED Driver to NuttX QEMU RISC-V (knsh64)](https://github.com/lupyuen2/wip-pinephone-nuttx/commit/1037eda906f11aef44f7670f8cc5a1c1d2141911).
 
 We fix the `leds` app because [task_create is missing from QEMU knsh64](https://github.com/lupyuen2/wip-pinephone-nuttx-apps/commit/45dbe5ce07239e7ca7dcb50cb0e55da151052429).
@@ -876,6 +912,10 @@ led_daemon: LED set 0x03
 Now we test with QuickJS...
 
 # QuickJS calls NuttX LED Driver
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 This is how we blink an LED in C: [leds_main.c](https://github.com/lupyuen2/wip-pinephone-nuttx-apps/blob/qemuled/examples/leds/leds_main.c)
 
@@ -937,6 +977,10 @@ qjs >
 ```
 
 # Add LED Driver to NuttX Ox64 BL808 SBC
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 Now we test on a Real Device with a Real LED: Ox64 BL808 SBC...
 
@@ -1067,6 +1111,10 @@ And QuickJS blinks the LED on Ox64 yay!
 
 # QuickJS blinks the LED on Ox64 Emulator
 
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
+
 _Will QuickJS run on Ox64 Emulator?_
 
 Yep it works! https://lupyuen.github.io/nuttx-tinyemu/quickjs/
@@ -1105,6 +1153,10 @@ bl808_gpiowrite: regaddr=0x20000938, clear=0x1000000
 
 # Simulate the LED on Ox64 Emulator
 
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
+
 Let's simulate the LED on Ox64 Emulator...
 
 - When writing to BL808 GPIO Output: [Send an Emulator Notification](https://github.com/lupyuen/ox64-tinyemu/commit/622ba840fd40ac627de2bdb6a73354ce291754b9) to the Console: `{"nuttxemu":{"gpio29":1}}`
@@ -1120,6 +1172,10 @@ And it works! https://lupyuen.github.io/nuttx-tinyemu/quickjs/
 ![QuickJS JavaScript Engine to Apache NuttX RTOS](https://lupyuen.github.io/images/quickjs-title2.png)
 
 # How Small is QuickJS
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 _Will QuickJS run on all kinds of NuttX Devices?_
 
@@ -1169,6 +1225,10 @@ We compute the Heap Usage in a Spreadsheet...
 ![QuickJS Heap Usage](https://lupyuen.github.io/images/quickjs-heap.jpg)
 
 # Full Linking for NuttX Apps
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 _QEMU vs Ox64 QuickJS: Any diff?_
 
@@ -1363,6 +1423,10 @@ SECTIONS
 ```
 
 # Switch Ox64 QuickJS to Full Linking
+
+Read the article...
+
+-   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
 _If we change the `.text` and `.data` addresses above, will it work for Ox64?_
 
