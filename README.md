@@ -6,7 +6,9 @@
 
 # Porting QuickJS JavaScript Engine to Apache NuttX RTOS
 
-Read the article...
+Read the articles...
+
+-   ["(Homage to MakeCode) Coding Ox64 BL808 SBC the Drag-n-Drop Way"](https://lupyuen.github.io/articles/quickjs2)
 
 -   ["QuickJS JavaScript Engine on a Real-Time Operating System (Apache NuttX RTOS)"](https://lupyuen.github.io/articles/quickjs)
 
