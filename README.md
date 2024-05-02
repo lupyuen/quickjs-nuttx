@@ -435,7 +435,18 @@ So we stop the Atom Search when we see Sentinel 0xFFFF_FFFF...
 
 # Heap Errors and STDIO Weirdness
 
-Now it halts inside the NuttX Mutex for printf...
+To troubleshoot Heap Memory and see the malloc() logs, we enable Memory Manager Logging in NuttX...
+
+https://github.com/apache/nuttx/blob/master/Kconfig#L963-L988
+
+```bash
+CONFIG_DEBUG_MM=y
+CONFIG_DEBUG_MM_INFO=y
+CONFIG_DEBUG_MM_ERROR=y
+CONFIG_DEBUG_MM_WARN=y
+```
+
+Now we see the logs for mm_malloc and mm_free. It halts inside the NuttX Mutex for printf...
 
 ```text
 __JS_FindAtom: 0
